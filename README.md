@@ -5,15 +5,14 @@ Windows Subsystem for Linux (Ubuntu, Debian, etc.).
 
 # Content
 
-No fancy script or installer, just do `ln -s`-install.
+No fancy all-in-one installer script.
 
 ## Windows
 
-- [Cmder](http://cmder.net/) `ConEmu.xml` with task shortcuts `clink.lua`
- [workaround](https://github.com/cmderdev/cmder/issues/447#issuecomment-379992066)
-  to avoid prompt lags for large git repositories.
+- copy `ConEmu.xml` with custom tasks to [Cmder](http://cmder.net/) config directory
+- copy `clink.lua` with [slow git status workaround](https://github.com/cmderdev/cmder/issues/447#issuecomment-379992066) to Cmder vendor directory
 
 ## WSL
 
-- Vim
-- Git
+- symlink files in `home/mloskot`
+- run `scripts`
