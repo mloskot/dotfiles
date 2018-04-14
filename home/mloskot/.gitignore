@@ -1,0 +1,39 @@
+[user]
+    name = Mateusz Loskot
+    email = mateusz@loskot.net
+    signingkey = BB2AC1F2
+
+[github]
+    user = mloskot
+
+[core]
+    editor = vim --nofork
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+	ui = auto
+
+[alias]
+    # commands shorcuts
+    br = branch
+    bv = branch -vv
+    ci = commit --verbose
+    co = checkout
+    dc = diff --cached
+    df = diff
+    gf = flow
+    rt = remote
+    rv = remote -v
+    st = status
+    # log aliases
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    ls = ls-files
+    # generate GitHub repository changelog in Markdown
+    # usage: git <alias> first_tag last_tag github_user github_repo
+    ghclm = !sh -c 'git log $1...$2  --pretty=format:\"* [view](http://github.com/$3/$4/commit/%H) - %s\"' -
+    # show files ignored by git:
+    ign = ls-files -o -i --exclude-standard
