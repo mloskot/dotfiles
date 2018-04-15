@@ -9,10 +9,17 @@ No fancy all-in-one installer script.
 
 ## Windows
 
-- copy `ConEmu.xml` with custom tasks to [Cmder](http://cmder.net/) config directory
-- copy `clink.lua` with [slow git status workaround](https://github.com/cmderdev/cmder/issues/447#issuecomment-379992066) to Cmder vendor directory
+- `ConEmu.xml` with custom tasks to [Cmder](http://cmder.net/) config directory
+  ```shell
+  mklink C:\apps\cmder_mini\vendor\conemu-maximus5\ConEmu.xml D:\wsl-config\cmder_mini\vendor\conemu-maximus5\ConEmu.xml
+  ```
+
+- `clink.lua` with [slow git status workaround](https://github.com/cmderdev/cmder/issues/447#issuecomment-379992066) to Cmder vendor directory
+  ```shell
+  mklink C:\apps\cmder_mini\vendor\clink.lua D:\wsl-config\cmder_mini\vendor\clink.lua
+  ```
 
 ## WSL
 
-- symlink files in `home/mloskot`
-- run `scripts`
+- symlink files from `home/mloskot` in WSL `/home/mloskot`
+- run any of `scripts`
