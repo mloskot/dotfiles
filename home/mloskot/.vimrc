@@ -45,15 +45,8 @@ set wildmenu " command-line completion enhanced mode
 set wildmode=list:longest
 set lazyredraw
 set mouse=a
-if &t_Co > 2 || has("gui_running")
-    " switch syntax highlighting on, when the terminal has colors
-    syntax on
-endif
-if &t_Co >= 256 || has("gui_running")
-    colorscheme desert "molokai "wombat murphy
-else
-    colorscheme desert
-endif
+set t_Co=256
+colorscheme desert
 if has('gui_running')
     set vb t_vb="<ESC>|30f" " Turn off beep
     set guioptions-=T " Hide toolbar
