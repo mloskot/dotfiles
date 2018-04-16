@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2018-04-16 16:05:16" build="180206">
+		<key name=".Vanilla" modified="2018-04-16 16:08:55" build="180206">
 			<value name="ColorTable00" type="dword" data="00222827"/>
 			<value name="ColorTable01" type="dword" data="009e5401"/>
 			<value name="ColorTable02" type="dword" data="0004aa74"/>
@@ -72,7 +72,7 @@
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
-			<value name="StartTasksName" type="string" data="{Split: Cmder | Cmder}"/>
+			<value name="StartTasksName" type="string" data="{Split: Cmder | PowerShell as Admin}"/>
 			<value name="StartFarFolders" type="hex" data="00"/>
 			<value name="StartFarEditors" type="hex" data="00"/>
 			<value name="StoreTaskbarkTasks" type="hex" data="00"/>
@@ -482,8 +482,8 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-			<key name="Tasks" modified="2018-04-14 16:46:11" build="180206">
-				<value name="Count" type="long" data="13"/>
+			<key name="Tasks" modified="2018-04-16 16:08:24" build="180206">
+				<value name="Count" type="long" data="14"/>
 				<key name="Task1" modified="2018-04-16 16:03:51" build="180206">
 					<value name="Name" type="string" data="{Split: Cmder | Cmder}"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
@@ -494,35 +494,45 @@
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Cmd2" type="string" data='{cmd::Cmder} -cur_console:s50H -cur_console:d:D:\ -new_console:t:"cmd R"'/>
 				</key>
-				<key name="Task2" modified="2018-04-14 16:48:07" build="180206">
-					<value name="Name" type="string" data="{cmd::Cmder as Admin}"/>
+				<key name="Task2" modified="2018-04-16 16:08:24" build="180206">
+					<value name="Name" type="string" data="{Split: Cmder | PowerShell as Admin}"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
-					<value name="Cmd1" type="string" data='*cmd /k "%ConEmuDir%\..\init.bat"'/>
+					<value name="Cmd1" type="string" data='{cmd::Cmder} -cur_console:d:D:\ -new_console:t:"cmd L"'/>
+					<value name="Active" type="long" data="0"/>
+					<value name="Count" type="long" data="2"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Cmd2" type="string" data='{Powershell::PowerShell as Admin} -cur_console:s50H -cur_console:d:C:\ -new_console:t:"ps1 R"'/>
+				</key>
+				<key name="Task3" modified="2018-04-16 16:08:24" build="180206">
+					<value name="Name" type="string" data="{cmd::Cmder as Admin}"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="Flags" type="dword" data="00000000"/>
+					<value name="Cmd1" type="string" data='*cmd /k "%ConEmuDir%\..\init.bat"'/>
 				</key>
-				<key name="Task3" modified="2018-04-15 13:30:55" build="180206">
+				<key name="Task4" modified="2018-04-16 16:08:24" build="180206">
 					<value name="Name" type="string" data="{cmd::Cmder}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
+					<value name="Cmd1" type="string" data='cmd /k "%ConEmuDir%\..\init.bat"  -new_console:d:D:\ '/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Flags" type="dword" data="00000000"/>
-					<value name="Cmd1" type="string" data='cmd /k "%ConEmuDir%\..\init.bat"  -new_console:d:D:\ '/>
 				</key>
-				<key name="Task4" modified="2018-04-14 17:20:40" build="180206">
+				<key name="Task5" modified="2018-04-16 16:08:24" build="180206">
 					<value name="Name" type="string" data="{Split: Ubuntu | Ubuntu}"/>
+					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data='/icon "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu.exe"'/>
 					<value name="Cmd1" type="string" data='{Ubuntu} -new_console:t:"Ubuntu L"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="2"/>
-					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Cmd2" type="string" data='{Ubuntu} -new_console:t:"Ubuntu R" -cur_console:s50H'/>
 				</key>
-				<key name="Task5" modified="2018-04-14 17:20:40" build="180206">
+				<key name="Task6" modified="2018-04-16 16:08:24" build="180206">
 					<value name="Name" type="string" data="{Ubuntu}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -531,7 +541,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task6" modified="2018-04-14 17:20:40" build="180206">
+				<key name="Task7" modified="2018-04-16 16:08:24" build="180206">
 					<value name="Name" type="string" data="{Debian}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -540,7 +550,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task7" modified="2018-04-14 16:48:07" build="180206">
+				<key name="Task8" modified="2018-04-16 16:08:24" build="180206">
 					<value name="Name" type="string" data="{Powershell::PowerShell as Admin}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -549,7 +559,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task8" modified="2018-04-14 16:48:07" build="180206">
+				<key name="Task9" modified="2018-04-16 16:08:24" build="180206">
 					<value name="Name" type="string" data="{Powershell::Powershell}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -558,7 +568,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task9" modified="2018-04-14 16:46:11" build="180206">
+				<key name="Task10" modified="2018-04-16 16:08:24" build="180206">
 					<value name="Name" type="string" data="{MinGW}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -567,7 +577,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task10" modified="2018-04-14 16:46:11" build="180206">
+				<key name="Task11" modified="2018-04-16 16:08:24" build="180206">
 					<value name="Name" type="string" data="{VS2012::32 As Admin}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -576,16 +586,16 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task11" modified="2018-04-14 16:46:11" build="180206">
+				<key name="Task12" modified="2018-04-16 16:08:24" build="180206">
 					<value name="Name" type="string" data="{VS2012::64 As Admin}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data='/icon "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe"'/>
-					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\vcvarsall.bat"" amd64 -new_console:t:"VS2012 x64" -new_console:d:"F:\V8.x64"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
+					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\vcvarsall.bat"" amd64 -new_console:t:"VS2012 x64" -new_console:d:"F:\V8.x64"'/>
 				</key>
-				<key name="Task12" modified="2018-04-14 16:46:11" build="180206">
+				<key name="Task13" modified="2018-04-16 16:08:24" build="180206">
 					<value name="Name" type="string" data="{VS2017::32 As Admin}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -594,7 +604,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars32.bat" -new_console:t:"VS2017 x86" -new_console:d:"F:\V9.Win32"'/>
 				</key>
-				<key name="Task13" modified="2018-04-14 16:46:11" build="180206">
+				<key name="Task14" modified="2018-04-16 16:08:24" build="180206">
 					<value name="Name" type="string" data="{VS2017::64 As Admin}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
