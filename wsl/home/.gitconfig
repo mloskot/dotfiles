@@ -37,3 +37,6 @@
     ghclm = !sh -c 'git log $1...$2  --pretty=format:\"* [view](http://github.com/$3/$4/commit/%H) - %s\"' -
     # show files ignored by git:
     ign = ls-files -o -i --exclude-standard
+
+[commit]
+    template = ~/.gitmessage

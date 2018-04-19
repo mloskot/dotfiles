@@ -27,6 +27,13 @@ No fancy all-in-one installer script.
   mklink "C:\Program Files\Microsoft VS Code Insiders\bin\code.cmd" %CD%\win\vscode\code.cmd
   ```
 
+- `.gitconfig` works for both
+
+  ```shell
+  mklink "%USERPROFILE%\.gitconfig" %CD%\wsl\home\.gitconfig
+  mklink "%USERPROFILE%\.gitmessage" %CD%\wsl\home\.gitmessage
+  ```
+
 ## WSL
 
 - symlink files from `wsl/home` in `$HOME`
