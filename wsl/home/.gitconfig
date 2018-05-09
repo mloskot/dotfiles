@@ -7,13 +7,13 @@
     user = mloskot
 
 [core]
-    editor = vim --nofork
+    editor = notepad.exe
 
 [color]
     branch = auto
     diff = auto
     status = auto
-	ui = auto
+    ui = auto
 
 [alias]
     # commands shorcuts
