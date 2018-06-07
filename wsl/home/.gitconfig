@@ -7,7 +7,7 @@
     user = mloskot
 
 [core]
-    editor = notepad.exe
+    editor = vim
 
 [color]
     branch = auto
