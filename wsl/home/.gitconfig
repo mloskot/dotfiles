@@ -8,7 +8,6 @@
 
 [core]
     editor = vim
-	autocrlf = true
 
 [color]
     branch = auto
