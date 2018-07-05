@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2018-07-05 10:46:58" build="180626">
+		<key name=".Vanilla" modified="2018-07-05 11:35:59" build="180626">
 			<value name="ColorTable00" type="dword" data="00222827"/>
 			<value name="ColorTable01" type="dword" data="009e5401"/>
 			<value name="ColorTable02" type="dword" data="0004aa74"/>
@@ -126,7 +126,7 @@
 			<value name="ConWnd Width" type="dword" data="00000077"/>
 			<value name="ConWnd Height" type="dword" data="0000001c"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="long" data="3244"/>
+			<value name="ConWnd X" type="long" data="2530"/>
 			<value name="ConWnd Y" type="long" data="-8"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
@@ -737,7 +737,7 @@
 			<value name="StatusBar.Hide.Dpi" type="hex" data="01"/>
 			<value name="TabFlashChanged" type="long" data="8"/>
 			<value name="TabModifiedSuffix" type="string" data="[*]"/>
-			<key name="HotKeys" modified="2018-04-17 17:23:30" build="180206">
+			<key name="HotKeys" modified="2018-07-05 11:35:59" build="180626">
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="00000011"/>
 				<value name="Multi.ArrowsModifier" type="dword" data="0000005b"/>
@@ -931,13 +931,30 @@
 				<value name="Key.BufPrUp" type="dword" data="00121121"/>
 				<value name="Key.BufPrDn" type="dword" data="00121122"/>
 				<value name="Key.ResetTerm" type="dword" data="00000000"/>
+				<value name="CheckUpdates" type="dword" data="00105b55"/>
+				<value name="Multi.NewWndConfirm" type="dword" data="00000000"/>
 			</key>
 			<value name="StartCreateDelay" type="ulong" data="1000"/>
 			<value name="DefaultTerminalDebugLog" type="hex" data="00"/>
 			<value name="LastMonitor" type="string" data="1920,0,3840,1050"/>
 			<value name="Restore2ActiveMon" type="hex" data="00"/>
 			<value name="DownShowExOnTopMessage" type="hex" data="00"/>
-			<value name="EnvironmentSet" type="multi"/>
+			<value name="EnvironmentSet" type="multi">
+				<line data="set PATH=%ConEmuBaseDir%\Scripts;%PATH%"/>
+				<line data=" "/>
+				<line data="# set ConEmuPromptNames=NO"/>
+				<line data="# set ConEmuPromptNL=NO"/>
+				<line data="# set ConEmuSudoSplit=NO"/>
+				<line data="# set ConEmuSudoConfirm=NO"/>
+				<line data=" "/>
+				<line data="# set LANG=ru_RU.utf8"/>
+				<line data="# set LANG=ru_RU.CP1251"/>
+				<line data=" "/>
+				<line data='# alias cdc=cd /d "%ConEmuDir%"'/>
+				<line data='# alias cd~=cd /d "%UserProfile%"'/>
+				<line data="# alias gl=git-log"/>
+				<line data="# alias glb=git-log --branches --date-order"/>
+			</value>
 			<value name="Update.InetTool" type="hex" data="00"/>
 			<value name="Update.InetToolCmd" type="string" data=""/>
 			<value name="SuppressBells" type="hex" data="01"/>
@@ -945,7 +962,9 @@
 			<value name="ClipboardFirstLinePosix" type="hex" data="00"/>
 			<value name="VividColors" type="hex" data="01"/>
 			<value name="AnsiExecution" type="hex" data="01"/>
-			<value name="AnsiAllowedCommands" type="multi"/>
+			<value name="AnsiAllowedCommands" type="multi">
+				<line data="cmd -cur_console:R /cGitShowBranch.cmd"/>
+			</value>
 			<value name="KillSshAgent" type="hex" data="01"/>
 			<value name="ProcessCtrlZ" type="hex" data="00"/>
 			<value name="JumpListAutoUpdate" type="hex" data="01"/>
@@ -961,6 +980,8 @@
 			<value name="StatusBar.Hide.RMode" type="hex" data="01"/>
 			<value name="StatusBar.Hide.WMode" type="hex" data="01"/>
 			<value name="StatusBar.Hide.CellI" type="hex" data="01"/>
+			<value name="Language" type="string" data="en"/>
+			<value name="RestoreInactive" type="hex" data="00"/>
 		</key>
 	</key>
 </key>
