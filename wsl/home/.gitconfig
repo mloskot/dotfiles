@@ -37,6 +37,8 @@
     ghclm = !sh -c 'git log $1...$2  --pretty=format:\"* [view](http://github.com/$3/$4/commit/%H) - %s\"' -
     # show files ignored by git:
     ign = ls-files -o -i --exclude-standard
+    prune-branches-origin = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
+    prune-branches-mloskot = !git remote prune mloskot && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
 
 [commit]
     template = ~/.gitmessage
