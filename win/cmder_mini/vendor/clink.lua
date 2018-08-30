@@ -40,12 +40,10 @@ local function set_prompt_filter()
     -- orig: $E[1;32;40m$P$S{git}{hg}$S$_$E[1;30;40m{lamb}$S$E[0m
     -- color codes: "\x1b[1;37;40m"
     local cmder_prompt = "\x1b[1;32;40m{cwd} {git}{hg}{svn} \n\x1b[1;39;40m{lamb} \x1b[0m"
-    local lambda
+    local lambda = "λ"
     cmder_prompt = string.gsub(cmder_prompt, "{cwd}", cwd)
-    if env == nil then
-        lambda = "λ"
-    else
-        lambda = "("..env..") λ"
+    if env ~= nil then
+        lambda = "("..env..") "..lambda
     end
     clink.prompt.value = string.gsub(cmder_prompt, "{lamb}", lambda)
 end
@@ -263,11 +261,11 @@ local function git_prompt_filter()
         local color
         if branch then
             -- Has branch => therefore it is a git folder, now figure out status
-            --if get_git_status() then
+            if get_git_status() then
                 color = colors.clean
-            --else
-            --    color = colors.dirty
-            --end
+            else
+                color = colors.dirty
+            end
 
             clink.prompt.value = string.gsub(clink.prompt.value, "{git}", color.."("..branch..")")
             return false
