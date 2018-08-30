@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2018-07-05 11:35:59" build="180626">
+		<key name=".Vanilla" modified="2018-08-30 11:24:05" build="180528">
 			<value name="ColorTable00" type="dword" data="00222827"/>
 			<value name="ColorTable01" type="dword" data="009e5401"/>
 			<value name="ColorTable02" type="dword" data="0004aa74"/>
@@ -35,7 +35,7 @@
 			<value name="ColorTable30" type="dword" data="0081cccc"/>
 			<value name="ColorTable31" type="dword" data="00ffffff"/>
 			<value name="ExtendColors" type="hex" data="00"/>
-			<value name="ExtendColorIdx" type="hex" data="0E"/>
+			<value name="ExtendColorIdx" type="hex" data="0e"/>
 			<value name="TextColorIdx" type="hex" data="10"/>
 			<value name="BackColorIdx" type="hex" data="10"/>
 			<value name="PopTextColorIdx" type="hex" data="10"/>
@@ -59,6 +59,7 @@
 			<value name="FadeInactive" type="hex" data="01"/>
 			<value name="FadeInactiveLow" type="hex" data="00"/>
 			<value name="FadeInactiveHigh" type="hex" data="C8"/>
+			<value name="ComSpec.UncPaths" type="hex" data="01"/>
 			<value name="ConVisible" type="hex" data="00"/>
 			<value name="ConInMode" type="dword" data="ffffffff"/>
 			<value name="UseInjects" type="hex" data="01"/>
@@ -116,17 +117,17 @@
 			<value name="bgOperation" type="hex" data="00"/>
 			<value name="bgPluginAllowed" type="hex" data="01"/>
 			<value name="AlphaValue" type="hex" data="FF"/>
-			<value name="AlphaValueSeparate" type="hex" data="00"/>
-			<value name="AlphaValueInactive" type="hex" data="EE"/>
+			<value name="AlphaValueSeparate" type="hex" data="01"/>
+			<value name="AlphaValueInactive" type="hex" data="C9"/>
 			<value name="UserScreenTransparent" type="hex" data="00"/>
 			<value name="ColorKeyTransparent" type="hex" data="00"/>
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
 			<value name="WindowMode" type="dword" data="00000520"/>
-			<value name="ConWnd Width" type="dword" data="00000077"/>
-			<value name="ConWnd Height" type="dword" data="0000001c"/>
+			<value name="ConWnd Width" type="dword" data="00000078"/>
+			<value name="ConWnd Height" type="dword" data="0000001e"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="long" data="2530"/>
+			<value name="ConWnd X" type="long" data="426"/>
 			<value name="ConWnd Y" type="long" data="-8"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
@@ -144,7 +145,7 @@
 			<value name="ConsoleFontName" type="string" data="Lucida Console"/>
 			<value name="ConsoleFontWidth" type="long" data="3"/>
 			<value name="ConsoleFontHeight" type="long" data="5"/>
-			<value name="DefaultBufferHeight" type="long" data="2000"/>
+			<value name="DefaultBufferHeight" type="long" data="1000"/>
 			<value name="AutoBufferHeight" type="hex" data="01"/>
 			<value name="CmdOutputCP" type="dword" data="00000000"/>
 			<value name="ComSpec.Type" type="hex" data="00"/>
@@ -328,7 +329,7 @@
 			<value name="Update.CheckOnStartup" type="hex" data="01"/>
 			<value name="Update.CheckHourly" type="hex" data="00"/>
 			<value name="Update.ConfirmDownload" type="hex" data="01"/>
-			<value name="Update.UseBuilds" type="hex" data="01"/>
+			<value name="Update.UseBuilds" type="hex" data="03"/>
 			<value name="Update.UseProxy" type="hex" data="00"/>
 			<value name="Update.Proxy" type="string" data=""/>
 			<value name="Update.ProxyUser" type="string" data=""/>
@@ -482,9 +483,18 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-			<key name="Tasks" modified="2018-07-06 18:10:16" build="180626">
-				<value name="Count" type="long" data="17"/>
-				<key name="Task1" modified="2018-07-06 18:12:27" build="180626">
+			<key name="Tasks" modified="2018-08-30 10:56:07" build="180626">
+				<value name="Count" type="long" data="18"/>
+				<key name="Task1" modified="2018-08-30 11:28:16" build="180626">
+					<value name="Name" type="string" data="{Git Bash}"/>
+					<value name="GuiArgs" type="string" data=' /icon "%SystemDrive%\Program Files\Git\mingw64\share\git\git-for-windows.ico"'/>
+					<value name="Cmd1" type="string" data='cmd /c ""c:\Program Files\Git\bin\bash" --login -i" -new_console:d:D:\ '/>
+					<value name="Active" type="long" data="0"/>
+					<value name="Count" type="long" data="1"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="Flags" type="dword" data="00000000"/>
+				</key>
+				<key name="Task2" modified="2018-08-30 10:56:07" build="180626">
 					<value name="Name" type="string" data="{cmd::Cmder as Admin}"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
 					<value name="Cmd1" type="string" data='*cmd /k "%ConEmuDir%\..\init.bat"'/>
@@ -493,34 +503,34 @@
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="Flags" type="dword" data="00000000"/>
 				</key>
-				<key name="Task2" modified="2018-07-06 18:12:27" build="180626">
+				<key name="Task3" modified="2018-08-30 10:56:07" build="180626">
 					<value name="Name" type="string" data="{cmd::Cmder}"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
-					<value name="Cmd1" type="string" data='cmd /k "%ConEmuDir%\..\init.bat"  -new_console:d:D:\ '/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="Flags" type="dword" data="00000000"/>
+					<value name="Cmd1" type="string" data='cmd /k "%ConEmuDir%\..\init.bat"  -new_console:d:D:\ '/>
 				</key>
-				<key name="Task3" modified="2018-07-06 18:12:51" build="180626">
+				<key name="Task4" modified="2018-08-30 10:56:07" build="180626">
 					<value name="Name" type="string" data="{wsl::Xenial}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data='/icon "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu.exe"'/>
+					<value name="Cmd1" type="string" data='cmd /c "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu.exe" -new_console:t:"wsl:Xenial"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Flags" type="dword" data="00000000"/>
-					<value name="Cmd1" type="string" data='cmd /c "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu.exe" -new_console:t:"wsl:Xenial"'/>
 				</key>
-				<key name="Task4" modified="2018-07-06 18:12:51" build="180626">
+				<key name="Task5" modified="2018-08-30 10:56:07" build="180626">
 					<value name="Name" type="string" data="{wsl::Bionic}"/>
+					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data='/icon "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu.exe"'/>
 					<value name="Cmd1" type="string" data='cmd /c "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu1804.exe" -new_console:t:"wsl:Bionic"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Flags" type="dword" data="00000004"/>
 				</key>
-				<key name="Task5" modified="2018-07-06 18:12:51" build="180626">
+				<key name="Task6" modified="2018-08-30 10:56:07" build="180626">
 					<value name="Name" type="string" data="{wsl::Xenial | Bionic}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -530,7 +540,7 @@
 					<value name="Count" type="long" data="2"/>
 					<value name="Cmd2" type="string" data='{wsl::Bionic} -new_console:t:"wsl:Bionic R" -cur_console:s50H'/>
 				</key>
-				<key name="Task6" modified="2018-07-06 18:12:51" build="180626">
+				<key name="Task7" modified="2018-08-30 10:56:07" build="180626">
 					<value name="Name" type="string" data="{wsl::Stretch}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -539,7 +549,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task7" modified="2018-07-06 18:12:51" build="180626">
+				<key name="Task8" modified="2018-08-30 10:56:07" build="180626">
 					<value name="Name" type="string" data="{Cmder | Cmder}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -549,7 +559,7 @@
 					<value name="Count" type="long" data="2"/>
 					<value name="Cmd2" type="string" data='{cmd::Cmder} -cur_console:s50H -cur_console:d:D:\ -new_console:t:"cmd R"'/>
 				</key>
-				<key name="Task8" modified="2018-07-06 18:12:51" build="180626">
+				<key name="Task9" modified="2018-08-30 10:56:07" build="180626">
 					<value name="Name" type="string" data="{Cmder | PowerShell as Admin}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -559,7 +569,7 @@
 					<value name="Count" type="long" data="2"/>
 					<value name="Cmd2" type="string" data='{Powershell::PowerShell as Admin} -cur_console:a -cur_console:s50H -cur_console:d:C:\ -new_console:t:"ps1 R"'/>
 				</key>
-				<key name="Task9" modified="2018-07-06 18:12:51" build="180626">
+				<key name="Task10" modified="2018-08-30 10:56:07" build="180626">
 					<value name="Name" type="string" data="{Cmder | Xenial}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -569,7 +579,7 @@
 					<value name="Count" type="long" data="2"/>
 					<value name="Cmd2" type="string" data='{wsl::Xenial} -new_console:t:"wsl:Xenial R" -cur_console:s50H'/>
 				</key>
-				<key name="Task10" modified="2018-07-06 18:10:16" build="180626">
+				<key name="Task11" modified="2018-08-30 10:56:07" build="180626">
 					<value name="Name" type="string" data="{Powershell::PowerShell as Admin}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -578,16 +588,16 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task11" modified="2018-07-06 18:10:16" build="180626">
+				<key name="Task12" modified="2018-08-30 10:56:07" build="180626">
 					<value name="Name" type="string" data="{Powershell::Powershell}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
-					<value name="Cmd1" type="string" data='PowerShell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression &apos;. &apos;&apos;%ConEmuDir%\..\profile.ps1&apos;&apos;&apos;"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
+					<value name="Cmd1" type="string" data='PowerShell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression &apos;. &apos;&apos;%ConEmuDir%\..\profile.ps1&apos;&apos;&apos;"'/>
 				</key>
-				<key name="Task12" modified="2018-07-06 18:10:16" build="180626">
+				<key name="Task13" modified="2018-08-30 10:56:07" build="180626">
 					<value name="Name" type="string" data="{MinGW}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -596,7 +606,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='%comspec% /k "C:\Program Files\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw-w64.bat" -new_console:t:"MinGW"'/>
 				</key>
-				<key name="Task13" modified="2018-07-06 18:10:16" build="180626">
+				<key name="Task14" modified="2018-08-30 10:56:07" build="180626">
 					<value name="Name" type="string" data="{VS2012::32 As Admin}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -605,7 +615,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\vcvarsall.bat"" x64_x86 -new_console:t:"VS2012 x86" -new_console:d:"F:\V8.win32"'/>
 				</key>
-				<key name="Task14" modified="2018-07-06 18:10:16" build="180626">
+				<key name="Task15" modified="2018-08-30 10:56:07" build="180626">
 					<value name="Name" type="string" data="{VS2012::64 As Admin}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -614,7 +624,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\vcvarsall.bat"" amd64 -new_console:t:"VS2012 x64" -new_console:d:"F:\V8.x64"'/>
 				</key>
-				<key name="Task15" modified="2018-07-06 18:10:16" build="180626">
+				<key name="Task16" modified="2018-08-30 10:56:07" build="180626">
 					<value name="Name" type="string" data="{VS2017::32 As Admin}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -623,7 +633,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars32.bat" x64_x86 -new_console:t:"VS2017 x86" -new_console:d:"F:\V9.Win32"'/>
 				</key>
-				<key name="Task16" modified="2018-07-06 18:10:16" build="180626">
+				<key name="Task17" modified="2018-08-30 10:56:07" build="180626">
 					<value name="Name" type="string" data="{VS2017::64 As Admin}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -632,7 +642,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars64.bat" -new_console:t:"VS2017 x64 as Admin" -new_console:d:"F:\V9.x64"'/>
 				</key>
-				<key name="Task17" modified="2018-07-06 18:10:16" build="180626">
+				<key name="Task18" modified="2018-08-30 10:56:07" build="180626">
 					<value name="Name" type="string" data="{VS2017 Preview::64 As Admin}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -642,14 +652,14 @@
 					<value name="Cmd1" type="string" data='*%comspec% /k "c:\Program Files (x86)\Microsoft Visual Studio\Preview\Professional\VC\Auxiliary\Build\vcvars64.bat" -new_console:t:"VS2017 Preview x64 as Admin" -new_console:d:"D:\"'/>
 				</key>
 			</key>
-			<key name="Apps" modified="2018-04-09 23:05:47" build="180206">
+			<key name="Apps" modified="2018-02-22 06:05:13" build="171109">
 				<value name="Count" type="long" data="0"/>
 			</key>
-			<key name="Colors" modified="2018-04-09 23:05:47" build="180206">
-				<key name="Palette1" modified="2018-04-09 23:05:47" build="180206">
+			<key name="Colors" modified="2018-02-22 06:05:13" build="171109">
+				<key name="Palette1" modified="2018-02-22 06:05:13" build="171109">
 					<value name="Name" type="string" data="Monokai"/>
 					<value name="ExtendColors" type="hex" data="00"/>
-					<value name="ExtendColorIdx" type="hex" data="0E"/>
+					<value name="ExtendColorIdx" type="hex" data="0e"/>
 					<value name="TextColorIdx" type="hex" data="10"/>
 					<value name="BackColorIdx" type="hex" data="10"/>
 					<value name="PopTextColorIdx" type="hex" data="10"/>
@@ -747,11 +757,11 @@
 			<value name="StatusBar.Hide.Dpi" type="hex" data="01"/>
 			<value name="TabFlashChanged" type="long" data="8"/>
 			<value name="TabModifiedSuffix" type="string" data="[*]"/>
-			<key name="HotKeys" modified="2018-07-05 11:35:59" build="180626">
+			<key name="HotKeys" modified="2018-08-30 11:12:34" build="180528">
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="00000011"/>
 				<value name="Multi.ArrowsModifier" type="dword" data="0000005b"/>
-				<value name="MinimizeRestore" type="dword" data="00000000"/>
+				<value name="MinimizeRestore" type="dword" data="000011c0"/>
 				<value name="MinimizeRestore2" type="dword" data="00000000"/>
 				<value name="GlobalRestore" type="dword" data="00000000"/>
 				<value name="CdExplorerPath" type="dword" data="00000000"/>
@@ -935,7 +945,6 @@
 				<value name="Multi.SplitSwapR" type="dword" data="00125d27"/>
 				<value name="Multi.GroupInputAll" type="dword" data="00105d47"/>
 				<value name="Multi.GroupInputKey" type="dword" data="00125d47"/>
-				<value name="CloseToRightKey" type="dword" data="00000000"/>
 				<value name="Key.AltNumpad" type="dword" data="00000000"/>
 				<value name="Key.JumpActiveMonitor" type="dword" data="00000000"/>
 				<value name="Key.BufPrUp" type="dword" data="00121121"/>
@@ -943,27 +952,15 @@
 				<value name="Key.ResetTerm" type="dword" data="00000000"/>
 				<value name="CheckUpdates" type="dword" data="00105b55"/>
 				<value name="Multi.NewWndConfirm" type="dword" data="00000000"/>
+				<value name="CloseToRightKey" type="dword" data="00000000"/>
 			</key>
-			<value name="StartCreateDelay" type="ulong" data="1000"/>
+			<value name="StartCreateDelay" type="ulong" data="100"/>
 			<value name="DefaultTerminalDebugLog" type="hex" data="00"/>
-			<value name="LastMonitor" type="string" data="1920,0,3840,1050"/>
+			<value name="LastMonitor" type="string" data="0,0,1920,1050"/>
 			<value name="Restore2ActiveMon" type="hex" data="00"/>
 			<value name="DownShowExOnTopMessage" type="hex" data="00"/>
 			<value name="EnvironmentSet" type="multi">
 				<line data="set PATH=%ConEmuBaseDir%\Scripts;%PATH%"/>
-				<line data=" "/>
-				<line data="# set ConEmuPromptNames=NO"/>
-				<line data="# set ConEmuPromptNL=NO"/>
-				<line data="# set ConEmuSudoSplit=NO"/>
-				<line data="# set ConEmuSudoConfirm=NO"/>
-				<line data=" "/>
-				<line data="# set LANG=ru_RU.utf8"/>
-				<line data="# set LANG=ru_RU.CP1251"/>
-				<line data=" "/>
-				<line data='# alias cdc=cd /d "%ConEmuDir%"'/>
-				<line data='# alias cd~=cd /d "%UserProfile%"'/>
-				<line data="# alias gl=git-log"/>
-				<line data="# alias glb=git-log --branches --date-order"/>
 			</value>
 			<value name="Update.InetTool" type="hex" data="00"/>
 			<value name="Update.InetToolCmd" type="string" data=""/>
@@ -988,10 +985,10 @@
 			<value name="DebugLog" type="hex" data="00"/>
 			<value name="StatusBar.Hide.TMode" type="hex" data="01"/>
 			<value name="StatusBar.Hide.RMode" type="hex" data="01"/>
-			<value name="StatusBar.Hide.WMode" type="hex" data="01"/>
 			<value name="StatusBar.Hide.CellI" type="hex" data="01"/>
 			<value name="Language" type="string" data="en"/>
 			<value name="RestoreInactive" type="hex" data="00"/>
+			<value name="StatusBar.Hide.WMode" type="hex" data="01"/>
 		</key>
 	</key>
 </key>
