@@ -34,6 +34,12 @@ No fancy all-in-one installer script.
   mklink "%USERPROFILE%\.gitmessage" %CD%\wsl\home\.gitmessage
   ```
 
+- `git-prompt.sh` for preferred Bash prompt
+
+  ```shell
+  mklink "c:\Program Files\Git\etc\profile.d\git-prompt.sh" %CD%\win\git\etc\profile.d\git-prompt.sh
+  ```
+
 ## WSL
 
 - symlink files from `wsl/home` in `$HOME`
