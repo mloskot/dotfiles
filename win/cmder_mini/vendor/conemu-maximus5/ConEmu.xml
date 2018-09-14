@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2018-08-30 11:47:11" build="180626">
+		<key name=".Vanilla" modified="2018-09-14 22:19:02" build="180626">
 			<value name="ColorTable00" type="dword" data="00222827"/>
 			<value name="ColorTable01" type="dword" data="009e5401"/>
 			<value name="ColorTable02" type="dword" data="0004aa74"/>
@@ -124,11 +124,11 @@
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
 			<value name="WindowMode" type="dword" data="00000520"/>
-			<value name="ConWnd Width" type="dword" data="00000078"/>
-			<value name="ConWnd Height" type="dword" data="0000001e"/>
+			<value name="ConWnd Width" type="dword" data="00000044"/>
+			<value name="ConWnd Height" type="dword" data="0000000c"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="long" data="2626"/>
-			<value name="ConWnd Y" type="long" data="-8"/>
+			<value name="ConWnd X" type="long" data="2682"/>
+			<value name="ConWnd Y" type="long" data="-7"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
@@ -512,8 +512,8 @@
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Cmd1" type="string" data='cmd /k "%ConEmuDir%\..\init.bat"  -new_console:d:D:\ '/>
 				</key>
-				<key name="Task4" modified="2018-08-30 10:56:07" build="180626">
-					<value name="Name" type="string" data="{wsl::Xenial}"/>
+				<key name="Task4" modified="2018-09-14 22:19:47" build="180626">
+					<value name="Name" type="string" data="{WSL::Xenial}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data='/icon "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu.exe"'/>
 					<value name="Cmd1" type="string" data='cmd /c "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu.exe" -new_console:t:"wsl:Xenial"'/>
@@ -521,8 +521,8 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Flags" type="dword" data="00000000"/>
 				</key>
-				<key name="Task5" modified="2018-08-30 10:56:07" build="180626">
-					<value name="Name" type="string" data="{wsl::Bionic}"/>
+				<key name="Task5" modified="2018-09-14 22:19:47" build="180626">
+					<value name="Name" type="string" data="{WSL::Bionic}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data='/icon "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu.exe"'/>
@@ -530,8 +530,8 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task6" modified="2018-08-30 10:56:07" build="180626">
-					<value name="Name" type="string" data="{wsl::Xenial | Bionic}"/>
+				<key name="Task6" modified="2018-09-14 22:19:47" build="180626">
+					<value name="Name" type="string" data="{WSL::Xenial | Bionic}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data='/icon "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu.exe"'/>
@@ -540,8 +540,8 @@
 					<value name="Count" type="long" data="2"/>
 					<value name="Cmd2" type="string" data='{wsl::Bionic} -new_console:t:"wsl:Bionic R" -cur_console:s50H'/>
 				</key>
-				<key name="Task7" modified="2018-08-30 10:56:07" build="180626">
-					<value name="Name" type="string" data="{wsl::Stretch}"/>
+				<key name="Task7" modified="2018-09-14 22:19:47" build="180626">
+					<value name="Name" type="string" data="{WSL::Stretch}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data='/icon "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\debian.exe"'/>
@@ -956,7 +956,7 @@
 			</key>
 			<value name="StartCreateDelay" type="ulong" data="100"/>
 			<value name="DefaultTerminalDebugLog" type="hex" data="00"/>
-			<value name="LastMonitor" type="string" data="1920,0,3840,1050"/>
+			<value name="LastMonitor" type="string" data="0,0,3200,1724"/>
 			<value name="Restore2ActiveMon" type="hex" data="00"/>
 			<value name="DownShowExOnTopMessage" type="hex" data="00"/>
 			<value name="EnvironmentSet" type="multi">
