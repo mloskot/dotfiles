@@ -261,11 +261,12 @@ local function git_prompt_filter()
         local color
         if branch then
             -- Has branch => therefore it is a git folder, now figure out status
-            if get_git_status() then
+            --XXX: Disable git status due to lag in large repo
+            --if get_git_status() then
                 color = colors.clean
-            else
-                color = colors.dirty
-            end
+            --else
+            --    color = colors.dirty
+            --end
 
             clink.prompt.value = string.gsub(clink.prompt.value, "{git}", color.."("..branch..")")
             return false
