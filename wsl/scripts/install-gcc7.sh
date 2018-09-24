@@ -1,7 +1,14 @@
 #!/bin/sh
 set -x
 
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test               # latest GCC
+if type lsb_release >/dev/null 2>&1; then
+    if lsb_release -sc | grep bionic; then
+        echo "Ubuntu Bionic with native GCC 8 packages"
+    else
+        sudo add-apt-repository ppa:ubuntu-toolchain-r/test   # latest GCC
+    fi
+fi
+
 sudo apt-get update
 sudo apt-get install gcc-7 g++-7
 
