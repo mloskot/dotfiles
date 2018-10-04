@@ -641,7 +641,7 @@
 					<value name="GuiArgs" type="string" data=' /icon "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='*%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars32.bat" x64_x86 -new_console:t:"VS2017 x86" -new_console:d:"F:\V9.Win32"'/>
+					<value name="Cmd1" type="string" data='*%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars32.bat" x64_x86 -new_console:t:"VS2017 x86" -new_console:d:"F:\V91.Win32"'/>
 				</key>
 				<key name="Task18" modified="2018-09-17 17:58:36" build="180626">
 					<value name="Name" type="string" data="{VS2017::64 As Admin}"/>
@@ -650,7 +650,7 @@
 					<value name="GuiArgs" type="string" data=' /icon "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='*%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars64.bat" -new_console:t:"VS2017 x64 as Admin" -new_console:d:"F:\V9.x64"'/>
+					<value name="Cmd1" type="string" data='*%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars64.bat" -new_console:t:"VS2017 x64 as Admin" -new_console:d:"F:\V91.x64"'/>
 				</key>
 				<key name="Task19" modified="2018-09-17 17:58:36" build="180626">
 					<value name="Name" type="string" data="{VS2017 Preview::64 As Admin}"/>
