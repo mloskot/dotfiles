@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2018-09-29 21:25:14" build="180626">
+		<key name=".Vanilla" modified="2018-10-04 19:49:32" build="180626">
 			<value name="ColorTable00" type="dword" data="00222827"/>
 			<value name="ColorTable01" type="dword" data="009e5401"/>
 			<value name="ColorTable02" type="dword" data="0004aa74"/>
@@ -623,7 +623,7 @@
 					<value name="GuiArgs" type="string" data='/icon "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\vcvarsall.bat"" x64_x86 -new_console:t:"VS2012 x86" -new_console:d:"F:\V8.win32"'/>
+					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\vcvarsall.bat" x86 &amp; "%ConEmuDir%\..\init.bat"" -new_console:t:"VS2012 x86" -new_console:d:"F:\V8.win32"'/>
 				</key>
 				<key name="Task16" modified="2018-09-17 17:58:36" build="180626">
 					<value name="Name" type="string" data="{VS2012::64 As Admin}"/>
@@ -632,7 +632,7 @@
 					<value name="GuiArgs" type="string" data='/icon "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\vcvarsall.bat"" amd64 -new_console:t:"VS2012 x64" -new_console:d:"F:\V8.x64"'/>
+					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\vcvarsall.bat" amd64 &amp; "%ConEmuDir%\..\init.bat"" -new_console:t:"VS2012 x64" -new_console:d:"F:\V8.x64"'/>
 				</key>
 				<key name="Task17" modified="2018-09-17 17:58:36" build="180626">
 					<value name="Name" type="string" data="{VS2017::32 As Admin}"/>
@@ -641,7 +641,7 @@
 					<value name="GuiArgs" type="string" data=' /icon "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='*%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars32.bat" x64_x86 -new_console:t:"VS2017 x86" -new_console:d:"F:\V91.Win32"'/>
+					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars32.bat" x64_x86 &amp; "%ConEmuDir%\..\init.bat"" -new_console:t:"VS2017 x86" -new_console:d:"F:\V91.Win32"'/>
 				</key>
 				<key name="Task18" modified="2018-09-17 17:58:36" build="180626">
 					<value name="Name" type="string" data="{VS2017::64 As Admin}"/>
@@ -650,7 +650,7 @@
 					<value name="GuiArgs" type="string" data=' /icon "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='*%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars64.bat" -new_console:t:"VS2017 x64 as Admin" -new_console:d:"F:\V91.x64"'/>
+					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars64.bat" &amp; "%ConEmuDir%\..\init.bat"" -new_console:t:"VS2017 x64 as Admin" -new_console:d:"F:\V91.x64"'/>
 				</key>
 				<key name="Task19" modified="2018-09-17 17:58:36" build="180626">
 					<value name="Name" type="string" data="{VS2017 Preview::64 As Admin}"/>
@@ -966,7 +966,7 @@
 			</key>
 			<value name="StartCreateDelay" type="ulong" data="100"/>
 			<value name="DefaultTerminalDebugLog" type="hex" data="00"/>
-			<value name="LastMonitor" type="string" data="0,0,3200,1724"/>
+			<value name="LastMonitor" type="string" data="1920,0,3840,1050"/>
 			<value name="Restore2ActiveMon" type="hex" data="00"/>
 			<value name="DownShowExOnTopMessage" type="hex" data="00"/>
 			<value name="EnvironmentSet" type="multi">
