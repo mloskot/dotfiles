@@ -8,7 +8,8 @@ REM reset the whole repository and its modules:
 setlocal
 set BRANCH="master"
 if NOT "%~1"=="" set BRANCH="%1"
-git rev-parse --verify --quiet %BRANCH% > nul 2>&1
+REM git rev-parse --verify --quiet %BRANCH% > nul 2>&1
+git show-branch remotes/origin/%BRANCH% > nul 2>&1
 IF %ERRORLEVEL% NEQ 0 (
     @echo Boost super-project branch %BRANCH% not found, aborting.
     goto :EOF
