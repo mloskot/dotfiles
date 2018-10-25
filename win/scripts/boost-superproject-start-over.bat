@@ -17,9 +17,12 @@ IF %ERRORLEVEL% NEQ 0 (
 
 git clean -xfd
 git submodule foreach --recursive git clean -xfd
+
 git reset --hard
 git submodule foreach --recursive git reset --hard
+
 git checkout %BRANCH%
 git pull
 git submodule update --init --recursive --jobs 8
+
 git branch
