@@ -4,7 +4,6 @@ then
 else
 	TITLEPREFIX=$MSYSTEM
 fi
-TITLEPREFIX="Bash Prompt (Git for Windows)"
 
 if test -f ~/.config/git/git-prompt.sh
 then
