@@ -1,44 +1,50 @@
 [user]
-    name = Mateusz Łoskot
-    email = mateusz@loskot.net
-    signingkey = BB2AC1F2
+	name = Mateusz Łoskot
+	email = mateusz@loskot.net
+	signingkey = BB2AC1F2
 
 [github]
-    user = mloskot
-
-[core]
-    editor = vim
+	user = mloskot
 
 [color]
-    branch = auto
-    diff = auto
-    status = auto
-    ui = auto
+	branch = auto
+	diff = auto
+	status = auto
+	ui = auto
+
+[core]
+	editor = vim
 
 [alias]
-    # commands shorcuts
-    br = branch
-    bv = branch -vv
-    ci = commit --verbose
-    co = checkout
-    dc = diff --cached
-    df = diff
-    gf = flow
-    rt = remote
-    rv = remote -v
-    st = status
-    # log aliases
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-    ls = ls-files
-    # generate GitHub repository changelog in Markdown
-    # usage: git <alias> first_tag last_tag github_user github_repo
-    ghclm = !sh -c 'git log $1...$2  --pretty=format:\"* [view](http://github.com/$3/$4/commit/%H) - %s\"' -
-    # show files ignored by git:
-    ign = ls-files -o -i --exclude-standard
-    prune-branches-origin = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
-    prune-branches-mloskot = !git remote prune mloskot && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
+	br = branch
+	bv = branch -vv
+	ci = commit --verbose
+	cia = commit --verbose --amend
+	ciae = commit --verbose --amend --no-edit
+	co = checkout
+	dc = diff --cached
+	df = diff
+	gf = flow
+	rt = remote
+	rv = remote -v
+	st = status
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ls = ls-files
+	# generate GitHub repository changelog in Markdown
+	# usage: git <alias> first_tag last_tag github_user github_repo
+	ghclm = !sh -c 'git log $1...$2  --pretty=format:\"* [view](http://github.com/$3/$4/commit/%H) - %s\"' -
+	# show files ignored by git:
+	ign = ls-files -o -i --exclude-standard
+	prune-branches-origin = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
+	prune-branches-mloskot = !git remote prune mloskot && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
 
 [commit]
-    template = ~/.gitmessage
+	template = ~/.gitmessage
+
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
