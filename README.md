@@ -37,6 +37,14 @@ No fancy all-in-one installer script.
 - `git-prompt.sh` for preferred Bash prompt
 
   ```shell
+  
+  mklink %CD%\win\home\.config\git\git-prompt.sh %USERPROFILE%\.config\git\git-prompt.sh
+  ```
+
+  or
+
+  ```shell
+  del /S /Q "c:\Program Files\Git\etc\profile.d\git-prompt.sh"
   mklink "c:\Program Files\Git\etc\profile.d\git-prompt.sh" %CD%\win\git\etc\profile.d\git-prompt.sh
   ```
 
