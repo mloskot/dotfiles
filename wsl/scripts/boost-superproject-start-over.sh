@@ -11,7 +11,7 @@ if [ "$1" != "" ]; then
 fi
 git show-branch remotes/origin/$BRANCH > /dev/null 2>&1
 if [ $? != 0 ]; then
-    echo Boost super-project branch %BRANCH% not found, aborting.
+    echo Boost super-project branch $BRANCH not found, aborting.
     exit 0
 fi
 
