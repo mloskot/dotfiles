@@ -1,5 +1,5 @@
 #!/usr/bin/env powershell
-$version = '3.13.0-rc2'
+$version = '3.13.0'
 
 $major, $minor, $patch = $version.split('.');
 try {
