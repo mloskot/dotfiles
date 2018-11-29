@@ -1,4 +1,6 @@
 #!/usr/bin/env powershell
+#Requires -RunAsAdministrator
+
 $version = '3.13.1'
 
 $major, $minor, $patch = $version.split('.');
