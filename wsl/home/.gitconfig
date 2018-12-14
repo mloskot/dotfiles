@@ -32,16 +32,17 @@
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     ls = ls-files
     lst = lfs status
+    # what new commits have been created by the last command – typically after a git pull
+    new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
     rt = remote
     rtv = remote -v
     st = status
-    # generate GitHub repository changelog in Markdown
-    # usage: git <alias> first_tag last_tag github_user github_repo
-    ghclm = !sh -c 'git log $1...$2  --pretty=format:\"* [view](http://github.com/$3/$4/commit/%H) - %s\"' -
+    # Dump GitHub repo history to changelog in Markdown
+    # usage: git ghclm first_tag last_tag github_user github_repo
+    ghclm = "!f() { git log $1...$2  --pretty=format:\"* [view](http://github.com/$3/$4/commit/%H) - %s\"; }; f"
     # show files ignored by git:
     ign = ls-files -o -i --exclude-standard
-    prune-branches-origin = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
-    prune-branches-mloskot = !git remote prune mloskot && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D
+    prune-branches = "!f() { git remote prune $1 && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D; }; f"
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 
 [commit]
