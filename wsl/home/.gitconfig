@@ -27,11 +27,11 @@
     dc = diff --cached
     df = diff
     gf = flow
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-    ls = ls-files
-    lst = lfs status
+    lcg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lgd = log --graph --decorate --pretty=oneline --abbrev-commit
+    lgda = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    lsf = ls-files
+    lfst = lfs status
     # what new commits have been created by the last command – typically after a git pull
     new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
     rt = remote
@@ -44,6 +44,7 @@
     ign = ls-files -o -i --exclude-standard
     prune-branches = "!f() { git remote prune $1 && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D; }; f"
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
 
 [commit]
     template = ~/.gitmessage
