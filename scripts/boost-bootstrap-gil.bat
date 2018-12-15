@@ -5,7 +5,7 @@ if not exist boost-build.jam (
     exit /b 1
 )
 
-.\bootstrap.bat
+call .\bootstrap.bat
 .\b2 -j8 headers
 
 rem .\b2 -j8 --with-test --with-filesystem variant=debug stage
