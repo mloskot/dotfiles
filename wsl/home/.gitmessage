@@ -1,3 +1,2 @@
 
-
-[ci skip]
+[skip appveyor] [skip travis] [ci skip]
