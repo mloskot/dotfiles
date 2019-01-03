@@ -7,7 +7,7 @@
     user = mloskot
 
 [core]
-    editor = vim
+    editor = code --wait -n
 
 [color]
     branch = auto
@@ -60,5 +60,6 @@
     smudge = git-lfs smudge --skip -- %f
     process = git-lfs filter-process --skip
     required = true
+
 [http]
 	postBuffer = 1048576000
