@@ -1,65 +1,69 @@
 [user]
-    name = Mateusz Łoskot
-    email = mateusz@loskot.net
-    signingkey = BB2AC1F2
+	name = Mateusz Łoskot
+	email = mateusz@loskot.net
+	signingkey = BB2AC1F2
 
 [github]
-    user = mloskot
+	user = mloskot
 
 [core]
-    editor = code --wait -n
+	editor = code --wait -n
 
 [color]
-    branch = auto
-    diff = auto
-    status = auto
-    ui = auto
+	branch = auto
+	diff = auto
+	status = auto
+	ui = auto
 
 [alias]
-    br = branch
-    bv = branch -vv
-    brv = branch -vv
-    bra = branch -a
-    ci = commit --verbose
-    cia = commit --verbose --amend
-    ciae = commit --verbose --amend --no-edit
-    co = checkout
-    dc = diff --cached
-    df = diff
-    gf = flow
-    lcg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    lgd = log --graph --decorate --pretty=oneline --abbrev-commit
-    lgda = log --graph --decorate --pretty=oneline --abbrev-commit --all
-    lsf = ls-files
-    lfst = lfs status
-    # what new commits have been created by the last command – typically after a git pull
-    new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
-    rt = remote
-    rta = remote add
-    rtr = remote remove
-    rtv = remote -v
-    st = status
-    # Dump GitHub repo history to changelog in Markdown
-    # usage: git ghclm first_tag last_tag github_user github_repo
-    ghclm = "!f() { git log $1...$2  --pretty=format:\"* [view](http://github.com/$3/$4/commit/%H) - %s\"; }; f"
-    # show files ignored by git:
-    ign = ls-files -o -i --exclude-standard
-    prune-branches = "!f() { git remote prune $1 && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D; }; f"
-    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-    graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+	br = branch
+	bv = branch -vv
+	brv = branch -vv
+	bra = branch -a
+	ci = commit --verbose
+	cia = commit --verbose --amend
+	ciae = commit --verbose --amend --no-edit
+	co = checkout
+	dc = diff --cached
+	df = diff
+	gf = flow
+	lcg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lgd = log --graph --decorate --pretty=oneline --abbrev-commit
+	lgda = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	lsf = ls-files
+	lfst = lfs status
+	# what new commits have been created by the last command – typically after a git pull
+	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+	rt = remote
+	rta = remote add
+	rtr = remote remove
+	rtv = remote -v
+	st = status
+	# Dump GitHub repo history to changelog in Markdown
+	# usage: git ghclm first_tag last_tag github_user github_repo
+	ghclm = "!f() { git log $1...$2  --pretty=format:\"* [view](http://github.com/$3/$4/commit/%H) - %s\"; }; f"
+	# show files ignored by git:
+	ign = ls-files -o -i --exclude-standard
+	prune-branches = "!f() { git remote prune $1 && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D; }; f"
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
 	ra = remote add
 
 [commit]
-    template = ~/.gitmessage
+	template = ~/.gitmessage
 
 [credential]
-    helper = manager
-
-[filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge --skip -- %f
-    process = git-lfs filter-process --skip
-    required = true
+	helper = manager
 
 [http]
 	postBuffer = 1048576000
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[difftool "sourcetree"]
+	cmd = '' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true
