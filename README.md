@@ -10,6 +10,7 @@ No fancy all-in-one installer script.
 ## Windows
 
 - `ConEmu.xml` with custom tasks to [Cmder](http://cmder.net/) config directory
+
   ```shell
   mv C:\apps\cmder_mini\vendor\conemu-maximus5\ConEmu.xml C:\apps\cmder_mini\vendor\conemu-maximus5\ConEmu.xml.original
   mklink C:\apps\cmder_mini\vendor\conemu-maximus5\ConEmu.xml %CD%\win\cmder_mini\vendor\conemu-maximus5\ConEmu.xml
@@ -37,7 +38,6 @@ No fancy all-in-one installer script.
 - `git-prompt.sh` for preferred Bash prompt
 
   ```shell
-  
   mklink %CD%\win\home\.config\git\git-prompt.sh %USERPROFILE%\.config\git\git-prompt.sh
   ```
 
