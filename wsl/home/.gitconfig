@@ -11,7 +11,24 @@
 	diff = auto
 	status = auto
 	ui = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	header = normal
+	added = red
+	updated = green
+	changed = red
+	untracked = red
+	nobranch = red
 [alias]
+	### Basics
 	br = branch
 	bv = branch -vv
 	brv = branch -vv
@@ -22,28 +39,45 @@
 	co = checkout
 	dc = diff --cached
 	df = diff
-	gf = flow
-	lcg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	lgd = log --graph --decorate --pretty=oneline --abbrev-commit
-	lgda = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ign = ls-files -o -i --exclude-standard
 	lsf = ls-files
 	lfst = lfs status
-	# what new commits have been created by the last command – typically after a git pull
-	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+	ra = remote add
 	rt = remote
 	rta = remote add
 	rtr = remote remove
 	rtv = remote -v
 	st = status
+	### History
+	lcg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lgd = log --graph --decorate --pretty=oneline --abbrev-commit
+	lgda = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	# what new commits have been created by the last command – typically after a git pull
+	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+	##### Pretty Git graphs (https://stackoverflow.com/a/22481650/151641)
+	logx = log --all --graph --decorate=short --color --format=format:'%C(bold blue)%h%C(reset)+%C(dim black)(%cr)%C(reset)+%C(auto)%d%C(reset)++\n+++       %C(bold black)%an%C(reset)%C(black): %s%C(reset)'
+	tree = log --all --graph --decorate=short --color --format=format:'%C(bold blue)%h%C(reset) %C(auto)%d%C(reset)\n         %C(black)[%cr]%C(reset)  %x09%C(black)%an: %s %C(reset)'
+	stree = !bash -c '"                                                                             \
+		while IFS=+ read -r hash time branch message; do                                            \
+			timelength=$(echo \"$time\" | sed -r \"s:[^ ][[]([0-9]{1,2}(;[0-9]{1,2})?)?m::g\");     \
+			timelength=$(echo \"16+${#time}-${#timelength}\" | bc);                                 \
+			printf \"%${timelength}s    %s %s %s\n\" \"$time\" \"$hash\" \"$branch\" \"\";          \
+		done < <(git logx && echo);"'
+	vtree = !bash -c '"                                                                             \
+		while IFS=+ read -r hash time branch message; do                                            \
+			timelength=$(echo \"$time\" | sed -r \"s:[^ ][[]([0-9]{1,2}(;[0-9]{1,2})?)?m::g\");     \
+			timelength=$(echo \"16+${#time}-${#timelength}\" | bc);                                 \
+			printf \"%${timelength}s    %s %s %s\n\" \"$time\" \"$hash\" \"$branch\" \"$message\";  \
+		done < <(git logx && echo);"'
 	# Dump GitHub repo history to changelog in Markdown
 	# usage: git ghclm first_tag last_tag github_user github_repo
 	ghclm = "!f() { git log $1...$2  --pretty=format:\"* [view](http://github.com/$3/$4/commit/%H) - %s\"; }; f"
 	# show ignored files
-	ign = ls-files -o -i --exclude-standard
-	prune-branches = "!f() { git remote prune $1 && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D; }; f"
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
-	ra = remote add
+	### Branches maintenance
+	prune-branches = "!f() { git remote prune $1 && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D; }; f"
+
 [commit]
 	template = ~/.gitmessage
 [credential]
