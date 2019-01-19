@@ -6,7 +6,8 @@ PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]' # set window title
 #PS1="$PS1"'$MSYSTEM '          # show MSYSTEM
 #PS1="$PS1"'\[\033[33m\]'       # change to brownish yellow
 PS1="$PS1"'\[\033[32m\]'       # change to green instead of brownish yellow
-PS1="$PS1"'\w'                 # current working directory
+#PS1="$PS1"'\w'                 # current working directory path
+PS1="$PS1"'\W'                 # current working directory name
 if test -z "$WINELOADERNOEXEC"
 then
 	GIT_EXEC_PATH="$(git --exec-path 2>/dev/null)"
