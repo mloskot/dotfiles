@@ -48,6 +48,10 @@
 	rtr = remote remove
 	rtv = remote -v
 	st = status
+	### Temporary ignore files
+	skip = !git update-index --assume-unchanged 
+	unskip = !git update-index --no-assume-unchanged
+	skipped = !git ls-files -v | grep -e '^[[:lower:]]'
 	### History
 	l = log  --color --graph --oneline
 	l2 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
