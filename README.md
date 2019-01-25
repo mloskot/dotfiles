@@ -32,7 +32,7 @@ No fancy all-in-one installer script.
 
   ```shell
   cmd <<< "%USERPROFILE%\.gitconfig %CD%\wsl\home\.gitconfig"
-  cmd <<< "%USERPROFILE%\.gitmessage %CD%\wsl\home\.gitmessage"
+  cmd <<< "%USERPROFILE%\message.gitconfig %CD%\wsl\home\message.gitconfig"
   cmd <<< "mklink %USERPROFILE%\alias_basic.gitconfig %CD%\wsl\home\alias_basic.gitconfig"
   cmd <<< "mklink %USERPROFILE%\alias_ignore.gitconfig %CD%\wsl\home\alias_ignore.gitconfig"
   cmd <<< "mklink %USERPROFILE%\alias_log.gitconfig %CD%\wsl\home\alias_log.gitconfig"
