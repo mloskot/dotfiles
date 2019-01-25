@@ -22,6 +22,11 @@ No fancy all-in-one installer script.
   mklink C:\apps\cmder_mini\vendor\clink.lua %CD%\win\cmder_mini\vendor\clink.lua
   ```
 
+- `clink-completions\git_prompt.lua`
+
+  ```shell
+  mklink C:\apps\cmder_mini\vendor\clink-completions\git_prompt.lua %CD%\win\cmder_mini\vendor\clink-completions\git_prompt.lua
+  ```
 - `code.cmd` for [Code Insiders](https://code.visualstudio.com/insiders/)
 
   ```shell
