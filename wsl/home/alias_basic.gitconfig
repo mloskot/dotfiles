@@ -1,0 +1,20 @@
+[alias]
+	br = branch
+	bv = branch -vv
+	brv = branch -vv
+	bra = branch -a
+	ci = commit --verbose
+	cia = commit --verbose --amend
+	ciae = commit --verbose --amend --no-edit
+	co = checkout
+	dc = diff --cached
+	df = diff
+	ign = ls-files -o -i --exclude-standard
+	lsf = ls-files
+	lfst = lfs status
+	ra = remote add
+	rt = remote
+	rta = remote add
+	rtr = remote remove
+	rtv = remote -v
+	st = status

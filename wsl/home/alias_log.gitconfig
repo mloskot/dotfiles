@@ -1,0 +1,16 @@
+[alias]
+	l = log  --color --graph --oneline
+	l2 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	la = log  --color --graph --oneline --all
+
+	# what new commits have been created by the last command – typically after a git pull
+	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+
+	# Dump GitHub repo history to changelog in Markdown
+	# usage: git ghclm first_tag last_tag github_user github_repo
+	ghclm = "!f() { git log $1...$2  --pretty=format:\"* [view](http://github.com/$3/$4/commit/%H) - %s\"; }; f"
+
+	# show ignored files
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+
