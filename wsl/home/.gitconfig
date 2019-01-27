@@ -34,9 +34,8 @@
 	path = ~/alias_log.gitconfig
 	path = ~/alias_tree.gitconfig
 	path = ~/alias_misc.gitconfig
-
 [commit]
-	template = ~/.gitmessage
+	template = ~/message.gitconfig
 [credential]
 	helper = manager
 [http]
