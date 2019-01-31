@@ -46,7 +46,7 @@
 	process = git-lfs filter-process
 	required = true
 [difftool "sourcetree"]
-	cmd = '' \"$LOCAL\" \"$REMOTE\"
+	cmd = 'C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe' \"$LOCAL\" \"$REMOTE\"
 [mergetool "sourcetree"]
-	cmd = "'' "
+	cmd = 'C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe'  -base:\"$BASE\" -mine:\"$LOCAL\" -theirs:\"$REMOTE\" -merged:\"$MERGED\"
 	trustExitCode = true
