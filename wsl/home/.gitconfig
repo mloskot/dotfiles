@@ -38,15 +38,24 @@
 	template = ~/message.gitconfig
 [credential]
 	helper = manager
-[http]
-	postBuffer = 1048576000
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[difftool "sourcetree"]
-	cmd = 'C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe' \"$LOCAL\" \"$REMOTE\"
-[mergetool "sourcetree"]
-	cmd = 'C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe'  -base:\"$BASE\" -mine:\"$LOCAL\" -theirs:\"$REMOTE\" -merged:\"$MERGED\"
-	trustExitCode = true
+
+[difftool]
+    prompt = false
+[difftool "vscode"]
+    cmd = 'C:/Program Files/Microsoft VS Code/bin/code' \"$LOCAL\" \"$REMOTE\" --diff --wait
+    trustExitCode = false
+[difftool "TortoiseGitMerge"]
+    cmd = 'C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe' \"$LOCAL\" \"$REMOTE\"
+    trustExitCode = false
+[mergetool "TortoiseGitMerge"]
+    cmd = 'C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe'  -base:\"$BASE\" -mine:\"$LOCAL\" -theirs:\"$REMOTE\" -merged:\"$MERGED\"
+    trustExitCode = true
+[diff]
+    tool = vscode
+[merge]
+    tool = TortoiseGitMerge
