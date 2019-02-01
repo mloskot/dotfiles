@@ -1,4 +1,5 @@
 [alias]
 	# Branches maintenance
 	prune-branches = "!f() { git remote prune $1 && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D; }; f"
-	fork = "!f() { ~/AppData/Local/Fork/Fork.exe $PWD; }; f"
+	fapp = "!f() { ~/AppData/Local/Fork/Fork.exe $PWD; }; f"
+
