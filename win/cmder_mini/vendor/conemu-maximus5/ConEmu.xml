@@ -483,8 +483,8 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-			<key name="Tasks" modified="2019-01-21 13:33:21" build="190108">
-				<value name="Count" type="long" data="19"/>
+			<key name="Tasks" modified="2019-02-01 22:35:14" build="190108">
+				<value name="Count" type="long" data="20"/>
 				<key name="Task1" modified="2019-01-26 00:17:09" build="190108">
 					<value name="Name" type="string" data="{Git Bash}"/>
 					<value name="GuiArgs" type="string" data=' /icon "%SystemDrive%\Program Files\Git\mingw64\share\git\git-for-windows.ico"'/>
@@ -659,6 +659,15 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*%comspec% /k "c:\Program Files (x86)\Microsoft Visual Studio\Preview\Professional\VC\Auxiliary\Build\vcvars64.bat" -new_console:t:"VS2017 Preview x64 as Admin" -new_console:d:"D:\"'/>
+				</key>
+				<key name="Task20" modified="2019-02-01 22:35:14" build="190108">
+					<value name="Name" type="string" data="{VS2019 Preview::64 As Admin}"/>
+					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=' /icon "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\IDE\devenv.exe"'/>
+					<value name="Active" type="long" data="0"/>
+					<value name="Count" type="long" data="1"/>
+					<value name="Cmd1" type="string" data='*%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\VC\Auxiliary\Build\vcvars64.bat" -new_console:t:"VS2019 Preview x64 as Admin" -new_console:d:"D:\"'/>
 				</key>
 			</key>
 			<key name="Apps" modified="2018-02-22 06:05:13" build="171109">
