@@ -1,6 +1,6 @@
-[includeIf "gitdir:F:/"]
+[includeIf "gitdir/i:F:/"]
 	path = ~/user_work.gitconfig
-[includeIf "gitdir:D:/"]
+[includeIf "gitdir/i:D:/"]
 	path = ~/user_personal.gitconfig
 [github]
 	user = mloskot
@@ -55,6 +55,6 @@
     tool = TortoiseGitMerge
 [filter "lfs"]
 	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+	smudge = git-lfs smudge --skip -- %f
+	process = git-lfs filter-process --skip
 	required = true
