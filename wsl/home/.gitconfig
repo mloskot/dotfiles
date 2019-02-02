@@ -1,7 +1,7 @@
-[user]
-	name = Mateusz Łoskot
-	email = mateusz@loskot.net
-	signingkey = BB2AC1F2
+[includeIf "gitdir:F:/"]
+	path = ~/user_work.gitconfig
+[includeIf "gitdir:D:/"]
+	path = ~/user_personal.gitconfig
 [github]
 	user = mloskot
 [core]
@@ -38,12 +38,6 @@
 	template = ~/message.gitconfig
 [credential]
 	helper = manager
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-
 [difftool]
     prompt = false
 [difftool "vscode"]
@@ -59,3 +53,8 @@
     tool = vscode
 [merge]
     tool = TortoiseGitMerge
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

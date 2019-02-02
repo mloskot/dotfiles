@@ -36,8 +36,10 @@ No fancy all-in-one installer script.
 - `.gitconfig` works for both
 
   ```shell
-  cmd <<< "%USERPROFILE%\.gitconfig %CD%\wsl\home\.gitconfig"
-  cmd <<< "%USERPROFILE%\message.gitconfig %CD%\wsl\home\message.gitconfig"
+  cmd <<< "mklink %USERPROFILE%\.gitconfig %CD%\wsl\home\.gitconfig"
+  cmd <<< "mklink %USERPROFILE%\user_personal.gitconfig %CD%\wsl\home\user_personal.gitconfig"
+  cmd <<< "mklink %USERPROFILE%\user_work.gitconfig %CD%\wsl\home\user_work.gitconfig"
+  cmd <<< "mklink %USERPROFILE%\message.gitconfig %CD%\wsl\home\message.gitconfig"
   cmd <<< "mklink %USERPROFILE%\alias_basic.gitconfig %CD%\wsl\home\alias_basic.gitconfig"
   cmd <<< "mklink %USERPROFILE%\alias_ignore.gitconfig %CD%\wsl\home\alias_ignore.gitconfig"
   cmd <<< "mklink %USERPROFILE%\alias_log.gitconfig %CD%\wsl\home\alias_log.gitconfig"
