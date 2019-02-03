@@ -1,0 +1,9 @@
+mklink %USERPROFILE%\.gitconfig %CD%\wsl\home\.gitconfig
+mklink %USERPROFILE%\user_personal.gitconfig %CD%\wsl\home\user_personal.gitconfig
+mklink %USERPROFILE%\user_work.gitconfig %CD%\wsl\home\user_work.gitconfig
+mklink %USERPROFILE%\message.gitconfig %CD%\wsl\home\message.gitconfig
+mklink %USERPROFILE%\alias_basic.gitconfig %CD%\wsl\home\alias_basic.gitconfig
+mklink %USERPROFILE%\alias_ignore.gitconfig %CD%\wsl\home\alias_ignore.gitconfig
+mklink %USERPROFILE%\alias_log.gitconfig %CD%\wsl\home\alias_log.gitconfig
+mklink %USERPROFILE%\alias_tree.gitconfig %CD%\wsl\home\alias_tree.gitconfig
+mklink %USERPROFILE%\alias_misc.gitconfig %CD%\wsl\home\alias_misc.gitconfig
