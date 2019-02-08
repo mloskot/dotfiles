@@ -7,6 +7,13 @@ Windows Subsystem for Linux (Ubuntu, Debian, etc.).
 
 No fancy all-in-one installer script.
 
+## Git
+
+```console
+cd git
+install.bat
+```
+
 ## Windows
 
 - `ConEmu.xml` with custom tasks to [Cmder](http://cmder.net/) config directory
@@ -35,18 +42,6 @@ No fancy all-in-one installer script.
 
 - `.gitconfig` works for both
 
-  ```shell
-  cmd <<< "mklink %USERPROFILE%\.gitconfig %CD%\wsl\home\.gitconfig"
-  cmd <<< "mklink %USERPROFILE%\user_personal.gitconfig %CD%\wsl\home\user_personal.gitconfig"
-  cmd <<< "mklink %USERPROFILE%\user_work.gitconfig %CD%\wsl\home\user_work.gitconfig"
-  cmd <<< "mklink %USERPROFILE%\message.gitconfig %CD%\wsl\home\message.gitconfig"
-  cmd <<< "mklink %USERPROFILE%\alias_basic.gitconfig %CD%\wsl\home\alias_basic.gitconfig"
-  cmd <<< "mklink %USERPROFILE%\alias_ignore.gitconfig %CD%\wsl\home\alias_ignore.gitconfig"
-  cmd <<< "mklink %USERPROFILE%\alias_log.gitconfig %CD%\wsl\home\alias_log.gitconfig"
-  cmd <<< "mklink %USERPROFILE%\alias_tree.gitconfig %CD%\wsl\home\alias_tree.gitconfig"
-  cmd <<< "mklink %USERPROFILE%\alias_misc.gitconfig %CD%\wsl\home\alias_misc.gitconfig"
-  ```
-
 - `git-prompt.sh` for preferred Bash prompt
 
   ```shell
@@ -62,5 +57,4 @@ No fancy all-in-one installer script.
 
 ## WSL
 
-- symlink files from `wsl/home` in `$HOME`
-- run any of `scripts`
+Nothing yet.
