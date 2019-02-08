@@ -3,6 +3,9 @@
 	l2 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	la = log  --color --graph --oneline --all
 
+	# git show with message and full authorship
+	wosh = show --pretty=full --no-patch
+
 	# what new commits have been created by the last command – typically after a git pull
 	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
 
