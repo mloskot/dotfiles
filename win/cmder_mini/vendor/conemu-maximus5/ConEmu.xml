@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2019-02-01 22:18:27" build="190108">
+		<key name=".Vanilla" modified="2019-02-15 12:54:46" build="190108">
 			<value name="ColorTable00" type="dword" data="00000000"/>
 			<value name="ColorTable01" type="dword" data="009e5401"/>
 			<value name="ColorTable02" type="dword" data="0004aa74"/>
@@ -127,8 +127,8 @@
 			<value name="ConWnd Width" type="dword" data="00000068"/>
 			<value name="ConWnd Height" type="dword" data="00000019"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="long" data="2075"/>
-			<value name="ConWnd Y" type="long" data="-112"/>
+			<value name="ConWnd X" type="long" data="1927"/>
+			<value name="ConWnd Y" type="long" data="-104"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
@@ -651,23 +651,23 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars64.bat" &amp; "%ConEmuDir%\..\init.bat"" -new_console:t:"VS2017 x64 as Admin" -new_console:d:"F:\V91.x64"'/>
 				</key>
-				<key name="Task19" modified="2019-01-21 13:33:21" build="190108">
+				<key name="Task19" modified="2019-02-15 10:02:11" build="190108">
 					<value name="Name" type="string" data="{VS2017 Preview::64 As Admin}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=' /icon "C:\Program Files (x86)\Microsoft Visual Studio\Preview\Professional\Common7\IDE\devenv.exe"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='*%comspec% /k "c:\Program Files (x86)\Microsoft Visual Studio\Preview\Professional\VC\Auxiliary\Build\vcvars64.bat" -new_console:t:"VS2017 Preview x64 as Admin" -new_console:d:"D:\"'/>
+					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio\Preview\Professional\VC\Auxiliary\Build\vcvars64.bat" &amp; "%ConEmuDir%\..\init.bat"" -new_console:t:"VS2017 Preview x64 as Admin" -new_console:d:"D:\"'/>
 				</key>
-				<key name="Task20" modified="2019-02-01 22:35:14" build="190108">
+				<key name="Task20" modified="2019-02-15 10:02:11" build="190108">
 					<value name="Name" type="string" data="{VS2019 Preview::64 As Admin}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=' /icon "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\IDE\devenv.exe"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='*%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\VC\Auxiliary\Build\vcvars64.bat" -new_console:t:"VS2019 Preview x64 as Admin" -new_console:d:"D:\"'/>
+					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\VC\Auxiliary\Build\vcvars64.bat" &amp; "%ConEmuDir%\..\init.bat"" -new_console:t:"VS2019 Preview x64 as Admin" -new_console:d:"D:\"'/>
 				</key>
 			</key>
 			<key name="Apps" modified="2018-02-22 06:05:13" build="171109">
