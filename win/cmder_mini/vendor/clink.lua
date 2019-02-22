@@ -363,11 +363,11 @@ local function svn_prompt_filter()
         local branch = get_svn_branch()
         local color
         if branch then
-            if get_svn_status() then
-                color = colors.clean
-            else
-                color = colors.dirty
-            end
+            --if get_svn_status() then
+                 color = colors.clean
+            --else
+            --     color = colors.dirty
+            --end
 
             clink.prompt.value = string.gsub(clink.prompt.value, "{svn}", color.."("..verbatim(branch)..")")
             return false
