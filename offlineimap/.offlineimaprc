@@ -1,0 +1,36 @@
+[general]
+ui = ttyui
+accounts = Gmail
+maxsyncaccounts = 1
+
+[Account Gmail]
+localrepository = Local
+remoterepository = Remote
+
+[Repository Local]
+type = GmailMaildir
+localfolders = ~/Mail/Gmail
+# Remove Gmail prefix on Google-specific IMAP folders that are pulled down
+nametrans = lambda f: '[Gmail]/' + f if f in ['Drafts', 'Starred', 'Important', 'Spam', 'Trash', 'Bin', 'All Mail', 'Sent Mail'] else f
+
+[Repository Remote]
+type = Gmail
+remoteuser = mateusz@loskot.net
+# Remove Gmail prefix on IMAP folders
+nametrans = lambda f: f.replace('[Gmail]/', '') if f.startswith('[Gmail]/') else f
+# Setting realdelete=yes will Really Delete email from the server.
+# Otherwise, 'deleting' a message will just remove any labels and
+# retain the message in the All Mail folder.
+realdelete = no
+# Debian/Ubuntu
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+# Authentication
+# 1. Create client ID at https://console.developers.google.com/apis/credentials
+# 2. git clone https://github.com/google/gmail-oauth2-tools
+# 3. python python/oauth2.py --generate_oauth2_token --client_id=SECRET_CLIENT_ID --client_secret=SECRET_CLIENT_SECRET
+# 4. Hit the link returned, authorize the app, copy and paste the code, ENTER, get the refresher token
+auth_mechanisms = XOAUTH2
+oauth2_client_id = SECRET_CLIENT_ID
+oauth2_client_secret = SECRET_CLIENT_SECRET
+oauth2_request_url = https://accounts.google.com/o/oauth2/token
+oauth2_refresh_token = SECRET_REFRESH_TOKEN

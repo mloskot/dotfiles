@@ -1,0 +1,98 @@
+set realname="Mateusz Łoskot"
+set from="mateusz@loskot.net"
+set use_from=yes
+set envelope_from=yes
+set edit_headers=yes
+set beep=no
+set beep_new=no
+
+#######################################################################
+# Folders and mailboxes
+set mbox_type=Maildir
+set folder="~/Mail/Gmail"
+set spoolfile="~/Mail/Gmail/INBOX"
+set record="~/Mail/Gmail/Sent Mail"
+set postponed="~/Mail/Gmail/Drafts"
+# Gmail seems no longer listing Trash but Bin
+set trash="~/Mail/Gmail/Bin"
+# Gmail seems no longer listing Trash but Bin
+mailboxes =INBOX \
+=Sent\ Mail \
+=Drafts \
+=Spam \
+=Bin \
+=Trash
+
+#######################################################################
+# Cache folders
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/message
+set certificate_file=~/.mutt/certificates
+
+#######################################################################
+# Sidebar
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+
+#######################################################################
+# Navigation based on favourite Vim bindings (see vim/.vimrc)
+#
+bind generic z noop
+bind generic Z noop
+
+bind generic,index,pager \Cf next-page
+bind generic,index,pager \Cb previous-page
+
+# '?' is used for search-opposite
+bind index,pager \Ch help
+bind index,pager / search
+bind index,pager ? search-reverse
+bind index,pager n search-next
+bind index,pager N search-opposite
+
+bind index k next-entry
+bind index l previous-entry
+bind index K next-thread
+bind index L previous-thread
+bind index gg first-entry
+bind index G last-entry
+
+bind pager k next-line
+bind pager l previous-line
+
+bind pager gg top
+bind pager G bottom
+
+#######################################################################
+# Reading and processign
+macro pager d "<delete-message><exit>"
+
+#######################################################################
+# Sorting and threading
+set sort=threads
+set sort_aux = reverse-last-date-received
+set sort_browser=reverse-date
+set sort_re
+set strict_threads=yes
+unset collapse_unread
+
+bind index <space> collapse-thread
+bind index - collapse-thread
+bind index _ collapse-all
+
+#######################################################################
+# GMail-specific
+unset move          # gmail does that
+set delete          # don't ask, just do
+unset confirmappend # don't ask, just do!
+set quit            # don't ask, just do!!
+
+macro index gi "<change-folder>=INBOX<enter>" "Go to INBOX"
+macro index gs "<change-folder>=Sent\ Mail<enter>" "Go to Sent mail"
+macro index gd "<change-folder>=Drafts<enter>" "Go to Drafts"
+macro index gj "<change-folder>=Spam<enter>" "Go to Spam"
+macro index gb "<change-folder>=Bin<enter>" "Go to Bin"
+macro index,pager gf "<change-folder>?" "Open mailbox..."
+macro index u "<save-message>=INBOX<enter>" "Move messages to INBOX"
+macro pager u "<save-message>=INBOX<enter>" "Move message to INBOX"
