@@ -11,17 +11,17 @@ mailsync="/usr/local/bin/offlineimap -o -q -u quiet -l ~/.offlineimap.log"
 
 # kill offlineimap if active, sometimes it hangs
 case $imapactive in
-'1')
- killall offlineimap && sleep 5
-;;
+    '1')
+    killall offlineimap && sleep 5
+    ;;
 esac
 
 # Check that you can access the SMTP server
 case $netactive in
-'up')
- $mailsync
-;;
-'down')
- :
-;;
+    'up')
+    $mailsync
+    ;;
+    'down')
+    :
+    ;;
 esac
