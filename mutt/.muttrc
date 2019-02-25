@@ -1,11 +1,19 @@
 set realname="Mateusz Łoskot"
 set from="mateusz@loskot.net"
 set use_from=yes
-set envelope_from=yes
-set edit_headers=yes
 set beep=no
 set beep_new=no
+
+source ~/.mutt/vombatidae.mutt
+
+#######################################################################
+# Reading and editing
 set editor=vim
+set mark_old=no
+set edit_headers=yes
+set pager_index_lines=12   # Split-screen index/pager preview thing
+set pager_stop=yes         # Don't skip to next message at end of message
+                           # (avoids accidental setting as being read)
 
 #######################################################################
 # Folders and mailboxes
@@ -71,7 +79,7 @@ bind pager l previous-line
 bind pager gg top
 bind pager G bottom
 
-macro pager d "<delete-message><exit>"
+#macro index,pager D "<purge-message>"
 
 #######################################################################
 # Sorting and threading
