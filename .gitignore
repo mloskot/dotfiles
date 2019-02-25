@@ -2,4 +2,4 @@
 .vs*
 *.gpg
 *.swp
-*secret*
+secret*
