@@ -1,4 +1,5 @@
 [general]
+pythonfile = ~/.mail/offlineimap_secret.py
 ui = ttyui
 accounts = Gmail
 maxsyncaccounts = 1
@@ -25,12 +26,8 @@ realdelete = no
 # Debian/Ubuntu
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 # Authentication
-# 1. Create client ID at https://console.developers.google.com/apis/credentials
-# 2. git clone https://github.com/google/gmail-oauth2-tools
-# 3. python python/oauth2.py --generate_oauth2_token --client_id=SECRET_CLIENT_ID --client_secret=SECRET_CLIENT_SECRET
-# 4. Hit the link returned, authorize the app, copy and paste the code, ENTER, get the refresher token
 auth_mechanisms = XOAUTH2
-oauth2_client_id = SECRET_CLIENT_ID
-oauth2_client_secret = SECRET_CLIENT_SECRET
 oauth2_request_url = https://accounts.google.com/o/oauth2/token
-oauth2_refresh_token = SECRET_REFRESH_TOKEN
+oauth2_client_id_eval = get_client_id()
+oauth2_client_secret_eval = get_client_secret()
+oauth2_refresh_token_eval = get_refresh_token()

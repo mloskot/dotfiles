@@ -57,4 +57,92 @@ install.bat
 
 ## WSL
 
-Nothing yet.
+```console
+sudo -i bash -c 'echo "mloskot ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers'
+```
+
+```console
+sudo sed -i '/bell-style none/s/^# //g' /etc/inputrc
+```
+
+### Bash
+
+```console
+cp ~/.bashrc ~/.bashrc.orig
+```
+
+```console
+sed -i 's/\@\\h/bionic/g' ~/.bashrc
+sed -i 's/\\w\\/\\W\\/g' ~/.bashrc
+```
+
+### Cron
+
+```console
+echo 'sudo -i service cron start' >> ~/.bashrc
+```
+
+### Vim
+
+```console
+ln -s /mnt/d/wsl-config/vim/.vimrc ~/.vimrc
+```
+
+### Mail
+
+* https://wiki.archlinux.org/index.php/Mutt#Passwords_management
+
+```console
+mkdir ~/.mail
+chmod 0700 ~/.mail
+```
+
+#### OfflineIMAP
+
+```console
+sudo apt -y -q install python-pip
+sudo pip install --system offlineimap
+```
+
+```console
+ln -s /mnt/d/wsl-config/mail/.offlineimaprc ~/.offlineimaprc
+ln -s /mnt/d/wsl-config/mail/offlineimap_secret.py ~/.mail/offlineimap_secret.py
+```
+
+```console
+echo "<<CLIENT_ID>>" | gpg -e -r "mateusz@loskot.net" -o ~/.mail/oauth2_client_id.gpg
+echo "<<CLIENT_SECRET>>" | gpg -e -r "mateusz@loskot.net" -o ~/.mail/oauth2_client_secret.gpg
+echo "<<REFRESH_TOKEN>>" | gpg -e -r "mateusz@loskot.net" -o ~/.mail/oauth2_refresh_token.gpg
+```
+
+```console
+# workstation
+ln -s /mnt/d/wsl-config/mail/mailrun.sh ~/bin/
+# laptop
+ln -s /mnt/d/wsl-config/mail/mailsync.sh ~/bin/
+```
+
+```console
+$ crontab -e
+*/5 * * * * /home/mloskot/bin/mailrun.sh
+```
+
+### Mutt
+
+```console
+sudo apt -y -q install neomutt
+```
+
+```console
+which mutt || which neomutt && sudo ln -s `which neomutt` /usr/local/bin/mutt
+```
+
+```console
+echo -e 'set smtp_url="<<URL>"\nset smtp_pass="<<PASSWORD>"' | gpg -e -r "mateusz@loskot.net" -o ~/.mail/smtp_token.gpg
+```
+
+```console
+ln -s /mnt/d/wsl-config/mail/.muttrc ~/.muttrc
+ln -s /mnt/d/wsl-config/mail/signature ~/.mail/signature
+ln -s /mnt/d/wsl-config/mail/vombatidae.mutt ~/.mail/vombatidae.mutt
+```
