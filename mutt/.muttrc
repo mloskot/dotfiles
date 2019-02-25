@@ -1,19 +1,20 @@
 set realname="Mateusz Łoskot"
 set from="mateusz@loskot.net"
+set signature="~/.mutt/signature"
 set use_from=yes
 set beep=no
 set beep_new=no
-
 source ~/.mutt/vombatidae.mutt
 
 #######################################################################
 # Reading and editing
-set editor=vim
 set mark_old=no
-set edit_headers=yes
-set pager_index_lines=12   # Split-screen index/pager preview thing
+#set pager_index_lines=12   # Split-screen index/pager preview thing
 set pager_stop=yes         # Don't skip to next message at end of message
                            # (avoids accidental setting as being read)
+set editor="vim +/^$ ++1"
+set edit_headers=yes
+set text_flowed=yes
 
 #######################################################################
 # Folders and mailboxes
@@ -24,13 +25,7 @@ set record=+INBOX
 set postponed=+Drafts
 # Gmail seems no longer listing Trash but Bin
 set trash=+Bin
-# Gmail seems no longer listing Trash but Bin
-mailboxes =INBOX \
-=Sent\ Mail \
-=Drafts \
-=Spam \
-=Bin \
-=Trash
+mailboxes =INBOX =Drafts =Bin =All\ Mail =Sent\ Mail =Spam
 
 #######################################################################
 # SMTP
@@ -40,14 +35,15 @@ set smtp_pass = "$smtp_pass"
 
 #######################################################################
 # Cache folders
-set header_cache=~/.mutt/cache/headers
-set message_cachedir=~/.mutt/cache/message
-set certificate_file=~/.mutt/certificates
+set header_cache=~/.cache/mutt/headers
+set message_cachedir=~/.cache/mutt/messages
+set certificate_file=~/.cache/mutt/certificates
 
 #######################################################################
 # Sidebar
 set sidebar_visible
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set sidebar_width = 25
 set mail_check_stats
 
 #######################################################################
@@ -66,6 +62,7 @@ bind index,pager ? search-reverse
 bind index,pager n search-next
 bind index,pager N search-opposite
 
+bind index j limit
 bind index k next-entry
 bind index l previous-entry
 bind index K next-thread
@@ -75,11 +72,8 @@ bind index G last-entry
 
 bind pager k next-line
 bind pager l previous-line
-
 bind pager gg top
 bind pager G bottom
-
-#macro index,pager D "<purge-message>"
 
 #######################################################################
 # Sorting and threading
@@ -101,11 +95,16 @@ set delete          # don't ask, just do
 unset confirmappend # don't ask, just do!
 set quit            # don't ask, just do!!
 
+bind editor <space> noop
 macro index gi "<change-folder>=INBOX<enter>" "Go to INBOX"
-macro index gs "<change-folder>=Sent Mail<enter>" "Go to Sent mail"
-macro index gd "<change-folder>=Drafts<enter>" "Go to Drafts"
-macro index gj "<change-folder>=Spam<enter>" "Go to Spam"
-macro index gb "<change-folder>=Bin<enter>" "Go to Bin"
+macro index gd "<change-folder>=Drafts<enter>" "Go to drafts"
+macro index gb "<change-folder>=Bin<enter>" "Go to bin"
+macro index gj "<change-folder>=Spam<enter>" "Go to spam"
+macro index ga "<change-folder>=All Mail<enter>" "Go to all mail"
+macro index gs "<change-folder>=Sent Mail<enter>" "Go to sent mail"
 macro index,pager gf "<change-folder>?" "Open mailbox..."
-macro index u "<save-message>=INBOX<enter>" "Move messages to INBOX"
-macro pager u "<save-message>=INBOX<enter>" "Move message to INBOX"
+
+macro index,pager d "<save-message>=Bin<enter>i" "Move messages to Bin"
+macro index,pager u "<save-message>=INBOX<enter>i" "Move messages to INBOX"
+macro index,pager a "<save-message>=All Mail<enter>i" "Move messages to archive"
+#macro index,pager D "<purge-message>"
