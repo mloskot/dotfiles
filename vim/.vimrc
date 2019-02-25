@@ -159,6 +159,7 @@ vnoremap <tab> %
 " {{{
 set cursorline
 " handle long lines
+setlocal fo+=aw
 set nowrap
 set textwidth=80
 set formatoptions=qrn1
