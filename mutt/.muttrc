@@ -5,16 +5,17 @@ set envelope_from=yes
 set edit_headers=yes
 set beep=no
 set beep_new=no
+set editor=vim
 
 #######################################################################
 # Folders and mailboxes
 set mbox_type=Maildir
 set folder="~/Mail/Gmail"
-set spoolfile="~/Mail/Gmail/INBOX"
-set record="~/Mail/Gmail/Sent Mail"
-set postponed="~/Mail/Gmail/Drafts"
+set spoolfile=+INBOX
+set record=+INBOX
+set postponed=+Drafts
 # Gmail seems no longer listing Trash but Bin
-set trash="~/Mail/Gmail/Bin"
+set trash=+Bin
 # Gmail seems no longer listing Trash but Bin
 mailboxes =INBOX \
 =Sent\ Mail \
@@ -22,6 +23,12 @@ mailboxes =INBOX \
 =Spam \
 =Bin \
 =Trash
+
+#######################################################################
+# SMTP
+source "gpg -dq $HOME/.mutt/config.gpg |"
+set smtp_url = "$smtp_url"
+set smtp_pass = "$smtp_pass"
 
 #######################################################################
 # Cache folders
@@ -64,8 +71,6 @@ bind pager l previous-line
 bind pager gg top
 bind pager G bottom
 
-#######################################################################
-# Reading and processign
 macro pager d "<delete-message><exit>"
 
 #######################################################################
@@ -89,7 +94,7 @@ unset confirmappend # don't ask, just do!
 set quit            # don't ask, just do!!
 
 macro index gi "<change-folder>=INBOX<enter>" "Go to INBOX"
-macro index gs "<change-folder>=Sent\ Mail<enter>" "Go to Sent mail"
+macro index gs "<change-folder>=Sent Mail<enter>" "Go to Sent mail"
 macro index gd "<change-folder>=Drafts<enter>" "Go to Drafts"
 macro index gj "<change-folder>=Spam<enter>" "Go to Spam"
 macro index gb "<change-folder>=Bin<enter>" "Go to Bin"
