@@ -29,7 +29,7 @@ mailboxes =INBOX =Drafts =Bin =All\ Mail =Sent\ Mail =Spam
 
 #######################################################################
 # SMTP
-source "gpg -dq $HOME/.mutt/config.gpg |"
+source "gpg -dq $HOME/.mutt/smtp_token.gpg |"
 set smtp_url = "$smtp_url"
 set smtp_pass = "$smtp_pass"
 
