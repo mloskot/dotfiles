@@ -49,6 +49,7 @@ set mail_check_stats
 #######################################################################
 # Navigation based on favourite Vim bindings (see vim/.vimrc)
 #
+bind index,pager g noop
 bind generic z noop
 bind generic Z noop
 
