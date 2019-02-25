@@ -1,10 +1,10 @@
 set realname="Mateusz Łoskot"
 set from="mateusz@loskot.net"
-set signature="~/.mutt/signature"
+set signature="~/.mail/signature"
 set use_from=yes
 set beep=no
 set beep_new=no
-source ~/.mutt/vombatidae.mutt
+source ~/.mail/vombatidae.mutt
 
 #######################################################################
 # Reading and editing
