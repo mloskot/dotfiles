@@ -8,6 +8,10 @@ source ~/.mail/vombatidae.mutt
 
 #######################################################################
 # Reading and editing
+set date_format="%y-%m-%d %T"
+set index_format="%2C | %Z [%d] %-30.30F (%-4.4c) %s"
+alternative_order text/plain text/html
+auto_view text/html
 set mark_old=no
 #set pager_index_lines=12   # Split-screen index/pager preview thing
 set pager_stop=yes         # Don't skip to next message at end of message
@@ -47,36 +51,6 @@ set sidebar_width = 25
 set mail_check_stats
 
 #######################################################################
-# Navigation shortcuts - based on the sane Vim bindings (see vim/.vimrc)
-#
-bind index,pager g noop
-bind generic z noop
-bind generic Z noop
-
-bind generic,index,pager \Cf next-page
-bind generic,index,pager \Cb previous-page
-
-# '?' is used for search-opposite
-bind index,pager \Ch help
-bind index,pager / search
-bind index,pager ? search-reverse
-bind index,pager n search-next
-bind index,pager N search-opposite
-
-bind index j limit
-bind index k next-entry
-bind index l previous-entry
-bind index K next-thread
-bind index L previous-thread
-bind index gg first-entry
-bind index G last-entry
-
-bind pager k next-line
-bind pager l previous-line
-bind pager gg top
-bind pager G bottom
-
-#######################################################################
 # Sorting and threading
 set sort=threads
 set sort_aux = reverse-last-date-received
@@ -85,10 +59,6 @@ set sort_re
 set strict_threads=yes
 unset collapse_unread
 
-bind index <space> collapse-thread
-bind index - collapse-thread
-bind index _ collapse-all
-
 #######################################################################
 # GMail-specific
 unset move          # gmail does that
@@ -96,19 +66,30 @@ set delete          # don't ask, just do
 unset confirmappend # don't ask, just do!
 set quit            # don't ask, just do!!
 
-bind editor <space> noop
-macro index gi "<change-folder>=INBOX<enter>" "Go to INBOX"
-macro index gd "<change-folder>=Drafts<enter>" "Go to drafts"
-macro index gb "<change-folder>=Bin<enter>" "Go to bin"
-macro index gj "<change-folder>=Spam<enter>" "Go to spam"
-macro index ga "<change-folder>=All Mail<enter>" "Go to all mail"
-macro index gs "<change-folder>=Sent Mail<enter>" "Go to sent mail"
-macro index,pager gf "<change-folder>?" "Open mailbox..."
+#######################################################################
+# Keyboard shortcuts - based on the sane Vim bindings (see vim/.vimrc)
+#
+macro index,pager $ "<sync-mailbox><shell-escape>offlineimap<enter>" "Run oflineimap to sync all"
+# '?' is used for search-opposite
+bind generic,index,pager    \Ch help
+bind generic,index,pager    \CP sidebar-prev
+bind generic,index,pager    \CN sidebar-next
+bind generic,index,pager    \CO sidebar-open
 
-macro index,pager d "<save-message>=Bin<enter>i" "Move messages to Bin"
-macro index,pager u "<save-message>=INBOX<enter>i" "Move messages to INBOX"
-macro index,pager a "<save-message>=All Mail<enter>i" "Move messages to archive"
-#macro index,pager D "<purge-message>"
+bind index,pager    /   search
+bind index,pager    ?   search-reverse
+bind index,pager    n   search-next
+bind index,pager    N   search-opposite
+bind index          j   limit
+bind index          k   next-entry
+bind index          l   previous-entry
+bind pager          k   next-line
+bind pager          l   previous-line
+bind index          -   collapse-thread
+bind index          _   collapse-all
 
-macro index  \Ca "<shell-escape>offlineimap<enter>" "Run oflineimap to sync all"
-macro index  \Ci "<shell-escape>offlineimap -qf INBOX<enter>" "Run oflineimap to sync INBOX"
+bind editor         <space> noop    # Required to allow mailbox with spaces
+macro index,pager   d   "<save-message>=Bin<enter>i" "Move messages to Bin"
+macro index,pager   \Cd "<purge-message>i" "Purge messages"
+macro index,pager   u   "<save-message>=INBOX<enter>i" "Move messages to INBOX"
+macro index,pager   U   "<save-message>=All Mail<enter>i" "Move messages to archive"
