@@ -92,4 +92,4 @@ bind editor         <space> noop    # Required to allow mailbox with spaces
 macro index,pager   d   "<save-message>=Bin<enter>i" "Move messages to Bin"
 macro index,pager   \Cd "<purge-message>i" "Purge messages"
 macro index,pager   u   "<save-message>=INBOX<enter>i" "Move messages to INBOX"
-macro index,pager   U   "<save-message>=All Mail<enter>i" "Move messages to archive"
+macro index,pager   A   "<save-message>=All Mail<enter>i" "Move messages to archive"
