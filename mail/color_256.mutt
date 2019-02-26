@@ -1,0 +1,65 @@
+# vim: filetype=muttrc
+# source: https://heipei.net/linux/
+# colors: white black green magenta blue cyan yellow red default colorx
+
+color normal		color245	color233
+color error		color124	color233
+color tilde		color245	color233
+color message		yellow		color233
+color markers		yellow		color233
+color attachment	color221	color233
+color search		color48		color240	# how to hilite search patterns in the pager
+color status		color42		color237
+color indicator		color220	color88
+
+# Index
+color tree		color124	color233			# arrow in threads
+color index		color184	color233	"~N~p"		# message to myself (new)
+color index		color130	color233	"~p"		# message to myself
+color index		color137	color233	"~Q"		# messages replied to
+color index		color70		color233	"~P" 		# message from myself
+color index		color220	color233	~N		# new
+color index		color208	color233	~U		# unread
+color index		color142	color233	~O		# old
+color index		color91		color233	~T		# tagged
+color index		color238	color233	"~D(!~p|~p)"	# deleted
+color index		color196	color233	~F		# flagged
+color index		color250	color233	"~A!~N!~T!~p!~Q!~F!~D!~P"	# the rest
+color index		color220	color233	"~A~N!~T!~p!~Q!~F!~D"		# the rest
+color index		color232	color124	~=		# duplicate messages
+
+
+color header		color74		color233	"^From"
+color header		color88		color233	"^Date"
+color header		color166	color233	"^(Subject)"
+color header		color244	color233	"^(To|Reply-To|Cc|Bcc):"
+color header		color245	color233	"^(X-Original-To):"
+color header		color96		color233	"^(User-Agent|X-Editor|X-Mailer):"
+color header 		cyan		color233	"^Organization:"
+
+# Body
+color quoted 		color24		color233
+color quoted1		color28		color233
+color quoted2		color94		color233
+color quoted3		color88		color233
+color signature		color238	color233
+color bold		green		color233
+color underline		color208	color233
+color normal		color250	color233
+color body		color39		color233	"(finger|ftp|http|news|telnet)://[^ >]*"
+color body		color39		color233	"<URL:[^ ]*>"
+color body		cyan		color233	"www\\.[-.a-z0-9]+\\.[a-z][a-z][a-z]?([-_./~a-z0-9]+)?"
+color body		green		color233	"[[:alnum:]][-+.#_[:alnum:]]*@[-+.[:alnum:]]*[[:alnum:]]"
+color body		brightred	color233	"mailto: *[^ ]+\(\\?subject=[^ ]+\)?"
+color body		color178	color233	"[;:][-o][)/(|]"
+color body		color178	color233	"[;:][)(|]"
+color body		color178	color233	"[*]?((N)?ACK|CU|LOL|SCNR|BRB|BTW|CWYL|FWIW|vbg|GD&R|HTH|HTHBE|IMHO|IMNSHO|IRL|RTFM|ROTFL|ROFL|YMMV)[*]?"
+color body		color178	color233	"[ ][*][^*]*[*][ ]?"
+color body		color178	color233	"[ ]?[*][^*]*[*][ ]"
+color body		brightred	color233	"(BAD signature)"
+color body		green		color233	"(Good signature)"
+color body		color208	color233	"(heipei|hackvalue|Jojo|Gilger|Johannes)"
+
+color hdrdefault	color238	color233
+color body		color128	color233	'[-.+\w]+@[-.\w]+[^.]' # e-mail addresses
+color underline		brightgreen	color233

@@ -5,7 +5,8 @@ set use_from=yes
 set beep=no
 set beep_new=no
 set sleep_time = 0 # be fast
-source ~/.mail/vombatidae.mutt
+#source ~/.mail/vombatidae.mutt
+source ~/.mail/color_256.mutt
 
 #######################################################################
 # Reading and editing
