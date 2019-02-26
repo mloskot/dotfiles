@@ -78,6 +78,8 @@ sed -i 's/\\w\\/\\W\\/g' ~/.bashrc
 
 ### Cron
 
+Optionally, to enable OfflineIMAP as cron job:
+
 ```console
 echo 'sudo -i service cron start' >> ~/.bashrc
 ```
@@ -121,6 +123,9 @@ ln -s /mnt/d/wsl-config/mail/mailrun.sh ~/bin/
 # laptop
 ln -s /mnt/d/wsl-config/mail/mailsync.sh ~/bin/
 ```
+
+Optionally, to run OfflineIMAP, if the customMutt shortucts,
+`CTRL+a` and `CTRL+i` are not enough:
 
 ```console
 $ crontab -e

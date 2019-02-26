@@ -47,7 +47,7 @@ set sidebar_width = 25
 set mail_check_stats
 
 #######################################################################
-# Navigation based on favourite Vim bindings (see vim/.vimrc)
+# Navigation shortcuts - based on the sane Vim bindings (see vim/.vimrc)
 #
 bind index,pager g noop
 bind generic z noop
@@ -109,3 +109,6 @@ macro index,pager d "<save-message>=Bin<enter>i" "Move messages to Bin"
 macro index,pager u "<save-message>=INBOX<enter>i" "Move messages to INBOX"
 macro index,pager a "<save-message>=All Mail<enter>i" "Move messages to archive"
 #macro index,pager D "<purge-message>"
+
+macro index  \Ca "<shell-escape>offlineimap<enter>" "Run oflineimap to sync all"
+macro index  \Ci "<shell-escape>offlineimap -qf INBOX<enter>" "Run oflineimap to sync INBOX"
