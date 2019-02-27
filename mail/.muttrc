@@ -10,8 +10,7 @@ source ~/.mail/color_256.mutt
 
 #######################################################################
 # Reading and editing
-#set date_format="%y-%m-%d %T"
-set date_format="%y-%m-%d"
+set date_format="%y-%m-%d %T"
 set index_format="%2C | %Z [%d] %-15.15L (%-4.4c) %s"
 alternative_order text/plain text/html
 auto_view text/html
