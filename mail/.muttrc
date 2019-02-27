@@ -12,15 +12,14 @@ source ~/.mail/color_256.mutt
 # Reading and editing
 set date_format="%y-%m-%d %T"
 set index_format="%2C | %Z [%d] %-15.15L (%-4.4c) %s"
-alternative_order text/plain text/html
-auto_view text/html
 set mark_old=no
-#set pager_index_lines=12   # Split-screen index/pager preview thing
-set pager_stop=yes         # Don't skip to next message at end of message
-                           # (avoids accidental setting as being read)
+#set pager_index_lines=12                               # Split-screen index/pager preview thing
+set pager_stop=yes                                      # Don't skip to next message at end of message (avoids accidental setting as being read)
 set editor="vim +/^$ ++1"
 set edit_headers=yes
 set text_flowed=yes
+auto_view text/html                                     # view html automatically
+alternative_order text/plain text/enriched text/html    # save html for last
 
 #######################################################################
 # Folders and mailboxes
