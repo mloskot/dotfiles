@@ -1,0 +1,8 @@
+# HTML (when you press Enter in the attachment list)
+# maybe also consider -html-hard-assume 1
+#text/html; /usr/bin/links -html-assume-codepage %{charset} '%s'; needsterminal; description=HTML Text; nametemplate=%s.html
+text/html; /usr/bin/w3m -I %{charset} '%s'; needsterminal; description=HTML Text; nametemplate=%s.html
+
+# HTML mail (rendered in Mutt's pager and also what you get when replying)
+#text/html; w3m -I %{charset} -T text/html; copiousoutput;
+text/html; /usr/bin/w3m -dump -s -o display_link=yes -o display_link_number=yes -o decode_url=yes -T text/html -I %{charset}; copiousoutput; description=HTML Text
