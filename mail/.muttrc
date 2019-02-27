@@ -11,7 +11,7 @@ source ~/.mail/color_256.mutt
 #######################################################################
 # Reading and editing
 set date_format="%y-%m-%d %T"
-set index_format="%2C | %Z [%d] %-15.15L (%-4.4c) %s"
+set index_format="%2C | %Z %d %-17.17L %-4.4c %s"
 set mark_old=no
 #set pager_index_lines=12                               # Split-screen index/pager preview thing
 set pager_stop=yes                                      # Don't skip to next message at end of message (avoids accidental setting as being read)
