@@ -95,4 +95,4 @@ macro index,pager   \Cd "<purge-message>i" "Purge messages"
 macro index,pager   u   "<save-message>=INBOX<enter>i" "Move messages to INBOX"
 macro index,pager   A   "<save-message>=All Mail<enter>i" "Move messages to archive"
 
-macro index,pager @ "<sync-mailbox><shell-escape>offlineimap<enter>" "Run oflineimap to sync all"
+macro index         @ "<sync-mailbox><shell-escape>offlineimap<enter>" "Run oflineimap to sync all"
