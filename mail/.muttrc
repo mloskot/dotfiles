@@ -70,7 +70,6 @@ set quit            # don't ask, just do!!
 #######################################################################
 # Keyboard shortcuts - based on the sane Vim bindings (see vim/.vimrc)
 #
-macro index,pager $ "<sync-mailbox><shell-escape>offlineimap<enter>" "Run oflineimap to sync all"
 # '?' is used for search-opposite
 bind generic,index,pager    \Ch help
 bind generic,index,pager    \CP sidebar-prev
@@ -96,3 +95,4 @@ macro index,pager   \Cd "<purge-message>i" "Purge messages"
 macro index,pager   u   "<save-message>=INBOX<enter>i" "Move messages to INBOX"
 macro index,pager   A   "<save-message>=All Mail<enter>i" "Move messages to archive"
 
+macro index,pager @ "<sync-mailbox><shell-escape>offlineimap<enter>" "Run oflineimap to sync all"
