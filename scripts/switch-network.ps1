@@ -13,12 +13,12 @@ function WaitSeconds([int]$seconds) {
     Write-Host "done"
 }
 
-Write-Host -NoNewline "Disabling  adapters"
-Get-NetAdapter | ? status -eq up | Disable-NetAdapter -Confirm:$false
+Write-Host -NoNewline "Disabling adapters "
+#Get-NetAdapter | ? status -eq up | Disable-NetAdapter -Confirm:$false
 $knownAdapters | % { Disable-NetAdapter -Confirm:$false -Name $_ }
 WaitSeconds 3
 
-Write-Host -NoNewline "Enabling adapter: $adapterName"
+Write-Host -NoNewline "Enabling adapter $adapterName "
 Enable-NetAdapter -Name $adapterName -Confirm:$false
 WaitSeconds 3
 
