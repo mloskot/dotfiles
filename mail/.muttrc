@@ -99,3 +99,7 @@ macro index         @ "<sync-mailbox><shell-escape>offlineimap<enter>" "Run ofli
 
 # Move to top entry, intead of first unread
 exec first-entry
+
+#######################################################################
+# Miscellaneous
+source ~/.mail/pgp.conf
