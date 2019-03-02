@@ -22,7 +22,7 @@ nametrans = lambda f: f.replace('[Gmail]/', '') if f.startswith('[Gmail]/') else
 # Setting realdelete=yes will Really Delete email from the server.
 # Otherwise, 'deleting' a message will just remove any labels and
 # retain the message in the All Mail folder.
-realdelete = no
+realdelete = yes
 # Debian/Ubuntu
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 # Authentication
