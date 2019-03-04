@@ -4,7 +4,7 @@
 	la = log  --color --graph --oneline --all
 
 	# git show with message and full authorship
-	wosh = show --pretty=full --no-patch
+	wosh = show --pretty=full --show-signature --no-patch
 
 	# what new commits have been created by the last command – typically after a git pull
 	new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
