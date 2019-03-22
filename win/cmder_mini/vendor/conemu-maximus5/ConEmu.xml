@@ -551,16 +551,7 @@
 					<value name="Count" type="long" data="2"/>
 					<value name="Cmd2" type="string" data='{cmd::Cmder} -cur_console:s50H -cur_console:d:D:\ -new_console:t:"cmd R"'/>
 				</key>
-				<key name="Task8" modified="2019-01-21 11:02:26" build="190108">
-					<value name="Name" type="string" data="{WSL::Xenial}"/>
-					<value name="Flags" type="dword" data="00000000"/>
-					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="GuiArgs" type="string" data='/icon "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu1604.exe"'/>
-					<value name="Cmd1" type="string" data='cmd /c "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu1604.exe" -new_console:t:"wsl:Xenial"'/>
-					<value name="Active" type="long" data="0"/>
-					<value name="Count" type="long" data="1"/>
-				</key>
-				<key name="Task9" modified="2019-01-21 11:02:26" build="190108">
+				<key name="Task8" modified="2019-03-22 10:18:18" build="190310">
 					<value name="Name" type="string" data="{WSL::Xenial | Bionic}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -569,6 +560,15 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="2"/>
 					<value name="Cmd2" type="string" data='{wsl::Bionic} -new_console:t:"wsl:Bionic R" -cur_console:s50H'/>
+				</key>
+				<key name="Task9" modified="2019-03-22 10:18:18" build="190310">
+					<value name="Name" type="string" data="{WSL::Xenial}"/>
+					<value name="Flags" type="dword" data="00000000"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data='/icon "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu1604.exe"'/>
+					<value name="Cmd1" type="string" data='cmd /c "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu1604.exe" -new_console:t:"wsl:Xenial"'/>
+					<value name="Active" type="long" data="0"/>
+					<value name="Count" type="long" data="1"/>
 				</key>
 				<key name="Task10" modified="2019-01-21 11:02:26" build="190108">
 					<value name="Name" type="string" data="{WSL::Stretch}"/>
