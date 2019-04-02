@@ -72,7 +72,7 @@ cp ~/.bashrc ~/.bashrc.orig
 ```
 
 ```console
-sed -i 's/\@\\h/bionic/g' ~/.bashrc
+sed -i 's/\@\\h/\@bionic/g' ~/.bashrc
 sed -i 's/\\w\\/\\W\\/g' ~/.bashrc
 ```
 
