@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2019-03-22 10:16:39" build="190310">
+		<key name=".Vanilla" modified="2019-04-04 10:52:04" build="190331">
 			<value name="ColorTable00" type="dword" data="00000000"/>
 			<value name="ColorTable01" type="dword" data="009e5401"/>
 			<value name="ColorTable02" type="dword" data="0004aa74"/>
@@ -651,14 +651,14 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars64.bat" &amp; "%ConEmuDir%\..\init.bat"" -new_console:t:"VS2017 x64 as Admin" -new_console:d:"F:\V91.x64"'/>
 				</key>
-				<key name="Task19" modified="2019-03-08 09:00:31" build="190303">
-					<value name="Name" type="string" data="{VS2019 Preview::64 As Admin}"/>
+				<key name="Task19" modified="2019-04-04 10:52:04" build="190331">
+					<value name="Name" type="string" data="{VS2019::64 As Admin}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="GuiArgs" type="string" data=' /icon "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\IDE\devenv.exe"'/>
+					<value name="GuiArgs" type="string" data=' /icon "C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\devenv.exe"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\VC\Auxiliary\Build\vcvars64.bat" &amp; "%ConEmuDir%\..\init.bat"" -new_console:t:"VS2019 Preview x64 as Admin" -new_console:d:"D:\"'/>
+					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvars64.bat" &amp; "%ConEmuDir%\..\init.bat"" -new_console:t:"VS2019 x64 as Admin" -new_console:d:"D:\"'/>
 				</key>
 			</key>
 			<key name="Apps" modified="2018-02-22 06:05:13" build="171109">
@@ -1022,6 +1022,7 @@
 			<value name="RestoreInactive" type="hex" data="00"/>
 			<value name="StatusBar.Hide.WMode" type="hex" data="01"/>
 			<value name="AutoTrimSingleLine" type="hex" data="00"/>
+			<value name="AnsiLogCodes" type="hex" data="00"/>
 		</key>
 	</key>
 </key>
