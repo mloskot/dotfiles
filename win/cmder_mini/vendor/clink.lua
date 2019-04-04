@@ -219,7 +219,7 @@ end
 -- @return {bool}
 ---
 local function get_git_status()
-    local file = io.popen("git --no-optional-locks status --porcelain 2>nul")
+    local file = io.popen("git --no-optional-locks status --porcelain --ignore-submodules 2>nul")
     for line in file:lines() do
         file:close()
         return false
@@ -234,7 +234,7 @@ end
 -- @return {bool} indicating true for conflict, false for no conflicts
 ---
 function get_git_conflict()
-    local file = io.popen("git diff --name-only --diff-filter=U 2>nul")
+    local file = io.popen("git diff --name-only --diff-filter=U --ignore-submodules 2>nul")
     for line in file:lines() do
         file:close()
         return true;
