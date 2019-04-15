@@ -1,7 +1,7 @@
 #!/usr/bin/env powershell
 #Requires -RunAsAdministrator
 
-$version = '3.14.0'
+$version = '3.14.2'
 
 $major, $minor, $patch = $version.split('.');
 try {
@@ -10,7 +10,7 @@ try {
 } catch {
   $currentVersion = $null;
 }
-if ($currentVersion -ne $null) {
+if ($null -ne $currentVersion) {
   $currentMajor, $currentMinor, $currentPatch = $currentVersion.split('.');
   $currentPatch = $currentPatch.split('-')[0] # 0-rcX to 0
   $patch = $patch.split('-')[0]

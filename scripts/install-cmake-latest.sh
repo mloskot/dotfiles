@@ -1,6 +1,6 @@
 #!/bin/sh
 set -x
-version='3.14.0'
+version='3.14.2'
 
 sudo rm -rf /usr/local/bin/cmake*
 sudo rm -rf /usr/local/bin/ctest*
