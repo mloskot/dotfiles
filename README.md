@@ -124,7 +124,7 @@ ln -s /mnt/d/wsl-config/mail/mailrun.sh ~/bin/
 ln -s /mnt/d/wsl-config/mail/mailsync.sh ~/bin/
 ```
 
-Optionally, to run OfflineIMAP, if the customMutt shortucts,
+Optionally, to run OfflineIMAP, if the customMutt shortcuts,
 `CTRL+a` and `CTRL+i` are not enough:
 
 ```console
