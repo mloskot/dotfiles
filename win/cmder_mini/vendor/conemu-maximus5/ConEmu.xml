@@ -485,10 +485,10 @@
 			<value name="WndDragKey" type="dword" data="00121101"/>
 			<key name="Tasks" modified="2019-03-08 09:00:31" build="190303">
 				<value name="Count" type="long" data="19"/>
-				<key name="Task1" modified="2019-01-26 00:17:09" build="190108">
+				<key name="Task1" modified="2019-04-16 11:15:44" build="190331">
 					<value name="Name" type="string" data="{Git Bash}"/>
 					<value name="GuiArgs" type="string" data=' /icon "%SystemDrive%\Program Files\Git\mingw64\share\git\git-for-windows.ico"'/>
-					<value name="Cmd1" type="string" data='cmd /c ""c:\Program Files\Git\bin\bash" --login -i" -new_console:d:D:\ '/>
+					<value name="Cmd1" type="string" data='cmd /c ""c:\Program Files\Git\bin\bash" --login -i" -new_console:d:F:\ '/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
