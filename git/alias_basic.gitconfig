@@ -17,6 +17,7 @@
 	rta = remote add
 	rtr = remote remove
 	rtv = remote -v
+	sst = submodule status
 	st = status
-	stsa = status --ignore-submodules=all
+	stsi = status --ignore-submodules=all
 	stsu = status --ignore-submodules=untracked
