@@ -1,2 +1,4 @@
+   [skip appveyor]
 
-[skip appveyor] [skip travis] [ci skip]
+[skip travis]
+[skip azp]
