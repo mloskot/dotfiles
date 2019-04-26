@@ -3,9 +3,9 @@
 	bv = branch -vv
 	brv = branch -vv
 	bra = branch -a
-	ci = commit --verbose
-	cia = commit --verbose --amend
-	ciae = commit --verbose --amend --no-edit
+	ci = commit
+	cia = commit --amend
+	ciae = commit --amend --no-edit
 	co = checkout
 	dc = diff --cached
 	df = diff
