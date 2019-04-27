@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2019-04-19 20:40:44" build="190331">
+		<key name=".Vanilla" modified="2019-04-28 01:33:16" build="190331">
 			<value name="ColorTable00" type="dword" data="00000000"/>
 			<value name="ColorTable01" type="dword" data="009e5401"/>
 			<value name="ColorTable02" type="dword" data="0004aa74"/>
@@ -73,7 +73,7 @@
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
-			<value name="StartTasksName" type="string" data="{Git Bash}"/>
+			<value name="StartTasksName" type="string" data="{Far Manager | Git Bash}"/>
 			<value name="StartFarFolders" type="hex" data="00"/>
 			<value name="StartFarEditors" type="hex" data="00"/>
 			<value name="StoreTaskbarkTasks" type="hex" data="01"/>
@@ -483,8 +483,8 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-			<key name="Tasks" modified="2019-03-08 09:00:31" build="190303">
-				<value name="Count" type="long" data="19"/>
+			<key name="Tasks" modified="2019-04-28 01:33:04" build="190331">
+				<value name="Count" type="long" data="18"/>
 				<key name="Task1" modified="2019-04-16 11:15:44" build="190331">
 					<value name="Name" type="string" data="{Git Bash}"/>
 					<value name="GuiArgs" type="string" data=' /icon "%SystemDrive%\Program Files\Git\mingw64\share\git\git-for-windows.ico"'/>
@@ -494,64 +494,35 @@
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="Flags" type="dword" data="00000000"/>
 				</key>
-				<key name="Task2" modified="2019-04-04 20:27:39" build="190331">
-					<value name="Name" type="string" data="{Git Bash | Far Manager}"/>
-					<value name="GuiArgs" type="string" data=' /icon "%SystemDrive%\Program Files\Git\mingw64\share\git\git-for-windows.ico"'/>
-					<value name="Cmd1" type="string" data='{Git Bash} -cur_console:d:D:\ -new_console:t:"GIT"'/>
-					<value name="Active" type="long" data="0"/>
-					<value name="Count" type="long" data="2"/>
-					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="Flags" type="dword" data="00000004"/>
-					<value name="Cmd2" type="string" data='{Far Manager} -cur_console:d:D:\ -new_console:t:"FAR"'/>
-				</key>
-				<key name="Task3" modified="2019-04-04 20:27:39" build="190331">
-					<value name="Name" type="string" data="{Git Bash | Cmder}"/>
-					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="GuiArgs" type="string" data=' /icon "%SystemDrive%\Program Files\Git\mingw64\share\git\git-for-windows.ico"'/>
-					<value name="Active" type="long" data="0"/>
-					<value name="Count" type="long" data="2"/>
-					<value name="Flags" type="dword" data="00000000"/>
-					<value name="Cmd1" type="string" data='{Git Bash} -cur_console:d:D:\ -new_console:t:"git L"'/>
-					<value name="Cmd2" type="string" data='{cmd::Cmder} -cur_console:s50H -cur_console:d:D:\ -new_console:t:"cmd R"'/>
-				</key>
-				<key name="Task4" modified="2019-04-04 20:27:39" build="190331">
-					<value name="Name" type="string" data="{Far Manager}"/>
-					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="GuiArgs" type="string" data=' /icon "C:\Program Files\Far Manager\Far.exe"'/>
-					<value name="Cmd1" type="string" data='set "FARHOME=" &amp; "C:\Program Files\Far Manager\Far.exe" /w /x /p%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;'/>
-					<value name="Active" type="long" data="0"/>
-					<value name="Count" type="long" data="1"/>
-					<value name="Flags" type="dword" data="00000004"/>
-				</key>
-				<key name="Task5" modified="2019-04-04 20:27:39" build="190331">
+				<key name="Task2" modified="2019-04-28 01:33:04" build="190331">
 					<value name="Name" type="string" data="{cmd::Cmder | Cmder}"/>
-					<value name="Flags" type="dword" data="00000004"/>
-					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
 					<value name="Cmd1" type="string" data='{cmd::Cmder} -cur_console:d:D:\ -new_console:t:"cmd L"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="2"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Cmd2" type="string" data='{cmd::Cmder} -cur_console:s50H -cur_console:d:D:\ -new_console:t:"cmd R"'/>
 				</key>
-				<key name="Task6" modified="2019-01-26 00:17:09" build="190108">
+				<key name="Task3" modified="2019-04-28 01:33:04" build="190331">
 					<value name="Name" type="string" data="{cmd::Cmder as Admin}"/>
-					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
-					<value name="Cmd1" type="string" data='*cmd /k "%ConEmuDir%\..\init.bat"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-				</key>
-				<key name="Task7" modified="2019-04-04 20:27:39" build="190331">
-					<value name="Name" type="string" data="{cmd::Cmder}"/>
 					<value name="Flags" type="dword" data="00000000"/>
+					<value name="Cmd1" type="string" data='*cmd /k "%ConEmuDir%\..\init.bat"'/>
+				</key>
+				<key name="Task4" modified="2019-04-28 01:33:04" build="190331">
+					<value name="Name" type="string" data="{cmd::Cmder}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
 					<value name="Cmd1" type="string" data='cmd /k "%ConEmuDir%\..\init.bat"  -new_console:d:D:\'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
+					<value name="Flags" type="dword" data="00000000"/>
 				</key>
-				<key name="Task8" modified="2019-03-22 10:18:18" build="190310">
+				<key name="Task5" modified="2019-04-28 01:33:04" build="190331">
 					<value name="Name" type="string" data="{WSL::Xenial | Bionic}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -561,7 +532,7 @@
 					<value name="Count" type="long" data="2"/>
 					<value name="Cmd2" type="string" data='{wsl::Bionic} -new_console:t:"wsl:Bionic R" -cur_console:s50H'/>
 				</key>
-				<key name="Task9" modified="2019-03-22 10:18:18" build="190310">
+				<key name="Task6" modified="2019-04-28 01:33:04" build="190331">
 					<value name="Name" type="string" data="{WSL::Xenial}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -570,7 +541,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task10" modified="2019-01-21 11:02:26" build="190108">
+				<key name="Task7" modified="2019-04-28 01:33:04" build="190331">
 					<value name="Name" type="string" data="{WSL::Stretch}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -579,7 +550,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task11" modified="2019-02-24 00:46:15" build="190217">
+				<key name="Task8" modified="2019-04-28 01:33:04" build="190331">
 					<value name="Name" type="string" data="{WSL::Bionic}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -588,34 +559,34 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task12" modified="2019-01-21 13:33:21" build="190108">
+				<key name="Task9" modified="2019-04-28 01:33:04" build="190331">
 					<value name="Name" type="string" data="{Powershell::PowerShell as Admin}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
+					<value name="Cmd1" type="string" data='*PowerShell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression &apos;. &apos;&apos;%ConEmuDir%\..\profile.ps1&apos;&apos;&apos;"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='*PowerShell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression &apos;. &apos;&apos;%ConEmuDir%\..\profile.ps1&apos;&apos;&apos;"'/>
 				</key>
-				<key name="Task13" modified="2019-01-21 13:33:21" build="190108">
+				<key name="Task10" modified="2019-04-28 01:33:04" build="190331">
 					<value name="Name" type="string" data="{Powershell::Powershell}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
+					<value name="Cmd1" type="string" data='PowerShell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression &apos;. &apos;&apos;%ConEmuDir%\..\profile.ps1&apos;&apos;&apos;"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='PowerShell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression &apos;. &apos;&apos;%ConEmuDir%\..\profile.ps1&apos;&apos;&apos;"'/>
 				</key>
-				<key name="Task14" modified="2019-01-21 13:33:21" build="190108">
+				<key name="Task11" modified="2019-04-28 01:33:04" build="190331">
 					<value name="Name" type="string" data="{MinGW}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
+					<value name="Cmd1" type="string" data='%comspec% /k "C:\Program Files\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw-w64.bat" -new_console:t:"MinGW"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='%comspec% /k "C:\Program Files\mingw-w64\x86_64-7.3.0-posix-seh-rt_v5-rev0\mingw-w64.bat" -new_console:t:"MinGW"'/>
 				</key>
-				<key name="Task15" modified="2019-01-21 13:34:03" build="190108">
+				<key name="Task12" modified="2019-04-28 01:33:04" build="190331">
 					<value name="Name" type="string" data="{VS2012::32 As Admin}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -624,7 +595,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\vcvarsall.bat" x86 &amp; "%ConEmuDir%\..\init.bat"" -new_console:t:"VS2012 x86" -new_console:d:"F:\V80.win32"'/>
 				</key>
-				<key name="Task16" modified="2019-01-21 13:34:03" build="190108">
+				<key name="Task13" modified="2019-04-28 01:33:04" build="190331">
 					<value name="Name" type="string" data="{VS2012::64 As Admin}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -633,7 +604,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\vcvarsall.bat" amd64 &amp; "%ConEmuDir%\..\init.bat"" -new_console:t:"VS2012 x64" -new_console:d:"F:\V80.x64"'/>
 				</key>
-				<key name="Task17" modified="2019-02-24 00:46:15" build="190217">
+				<key name="Task14" modified="2019-04-28 01:33:04" build="190331">
 					<value name="Name" type="string" data="{VS2017::32 As Admin}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -642,7 +613,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars32.bat" x64_x86 &amp; "%ConEmuDir%\..\init.bat"" -new_console:t:"VS2017 x86" -new_console:d:"F:\V91.Win32"'/>
 				</key>
-				<key name="Task18" modified="2019-02-24 00:46:15" build="190217">
+				<key name="Task15" modified="2019-04-28 01:33:04" build="190331">
 					<value name="Name" type="string" data="{VS2017::64 As Admin}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -651,7 +622,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars64.bat" &amp; "%ConEmuDir%\..\init.bat"" -new_console:t:"VS2017 x64 as Admin" -new_console:d:"F:\V91.x64"'/>
 				</key>
-				<key name="Task19" modified="2019-04-04 10:52:04" build="190331">
+				<key name="Task16" modified="2019-04-28 01:33:04" build="190331">
 					<value name="Name" type="string" data="{VS2019::64 As Admin}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -659,6 +630,25 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*%comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvars64.bat" &amp; "%ConEmuDir%\..\init.bat"" -new_console:t:"VS2019 x64 as Admin" -new_console:d:"D:\"'/>
+				</key>
+				<key name="Task17" modified="2019-04-28 01:33:04" build="190331">
+					<value name="Name" type="string" data="{Far Manager}"/>
+					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=' /icon "C:\Program Files\Far Manager\Far.exe"'/>
+					<value name="Active" type="long" data="0"/>
+					<value name="Count" type="long" data="1"/>
+					<value name="Cmd1" type="string" data='set "FARHOME=" &amp; "C:\Program Files\Far Manager\Far.exe" /w /x /p%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;'/>
+				</key>
+				<key name="Task18" modified="2019-04-28 01:33:04" build="190331">
+					<value name="Name" type="string" data="{Far Manager | Git Bash}"/>
+					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=' /icon "%SystemDrive%\Program Files\Git\mingw64\share\git\git-for-windows.ico"'/>
+					<value name="Active" type="long" data="0"/>
+					<value name="Count" type="long" data="2"/>
+					<value name="Cmd1" type="string" data='{Far Manager} -cur_console:d:F:\ -new_console:t:"FAR"'/>
+					<value name="Cmd2" type="string" data='{Git Bash} -cur_console:d:F:\ -new_console:t:"GIT"'/>
 				</key>
 			</key>
 			<key name="Apps" modified="2018-02-22 06:05:13" build="171109">
