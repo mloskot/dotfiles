@@ -1,0 +1,12 @@
+# -*- muttrc -*-
+# List of mailing lists I'm subscribed to.
+# http://www.mutt.org/doc/manual/#lists
+#
+subscribe boost@lists.boost.org
+subscribe boost-build@lists.boost.org
+subscribe boost-cmake@lists.boost.org
+subscribe boost-docs@lists.boost.org
+subscribe boost-gil@lists.boost.org
+subscribe boost-testing@lists.boost.org
+subscribe geometry@lists.boost.org
+subscribe gdal-dev@lists.osgeo.org
