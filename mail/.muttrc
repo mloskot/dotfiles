@@ -102,5 +102,5 @@ exec first-entry
 
 #######################################################################
 # Miscellaneous
-source ~/.mail/pgp.muttrc
+source ~/.mail/gpg.muttrc
 source ~/.mail/mailing-lists.muttrc
