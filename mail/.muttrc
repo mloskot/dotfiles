@@ -26,7 +26,7 @@ alternative_order text/plain text/enriched text/html    # save html for last
 set mbox_type=Maildir
 set folder="~/Mail/Gmail"
 set spoolfile=+INBOX
-set record=+INBOX
+#set record=+Sent
 set postponed=+Drafts
 # Gmail seems no longer listing Trash but Bin
 set trash=+Bin
