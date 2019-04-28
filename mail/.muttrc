@@ -26,7 +26,7 @@ alternative_order text/plain text/enriched text/html    # save html for last
 set mbox_type=Maildir
 set folder="~/Mail/Gmail"
 set spoolfile=+INBOX
-#set record=+Sent
+set record=+Sent\ Mail
 set postponed=+Drafts
 # Gmail seems no longer listing Trash but Bin
 set trash=+Bin
@@ -97,7 +97,7 @@ macro index,pager   A   "<save-message>=All Mail<enter>i" "Move messages to arch
 
 macro index         @ "<sync-mailbox><shell-escape>offlineimap<enter>" "Run oflineimap to sync all"
 
-# Move to top entry, intead of first unread
+# Move to top entry, instead of first unread
 exec first-entry
 
 #######################################################################
