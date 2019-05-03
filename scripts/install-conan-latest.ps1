@@ -4,12 +4,12 @@
 $downloadUrl = 'https://conan.io/downloads.html'
 $downloadSite = Invoke-WebRequest $downloadUrl
 
-$conanVersion = ($downloadSite.AllElements | `
+$latestVersion = ($downloadSite.AllElements | `
     Where {$_.class -match 'col text-center pb-2 version' `
     -and $_.innerText -match "Conan (\d+\.\d+\.\d+)" } | `
     Select-Object -ExpandProperty InnerText -Last 1).Split(" ")[1].Trim();
 
-$major, $minor, $patch = $conanVersion.split('.');
+$major, $minor, $patch = $latestVersion.split('.');
 try {
   $currentVersion = (conan --version 2>&1);
   $currentVersion = $currentVersion.split(' ')[2] # conna version X.Y.Z
@@ -22,7 +22,7 @@ if ($currentVersion -ne $null) {
   $patch = $patch.split('-')[0]
   if ([Version]::new($currentMajor, $currentMinor, $currentPatch) -ge `
       [Version]::new($major, $minor, $patch)) {
-        Write-Host ('Installed Conan {0} is not newer than {1}' -f $currentVersion.ToString(), $conanVersion);
+        Write-Host ('Installed Conan {0} is not newer than {1}' -f $currentVersion.ToString(), $latestVersion);
         exit 0;
   }
 }
@@ -30,7 +30,7 @@ if ($currentVersion -ne $null) {
 $exe = ('conan-win-64_{0}_{1}_{2}.exe' -f $major, $minor, $patch);
 $out = ('{0}\{1}'-f $PSScriptRoot, $exe);
 if (-not (Test-Path -Path $out -PathType Leaf)) {
-  Write-Host ('Downloading Conan {0}' -f $conanVersion)
+  Write-Host ('Downloading Conan {0}' -f $latestVersion)
   $url = ('https://dl.bintray.com/conan/installers/{0}' -f $exe);
   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
   (New-Object System.Net.WebClient).DownloadFile($url, $out)
