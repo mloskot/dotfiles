@@ -127,6 +127,8 @@ nnoremap <leader>rw gqip
 nnoremap <leader>ft Vatzf
 " bring Ack ready to search - https://github.com/mileszs/ack.vim
 nnoremap <leader>a :Ack 
+" Mark trailing spaces, so we know we are doing flowed format right
+match ErrorMsg '\s\+$'
 "   }}}
 " }}}
 
@@ -159,9 +161,10 @@ vnoremap <tab> %
 " {{{
 set cursorline
 " handle long lines
-setlocal fo+=aw
+"setl fo+=aw
+"setl fo=watqc
 set nowrap
-set textwidth=80
+setl textwidth=79
 set formatoptions=qrn1
 set colorcolumn=85
 " folding
@@ -169,6 +172,8 @@ set foldmethod=indent " syntex
 set foldlevel=99
 " indentation
 set cindent
+setl nosmartindent " for mutt + flowed
+setl nojs
 " tab key
 set expandtab
 set tabstop=4
