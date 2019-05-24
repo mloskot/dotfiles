@@ -6,6 +6,7 @@
 	user = mloskot
 [core]
 	editor = code --wait -n
+	longpaths = true
 [color]
 	branch = auto
 	diff = auto
