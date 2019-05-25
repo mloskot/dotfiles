@@ -104,3 +104,5 @@ exec first-entry
 # Miscellaneous
 source ~/.mail/gpg.muttrc
 source ~/.mail/mailing-lists.muttrc
+source `FILE=$HOME/.mail/aliases; if [ ! -s "$FILE" ]; then FILE=/dev/null;fi;echo "$FILE"`
+
