@@ -2,4 +2,5 @@
 .vs*
 *.gpg
 *.swp
-secret*
+*secret*
+*token*
