@@ -10,6 +10,7 @@ PS1="$PS1"'\w'                 # current working directory path
 #PS1="$PS1"'\W'                 # current working directory name
 if test -z "$WINELOADERNOEXEC"
 then
+	GIT_PS1_SHOWUPSTREAM="auto verbose name"
 	GIT_EXEC_PATH="$(git --exec-path 2>/dev/null)"
 	COMPLETION_PATH="${GIT_EXEC_PATH%/libexec/git-core}"
 	COMPLETION_PATH="${COMPLETION_PATH%/lib/git-core}"
