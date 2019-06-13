@@ -5,7 +5,7 @@
 [github]
 	user = mloskot
 [core]
-	editor = code --wait -n
+	editor = \"C:\\Users\\mateuszl\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" --wait
 	longpaths = true
 [color]
 	branch = auto
