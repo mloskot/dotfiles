@@ -45,7 +45,7 @@ install.bat
 - `git-prompt.sh` for preferred Bash prompt
 
   ```shell
-  mklink %CD%\win\home\.config\git\git-prompt.sh %USERPROFILE%\.config\git\git-prompt.sh
+  mklink %USERPROFILE%\.config\git\git-prompt.sh %CD%\win\home\.config\git\git-prompt.sh
   ```
 
   or
