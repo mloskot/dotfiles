@@ -25,6 +25,7 @@ nametrans = lambda f: f.replace('[Gmail]/', '') if f.startswith('[Gmail]/') else
 realdelete = yes
 # Debian/Ubuntu
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+ssl_version = tls1_2
 # Authentication
 auth_mechanisms = XOAUTH2
 oauth2_request_url = https://accounts.google.com/o/oauth2/token
