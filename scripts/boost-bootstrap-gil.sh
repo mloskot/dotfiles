@@ -9,6 +9,5 @@ fi
 ./bootstrap.sh
 b2 -j8 headers
 
-#./b2 --with-test --with-filesystem variant=debug stage
-#./b2 --with-test --with-filesystem variant=release stage
-b2 -j8 variant=debug,release address-model=64 --layout=versioned --with-test --with-filesystem stage
+b2 toolset=gcc variant=debug,release address-model=64 --layout=versioned --with-test --with-filesystem stage
+b2 toolset=clang variant=debug,release address-model=64 --layout=versioned --with-test --with-filesystem stage
