@@ -1,7 +1,7 @@
 [alias]
-	l = log  --color --graph --oneline
-	l2 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	la = log  --color --graph --oneline --all
+	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	la = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+	lo = log  --color --graph --oneline
 
 	# git show with message and full authorship
 	wosh = show --pretty=full --show-signature --no-patch
