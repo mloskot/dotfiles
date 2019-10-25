@@ -290,8 +290,8 @@ local function git_prompt_filter()
         local color
         if branch then
             -- Has branch => therefore it is a git folder, now figure out status
-            local gitStatus = get_git_status()
-            local gitConflict = get_git_conflict()
+            local gitStatus = nil -- get_git_status()
+            local gitConflict = nil -- get_git_conflict()
 
             color = colors.dirty
             if gitStatus then
@@ -301,7 +301,7 @@ local function git_prompt_filter()
             if gitConflict then
                 color = colors.conflict
             end 
-
+            color = colors.clean
             clink.prompt.value = string.gsub(clink.prompt.value, "{git}", color.."("..verbatim(branch)..")")
             return false
         end
