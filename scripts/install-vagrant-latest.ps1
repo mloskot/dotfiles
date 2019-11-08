@@ -66,7 +66,7 @@ try {
 }
 Remove-Item -Path $out -Force
 
-if (where cmake) {
+if (where vagrant) {
     # check current and latest
     vagrant version
 } else {
