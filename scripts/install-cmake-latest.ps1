@@ -26,6 +26,7 @@ try {
     $currentVersion = $currentVersion.split(' ')[2] # cmake version X.Y.Z
 } catch {
     $currentVersion = $null;
+    Write-Host 'CMake not installed or not found. Downloading.'
 }
 if ($null -ne $currentVersion) {
     $currentMajor, $currentMinor, $currentPatch = $currentVersion.split('.');

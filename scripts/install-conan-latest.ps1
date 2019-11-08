@@ -15,6 +15,7 @@ try {
   $currentVersion = $currentVersion.split(' ')[2] # conna version X.Y.Z
 } catch {
   $currentVersion = $null;
+  Write-Host 'Conan not installed or not found. Downloading.'
 }
 if ($currentVersion -ne $null) {
   $currentMajor, $currentMinor, $currentPatch = $currentVersion.split('.');
