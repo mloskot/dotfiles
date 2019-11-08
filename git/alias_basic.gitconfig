@@ -6,6 +6,8 @@
 	ci = commit
 	cia = commit --amend
 	ciae = commit --amend --no-edit
+	cp = cherry-pick -x -e
+	cpm = cherry-pick -x -e -m1
 	co = checkout
 	dc = diff --cached
 	df = diff
