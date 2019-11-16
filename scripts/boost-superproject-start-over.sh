@@ -25,4 +25,5 @@ git checkout $BRANCH
 git pull
 git submodule update --init --recursive --jobs 8
 
+git pull
 git branch
