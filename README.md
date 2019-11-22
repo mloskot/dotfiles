@@ -16,6 +16,8 @@ install.bat
 
 ## Windows
 
+- Install `DejaVuSansMono Nerd Font` from https://www.nerdfonts.com
+
 - `ConEmu.xml` with custom tasks to [Cmder](http://cmder.net/) config directory
 
   ```shell
