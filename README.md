@@ -70,11 +70,9 @@ sudo sed -i '/bell-style none/s/^# //g' /etc/inputrc
 ### Bash
 
 ```console
-cp ~/.bashrc ~/.bashrc.orig
-```
-
-```console
+cp ~/.bashrc ~/.bashrc.original
 sed -i 's/\@\\h/\@bionic/g' ~/.bashrc
+sed -i 's/\@\\h/\@buster/g' ~/.bashrc
 sed -i 's/\\w\\/\\W\\/g' ~/.bashrc
 ```
 
