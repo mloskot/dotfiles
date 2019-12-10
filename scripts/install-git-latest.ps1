@@ -33,12 +33,12 @@ try {
     Write-Host 'Git not installed or not found. Downloading.'
 }
 
-if ($null -ne $currentVersion) {
+if ($currentVersion -ne $null) {
     $currentMajor, $currentMinor, $currentPatch, $currentIssue = $currentVersion.replace('.windows.', '.').split('.');
     if ([Version]::new($currentMajor, $currentMinor, $currentPatch) -ge `
         [Version]::new($major, $minor, $patch) `
         -and $currentIssue -ge $issue) {
-        Write-Host ('Installed Git {0} is not newer than {1}' -f $currentVersion.ToString(), $latestVersion);
+        Write-Host ('Installed Git {0} is not older than latest {1}' -f $currentVersion.ToString(), $latestVersion);
         exit 0;
     } else {
         Write-Host ('Installed Git {0} is older than latest {1}' -f $currentVersion.ToString(), $latestVersion);

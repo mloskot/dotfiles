@@ -28,14 +28,17 @@ try {
     $currentVersion = $null;
     Write-Host 'CMake not installed or not found. Downloading.'
 }
-if ($null -ne $currentVersion) {
+
+if ($currentVersion -ne $null) {
     $currentMajor, $currentMinor, $currentPatch = $currentVersion.split('.');
     $currentPatch = $currentPatch.split('-')[0] # 0-rcX to 0
     $patch = $patch.split('-')[0]
     if ([Version]::new($currentMajor, $currentMinor, $currentPatch) -ge `
         [Version]::new($major, $minor, $patch)) {
-        Write-Host ('Installed CMake {0} is not newer than {1}' -f $currentVersion.ToString(), $latestVersion);
+        Write-Host ('Installed CMake {0} not older than latest {1}' -f $currentVersion.ToString(), $latestVersion);
         exit 0;
+    } else {
+        Write-Host ('Installed CMake {0} is older than latest {1}' -f $currentVersion.ToString(), $latestVersion);
     }
 }
 
