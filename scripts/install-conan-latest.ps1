@@ -11,10 +11,15 @@ $latestVersion = ($downloadSite.AllElements | `
 
 $major, $minor, $patch = $latestVersion.split('.');
 try {
-    $currentVersion = (conan --version 2>&1);
-    $currentVersion = $currentVersion.split(' ')[2] # conna version X.Y.Z
-}
-catch {
+    if (where conan) {
+        $currentVersion = (conan --version 2>&1);
+    } else {
+        $conanExe = (Join-Path $env:ProgramFiles 'Conan\conan\conan.exe')
+        Write-Host ("Checking version of '{0}'" -f $conanExe)
+        $currentVersion = (&"$conanExe" --version 2>&1);
+    }
+    $currentVersion = $currentVersion.split(' ')[2] # conan version X.Y.Z
+} catch {
     $currentVersion = $null;
     Write-Host 'Conan not installed or not found. Downloading.'
 }
@@ -26,6 +31,8 @@ if ($currentVersion -ne $null) {
             [Version]::new($major, $minor, $patch)) {
         Write-Host ('Installed Conan {0} is not newer than {1}' -f $currentVersion.ToString(), $latestVersion);
         exit 0;
+    } else {
+        Write-Host ('Installed Conan {0} is older than latest {1}' -f $currentVersion.ToString(), $latestVersion);
     }
 }
 
