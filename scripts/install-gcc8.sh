@@ -9,8 +9,8 @@ if type lsb_release >/dev/null 2>&1; then
     fi
 fi
 
-sudo apt-get update
-sudo apt-get install gcc-8 g++-8
+sudo apt-get -y update
+sudo apt-get -y install gcc-8 g++-8
 
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 60 --slave /usr/bin/g++ g++ /usr/bin/g++-8
 sudo update-alternatives --config gcc-8
