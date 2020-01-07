@@ -1,6 +1,6 @@
 #!/bin/sh
 set -x
-version='1.8.14'
+version='1.8.17'
 
 # TODO:
 # . /etc/os-release
