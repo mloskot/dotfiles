@@ -3,7 +3,7 @@ set -x
 
 if type lsb_release >/dev/null 2>&1; then
     if lsb_release -sc | grep bionic; then
-        sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+        sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
     else
         echo "WSL with bionic distro expected"
         exit 1

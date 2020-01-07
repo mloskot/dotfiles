@@ -5,7 +5,7 @@ if type lsb_release >/dev/null 2>&1; then
     if lsb_release -sc | grep bionic; then
         echo "Ubuntu Bionic with native GCC packages"
     else
-        sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+        sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
     fi
 fi
 
