@@ -15,6 +15,7 @@
 	ign = ls-files -o -i --exclude-standard
 	lsf = ls-files
 	lfst = lfs status
+	mb = merge --log --no-ff
 	ra = remote add
 	rt = remote
 	rta = remote add
