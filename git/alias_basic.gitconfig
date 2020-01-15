@@ -25,3 +25,4 @@
 	st = status
 	stsi = status --ignore-submodules=all
 	stsu = status --ignore-submodules=untracked
+	sw = switch
