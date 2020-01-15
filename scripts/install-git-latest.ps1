@@ -8,7 +8,7 @@ $latestVersion = ($downloadSite.AllElements | `
     Where {$_.class -match 'version' -and $_.innerText -match "Version\s+\d+\.\d+\.\d+" } | `
     Select-Object -ExpandProperty InnerText).Trim();
 
-if ($latestVersion -match 'Version\s+(\d+\.\d+\.\d+\.\d+)') {
+if ($latestVersion -match 'Version\s+(\d+\.\d+\.\d+(\.\d+)?)') {
     $latestVersion = $matches[1]
 } else {
     Write-Host ("Failed to extract version of latest release from '{0}' at {1}" -f $latestVersion, $downloadUrl);
@@ -47,13 +47,17 @@ if ($currentVersion -ne $null) {
 # https://github.com/git-for-windows/git/releases/download/v2.24.0.windows.1/Git-2.24.0-64-bit.exe
 # https://github.com/git-for-windows/git/releases/download/v2.24.0.windows.2/Git-2.24.0.2-64-bit.exe
 # https://github.com/git-for-windows/git/releases/download/v2.24.1.windows.2/Git-2.24.1.2-64-bit.exe
-if ($issue -eq 1) {
+if (-not $issue -or $issue -eq 1) {
     $msi = ('Git-{0}.{1}.{2}-64-bit.exe' -f $major, $minor, $patch)
 } else {
     $msi = ('Git-{0}.{1}.{2}.{3}-64-bit.exe' -f $major, $minor, $patch, $issue)
 }
 $out = ('{0}\{1}'-f $PSScriptRoot, $msi);
+
 if (-not (Test-Path -Path $out -PathType Leaf)) {
+    if (-not $issue) {
+        $issue = 1
+    }
     $url = ('https://github.com/git-for-windows/git/releases/download/v{0}.{1}.{2}.windows.{3}/{4}' -f $major, $minor, $patch, $issue, $msi);
     Write-Host ('Downloading Git {0} from {1}' -f $latestVersion, $url)
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
