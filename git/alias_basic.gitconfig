@@ -17,10 +17,10 @@
 	lfst = lfs status
 	mb = merge --log --no-ff
 	ra = remote add
-	rt = remote
+	rs = restore
+	rt = remote -v
 	rta = remote add
 	rtr = remote remove
-	rtv = remote -v
 	sst = submodule status
 	st = status
 	stsi = status --ignore-submodules=all
