@@ -5,7 +5,7 @@ $downloadUrl = 'https://cmake.org/download/'
 $downloadSite = Invoke-WebRequest $downloadUrl
 
 $latestVersion = ($downloadSite.AllElements | `
-    Where {$_.tagName -match 'H3' -and $_.innerText -match "Latest Release" } | `
+    Where-Object {$_.tagName -match 'H3' -and $_.innerText -match "Latest Release" } | `
     Select-Object -ExpandProperty InnerText).Trim();
 if ($latestVersion -match 'Latest Release\s+\((\d+\.\d+\.\d+)\)') {
     $latestVersion = $matches[1]
@@ -16,7 +16,7 @@ if ($latestVersion -match 'Latest Release\s+\((\d+\.\d+\.\d+)\)') {
 
 $major, $minor, $patch = $latestVersion.split('.');
 try {
-    if (where cmake) {
+    if (Where-Object cmake) {
         $currentVersion = (cmake --version 2>&1);
     } else {
         $cmakeExe = (Join-Path $env:ProgramFiles 'CMake\bin\cmake')
@@ -29,7 +29,7 @@ try {
     Write-Host 'CMake not installed or not found. Downloading.'
 }
 
-if ($currentVersion -ne $null) {
+if ($null -ne $currentVersion) {
     $currentMajor, $currentMinor, $currentPatch = $currentVersion.split('.');
     $currentPatch = $currentPatch.split('-')[0] # 0-rcX to 0
     $patch = $patch.split('-')[0]
@@ -56,7 +56,7 @@ $options = @(
     '/norestart',
     'ADD_CMAKE_TO_PATH="System"'
 );
-$options = ($options.GetEnumerator() | % { ('{0}' -f $_) }) -join ' '
+$options = ($options.GetEnumerator() | ForEach-Object { ('{0}' -f $_) }) -join ' '
 try {
     Write-Host ("Installing {0}" -f $out)
     $p = Start-Process -Wait -PassThru -FilePath $out -Args $options
@@ -67,7 +67,7 @@ try {
 }
 Remove-Item -Path $out -Force
 
-if (where cmake) {
+if (Where-Object cmake) {
     cmake --version
 } else {
     Write-Host ("Re-launch console to update PATH")
