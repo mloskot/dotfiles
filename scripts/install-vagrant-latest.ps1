@@ -5,7 +5,7 @@ $downloadUrl = 'https://www.vagrantup.com/downloads.html'
 $downloadSite = Invoke-WebRequest $downloadUrl
 
 $latestVersion = ($downloadSite.AllElements | `
-    Where {$_.class -match 'col-md-12' `
+    Where-Object {$_.class -match 'col-md-12' `
     -and $_.innerText -match "latest version of Vagrant\s+\((\d+\.\d+\.\d+)\)" } | `
     Select-Object -ExpandProperty InnerText).Trim();
 
@@ -19,7 +19,7 @@ if ($latestVersion -match 'latest version of Vagrant\s+\((\d+\.\d+\.\d+)\)') {
 $major, $minor, $patch = $latestVersion.split('.');
 try {
     # check current only
-    if (where vagrant) {
+    if (Where-Object vagrant) {
         $currentVersion = (vagrant --version 2>&1);
     } else {
         $exe = 'C:\HashiCorp\Vagrant\bin\vagrant.exe'
@@ -39,6 +39,8 @@ if ($null -ne $currentVersion) {
         [Version]::new($major, $minor, $patch)) {
         Write-Host ('Installed Vagrant {0} is not newer than {1}' -f $currentVersion.ToString(), $latestVersion);
         exit 0;
+    } else {
+        Write-Host ('Installed Vagrant {0} is older than latest {1}' -f $currentVersion.ToString(), $latestVersion);
     }
 }
 
@@ -55,7 +57,7 @@ $options = @(
     '/qn',
     '/norestart'
 );
-$options = ($options.GetEnumerator() | % { ('{0}' -f $_) }) -join ' '
+$options = ($options.GetEnumerator() | ForEach-Object { ('{0}' -f $_) }) -join ' '
 try {
     Write-Host ("Installing {0}" -f $out)
     $p = Start-Process -Wait -PassThru -FilePath $out -Args $options
@@ -66,7 +68,7 @@ try {
 }
 Remove-Item -Path $out -Force
 
-if (where vagrant) {
+if (Where-Object vagrant) {
     # check current and latest
     vagrant version
 } else {
