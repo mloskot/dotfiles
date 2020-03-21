@@ -137,8 +137,10 @@ function color_my_prompt {
   local __git_branch_color="$GREEN"
   local __prompt_tail="$WHITE$"
   local __user_input_color="$WHITE"
-  local __git_branch=$(__git_ps1); 
-  
+  if [[ $PWD != /mnt* ]]; then
+    # Do not apply Git prompt for repos on Windows disk cloned with eol=crlf
+    local __git_branch=$(__git_ps1);
+  fi
   # colour branch name depending on state
   if [[ "${__git_branch}" =~ "*" ]]; then     # if repository is dirty
       __git_branch_color="$RED"
