@@ -52,6 +52,9 @@
     trustExitCode = true
 [diff]
     tool = vscode
+[diff "exif"]
+    textconv = exiftool
+	cachetextconv = true
 [merge]
     tool = TortoiseGitMerge
 [submodule]
