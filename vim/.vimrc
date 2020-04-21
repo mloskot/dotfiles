@@ -14,9 +14,14 @@
 if has('win32') || has('win64')
     set runtimepath=$HOME/.vim,$HOME/vimfiles,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 endif
-" On my Arch, Powerline is on by default, but on Debian it is not.
-set runtimepath+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim
 " }}}
+if filereadable(expand('~/.vim/autoload/plug.vim'))
+    call plug#begin(expand('~/.vim/plugged'))
+    Plug 'arcticicestudio/nord-vim'
+    call plug#end()
+endif
+
+
 
 filetype off
 "execute pathogen#infect()
@@ -46,7 +51,11 @@ set wildmode=list:longest
 set lazyredraw
 set mouse=a
 set t_Co=256
-colorscheme desert
+if filereadable(expand('~/.vim/plugged/nord-vim/colors/nord.vim'))
+    colorscheme nord
+else
+    colorscheme desert
+endif
 if has('gui_running')
     set vb t_vb="<ESC>|30f" " Turn off beep
     set guioptions-=T " Hide toolbar
