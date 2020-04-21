@@ -1,0 +1,47 @@
+[user]
+	name = Mateusz Łoskot
+	email = mateusz@loskot.net
+	signingkey = BB2AC1F2
+[commit]
+	gpgSign = false
+[github]
+	user = mloskot
+[core]
+	longpaths = true
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	ui = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	header = normal
+	added = red
+	updated = green
+	changed = red
+	untracked = red
+	nobranch = red
+[include]
+	path = ~/alias_basic.gitconfig
+	path = ~/alias_ignore.gitconfig
+	path = ~/alias_log.gitconfig
+	path = ~/alias_tree.gitconfig
+	path = ~/alias_misc.gitconfig
+[diff "exif"]
+    textconv = exiftool
+	cachetextconv = true
+[submodule]
+	fetchJobs = 8
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
