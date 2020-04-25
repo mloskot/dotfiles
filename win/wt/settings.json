@@ -11,23 +11,27 @@
     {
       "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
       "name": "Windows PowerShell",
-      "colorScheme": "Nord",
+      "colorScheme": "Monokai Night",
       "commandline": "powershell.exe",
+      "fontFace": "Consolas",
+      "fontSize": 10,
       "hidden": false,
       "useAcrylic": false
     },
     {
       "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
       "name": "Command Prompt",
-      "colorScheme": "Nord",
+      "colorScheme": "Monokai Night",
       "commandline": "cmd.exe",
+      "fontFace": "Consolas",
+      "fontSize": 10,
       "hidden": false,
       "useAcrylic": false
     },
     {
       "guid": "{00000000-0000-0000-ba54-000000000002}",
       "closeOnExit": true,
-      "colorScheme": "Nord",
+      "colorScheme": "Monokai Night",
       "commandline": "\"%PROGRAMFILES%\\git\\bin\\bash.exe\" --login -i",
       "cursorColor": "#FFFFFF",
       "cursorShape": "bar",
@@ -42,19 +46,11 @@
       "useAcrylic": false
     },
     {
-      "guid": "{5b4ef9a8-4506-4ac9-930a-5eb1fd0ebf20}",
-      "colorScheme": "Nord",
-      "name": "Cmder",
-      "commandline": "cmd.exe /k C:\\Apps\\cmder_mini\\vendor\\init.bat",
-      "icon": "C:\\Apps\\cmder_mini\\icons\\cmder.ico ",
-      "hidden": false
-    },
-    {
       "guid": "{0ca20dad-35be-5f56-a8ff-afcfefaa6101}",
       "name": "VS2017 64",
       "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Auxiliary/Build/vcvars64.bat\"",
       "hidden": false,
-      "fontFace": "Cascadia Code",
+      "fontFace": "Consolas",
       "fontSize": 10,
       "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
       "startingDirectory": "F:\\V91.x64"
@@ -62,10 +58,10 @@
     {
       "guid": "{0caa0dad-33be-5f56-a8ff-afceeeaa6101}",
       "name": "VS2017 32",
-      "colorScheme": "Nord",
+      "colorScheme": "Monokai Night",
       "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Auxiliary/Build/vcvars32.bat\" x64_x86",
       "hidden": false,
-      "fontFace": "Cascadia Code",
+      "fontFace": "Consolas",
       "fontSize": 10,
       "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
       "startingDirectory":  "F:\\V91.win32"
@@ -73,10 +69,10 @@
     {
       "guid": "{1ca20dcd-35be-5f56-a8ff-afcfefaa6121}",
       "name": "VS2019 64",
-      "colorScheme": "Solarized Dark",
+      "colorScheme": "Monokai Night",
       "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Auxiliary/Build/vcvars64.bat\"",
       "hidden": false,
-      "fontFace": "Cascadia Code",
+      "fontFace": "Consolas",
       "fontSize": 10,
       "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
       "startingDirectory": "D:\\"
@@ -84,17 +80,25 @@
     {
       "guid": "{1caa0dfd-35be-5f56-a8ff-afceeeaa6121}",
       "name": "VS2019 32",
-      "colorScheme": "Solarized Dark",
+      "colorScheme": "Monokai Night",
       "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Auxiliary/Build/vcvars32.bat\" x64_x86",
       "hidden": false,
-      "fontFace": "Cascadia Code",
+      "fontFace": "Consolas",
       "fontSize": 10,
       "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
       "startingDirectory": "D:\\"
     },
     {
+      "guid": "{5b4ef9a8-4506-4ac9-930a-5eb1fd0ebf20}",
+      "colorScheme": "Monokai Night",
+      "name": "Cmder",
+      "commandline": "cmd.exe /k C:\\Apps\\cmder_mini\\vendor\\init.bat",
+      "icon": "C:\\Apps\\cmder_mini\\icons\\cmder.ico ",
+      "hidden": false
+    },
+    {
       "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
-      "colorScheme": "Nord",
+      "colorScheme": "Monokai Night",
       "fontFace": "Consolas",
       "fontSize": 10,
       "historySize": 9001,
@@ -105,7 +109,7 @@
     },
     {
       "guid": "{6f9994f0-4403-5e85-9cce-98e5da3839bb}",
-      "colorScheme": "Nord",
+      "colorScheme": "Monokai Night",
       "fontFace": "Consolas",
       "fontSize": 10,
       "historySize": 9001,
@@ -115,7 +119,9 @@
     },
     {
       "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
-      "colorScheme": "Nord",
+      "colorScheme": "Monokai Night",
+      "fontFace": "Consolas",
+      "fontSize": 10,
       "hidden": false,
       "name": "Debian",
       "source": "Windows.Terminal.Wsl",
@@ -123,6 +129,8 @@
     },
     {
       "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+      "fontFace": "Consolas",
+      "fontSize": 10,
       "hidden": false,
       "name": "Azure Cloud Shell",
       "source": "Windows.Terminal.Azure",
