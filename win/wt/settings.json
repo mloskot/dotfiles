@@ -1,0 +1,182 @@
+
+// To view the default settings, hold "alt" while clicking on the "Settings" button.
+// For documentation on these settings, see: https://aka.ms/terminal-documentation
+
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+
+  "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+
+  "profiles": [
+    {
+      "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+      "name": "Windows PowerShell",
+      "colorScheme": "Nord",
+      "commandline": "powershell.exe",
+      "hidden": false,
+      "useAcrylic": false
+    },
+    {
+      "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+      "name": "Command Prompt",
+      "colorScheme": "Nord",
+      "commandline": "cmd.exe",
+      "hidden": false,
+      "useAcrylic": false
+    },
+    {
+      "guid": "{00000000-0000-0000-ba54-000000000002}",
+      "closeOnExit": true,
+      "colorScheme": "Nord",
+      "commandline": "\"%PROGRAMFILES%\\git\\bin\\bash.exe\" --login -i",
+      "cursorColor": "#FFFFFF",
+      "cursorShape": "bar",
+      "fontFace": "Consolas",
+      "fontSize": 10,
+      "historySize": 9001,
+      "icon": "c:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+      "name": "Git Bash",
+      "padding": "0, 0, 0, 0",
+      "snapOnInput": true,
+      "startingDirectory": "%USERPROFILE%",
+      "useAcrylic": false
+    },
+    {
+      "guid": "{5b4ef9a8-4506-4ac9-930a-5eb1fd0ebf20}",
+      "colorScheme": "Nord",
+      "name": "Cmder",
+      "commandline": "cmd.exe /k C:\\Apps\\cmder_mini\\vendor\\init.bat",
+      "icon": "C:\\Apps\\cmder_mini\\icons\\cmder.ico ",
+      "hidden": false
+    },
+    {
+      "guid": "{0ca20dad-35be-5f56-a8ff-afcfefaa6101}",
+      "name": "VS2017 64",
+      "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Auxiliary/Build/vcvars64.bat\"",
+      "hidden": false,
+      "fontFace": "Cascadia Code",
+      "fontSize": 10,
+      "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
+      "startingDirectory": "F:\\V91.x64"
+    },
+    {
+      "guid": "{0caa0dad-33be-5f56-a8ff-afceeeaa6101}",
+      "name": "VS2017 32",
+      "colorScheme": "Nord",
+      "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Auxiliary/Build/vcvars32.bat\" x64_x86",
+      "hidden": false,
+      "fontFace": "Cascadia Code",
+      "fontSize": 10,
+      "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
+      "startingDirectory":  "F:\\V91.win32"
+    },
+    {
+      "guid": "{1ca20dcd-35be-5f56-a8ff-afcfefaa6121}",
+      "name": "VS2019 64",
+      "colorScheme": "Solarized Dark",
+      "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Auxiliary/Build/vcvars64.bat\"",
+      "hidden": false,
+      "fontFace": "Cascadia Code",
+      "fontSize": 10,
+      "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
+      "startingDirectory": "D:\\"
+    },
+    {
+      "guid": "{1caa0dfd-35be-5f56-a8ff-afceeeaa6121}",
+      "name": "VS2019 32",
+      "colorScheme": "Solarized Dark",
+      "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Auxiliary/Build/vcvars32.bat\" x64_x86",
+      "hidden": false,
+      "fontFace": "Cascadia Code",
+      "fontSize": 10,
+      "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
+      "startingDirectory": "D:\\"
+    },
+    {
+      "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+      "colorScheme": "Nord",
+      "fontFace": "Consolas",
+      "fontSize": 10,
+      "historySize": 9001,
+      "hidden": false,
+      "name": "Ubuntu-18.04",
+      "source": "Windows.Terminal.Wsl",
+      "useAcrylic": false
+    },
+    {
+      "guid": "{6f9994f0-4403-5e85-9cce-98e5da3839bb}",
+      "colorScheme": "Nord",
+      "fontFace": "Consolas",
+      "fontSize": 10,
+      "historySize": 9001,
+      "hidden": false,
+      "name": "Ubuntu-16.04",
+      "source": "Windows.Terminal.Wsl"
+    },
+    {
+      "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+      "colorScheme": "Nord",
+      "hidden": false,
+      "name": "Debian",
+      "source": "Windows.Terminal.Wsl",
+      "useAcrylic": false
+    },
+    {
+      "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+      "hidden": false,
+      "name": "Azure Cloud Shell",
+      "source": "Windows.Terminal.Azure",
+      "useAcrylic": false
+    }
+  ],
+
+  // Add custom color schemes to this array
+  "schemes": [
+    {
+      "name": "Monokai Night",
+      "background": "#1f1f1f",
+      "foreground": "#f8f8f8",
+      "black": "#1f1f1f",
+      "blue": "#6699df",
+      "cyan": "#e69f66",
+      "green": "#a6e22e",
+      "purple": "#ae81ff",
+      "red": "#f92672",
+      "white": "#f8f8f2",
+      "yellow": "#e6db74",
+      "brightBlack": "#75715e",
+      "brightBlue": "#66d9ef",
+      "brightCyan": "#e69f66",
+      "brightGreen": "#a6e22e",
+      "brightPurple": "#ae81ff",
+      "brightRed": "#f92672",
+      "brightWhite": "#f8f8f2",
+      "brightYellow": "#e6db74"
+    },
+    {
+      "name": "Nord",
+      "background": "#2e3440",
+      "foreground": "#d8dee9",
+      "black": "#3b4252",
+      "blue": "#81a1c1",
+      "brightBlack": "#4c566a",
+      "brightBlue": "#81a1c1",
+      "brightCyan": "#8fbcbb",
+      "brightGreen": "#a3be8c",
+      "brightPurple": "#b48ead",
+      "brightRed": "#bf616a",
+      "brightWhite": "#eceff4",
+      "brightYellow": "#ebcb8b",
+      "cyan": "#88c0d0",
+      "green": "#a3be8c",
+      "purple": "#b48ead",
+      "red": "#bf616a",
+      "white": "#e5e9f0",
+      "yellow": "#ebcb8b"
+    }
+  ],
+
+  // Add any keybinding overrides to this array.
+  // To unbind a default keybinding, set the command to "unbound"
+  "keybindings": []
+}
