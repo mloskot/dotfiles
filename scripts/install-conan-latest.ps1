@@ -3,13 +3,10 @@
 
 $downloadUrl = 'https://conan.io/downloads.html'
 $downloadSite = Invoke-WebRequest $downloadUrl
+$_ = $downloadSite.Links | where { $_.href -match "conan-win.+(\d+_\d+_\d+)\.exe" }
+$latestVersion = $matches[1]
 
-$latestVersion = ($downloadSite.AllElements | `
-        Where { $_.class -match 'col text-center pb-2 version' `
-            -and $_.innerText -match "Conan (\d+\.\d+\.\d+)" } | `
-        Select-Object -ExpandProperty InnerText -Last 1).Split(" ")[1].Trim();
-
-$major, $minor, $patch = $latestVersion.split('.');
+$major, $minor, $patch = $latestVersion.split('_');
 try {
     if (where conan) {
         $currentVersion = (conan --version 2>&1);
