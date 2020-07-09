@@ -5,7 +5,7 @@ $downloadUrl = 'https://www.vagrantup.com/downloads.html'
 $downloadSite = Invoke-WebRequest $downloadUrl
 
 $latestVersion = ($downloadSite.AllElements | `
-    Where-Object {$_.class -match 'col-md-12' `
+    Where-Object {$_.class -match 'description g-type-body' `
     -and $_.innerText -match "latest version of Vagrant\s+\((\d+\.\d+\.\d+)\)" } | `
     Select-Object -ExpandProperty InnerText).Trim();
 
@@ -17,6 +17,7 @@ if ($latestVersion -match 'latest version of Vagrant\s+\((\d+\.\d+\.\d+)\)') {
 }
 
 $major, $minor, $patch = $latestVersion.split('.');
+
 try {
     # check current only
     if (Where-Object vagrant) {
