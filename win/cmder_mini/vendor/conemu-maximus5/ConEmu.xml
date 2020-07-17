@@ -503,14 +503,14 @@
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="Flags" type="dword" data="00000004"/>
 				</key>
-				<key name="Task3" modified="2020-07-13 16:09:34" build="200615">
+				<key name="Task3" modified="2020-07-17 17:28:16" build="200713">
 					<value name="Name" type="string" data="{VS2017::64 As Admin}"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=' /icon "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Flags" type="dword" data="00000000"/>
-					<value name="Cmd1" type="string" data='*%comspec% /s /k ""C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars64.bat" &amp; "%ConEmuDir%\..\init.bat" /nix_tools 0" -new_console:t:"VS2017 x64 as Admin" -new_console:d:"F:\V91.x64"'/>
+					<value name="Cmd1" type="string" data='*%comspec% /s /k ""C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars64.bat" &amp; "%ConEmuDir%\..\init.bat" /nix_tools 0" -new_console:t:"VS2017 x64 as Admin" -new_console:d:"F:\V90.x64"'/>
 				</key>
 				<key name="Task4" modified="2020-07-13 16:09:34" build="200615">
 					<value name="Name" type="string" data="{VS2012::64 As Admin}"/>
