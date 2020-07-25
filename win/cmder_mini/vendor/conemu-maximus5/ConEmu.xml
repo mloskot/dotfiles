@@ -602,14 +602,14 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='cmd /c "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu1804.exe" -new_console:t:"wsl:Bionic"'/>
 				</key>
-				<key name="Task14" modified="2020-07-25 16:54:10" build="200713">
+				<key name="Task14" modified="2020-07-25 17:12:19" build="200713">
 					<value name="Name" type="string" data="{WSL::Focal}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data='/icon "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu2004.exe"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='cmd /c "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu2004.exe" -new_console:t:"wsl:Bionic"'/>
+					<value name="Cmd1" type="string" data='cmd /c "C:\Users\mateuszl\AppData\Local\Microsoft\WindowsApps\ubuntu2004.exe" -new_console:t:"wsl:Focal"'/>
 				</key>
 				<key name="Task15" modified="2020-07-25 16:53:10" build="200713">
 					<value name="Name" type="string" data="{Powershell::Powershell}"/>
