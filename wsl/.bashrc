@@ -56,17 +56,18 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+CODENAME=$(lsb_release -c | cut -f2)
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@bionic\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@${CODENAME}\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@bionic:\W\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@${CODENAME}:\W\$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@bionic: \W\a\]$PS1"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@${CODENAME}: \W\a\]$PS1"
     ;;
 *)
     ;;
@@ -132,7 +133,7 @@ RED="\[\033[0;31m\]"
 VIOLET='\[\033[01;35m\]'
 
 function color_my_prompt {
-  local __user_and_host="$GREEN\u@bionic$WHITE:"
+  local __user_and_host="$GREEN\u@${CODENAME}$WHITE:"
   local __cur_location="$BLUE\w"           # capital 'W': current directory, small 'w': full file path
   local __git_branch_color="$GREEN"
   local __prompt_tail="$WHITE$"
