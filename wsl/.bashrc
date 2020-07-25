@@ -130,7 +130,7 @@ CYAN="\[\033[0;36m\]"
 GREEN="\[\033[01;32m\]"
 RED="\[\033[0;31m\]"
 VIOLET='\[\033[01;35m\]'
- 
+
 function color_my_prompt {
   local __user_and_host="$GREEN\u@bionic$WHITE:"
   local __cur_location="$BLUE\w"           # capital 'W': current directory, small 'w': full file path
@@ -151,21 +151,21 @@ function color_my_prompt {
   elif [[ "${__git_branch}" =~ "+" ]]; then   # if there are staged files
       __git_branch_color="$CYAN"
   fi
-   
+
   # Build the PS1 (Prompt String)
   PS1="$__user_and_host$__cur_location$__git_branch_color$__git_branch$__prompt_tail$__user_input_color "
 }
- 
+
 # configure PROMPT_COMMAND which is executed each time before PS1
-export PROMPT_COMMAND=color_my_prompt
- 
+#export PROMPT_COMMAND=color_my_prompt
+
 # if .git-prompt.sh exists, set options and execute it
 if [ -f ~/.git-prompt.sh ]; then
-  GIT_PS1_SHOWDIRTYSTATE=true
-  GIT_PS1_SHOWSTASHSTATE=true
-  GIT_PS1_SHOWUNTRACKEDFILES=true
+  GIT_PS1_SHOWDIRTYSTATE=1
+  GIT_PS1_SHOWSTASHSTATE=1
+  GIT_PS1_SHOWUNTRACKEDFILES=1
   GIT_PS1_SHOWUPSTREAM="auto"
-  GIT_PS1_HIDE_IF_PWD_IGNORED=true
+  GIT_PS1_HIDE_IF_PWD_IGNORED=1
   GIT_PS1_SHOWCOLORHINTS=true
   . ~/.git-prompt.sh
 fi
