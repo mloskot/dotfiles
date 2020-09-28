@@ -14,7 +14,7 @@
       "colorScheme": "Monokai Night",
       "commandline": "powershell.exe",
       "fontFace": "Consolas",
-      "fontSize": 10,
+      "fontSize": 11,
       "hidden": false,
       "useAcrylic": false
     },
@@ -135,6 +135,12 @@
       "name": "Azure Cloud Shell",
       "source": "Windows.Terminal.Azure",
       "useAcrylic": false
+    },
+    {
+        "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+        "hidden": false,
+        "name": "Ubuntu-20.04",
+        "source": "Windows.Terminal.Wsl"
     }
   ],
 
