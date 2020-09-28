@@ -7,6 +7,7 @@
 [core]
 	editor = \"C:/Program Files/Microsoft VS Code/bin/code\" --wait
 	longpaths = true
+	pager = less --raw-control-chars
 [color]
 	branch = auto
 	diff = auto
