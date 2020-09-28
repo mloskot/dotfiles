@@ -56,18 +56,17 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-CODENAME=$(lsb_release -c | cut -f2)
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@${CODENAME}\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@focal\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@${CODENAME}:\W\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@focal:\W\$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@${CODENAME}: \W\a\]$PS1"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@focal: \W\a\]$PS1"
     ;;
 *)
     ;;
@@ -116,57 +115,11 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-sshd_status=$(service ssh status)
-if [[ $sshd_status = *"is not running"* ]]; then
-  sudo service ssh --full-restart
-fi
 
-# store colors
-WHITE="\[\033[00m\]"
-MAGENTA="\[\033[0;35m\]"
-YELLOW="\[\033[01;33m\]"
-BLUE="\[\033[01;34m\]"
-LIGHT_GRAY="\[\033[0;37m\]"
-CYAN="\[\033[0;36m\]"
-GREEN="\[\033[01;32m\]"
-RED="\[\033[0;31m\]"
-VIOLET='\[\033[01;35m\]'
-
-function color_my_prompt {
-  local __user_and_host="$GREEN\u@${CODENAME}$WHITE:"
-  local __cur_location="$BLUE\w"           # capital 'W': current directory, small 'w': full file path
-  local __git_branch_color="$GREEN"
-  local __prompt_tail="$WHITE$"
-  local __user_input_color="$WHITE"
-  if [[ $PWD != /mnt* ]]; then
-    # Do not apply Git prompt for repos on Windows disk cloned with eol=crlf
-    local __git_branch=$(__git_ps1);
-  fi
-  # colour branch name depending on state
-  if [[ "${__git_branch}" =~ "*" ]]; then     # if repository is dirty
-      __git_branch_color="$RED"
-  elif [[ "${__git_branch}" =~ "$" ]]; then   # if there is something stashed
-      __git_branch_color="$YELLOW"
-  elif [[ "${__git_branch}" =~ "%" ]]; then   # if there are only untracked files
-      __git_branch_color="$LIGHT_GRAY"
-  elif [[ "${__git_branch}" =~ "+" ]]; then   # if there are staged files
-      __git_branch_color="$CYAN"
-  fi
-
-  # Build the PS1 (Prompt String)
-  PS1="$__user_and_host$__cur_location$__git_branch_color$__git_branch$__prompt_tail$__user_input_color "
+GOPATH=$HOME/go
+function _update_ps1() {
+    PS1="$($GOPATH/bin/powerline-go -error $? -hostname-only-if-ssh)"
 }
-
-# configure PROMPT_COMMAND which is executed each time before PS1
-#export PROMPT_COMMAND=color_my_prompt
-
-# if .git-prompt.sh exists, set options and execute it
-if [ -f ~/.git-prompt.sh ]; then
-  GIT_PS1_SHOWDIRTYSTATE=1
-  GIT_PS1_SHOWSTASHSTATE=1
-  GIT_PS1_SHOWUNTRACKEDFILES=1
-  GIT_PS1_SHOWUPSTREAM="auto"
-  GIT_PS1_HIDE_IF_PWD_IGNORED=1
-  GIT_PS1_SHOWCOLORHINTS=true
-  . ~/.git-prompt.sh
+if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
