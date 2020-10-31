@@ -121,6 +121,12 @@
                 "fontSize": 10
             },
             {
+                "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+                "hidden": false,
+                "name": "Ubuntu-18.04",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
                 "guid": "{6f9994f0-4403-5e85-9cce-98e5da3839bb}",
                 "hidden": false,
                 "name": "Ubuntu-16.04",
@@ -130,12 +136,6 @@
                 "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
                 "hidden": false,
                 "name": "Debian",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
-                "hidden": false,
-                "name": "Ubuntu-18.04",
                 "source": "Windows.Terminal.Wsl"
             },
             {
