@@ -4,3 +4,5 @@
 	signingkey = BB2AC1F2
 [commit]
 	gpgSign = true
+[credential]
+	helper = manager

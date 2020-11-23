@@ -1,0 +1,14 @@
+[user]
+	name = Mateusz Łoskot
+	email = mateusz@loskot.net
+	signingkey = BB2AC1F2
+[commit]
+	gpgSign = false
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+[include]
+	path = ~/alias_basic.gitconfig
+	path = ~/alias_ignore.gitconfig
+	path = ~/alias_log.gitconfig
+	path = ~/alias_tree.gitconfig
+	path = ~/alias_misc.gitconfig
