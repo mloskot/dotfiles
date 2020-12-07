@@ -6,7 +6,7 @@
 // For documentation on these settings, see: https://aka.ms/terminal-documentation
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "defaultProfile": "{a3a2e83a-884a-5379-baa8-16f193a13b21}",
     // You can add more global application settings here.
     // To learn more about global settings, visit https://aka.ms/terminal-global-settings
     // If enabled, selections are automatically copied to your clipboard.
@@ -23,9 +23,9 @@
         },
         "list": [
             {
-                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "guid": "{a3a2e83a-884a-5379-baa8-16f193a13b21}",
                 "hidden": false,
-                "name": "PowerShell 7 (Preview)",
+                "name": "PowerShell 7",
                 "source": "Windows.Terminal.PowershellCore",
                 "colorScheme": "Solarized Dark Patched",
                 "fontFace": "Cascadia Code PL",
@@ -93,6 +93,7 @@
             {
                 "guid": "{0ca20dad-35be-5f56-a8ff-afcfefaa6101}",
                 "name": "VS2017 64",
+                "colorScheme": "Monokai Night",
                 "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Auxiliary/Build/vcvars64.bat\"",
                 "hidden": false,
                 "fontFace": "Consolas",
@@ -143,6 +144,12 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore"
             }
         ]
     },
