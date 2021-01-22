@@ -23,7 +23,12 @@ git submodule foreach --recursive 'git reset --hard'
 
 git checkout $BRANCH
 git pull
-git submodule update --init --recursive --jobs 8
+
+if ! printf '%s\n%s\n' '2.8.0' $(git --version | head -n1  | cut -d" " -f3) | sort -V -C; then
+    git submodule update --init --recursive
+else
+    git submodule update --init --recursive --jobs 8
+fi
 
 git pull
 git branch
