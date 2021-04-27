@@ -45,9 +45,11 @@
             {
                 // Make changes here to the cmd.exe profile.
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
                 "name": "Command Prompt",
                 "commandline": "cmd.exe",
-                "hidden": false
+                "fontFace": "Cascadia Code PL",
+                "fontSize": 10
             },
             {
                 "guid": "{00000000-0000-0000-ba54-000000000002}",
@@ -113,11 +115,22 @@
                 "startingDirectory": "F:\\V90.win32"
             },
             {
+                "guid": "{5ca20dad-35be-5f56-a8ff-afcfefaa6102}",
+                "name": "VS2012 64",
+                "colorScheme": "Monokai Night",
+                "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio 11.0/VC/vcvarsall.bat\" amd64",
+                "hidden": false,
+                "fontFace": "Consolas",
+                "fontSize": 10,
+                "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
+                "startingDirectory": "F:\\V80.x64"
+            },
+            {
                 "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
                 "hidden": false,
                 "name": "Ubuntu-20.04",
                 "source": "Windows.Terminal.Wsl",
-                "colorScheme": "Solarized Dark Patched",
+                //"colorScheme": "Solarized Dark Patched",
                 "fontFace": "Cascadia Code PL",
                 "fontSize": 10
             },
