@@ -23,23 +23,22 @@
         },
         "list": [
             {
+                "colorScheme": "Solarized Dark Patched",
+                "fontFace": "CaskaydiaCove NF",
+                "fontSize": 10,
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell 7",
-                "source": "Windows.Terminal.PowershellCore",
-                "colorScheme": "Solarized Dark Patched",
-                "fontFace": "Cascadia Code PL",
-                "fontSize": 10
+                "source": "Windows.Terminal.PowershellCore"
             },
             {
-                // Make changes here to the powershell.exe profile.
+                "colorScheme": "Solarized Dark Patched",
+                "commandline": "powershell.exe",
+                "fontFace": "CaskaydiaCove NF",
+                "fontSize": 10,
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
-                "name": "Windows PowerShell",
-                "commandline": "powershell.exe",
-                "colorScheme": "Solarized Dark Patched",
-                "fontFace": "Cascadia Code PL",
-                "fontSize": 10
+                "name": "Windows PowerShell"
             },
 
             {

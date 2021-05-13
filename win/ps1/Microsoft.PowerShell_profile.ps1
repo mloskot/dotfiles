@@ -13,11 +13,11 @@ Set-Alias ~ cuserprofile -Option AllScope
 
 # Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
 # Install-Module posh-git -Scope CurrentUser
-# Install-Module oh-my-posh -Scope CurrentUser
 Import-Module posh-git
+# Install-Module oh-my-posh -Scope CurrentUser
 Import-Module oh-my-posh
 
 # Install-Module -AllowClobber Get-ChildItemColor
 Import-Module Get-ChildItemColor
 
-Set-Theme Paradox
+Set-PoshPrompt -Theme marcduiker
