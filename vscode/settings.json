@@ -1,0 +1,34 @@
+{
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "notebook.lineNumbers": "on",
+    "security.workspace.trust.untrustedFiles": "open",
+    "shellcheck.executablePath": "C:\\bin\\shellcheck-v0.7.1.exe",
+    "terminal.integrated.localEchoExcludePrograms": [
+        "vim",
+        "vi",
+        "nano"
+    ],
+    "vim.useCtrlKeys": false,
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "$HOME/.vsvimrc",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "C_Cpp.clang_format_path": "C:\\Program Files\\LLVM\\bin\\clang-format.exe",
+    "terminal.integrated.fontFamily": "DejaVuSansMono NF",
+    "python.showStartPage": false,
+    "terminal.integrated.fontSize": 12,
+    "workbench.colorTheme": "Github Light Theme - Gray",
+    "editor.fontSize": 14,
+    "powershell.powerShellDefaultVersion": "PowerShell (x64)",
+    "powershell.powerShellAdditionalExePaths": [
+        {
+            "exePath": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+            "versionName": "PowerShell 7 (pwsh.exe)"
+        }
+    ],
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "editor.lineNumbers": "relative",
+}
