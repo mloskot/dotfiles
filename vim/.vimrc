@@ -14,14 +14,9 @@
 if has('win32') || has('win64')
     set runtimepath=$HOME/.vim,$HOME/vimfiles,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 endif
+" On my Arch, Powerline is on by default, but on Debian it is not.
+set runtimepath+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim
 " }}}
-if filereadable(expand('~/.vim/autoload/plug.vim'))
-    call plug#begin(expand('~/.vim/plugged'))
-    Plug 'arcticicestudio/nord-vim'
-    call plug#end()
-endif
-
-
 
 filetype off
 "execute pathogen#infect()
@@ -51,11 +46,7 @@ set wildmode=list:longest
 set lazyredraw
 set mouse=a
 set t_Co=256
-if filereadable(expand('~/.vim/plugged/nord-vim/colors/nord.vim'))
-    colorscheme nord
-else
-    colorscheme desert
-endif
+colorscheme desert
 if has('gui_running')
     set vb t_vb="<ESC>|30f" " Turn off beep
     set guioptions-=T " Hide toolbar
@@ -136,8 +127,6 @@ nnoremap <leader>rw gqip
 nnoremap <leader>ft Vatzf
 " bring Ack ready to search - https://github.com/mileszs/ack.vim
 nnoremap <leader>a :Ack 
-" Mark trailing spaces, so we know we are doing flowed format right
-match ErrorMsg '\s\+$'
 "   }}}
 " }}}
 
@@ -170,10 +159,8 @@ vnoremap <tab> %
 " {{{
 set cursorline
 " handle long lines
-"setl fo+=aw
-"setl fo=watqc
 set nowrap
-setl textwidth=79
+set textwidth=80
 set formatoptions=qrn1
 set colorcolumn=85
 " folding
@@ -181,8 +168,6 @@ set foldmethod=indent " syntex
 set foldlevel=99
 " indentation
 set cindent
-setl nosmartindent " for mutt + flowed
-setl nojs
 " tab key
 set expandtab
 set tabstop=4

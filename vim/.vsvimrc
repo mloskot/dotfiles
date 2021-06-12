@@ -48,12 +48,14 @@ nnoremap s} ciw{<C-r>"}<Esc>
 nnoremap s> ciw<lt><C-r>"><Esc>
 nnoremap s" ciw"<C-r>""<Esc>
 nnoremap s' ciw'<C-r>"'<Esc>
+nnoremap s% ciw%<C-r>"%<Esc>
 nnoremap sw) ciW(<C-r>")<Esc>
 nnoremap sw] ciW[<C-r>"]<Esc>
 nnoremap sw} ciW{<C-r>"}<Esc>
 nnoremap sw> ciW<lt><C-r>"><Esc>
 nnoremap sw" ciW"<C-r>""<Esc>
 nnoremap sw' ciW'<C-r>"'<Esc>
+nnoremap sw% ciw%<C-r>"%<Esc>
 
 " Surround delete bindings
 nnoremap ds) vi(dvhp
@@ -62,6 +64,7 @@ nnoremap ds} vi{dvhp
 nnoremap ds> vi<dvhp
 nnoremap ds" vi"dvhp
 nnoremap ds' vi'dvhp
+nnoremap ds% vi%dvhp
 
 " Surround change bindings
 nnoremap cs"' vi"oh<Esc>msvi"l<Esc>cl'<Esc>`scl'<Esc>
