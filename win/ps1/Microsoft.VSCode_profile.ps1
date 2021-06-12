@@ -12,7 +12,7 @@ Set-Alias ls Get-ChildItemColorFormatWide -Option AllScope
 function cuserprofile { Set-Location ~ }
 Set-Alias ~ cuserprofile -Option AllScope
 
-# Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+# Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck    
 # Install-Module posh-git -Scope CurrentUser
 Import-Module posh-git
 # Install-Module oh-my-posh -Scope CurrentUser
@@ -30,14 +30,4 @@ else {
     Write-Warning ("Cannot find '{0}'" -f $rgPath)
 }
 
-# Select oh-my-posh theme
-if($env:TERM_PROGRAM -eq 'vscode') {
-    #Set-PoshPrompt -Theme robbyrussel
-    #Set-PoshPrompt -Theme star
-    Set-PoshPrompt -Theme marcduiker
-    Set-PoshPrompt -Theme C:\Users\mateuszl\.theme-marcduiker-mloskot.omp.json
-} else {
-    #Set-PoshPrompt -Theme marcduiker
-    #Set-PoshPrompt -Theme star
-    Set-PoshPrompt -Theme C:\Users\mateuszl\.theme-marcduiker-mloskot.omp.json
-}
+Set-PoshPrompt -Theme C:\Users\mateuszl\.theme-marcduiker-mloskot.omp.json
