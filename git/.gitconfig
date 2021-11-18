@@ -2,8 +2,9 @@
 	path = ~/user_work.gitconfig
 [includeIf "gitdir/i:D:/"]
 	path = ~/user_personal.gitconfig
-[includeIf "gitdir/i:/home/mloskot/"]
-	path = /mnt/d/wsl-config/git/user_personal.gitconfig.wsl
+#warning: encountered old-style '/home/mloskot/' that should be '%(prefix)/home/mloskot/'
+#[includeIf "gitdir/i:/home/mloskot/"]
+#	path = /mnt/d/wsl-config/git/user_personal.gitconfig.wsl
 [github]
 	user = mloskot
 [core]
