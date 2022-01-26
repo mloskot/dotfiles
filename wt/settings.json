@@ -242,6 +242,72 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "graceful",
+                "colorScheme": "Campbell",
+                "commandline": "F:\\V80.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__))\"",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "Cascadia Code PL",
+                    "size": 10
+                },
+                "guid": "{437c14e7-cf48-4905-8b49-dc5c8a1f418f}",
+                "historySize": 9001,
+                "icon": "\ud83d\udc0d",
+                "name": "SISpy 8.0 (x64)",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "F:\\PyRegress",
+                "tabTitle": null,
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "graceful",
+                "colorScheme": "Campbell",
+                "commandline": "F:\\V90.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__))\"",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "Cascadia Code PL",
+                    "size": 10
+                },
+                "guid": "{3f71423b-ef35-4c9d-bd78-044a99ae05ca}",
+                "historySize": 9001,
+                "icon": "\ud83d\udc0d",
+                "name": "SISpy 9.0 (x64)",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "F:\\PyRegress",
+                "tabTitle": null,
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "graceful",
+                "colorScheme": "Campbell",
+                "commandline": "F:\\V91.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__))\"",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "Cascadia Code PL",
+                    "size": 10
+                },
+                "guid": "{e95a4631-cddf-4a97-9994-7287b95bfb28}",
+                "historySize": 9001,
+                "icon": "\ud83d\udc0d",
+                "name": "SISpy 9.1 (x64)",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "F:\\PyRegress",
+                "tabTitle": null,
+                "useAcrylic": false
             }
         ]
     },
