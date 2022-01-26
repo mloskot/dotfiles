@@ -308,6 +308,72 @@
                 "startingDirectory": "F:\\PyRegress",
                 "tabTitle": null,
                 "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "graceful",
+                "colorScheme": "Campbell",
+                "commandline": "cmd.exe /k \"set PATH=F:\\V80.x64\\SIS\\SISpy\\x64\\Release\\Python;%PATH% && python -c \"import sis; print('PyRegress vs SIS', sis.__version__)\"\"",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "Cascadia Code PL",
+                    "size": 10
+                },
+                "guid": "{26d689cd-5461-4003-9bf2-f8c601068bba}",
+                "historySize": 9001,
+                "icon": "\ud83d\udc0d",
+                "name": "PyRegress 8.0 (x64)",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "F:\\PyRegress",
+                "tabTitle": null,
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "graceful",
+                "colorScheme": "Campbell",
+                "commandline": "cmd.exe /k \"set PATH=F:\\V90.x64\\SIS\\SISpy\\x64\\Release\\Python;%PATH% && python -c \"import sis; print('PyRegress vs SIS', sis.__version__)\"\"",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "CaskaydiaCove NF",
+                    "size": 10
+                },
+                "guid": "{887712cd-01a6-4a56-91f2-158b70da72e2}",
+                "historySize": 9001,
+                "icon": "\ud83d\udc0d",
+                "name": "PyRegress 9.0 (x64)",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "F:\\PyRegress",
+                "tabTitle": null,
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "graceful",
+                "colorScheme": "Campbell",
+                "commandline": "cmd.exe /k \"set PATH=F:\\V91.x64\\SIS\\SISpy\\x64\\Release\\Python;%PATH% && python -c \"import sis; print('PyRegress vs SIS', sis.__version__)\"\"",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "CaskaydiaCove NF",
+                    "size": 10
+                },
+                "guid": "{fbe29e9a-71f3-41cd-85d0-0950d776720e}",
+                "historySize": 9001,
+                "icon": "\ud83d\udc0d",
+                "name": "PyRegress 9.1 (x64)",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "F:\\PyRegress",
+                "tabTitle": null,
+                "useAcrylic": false
             }
         ]
     },
