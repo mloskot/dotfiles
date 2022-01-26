@@ -198,7 +198,7 @@
                 },
                 "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
                 "hidden": false,
-                "name": "Ubuntu 20.04",
+                "name": "Ubuntu 21.10",
                 "source": "Windows.Terminal.Wsl"
             },
             {
