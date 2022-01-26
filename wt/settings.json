@@ -123,10 +123,13 @@
             {
                 "colorScheme": "Monokai Night",
                 "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Auxiliary/Build/vcvars64.bat\"",
-                "fontFace": "Consolas",
-                "fontSize": 10,
+                "font": 
+                {
+                    "face": "Consolas",
+                    "size": 10
+                },
                 "guid": "{1ca20dcd-35be-5f56-a8ff-afcfefaa6121}",
-                "hidden": false,
+                "hidden": true,
                 "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
                 "name": "VS 2019 64",
                 "startingDirectory": "F:\\V91.x64"
@@ -134,10 +137,13 @@
             {
                 "colorScheme": "Monokai Night",
                 "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Auxiliary/Build/vcvars32.bat\" x64_x86",
-                "fontFace": "Consolas",
-                "fontSize": 10,
+                "font": 
+                {
+                    "face": "Consolas",
+                    "size": 10
+                },
                 "guid": "{1caa0dfd-35be-5f56-a8ff-afceeeaa6121}",
-                "hidden": false,
+                "hidden": true,
                 "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
                 "name": "VS 2019 32",
                 "startingDirectory": "F:\\V91.win32"
