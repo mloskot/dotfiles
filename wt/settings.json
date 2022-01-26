@@ -94,10 +94,13 @@
             },
             {
                 "colorScheme": "Monokai Night",
-                "commandline": "cmd.exe /k \"C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Auxiliary/Build/vcvars64.bat\"",
-                "fontFace": "Consolas",
-                "fontSize": 10,
-                "guid": "{6E00F8E8-F1D7-467D-AEA8-5369A33A14D7}",
+                "commandline": "cmd.exe /k \"C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Auxiliary/Build/vcvars64.bat\" 10.0.22000.0",
+                "font": 
+                {
+                    "face": "Consolas",
+                    "size": 10
+                },
+                "guid": "{6e00f8e8-f1d7-467d-aea8-5369a33a14d7}",
                 "hidden": false,
                 "icon": "c:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
                 "name": "VS 2022 64",
@@ -105,10 +108,13 @@
             },
             {
                 "colorScheme": "Monokai Night",
-                "commandline": "cmd.exe /k \"C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Auxiliary/Build/vcvarsamd64_x86.bat\"",
-                "fontFace": "Consolas",
-                "fontSize": 10,
-                "guid": "{7E00F8E8-F1D7-567D-BEA8-6369A33A14D7}",
+                "commandline": "cmd.exe /k \"C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Auxiliary/Build/vcvarsamd64_x86.bat\" 10.0.22000.0",
+                "font": 
+                {
+                    "face": "Consolas",
+                    "size": 10
+                },
+                "guid": "{7e00f8e8-f1d7-567d-bea8-6369a33a14d7}",
                 "hidden": false,
                 "icon": "c:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
                 "name": "VS 2022 32",
@@ -138,9 +144,11 @@
             },
             {
                 "colorScheme": "Monokai Night",
-                "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Auxiliary/Build/vcvars64.bat\"",
-                "fontFace": "Consolas",
-                "fontSize": 10,
+                "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Auxiliary/Build/vcvars64.bat\" 10.0.17763.0",
+                "font": 
+                {
+                    "face": "Consolas",
+                    "size": 10
                 "guid": "{0ca20dad-35be-5f56-a8ff-afcfefaa6101}",
                 "hidden": false,
                 "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
@@ -149,9 +157,12 @@
             },
             {
                 "colorScheme": "Monokai Night",
-                "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Auxiliary/Build/vcvars32.bat\" x64_x86",
-                "fontFace": "Consolas",
-                "fontSize": 10,
+                "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Auxiliary/Build/vcvars32.bat\" x64_x86 10.0.17763.0",
+                "font": 
+                {
+                    "face": "Consolas",
+                    "size": 10
+                },
                 "guid": "{0caa0dad-33be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
