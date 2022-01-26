@@ -155,6 +155,7 @@
                 {
                     "face": "Consolas",
                     "size": 10
+                },
                 "guid": "{0ca20dad-35be-5f56-a8ff-afcfefaa6101}",
                 "hidden": false,
                 "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
@@ -178,8 +179,11 @@
             {
                 "colorScheme": "Monokai Night",
                 "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio 11.0/VC/vcvarsall.bat\" amd64",
-                "fontFace": "Consolas",
-                "fontSize": 10,
+                "font": 
+                {
+                    "face": "Consolas",
+                    "size": 10
+                },
                 "guid": "{5ca20dad-35be-5f56-a8ff-afcfefaa6102}",
                 "hidden": false,
                 "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
@@ -187,8 +191,11 @@
                 "startingDirectory": "F:\\V80.x64"
             },
             {
-                "fontFace": "Cascadia Code PL",
-                "fontSize": 10,
+                "font": 
+                {
+                    "face": "Cascadia Code PL",
+                    "size": 10
+                },
                 "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
                 "hidden": false,
                 "name": "Ubuntu 20.04",
@@ -196,8 +203,11 @@
             },
             {
                 "colorScheme": "Solarized Dark Patched",
-                "fontFace": "Cascadia Code PL",
-                "fontSize": 10,
+                "font": 
+                {
+                    "face": "Cascadia Code PL",
+                    "size": 10
+                },
                 "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
                 "hidden": false,
                 "name": "Ubuntu 18.04",
@@ -205,8 +215,11 @@
             },
             {
                 "colorScheme": "Solarized Dark Patched",
-                "fontFace": "Cascadia Code PL",
-                "fontSize": 10,
+                "font": 
+                {
+                    "face": "Cascadia Code PL",
+                    "size": 10
+                },
                 "guid": "{6f9994f0-4403-5e85-9cce-98e5da3839bb}",
                 "hidden": false,
                 "name": "Ubuntu 16.04",
@@ -214,8 +227,11 @@
             },
             {
                 "colorScheme": "Solarized Dark Patched",
-                "fontFace": "Cascadia Code PL",
-                "fontSize": 10,
+                "font": 
+                {
+                    "face": "Cascadia Code PL",
+                    "size": 10
+                },
                 "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
                 "hidden": false,
                 "name": "Debian",
