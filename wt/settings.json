@@ -1,13 +1,7 @@
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    // Add custom actions and keybindings to this array.
-    // To unbind a key combination from your defaults.json, set the command to "unbound".
-    // To learn more about actions and keybindings, visit https://aka.ms/terminal-keybindings
     "actions": 
     [
-        // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
-        // These two lines additionally bind them to Ctrl+C and Ctrl+V.
-        // To learn more about selection, visit https://aka.ms/terminal-selection
         {
             "command": 
             {
@@ -20,15 +14,10 @@
             "command": "paste",
             "keys": "ctrl+v"
         },
-        // Press Ctrl+Shift+F to open the search box
         {
             "command": "find",
             "keys": "ctrl+shift+f"
         },
-        // Press Alt+Shift+D to open a new pane.
-        // - "split": "auto" makes this pane open in the direction that provides the most surface area.
-        // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
-        // To learn more about panes, visit https://aka.ms/terminal-panes
         {
             "command": 
             {
@@ -49,8 +38,11 @@
         [
             {
                 "colorScheme": "Solarized Dark Patched",
-                "fontFace": "CaskaydiaCove NF",
-                "fontSize": 10,
+                "font": 
+                {
+                    "face": "CaskaydiaCove NF",
+                    "size": 10
+                },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell 7",
@@ -59,16 +51,22 @@
             {
                 "colorScheme": "Solarized Dark Patched",
                 "commandline": "powershell.exe",
-                "fontFace": "CaskaydiaCove NF",
-                "fontSize": 10,
+                "font": 
+                {
+                    "face": "CaskaydiaCove NF",
+                    "size": 10
+                },
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
             },
             {
                 "commandline": "cmd.exe",
-                "fontFace": "Cascadia Code PL",
-                "fontSize": 10,
+                "font": 
+                {
+                    "face": "Cascadia Code PL",
+                    "size": 10
+                },
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
@@ -79,8 +77,11 @@
                 "commandline": "\"%PROGRAMFILES%\\git\\bin\\bash.exe\" --login -i",
                 "cursorColor": "#FFFFFF",
                 "cursorShape": "bar",
-                "fontFace": "Cascadia Code PL",
-                "fontSize": 10,
+                "font": 
+                {
+                    "face": "Cascadia Code PL",
+                    "size": 10
+                },
                 "guid": "{00000000-0000-0000-ba54-000000000002}",
                 "hidden": false,
                 "historySize": 9001,
