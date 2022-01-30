@@ -248,7 +248,7 @@
                 "antialiasingMode": "grayscale",
                 "closeOnExit": "graceful",
                 "colorScheme": "Campbell",
-                "commandline": "F:\\V80.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__))\"",
+                "commandline": "F:\\V80.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__));swd=sis.GisLink()\"",
                 "cursorShape": "bar",
                 "font": 
                 {
@@ -270,7 +270,7 @@
                 "antialiasingMode": "grayscale",
                 "closeOnExit": "graceful",
                 "colorScheme": "Campbell",
-                "commandline": "F:\\V90.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__))\"",
+                "commandline": "F:\\V90.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__));swd=sis.GisLink()\"",
                 "cursorShape": "bar",
                 "font": 
                 {
@@ -292,7 +292,7 @@
                 "antialiasingMode": "grayscale",
                 "closeOnExit": "graceful",
                 "colorScheme": "Campbell",
-                "commandline": "F:\\V91.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__))\"",
+                "commandline": "F:\\V91.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__));swd=sis.GisLink()\"",
                 "cursorShape": "bar",
                 "font": 
                 {
