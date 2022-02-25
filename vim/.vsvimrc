@@ -4,7 +4,7 @@
 " Basic behaviour and user interface experience
 " {{{
 set visualbell
-set relativenumber "number " always show line numbers
+set relativenumber number
 set showcmd " show (partial) command in status line.
 set history=1000 " remember more commands and search history
 set hlsearch
