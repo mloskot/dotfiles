@@ -22,7 +22,7 @@ Import-Module oh-my-posh
 Import-Module Get-ChildItemColor
 
 # Load ripgrep completion
-$rgPath = Join-Path -Path $env:ChocolateyInstall -ChildPath "lib\ripgrep\tools\ripgrep-12.1.1-x86_64-pc-windows-msvc\complete\_rg.ps1"
+$rgPath = Join-Path -Path $env:ChocolateyInstall -ChildPath "lib\ripgrep\tools\ripgrep-13.0.0-x86_64-pc-windows-msvc\complete\_rg.ps1"
 if (Test-Path -Path $rgPath -PathType Leaf) {
     . $rgPath
 }
