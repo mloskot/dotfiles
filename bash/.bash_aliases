@@ -1,4 +1,6 @@
 # Git
+alias gad='git add'
+alias gada='git add -A'
 alias gbr='git branch'
 alias gbra='git branch -a'
 alias gbrv='git branch -vv'

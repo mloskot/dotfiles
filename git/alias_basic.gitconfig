@@ -1,4 +1,6 @@
 [alias]
+    ad = add
+    ada = add -A
 	br = branch
 	bv = branch -vv
 	brv = branch -vv
