@@ -29,4 +29,4 @@ alias gsw='git switch'
 alias gwo='git show --date=iso --pretty=fuller --show-signature --no-patch'
 
 alias fork='/mnt/c/Windows/System32/cmd.exe /c "%USERPROFILE%\AppData\Local\Fork\Fork.exe "$(wslpath -w -a .)'
-
+alias lgit='lazygit'
