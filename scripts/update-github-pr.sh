@@ -15,12 +15,15 @@ if ! git show-branch "${BR}" > /dev/null 2>&1; then
     echo "${ME} Branch ${BR} not found. Aborting."
     exit 1
 fi
+set -e
+git fetch origin
 echo "${ME} Checking out PR ${PR}"
 gh pr checkout "${PR}"
 echo "${ME} Merging ${BR}"
 git merge "${BR}"
 PR_BR=$(git branch --show-current)
 echo "${ME} Pushing to PR ${PR} branch ${PR_BR}"
+# XXX: Remote tracking magic explained https://github.com/cli/cli/issues/2942#issuecomment-1007671372
 git push
 git switch -
 echo "${ME} Deleting branch ${PR_BR}"
