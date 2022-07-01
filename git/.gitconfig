@@ -10,8 +10,8 @@
 	editor = \"code\" --wait
 	longpaths = true
 	pager = less --raw-control-chars
-	fsmonitor = true
-	untrackedcache = true
+	fsmonitor = false
+	untrackedcache = false
 [color]
 	branch = auto
 	diff = auto
