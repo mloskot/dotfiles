@@ -1,0 +1,245 @@
+version: 3
+profiles:
+  - type: local
+    name: Visual Studio 2022 (32-bit cmd)
+    options:
+      command: cmd.exe
+      env: {}
+      cwd: F:\V91.win32
+      args:
+        - /k
+        - >-
+          C:/Program Files/Microsoft Visual
+          Studio/2022/Professional/VC/Auxiliary/Build/vcvarsamd64_x86.bat
+        - 10.0.22000.0
+    group: Visual Studio
+    icon: >-
+      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+      class="svg-inline--fa fa-windows fa-w-14 fa-2x" data-icon="windows"
+      data-prefix="fab" focusable="false" role="img" viewBox="0 0 448 512"><path
+      fill="#fff" stroke="none" stroke-width="1" d="M0
+      93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8
+      28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8
+      65.7z"></path></svg>
+    id: >-
+      local:custom:Visual-Studio-2022-32-bit-(cmd):1c87a76e-1b02-4169-86d6-63078b49ac56
+  - type: local
+    name: Visual Studio 2022 (64-bit cmd)
+    options:
+      command: cmd.exe
+      env: {}
+      cwd: F:\V91.x64
+      args:
+        - /k
+        - >-
+          C:/Program Files/Microsoft Visual
+          Studio/2022/Professional/VC/Auxiliary/Build/vcvars64.bat
+        - 10.0.22000.0
+    group: Visual Studio
+    id: >-
+      local:custom:Visual-Studio-2022-64-bit:2f9e588c-8fe7-4e6d-8a24-496ac46d339e
+    icon: >-
+      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+      class="svg-inline--fa fa-windows fa-w-14 fa-2x" data-icon="windows"
+      data-prefix="fab" focusable="false" role="img" viewBox="0 0 448 512"><path
+      fill="#fff" stroke="none" stroke-width="1" d="M0
+      93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8
+      28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8
+      65.7z"></path></svg>
+hotkeys:
+  toggle-window:
+    - Ctrl-Space
+  copy-current-path: []
+  ctrl-c:
+    - Ctrl-C
+  copy:
+    - Ctrl-Shift-C
+  paste:
+    - Ctrl-Shift-V
+    - Shift-Insert
+  select-all:
+    - Ctrl-Shift-A
+  clear: []
+  zoom-in:
+    - Ctrl-=
+    - Ctrl-Shift-=
+  zoom-out:
+    - Ctrl--
+    - Ctrl-Shift--
+  reset-zoom:
+    - Ctrl-0
+  home:
+    - Home
+  end:
+    - End
+  previous-word:
+    - Ctrl-Left
+  next-word:
+    - Ctrl-Right
+  delete-previous-word:
+    - Ctrl-Backspace
+  delete-line:
+    - Ctrl-Shift-Backspace
+  delete-next-word:
+    - Ctrl-Delete
+  search:
+    - Ctrl-Shift-F
+  pane-focus-all:
+    - Ctrl-Shift-I
+  scroll-to-top:
+    - Ctrl-PageUp
+  scroll-up:
+    - PageUp
+  scroll-down:
+    - PageDown
+  scroll-to-bottom:
+    - Ctrl-PageDown
+  restart-telnet-session: []
+  restart-ssh-session: []
+  launch-winscp: []
+  settings-tab: {}
+  settings:
+    - Ctrl-,
+  serial:
+    - Alt-K
+  restart-serial-session: []
+  new-window:
+    - Ctrl-Shift-N
+  new-tab:
+    - Ctrl-Shift-T
+  profile: {}
+  profile-selectors: {}
+  toggle-fullscreen:
+    - F11
+    - Alt-Enter
+  close-tab:
+    - Ctrl-Shift-W
+  reopen-tab:
+    - Ctrl-Shift-Z
+  toggle-last-tab: []
+  rename-tab:
+    - Ctrl-Shift-R
+  next-tab:
+    - Ctrl-Shift-Right
+    - Ctrl-Tab
+  previous-tab:
+    - Ctrl-Shift-Left
+    - Ctrl-Shift-Tab
+  move-tab-left:
+    - Ctrl-Shift-PageUp
+  move-tab-right:
+    - Ctrl-Shift-PageDown
+  rearrange-panes:
+    - Ctrl-Shift
+  duplicate-tab: []
+  restart-tab: []
+  explode-tab:
+    - Ctrl-Shift-.
+  combine-tabs:
+    - Ctrl-Shift-,
+  tab-1:
+    - Alt-1
+  tab-2:
+    - Alt-2
+  tab-3:
+    - Alt-3
+  tab-4:
+    - Alt-4
+  tab-5:
+    - Alt-5
+  tab-6:
+    - Alt-6
+  tab-7:
+    - Alt-7
+  tab-8:
+    - Alt-8
+  tab-9:
+    - Alt-9
+  tab-10:
+    - Alt-0
+  tab-11: []
+  tab-12: []
+  tab-13: []
+  tab-14: []
+  tab-15: []
+  tab-16: []
+  tab-17: []
+  tab-18: []
+  tab-19: []
+  tab-20: []
+  split-right:
+    - Ctrl-Shift-S
+  split-bottom:
+    - Ctrl-Shift-D
+  split-left: []
+  split-top: []
+  pane-nav-right:
+    - Ctrl-Alt-Right
+  pane-nav-down:
+    - Ctrl-Alt-Down
+  pane-nav-up:
+    - Ctrl-Alt-Up
+  pane-nav-left:
+    - Ctrl-Alt-Left
+  pane-nav-previous:
+    - Ctrl-Alt-[
+  pane-nav-next:
+    - Ctrl-Alt-]
+  pane-nav-1: []
+  pane-nav-2: []
+  pane-nav-3: []
+  pane-nav-4: []
+  pane-nav-5: []
+  pane-nav-6: []
+  pane-nav-7: []
+  pane-nav-8: []
+  pane-nav-9: []
+  pane-maximize:
+    - Ctrl-Alt-Enter
+  close-pane: []
+  pane-increase-vertical: []
+  pane-decrease-vertical: []
+  pane-increase-horizontal: []
+  pane-decrease-horizontal: []
+  switch-profile:
+    - Ctrl-Alt-T
+  profile-selector:
+    - Ctrl-Shift-E
+terminal:
+  searchOptions: {}
+  colorScheme:
+    name: Material
+    foreground: '#eceff1'
+    background: rgba(38, 50, 56, 1)
+    selection: null
+    cursor: '#FFCC00'
+    cursorAccent: null
+    colors:
+      - '#000000'
+      - '#D62341'
+      - '#9ECE58'
+      - '#FAED70'
+      - '#396FE2'
+      - '#BB80B3'
+      - '#2DDAFD'
+      - '#d0d0d0'
+      - rgba(255, 255, 255, 0.2)
+      - '#FF5370'
+      - '#C3E88D'
+      - '#FFCB6B'
+      - '#82AAFF'
+      - '#C792EA'
+      - '#89DDFF'
+      - '#ffffff'
+  profile: local:default
+  font: CaskaydiaCove NF
+ssh: {}
+configSync:
+  parts: {}
+clickableLinks: {}
+accessibility: {}
+appearance: {}
+hacks: {}
+enableWelcomeTab: false
+pluginBlacklist: []
+profileDefaults: {}
