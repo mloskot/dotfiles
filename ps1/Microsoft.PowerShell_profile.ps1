@@ -1,6 +1,9 @@
 # PowerShell 5: $HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 # PowerShell 7: $HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 # PowerShell VS Code Integrated Console: C:\Users\mateuszl\Documents\PowerShell\Microsoft.VSCode_profile.ps1
+if (-not (Test-Path env:PSModulePath)) {
+    return
+}
 $global:DefaultUser = [System.Environment]::UserName
 
 # Set l and ls alias to use the new Get-ChildItemColor cmdlets
