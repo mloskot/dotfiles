@@ -2,7 +2,9 @@
 	name = Mateusz Łoskot
 	email = mateusz.loskot@cadcorp.com
 	signingkey = BB2AC1F2
-[commit]
-	gpgSign = true
 [credential]
 	helper = manager-core
+[commit]
+	gpgSign = true
+[gpg]
+	program = C:\\Program Files\\Git\\usr\\bin\\gpg.exe
