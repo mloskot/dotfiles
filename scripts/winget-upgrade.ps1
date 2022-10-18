@@ -57,6 +57,7 @@ $toSkip = @(
     "Microsoft.VC++2013Redist-x86",
     "Microsoft.VC++2015-2019Redist-x64",
     "Microsoft.VC++2015-2019Redist-x86",
+    'Microsoft.WindowsSDK',
     'Python.Python.3',
     'Wondershare.'
 )
