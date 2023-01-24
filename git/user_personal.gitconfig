@@ -5,4 +5,4 @@
 [commit]
 	gpgSign = true
 [credential]
-	helper = manager-core
+	helper = manager

@@ -3,7 +3,7 @@
 	email = mateusz.loskot@cadcorp.com
 	signingkey = BB2AC1F2
 [credential]
-	helper = manager-core
+	helper = manager
 [commit]
 	gpgSign = true
 [gpg]
