@@ -1,4 +1,5 @@
 # Git
+alias g='git'
 alias gad='git add'
 alias gada='git add -A'
 alias gbr='git branch'
@@ -27,6 +28,21 @@ alias gst='git status'
 alias gsts='git submodule status'
 alias gsw='git switch'
 alias gwo='git show --date=iso --pretty=fuller --show-signature --no-patch'
-
 alias fork='/mnt/c/Windows/System32/cmd.exe /c "%USERPROFILE%\AppData\Local\Fork\Fork.exe "$(wslpath -w -a .)'
 alias lgit='lazygit'
+
+# Azure CLI
+alias a='az'
+
+# Kubernetes
+alias k='kubectl'
+alias kci='kubectl cluster-info'
+alias kd='kubectl destribe'
+alias kdn='kubectl describe nodes'
+alias kdnz='kubectl describe nodes | grep -e "Name:" -e "topology.kubernetes.io/zone"'
+alias kl='kubectl logs'
+alias kn='kubectl get nodes'
+alias knw='kubectl get nodes -o wide'
+alias kp='kubectl get pods'
+alias kpw='kubectl get pods -o wide'
+alias kv='kubectl version'
