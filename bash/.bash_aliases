@@ -1,3 +1,6 @@
+alias c='code'
+alias v='vim'
+
 # Git
 alias g='git'
 alias gad='git add'
@@ -31,18 +34,28 @@ alias gwo='git show --date=iso --pretty=fuller --show-signature --no-patch'
 alias fork='/mnt/c/Windows/System32/cmd.exe /c "%USERPROFILE%\AppData\Local\Fork\Fork.exe "$(wslpath -w -a .)'
 alias lgit='lazygit'
 
+# GitHub CLI
+
 # Azure CLI
 alias a='az'
+alias ak='az aks'
+alias aks='az aks show --query "{Name:name,Status:provisioningState,Power:powerState.code}"'
+# DevOps Hosting > AKS
+alias aks-dev='az aks show -g rg-aks-cadcorp-dev --name aks-cadcorp-uks-dev-aks --query "{Name:name,Status:provisioningState,Power:powerState.code}" -o table'
+#alias aks-dev='(IFS= read -r x; echo "az aks $x --resource-group rg-aks-cadcorp-dev --name aks-cadcorp-uks-dev-aks ";)'
+
 
 # Kubernetes
 alias k='kubectl'
+alias ka='kubectl apply'
 alias kci='kubectl cluster-info'
-alias kd='kubectl destribe'
+alias kd='kubectl describe'
 alias kdn='kubectl describe nodes'
-alias kdnz='kubectl describe nodes | grep -e "Name:" -e "topology.kubernetes.io/zone"'
-alias kl='kubectl logs'
-alias kn='kubectl get nodes'
-alias knw='kubectl get nodes -o wide'
-alias kp='kubectl get pods'
-alias kpw='kubectl get pods -o wide'
+alias kdnz="kubectl get nodes -o custom-columns=NAME:'{.metadata.name}',REGION:'{.metadata.labels.topology\.kubernetes\.io/region}',ZONE:'{metadata.labels.topology\.kubernetes\.io/zone}'"
+alias ke='kubectl exec -i -t'
+alias kl='kubectl log'
+alias kn='kubectl get node'
+alias knw='kubectl get node -o wide'
+alias kp='kubectl get pod'
+alias kpw='kubectl get pod -o wide'
 alias kv='kubectl version'
