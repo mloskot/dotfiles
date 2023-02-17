@@ -1,3 +1,10 @@
+#!/bin/bash
+# Basics
+alias l='ls'
+alias la='ls -a'
+alias ll='ls -l'
+alias llm='ls -al | more'
+
 alias c='code'
 alias v='vim'
 
@@ -44,7 +51,6 @@ alias aks='az aks show --query "{Name:name,Status:provisioningState,Power:powerS
 alias aks-dev='az aks show -g rg-aks-cadcorp-dev --name aks-cadcorp-uks-dev-aks --query "{Name:name,Status:provisioningState,Power:powerState.code}" -o table'
 #alias aks-dev='(IFS= read -r x; echo "az aks $x --resource-group rg-aks-cadcorp-dev --name aks-cadcorp-uks-dev-aks ";)'
 
-
 # Kubernetes
 alias k='kubectl'
 alias ka='kubectl apply'
@@ -59,3 +65,6 @@ alias knw='kubectl get node -o wide'
 alias kp='kubectl get pod'
 alias kpw='kubectl get pod -o wide'
 alias kv='kubectl version --output=yaml'
+
+# Terraform
+alias t='terraform'
