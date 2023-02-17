@@ -3,7 +3,8 @@
 alias l='ls'
 alias la='ls -a'
 alias ll='ls -l'
-alias llm='ls -al | more'
+alias lla='ls -la'
+alias llm='ls -la | more'
 
 alias c='code'
 alias v='vim'
