@@ -1,0 +1,73 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#E06C75",
+          "properties": {
+            "postfix": " <#ffffff>in</> ",
+            "prefix": "",
+            "root_icon": "root"
+          },
+          "style": "plain",
+          "type": "root"
+        },
+        {
+          "foreground": "#55B9C4",
+          "properties": {
+            "prefix": "",
+            "style": "folder"
+          },
+          "style": "plain",
+          "type": "path"
+        },
+        {
+          "foreground": "#C678DD",
+          "properties": {
+            "display_status": true,
+            "prefix": "<#ffffff>on</> "
+          },
+          "style": "plain",
+          "type": "git"
+        },
+        {
+          "foreground": "#98C379",
+          "properties": {
+            "display_version": true,
+            "prefix": "<#ffffff>via</>  "
+          },
+          "style": "plain",
+          "type": "node"
+        },
+        {
+          "foreground": "#C94A16",
+          "properties": {
+            "display_exit_code": false,
+            "prefix": "x"
+          },
+          "style": "plain",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#63F08C",
+          "properties": {
+            "prefix": "",
+            "text": "➜"
+          },
+          "style": "plain",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ]
+}
