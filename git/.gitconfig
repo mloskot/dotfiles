@@ -12,6 +12,7 @@
 	pager = less --raw-control-chars
 	fsmonitor = false
 	untrackedcache = false
+	symlinks = true
 [color]
 	branch = auto
 	diff = auto
