@@ -1,4 +1,5 @@
 {
+    "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
@@ -41,23 +42,23 @@
                 "font": 
                 {
                     "face": "CaskaydiaCove NF",
-                    "size": 10
+                    "size": 9.0
                 },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
-                "name": "PowerShell 7",
+                "name": "PowerShell",
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
                 "closeOnExit": "graceful",
-                "colorScheme": "Monokai Night",
+                "colorScheme": "Solarized Dark Patched",
                 "commandline": "\"%PROGRAMFILES%\\git\\bin\\bash.exe\" --login -i",
                 "cursorColor": "#FFFFFF",
                 "cursorShape": "bar",
                 "font": 
                 {
                     "face": "Cascadia Code PL",
-                    "size": 10
+                    "size": 9.0
                 },
                 "guid": "{00000000-0000-0000-ba54-000000000002}",
                 "hidden": false,
@@ -70,18 +71,24 @@
                 "useAcrylic": false
             },
             {
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+            },
+            {
                 "colorScheme": "Monokai Night",
                 "commandline": "cmd.exe /k \"C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Auxiliary/Build/vcvars64.bat\" 10.0.22000.0",
                 "font": 
                 {
                     "face": "Consolas",
-                    "size": 10
+                    "size": 10.0
                 },
                 "guid": "{6e00f8e8-f1d7-467d-aea8-5369a33a14d7}",
                 "hidden": false,
                 "icon": "c:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
                 "name": "VS 2022 64",
-                "startingDirectory": "F:\\V91.x64"
+                "startingDirectory": "F:\\V92.x64"
             },
             {
                 "colorScheme": "Monokai Night",
@@ -89,41 +96,13 @@
                 "font": 
                 {
                     "face": "Consolas",
-                    "size": 10
+                    "size": 10.0
                 },
                 "guid": "{7e00f8e8-f1d7-567d-bea8-6369a33a14d7}",
                 "hidden": false,
                 "icon": "c:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
                 "name": "VS 2022 32",
-                "startingDirectory": "F:\\V91.win32"
-            },
-            {
-                "colorScheme": "Monokai Night",
-                "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Auxiliary/Build/vcvars64.bat\"",
-                "font": 
-                {
-                    "face": "Consolas",
-                    "size": 10
-                },
-                "guid": "{1ca20dcd-35be-5f56-a8ff-afcfefaa6121}",
-                "hidden": true,
-                "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
-                "name": "VS 2019 64",
-                "startingDirectory": "F:\\V91.x64"
-            },
-            {
-                "colorScheme": "Monokai Night",
-                "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Auxiliary/Build/vcvars32.bat\" x64_x86",
-                "font": 
-                {
-                    "face": "Consolas",
-                    "size": 10
-                },
-                "guid": "{1caa0dfd-35be-5f56-a8ff-afceeeaa6121}",
-                "hidden": true,
-                "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
-                "name": "VS 2019 32",
-                "startingDirectory": "F:\\V91.win32"
+                "startingDirectory": "F:\\V92.win32"
             },
             {
                 "colorScheme": "Monokai Night",
@@ -131,7 +110,7 @@
                 "font": 
                 {
                     "face": "Consolas",
-                    "size": 10
+                    "size": 10.0
                 },
                 "guid": "{0ca20dad-35be-5f56-a8ff-afcfefaa6101}",
                 "hidden": false,
@@ -145,7 +124,7 @@
                 "font": 
                 {
                     "face": "Consolas",
-                    "size": 10
+                    "size": 10.0
                 },
                 "guid": "{0caa0dad-33be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
@@ -154,123 +133,21 @@
                 "startingDirectory": "F:\\V90.win32"
             },
             {
-                "colorScheme": "Monokai Night",
-                "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio 11.0/VC/vcvarsall.bat\" amd64",
-                "font": 
-                {
-                    "face": "Consolas",
-                    "size": 10
-                },
-                "guid": "{5ca20dad-35be-5f56-a8ff-afcfefaa6102}",
-                "hidden": false,
-                "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
-                "name": "VS 2012 64",
-                "startingDirectory": "F:\\V80.x64"
-            },
-            {
                 "altGrAliasing": true,
                 "antialiasingMode": "grayscale",
                 "closeOnExit": "graceful",
                 "colorScheme": "Campbell",
-                "commandline": "F:\\V80.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__));swd=sis.GisLink()\"",
-                "cursorShape": "bar",
-                "font": 
-                {
-                    "face": "Cascadia Code PL",
-                    "size": 10
-                },
-                "guid": "{437c14e7-cf48-4905-8b49-dc5c8a1f418f}",
-                "historySize": 9001,
-                "icon": "\ud83d\udc0d",
-                "name": "SISpy 8.0 (x64)",
-                "padding": "8, 8, 8, 8",
-                "snapOnInput": true,
-                "startingDirectory": "F:\\PyRegress",
-                "tabTitle": null,
-                "useAcrylic": false
-            },
-            {
-                "altGrAliasing": true,
-                "antialiasingMode": "grayscale",
-                "closeOnExit": "graceful",
-                "colorScheme": "Campbell",
-                "commandline": "F:\\V90.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__));swd=sis.GisLink()\"",
-                "cursorShape": "bar",
-                "font": 
-                {
-                    "face": "Cascadia Code PL",
-                    "size": 10
-                },
-                "guid": "{3f71423b-ef35-4c9d-bd78-044a99ae05ca}",
-                "historySize": 9001,
-                "icon": "\ud83d\udc0d",
-                "name": "SISpy 9.0 (x64)",
-                "padding": "8, 8, 8, 8",
-                "snapOnInput": true,
-                "startingDirectory": "F:\\PyRegress",
-                "tabTitle": null,
-                "useAcrylic": false
-            },
-            {
-                "altGrAliasing": true,
-                "antialiasingMode": "grayscale",
-                "closeOnExit": "graceful",
-                "colorScheme": "Campbell",
-                "commandline": "F:\\V91.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__));swd=sis.GisLink()\"",
-                "cursorShape": "bar",
-                "font": 
-                {
-                    "face": "Cascadia Code PL",
-                    "size": 10
-                },
-                "guid": "{e95a4631-cddf-4a97-9994-7287b95bfb28}",
-                "historySize": 9001,
-                "icon": "\ud83d\udc0d",
-                "name": "SISpy 9.1 (x64)",
-                "padding": "8, 8, 8, 8",
-                "snapOnInput": true,
-                "startingDirectory": "F:\\PyRegress",
-                "tabTitle": null,
-                "useAcrylic": false
-            },
-            {
-                "altGrAliasing": true,
-                "antialiasingMode": "grayscale",
-                "closeOnExit": "graceful",
-                "colorScheme": "Campbell",
-                "commandline": "cmd.exe /k \"set PATH=F:\\V80.x64\\SIS\\SISpy\\x64\\Release\\Python;%PATH% && python -c \"import sis; print('PyRegress vs SIS', sis.__version__)\"\"",
-                "cursorShape": "bar",
-                "font": 
-                {
-                    "face": "Cascadia Code PL",
-                    "size": 10
-                },
-                "guid": "{26d689cd-5461-4003-9bf2-f8c601068bba}",
-                "historySize": 9001,
-                "icon": "\ud83d\udc0d",
-                "name": "PyRegress 8.0 (x64)",
-                "padding": "8, 8, 8, 8",
-                "snapOnInput": true,
-                "startingDirectory": "F:\\PyRegress",
-                "tabTitle": null,
-                "useAcrylic": false
-            },
-            {
-                "altGrAliasing": true,
-                "antialiasingMode": "grayscale",
-                "closeOnExit": "graceful",
-                "colorScheme": "Campbell",
-                "commandline": "cmd.exe /k \"set PATH=F:\\V90.x64\\SIS\\SISpy\\x64\\Release\\Python;%PATH% && python -c \"import sis; print('PyRegress vs SIS', sis.__version__)\"\"",
+                "commandline": "cmd.exe /k \"set PATH=F:\\V92.x64\\SIS\\SISpy\\x64\\Release\\Python;%PATH% && python -c \"import sis; print('PyRegress vs SIS', sis.__version__)\"\"",
                 "cursorShape": "bar",
                 "font": 
                 {
                     "face": "CaskaydiaCove NF",
-                    "size": 10
+                    "size": 10.0
                 },
-                "guid": "{887712cd-01a6-4a56-91f2-158b70da72e2}",
+                "guid": "{c125e1c6-3418-4573-bcd8-a33a2799f7c4}",
                 "historySize": 9001,
                 "icon": "\ud83d\udc0d",
-                "name": "PyRegress 9.0 (x64)",
+                "name": "PyRegress 9.2 (x64)",
                 "padding": "8, 8, 8, 8",
                 "snapOnInput": true,
                 "startingDirectory": "F:\\PyRegress",
@@ -287,7 +164,7 @@
                 "font": 
                 {
                     "face": "CaskaydiaCove NF",
-                    "size": 10
+                    "size": 10.0
                 },
                 "guid": "{fbe29e9a-71f3-41cd-85d0-0950d776720e}",
                 "historySize": 9001,
@@ -300,71 +177,101 @@
                 "useAcrylic": false
             },
             {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "graceful",
+                "colorScheme": "Campbell",
+                "commandline": "cmd.exe /k \"set PATH=F:\\V90.x64\\SIS\\SISpy\\x64\\Release\\Python;%PATH% && python -c \"import sis; print('PyRegress vs SIS', sis.__version__)\"\"",
+                "cursorShape": "bar",
                 "font": 
                 {
-                    "face": "Cascadia Code PL",
-                    "size": 10
+                    "face": "CaskaydiaCove NF",
+                    "size": 10.0
                 },
-                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
-                "hidden": false,
-                "name": "Ubuntu 21.10",
-                "source": "Windows.Terminal.Wsl"
+                "guid": "{887712cd-01a6-4a56-91f2-158b70da72e2}",
+                "historySize": 9001,
+                "icon": "\ud83d\udc0d",
+                "name": "PyRegress 9.0 (x64)",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "F:\\PyRegress",
+                "tabTitle": null,
+                "useAcrylic": false
             },
             {
-                "colorScheme": "Solarized Dark Patched",
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "graceful",
+                "colorScheme": "Campbell",
+                "commandline": "cmd.exe /k \"set PATH=F:\\V80.x64\\SIS\\SISpy\\x64\\Release\\Python;%PATH% && python -c \"import sis; print('PyRegress vs SIS', sis.__version__)\"\"",
+                "cursorShape": "bar",
                 "font": 
                 {
                     "face": "Cascadia Code PL",
-                    "size": 10
+                    "size": 10.0
                 },
-                "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
-                "hidden": false,
-                "name": "Ubuntu 18.04",
-                "source": "Windows.Terminal.Wsl"
+                "guid": "{26d689cd-5461-4003-9bf2-f8c601068bba}",
+                "historySize": 9001,
+                "icon": "\ud83d\udc0d",
+                "name": "PyRegress 8.0 (x64)",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "F:\\PyRegress",
+                "tabTitle": null,
+                "useAcrylic": false
             },
             {
-                "colorScheme": "Solarized Dark Patched",
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "graceful",
+                "colorScheme": "Campbell",
+                "commandline": "F:\\V92.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__));swd=sis.GisLink()\"",
+                "cursorShape": "bar",
                 "font": 
                 {
                     "face": "Cascadia Code PL",
-                    "size": 10
+                    "size": 10.0
                 },
-                "guid": "{6f9994f0-4403-5e85-9cce-98e5da3839bb}",
-                "hidden": false,
-                "name": "Ubuntu 16.04",
-                "source": "Windows.Terminal.Wsl"
+                "guid": "{ebb4a86a-8026-4221-bf8f-b7f59bd0fea6}",
+                "historySize": 9001,
+                "icon": "\ud83d\udc0d",
+                "name": "SISpy 9.2 (x64)",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "F:\\PyRegress",
+                "tabTitle": null,
+                "useAcrylic": false
             },
             {
-                "colorScheme": "Solarized Dark Patched",
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "graceful",
+                "colorScheme": "Campbell",
+                "commandline": "F:\\V91.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__));swd=sis.GisLink()\"",
+                "cursorShape": "bar",
                 "font": 
                 {
                     "face": "Cascadia Code PL",
-                    "size": 10
+                    "size": 10.0
                 },
-                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
-                "hidden": false,
-                "name": "Debian",
-                "source": "Windows.Terminal.Wsl"
+                "guid": "{e95a4631-cddf-4a97-9994-7287b95bfb28}",
+                "historySize": 9001,
+                "icon": "\ud83d\udc0d",
+                "name": "SISpy 9.1 (x64)",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "F:\\PyRegress",
+                "tabTitle": null,
+                "useAcrylic": false
             },
             {
-                "commandline": "cmd.exe",
-                "font": 
-                {
-                    "face": "Cascadia Code PL",
-                    "size": 10
-                },
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
             },
             {
-                "colorScheme": "Solarized Dark Patched",
-                "commandline": "powershell.exe",
-                "font": 
-                {
-                    "face": "CaskaydiaCove NF",
-                    "size": 10
-                },
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
@@ -374,6 +281,24 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{4f850f17-5459-5ced-b43f-90569fbd90d8}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{c7f1819b-f772-599b-ab33-7faf9b6be14c}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{001c1993-316c-52b1-8e09-d439727457cd}",
+                "hidden": true,
+                "name": "Developer Command Prompt for VS 2017",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
@@ -424,52 +349,6 @@
             "selectionBackground": "#FFFFFF",
             "white": "#CCCCCC",
             "yellow": "#C19C00"
-        },
-        {
-            "background": "#2E3440",
-            "black": "#1F1F1F",
-            "blue": "#6699DF",
-            "brightBlack": "#75715E",
-            "brightBlue": "#66D9EF",
-            "brightCyan": "#E69F66",
-            "brightGreen": "#A6E22E",
-            "brightPurple": "#AE81FF",
-            "brightRed": "#F92672",
-            "brightWhite": "#F8F8F2",
-            "brightYellow": "#E6DB74",
-            "cursorColor": "#FFFFFF",
-            "cyan": "#E69F66",
-            "foreground": "#F8F8F8",
-            "green": "#A6E22E",
-            "name": "Monokai Night",
-            "purple": "#AE81FF",
-            "red": "#F92672",
-            "selectionBackground": "#FFFFFF",
-            "white": "#F8F8F2",
-            "yellow": "#E6DB74"
-        },
-        {
-            "background": "#2E3440",
-            "black": "#3B4252",
-            "blue": "#81A1C1",
-            "brightBlack": "#4C566A",
-            "brightBlue": "#81A1C1",
-            "brightCyan": "#8FBCBB",
-            "brightGreen": "#A3BE8C",
-            "brightPurple": "#B48EAD",
-            "brightRed": "#BF616A",
-            "brightWhite": "#ECEFF4",
-            "brightYellow": "#EBCB8B",
-            "cursorColor": "#FFFFFF",
-            "cyan": "#88C0D0",
-            "foreground": "#D8DEE9",
-            "green": "#A3BE8C",
-            "name": "Nord",
-            "purple": "#B48EAD",
-            "red": "#BF616A",
-            "selectionBackground": "#FFFFFF",
-            "white": "#E5E9F0",
-            "yellow": "#EBCB8B"
         },
         {
             "background": "#282C34",
@@ -534,29 +413,6 @@
             "foreground": "#839496",
             "green": "#859900",
             "name": "Solarized Dark",
-            "purple": "#D33682",
-            "red": "#DC322F",
-            "selectionBackground": "#FFFFFF",
-            "white": "#EEE8D5",
-            "yellow": "#B58900"
-        },
-        {
-            "background": "#004C5F",
-            "black": "#073642",
-            "blue": "#268BD2",
-            "brightBlack": "#657B83",
-            "brightBlue": "#839496",
-            "brightCyan": "#93A1A1",
-            "brightGreen": "#586E75",
-            "brightPurple": "#6C71C4",
-            "brightRed": "#CB4B16",
-            "brightWhite": "#FDF6E3",
-            "brightYellow": "#657B83",
-            "cursorColor": "#657B83",
-            "cyan": "#2AA198",
-            "foreground": "#FDF6E3",
-            "green": "#859900",
-            "name": "Solarized Dark Patched",
             "purple": "#D33682",
             "red": "#DC322F",
             "selectionBackground": "#FFFFFF",
@@ -633,6 +489,29 @@
             "yellow": "#C4A000"
         },
         {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
             "background": "#000000",
             "black": "#000000",
             "blue": "#000080",
@@ -654,6 +533,54 @@
             "selectionBackground": "#FFFFFF",
             "white": "#C0C0C0",
             "yellow": "#808000"
+        },
+        {
+            "background": "#004C5F",
+            "black": "#073642",
+            "blue": "#268BD2",
+            "brightBlack": "#657B83",
+            "brightBlue": "#839496",
+            "brightCyan": "#93A1A1",
+            "brightGreen": "#586E75",
+            "brightPurple": "#6C71C4",
+            "brightRed": "#CB4B16",
+            "brightWhite": "#FDF6E3",
+            "brightYellow": "#657B83",
+            "cursorColor": "#657B83",
+            "cyan": "#2AA198",
+            "foreground": "#FDF6E3",
+            "green": "#859900",
+            "name": "Solarized Dark Patched",
+            "purple": "#D33682",
+            "red": "#DC322F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#EEE8D5",
+            "yellow": "#B58900"
+        },
+        {
+            "background": "#2E3440",
+            "black": "#1F1F1F",
+            "blue": "#6699DF",
+            "brightBlack": "#75715E",
+            "brightBlue": "#66D9EF",
+            "brightCyan": "#E69F66",
+            "brightGreen": "#A6E22E",
+            "brightPurple": "#AE81FF",
+            "brightRed": "#F92672",
+            "brightWhite": "#F8F8F2",
+            "brightYellow": "#E6DB74",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#E69F66",
+            "foreground": "#F8F8F8",
+            "green": "#A6E22E",
+            "name": "Monokai Night",
+            "purple": "#AE81FF",
+            "red": "#F92672",
+            "selectionBackground": "#FFFFFF",
+            "white": "#F8F8F2",
+            "yellow": "#E6DB74"
         }
-    ]
+    ],
+    "theme": "system",
+    "themes": []
 }
