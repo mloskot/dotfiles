@@ -71,3 +71,5 @@
 	ff = only
 [safe]
 	directory = *
+[init]
+	defaultBranch = main
