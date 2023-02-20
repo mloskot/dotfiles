@@ -2,15 +2,15 @@
 echo "Loading ~/.bash_profile"
 
 if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
+    source ~/.bashrc
 fi
 
 if [ -f ~/.bash_aliases ]; then
-    . "$HOME/.bash_aliases"
+    source ~/.bash_aliases
 fi
 
 function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -error $? -jobs $(jobs -p | wc -l) --hostname-only-if-ssh -condensed --trim-ad-domain -modules venv,host,ssh,cwd,perms,git,jobs,exit,root)"
+    PS1="$($GOPATH/bin/powerline-go -newline -modules venv,ssh,cwd,perms,git,hg,jobs,exit,root,docker,kube,wsl -cwd-mode plain -hostname-only-if-ssh -trim-ad-domain)"
 
     # Uncomment the following line to automatically clear errors after showing
     # them once. This not only clears the error for powerline-go, but also for
