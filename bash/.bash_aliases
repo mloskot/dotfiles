@@ -56,6 +56,7 @@ alias aks-dev='az aks show -g rg-aks-cadcorp-dev --name aks-cadcorp-uks-dev-aks 
 # Kubernetes
 alias k='kubectl'
 alias ka='kubectl apply'
+alias kcsn='kubectl config set-context --current --namespace'
 alias kci='kubectl cluster-info'
 alias kd='kubectl describe'
 alias kdn='kubectl describe nodes'
