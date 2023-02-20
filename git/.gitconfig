@@ -2,11 +2,11 @@
 	path = ~/user_work.gitconfig
 [includeIf "gitdir/i:D:/"]
 	path = ~/user_personal.gitconfig
-[includeIf "gitdir/i:/home/mloskot/"]
+[includeIf "gitdir/i:**/home/mloskot/"]
 	path = /mnt/d/wsl-config/git/user_personal.gitconfig.wsl
-[includeIf "gitdir/i:/mnt/d/"]
+[includeIf "gitdir/i:**/mnt/d/"]
 	path = /mnt/d/wsl-config/git/user_personal.gitconfig.wsl
-[includeIf "gitdir/i:/mnt/f/"]
+[includeIf "gitdir/i:**/mnt/f/"]
 	path = /mnt/d/wsl-config/git/user_personal.gitconfig.wsl
 [github]
 	user = mloskot
