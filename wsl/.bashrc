@@ -102,6 +102,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
+if [ -d ~/.bash.d ]; then
+  for f in ~/.bash.d/*.sh; do
+    if [ -r $f ]; then
+        echo "Loading $f"
+      . "$f"
+    fi
+  done
+  unset f
+fi
+
 function _update_ps1() {
     PS1="$($HOME/bin/powerline-go -error $? -jobs $(jobs -p | wc -l) -newline -modules venv,ssh,cwd,perms,git,hg,jobs,exit,root,docker,wsl -cwd-mode plain -hostname-only-if-ssh -trim-ad-domain)"
 
