@@ -1,6 +1,11 @@
 #!/bin/bash
 echo "Loading ~/.bashrc"
 
+# append to the history file, don't overwrite it
+shopt -s histappend
+HISTSIZE=5000
+HISTFILESIZE=5000
+
 if [ -d ~/.bash.d ]; then
   for f in ~/.bash.d/*.sh; do
     if [ -r $f ]; then
