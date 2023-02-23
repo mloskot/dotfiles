@@ -3,6 +3,7 @@ echo "Loading ~/.bashrc"
 
 # append to the history file, don't overwrite it
 shopt -s histappend
+HISTCONTROL=erasedups
 HISTSIZE=5000
 HISTFILESIZE=5000
 
