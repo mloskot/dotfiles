@@ -42,6 +42,9 @@ alias gst='git status'
 alias gsts='git submodule status'
 alias gsw='git switch'
 alias gwo='git show --date=iso --pretty=fuller --show-signature --no-patch'
+## Git Custom Comands
+### Git Goes Back to Main (updating and deleting previous topic branch, if merged)
+alias ggbm='git switch main && git pull origin main && git br -d @{-1}'
 alias fork='/mnt/c/Windows/System32/cmd.exe /c "%USERPROFILE%\AppData\Local\Fork\Fork.exe "$(wslpath -w -a .)'
 alias lgit='lazygit'
 
