@@ -39,7 +39,7 @@
         [
             {
                 "colorScheme": "Solarized Dark Patched",
-                "font":
+                "font": 
                 {
                     "face": "CaskaydiaCove NF",
                     "size": 9.0
@@ -55,7 +55,7 @@
                 "commandline": "\"%PROGRAMFILES%\\git\\bin\\bash.exe\" --login -i",
                 "cursorColor": "#FFFFFF",
                 "cursorShape": "bar",
-                "font":
+                "font": 
                 {
                     "face": "Cascadia Code PL",
                     "size": 9.0
@@ -71,7 +71,7 @@
                 "useAcrylic": false
             },
             {
-                "font":
+                "font": 
                 {
                     "face": "CaskaydiaCove NF",
                     "size": 9.0
@@ -84,7 +84,7 @@
             {
                 "colorScheme": "Monokai Night",
                 "commandline": "cmd.exe /k \"C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Auxiliary/Build/vcvars64.bat\" 10.0.22000.0",
-                "font":
+                "font": 
                 {
                     "face": "Consolas",
                     "size": 10.0
@@ -98,7 +98,7 @@
             {
                 "colorScheme": "Monokai Night",
                 "commandline": "cmd.exe /k \"C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Auxiliary/Build/vcvarsamd64_x86.bat\" 10.0.22000.0",
-                "font":
+                "font": 
                 {
                     "face": "Consolas",
                     "size": 10.0
@@ -112,7 +112,7 @@
             {
                 "colorScheme": "Monokai Night",
                 "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Auxiliary/Build/vcvars64.bat\" 10.0.17763.0",
-                "font":
+                "font": 
                 {
                     "face": "Consolas",
                     "size": 10.0
@@ -126,7 +126,7 @@
             {
                 "colorScheme": "Monokai Night",
                 "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Auxiliary/Build/vcvars32.bat\" x64_x86 10.0.17763.0",
-                "font":
+                "font": 
                 {
                     "face": "Consolas",
                     "size": 10.0
@@ -144,7 +144,7 @@
                 "colorScheme": "Campbell",
                 "commandline": "cmd.exe /k \"set PATH=F:\\V92.x64\\SIS\\SISpy\\x64\\Release\\Python;%PATH% && python -c \"import sis; print('PyRegress vs SIS', sis.__version__)\"\"",
                 "cursorShape": "bar",
-                "font":
+                "font": 
                 {
                     "face": "CaskaydiaCove NF",
                     "size": 10.0
@@ -166,7 +166,7 @@
                 "colorScheme": "Campbell",
                 "commandline": "cmd.exe /k \"set PATH=F:\\V91.x64\\SIS\\SISpy\\x64\\Release\\Python;%PATH% && python -c \"import sis; print('PyRegress vs SIS', sis.__version__)\"\"",
                 "cursorShape": "bar",
-                "font":
+                "font": 
                 {
                     "face": "CaskaydiaCove NF",
                     "size": 10.0
@@ -188,7 +188,7 @@
                 "colorScheme": "Campbell",
                 "commandline": "cmd.exe /k \"set PATH=F:\\V90.x64\\SIS\\SISpy\\x64\\Release\\Python;%PATH% && python -c \"import sis; print('PyRegress vs SIS', sis.__version__)\"\"",
                 "cursorShape": "bar",
-                "font":
+                "font": 
                 {
                     "face": "CaskaydiaCove NF",
                     "size": 10.0
@@ -210,7 +210,7 @@
                 "colorScheme": "Campbell",
                 "commandline": "cmd.exe /k \"set PATH=F:\\V80.x64\\SIS\\SISpy\\x64\\Release\\Python;%PATH% && python -c \"import sis; print('PyRegress vs SIS', sis.__version__)\"\"",
                 "cursorShape": "bar",
-                "font":
+                "font": 
                 {
                     "face": "Cascadia Code PL",
                     "size": 10.0
@@ -232,7 +232,7 @@
                 "colorScheme": "Campbell",
                 "commandline": "F:\\V92.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__));swd=sis.GisLink()\"",
                 "cursorShape": "bar",
-                "font":
+                "font": 
                 {
                     "face": "Cascadia Code PL",
                     "size": 10.0
@@ -254,7 +254,7 @@
                 "colorScheme": "Campbell",
                 "commandline": "F:\\V91.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__));swd=sis.GisLink()\"",
                 "cursorShape": "bar",
-                "font":
+                "font": 
                 {
                     "face": "Cascadia Code PL",
                     "size": 10.0
