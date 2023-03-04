@@ -1,9 +1,9 @@
 mklink %USERPROFILE%\.gitconfig %CD%\.gitconfig
-mklink %USERPROFILE%\user_personal.gitconfig %CD%\user_personal.gitconfig
-mklink %USERPROFILE%\user_work.gitconfig %CD%\user_work.gitconfig
-mklink %USERPROFILE%\message.gitconfig %CD%\message.gitconfig
-mklink %USERPROFILE%\alias_basic.gitconfig %CD%\alias_basic.gitconfig
-mklink %USERPROFILE%\alias_ignore.gitconfig %CD%\alias_ignore.gitconfig
-mklink %USERPROFILE%\alias_log.gitconfig %CD%\alias_log.gitconfig
-mklink %USERPROFILE%\alias_tree.gitconfig %CD%\alias_tree.gitconfig
-mklink %USERPROFILE%\alias_misc.gitconfig %CD%\alias_misc.gitconfig
+mklink %USERPROFILE%\.gitconfig.user_personal %CD%\.gitconfig.user_personal
+mklink %USERPROFILE%\.gitconfig.user_work %CD%\.gitconfig.user_work
+mklink %USERPROFILE%\.gitconfig.message %CD%\.gitconfig.message
+mklink %USERPROFILE%\.gitconfig.alias_basic %CD%\.gitconfig.alias_basic
+mklink %USERPROFILE%\.gitconfig.alias_ignore %CD%\.gitconfig.alias_ignore
+mklink %USERPROFILE%\.gitconfig.alias_log %CD%\.gitconfig.alias_log
+mklink %USERPROFILE%\.gitconfig.alias_tree %CD%\.gitconfig.alias_tree
+mklink %USERPROFILE%\.gitconfig.alias_misc %CD%\.gitconfig.alias_misc

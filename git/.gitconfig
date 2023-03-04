@@ -1,13 +1,13 @@
 [includeIf "gitdir/i:F:/"]
-	path = ~/user_work.gitconfig
+	path = ~/.gitconfig.user_work
 [includeIf "gitdir/i:D:/"]
-	path = ~/user_personal.gitconfig
+	path = ~/.gitconfig.user_personal
 [includeIf "gitdir/i:**/home/mloskot/"]
-	path = /mnt/d/wsl-config/git/user_personal.gitconfig.wsl
+	path = /mnt/d/wsl-config/git/.gitconfig.user_personal_wsl
 [includeIf "gitdir/i:**/mnt/d/"]
-	path = /mnt/d/wsl-config/git/user_personal.gitconfig.wsl
+	path = /mnt/d/wsl-config/git/.gitconfig.user_personal_wsl
 [includeIf "gitdir/i:**/mnt/f/"]
-	path = /mnt/d/wsl-config/git/user_personal.gitconfig.wsl
+	path = /mnt/d/wsl-config/git/.gitconfig.user_personal_wsl
 [github]
 	user = mloskot
 [core]
@@ -39,13 +39,13 @@
 	untracked = red
 	nobranch = red
 [include]
-	path = ~/alias_basic.gitconfig
-	path = ~/alias_ignore.gitconfig
-	path = ~/alias_log.gitconfig
-	path = ~/alias_tree.gitconfig
-	path = ~/alias_misc.gitconfig
+	path = ~/.gitconfig.alias_basic
+	path = ~/.gitconfig.alias_ignore
+	path = ~/.gitconfig.alias_log
+	path = ~/.gitconfig.alias_tree
+	path = ~/.gitconfig.alias_misc
 [commit]
-	template = ~/message.gitconfig
+	template = ~/.gitconfig.message
 [difftool]
     prompt = false
 [difftool "vscode"]
