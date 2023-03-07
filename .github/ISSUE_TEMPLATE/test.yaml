@@ -1,0 +1,44 @@
+---
+name: Test
+description: Make a request
+title: "[test] <test name>"
+labels: [test]
+body:
+  - type: input
+    id: po_number
+    attributes:
+      label: PO Number
+      description: PO number in `YYNNNNNN` format
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Date
+      description: Request submission date in `YYYY-MM-DD` format
+    validations:
+      required: true
+
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: Version to deploy
+      options:
+        - '3.1.<latest available>'
+        - '2.1.5678'
+        - '1.1.1234'
+      multiple: false
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: features
+    attributes:
+      label: Features
+      description: Selection of features
+      options:
+        - label: '`X`'
+        - label: '`Y`'
+        - label: '`Z`'
