@@ -113,7 +113,7 @@ if [ -d ~/.bash.d ]; then
 fi
 
 function _update_ps1() {
-    PS1="$($HOME/bin/powerline-go -error $? -jobs $(jobs -p | wc -l) -newline -modules venv,ssh,cwd,perms,git,hg,jobs,exit,root,docker,wsl -cwd-mode plain -hostname-only-if-ssh -trim-ad-domain)"
+    PS1="$($HOME/bin/powerline-go -error $? -jobs $(jobs -p | wc -l) -newline -modules venv,ssh,cwd,perms,git,hg,jobs,exit,root,docker,wsl -cwd-mode plain -hostname-only-if-ssh -trim-ad-domain -mode compatible)"
 
     # Uncomment the following line to automatically clear errors after showing
     # them once. This not only clears the error for powerline-go, but also for
