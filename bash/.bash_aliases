@@ -7,6 +7,7 @@ alias lla='ls -la'
 alias llm='ls -la | more'
 alias h='history'
 alias hu='history -a;history -n'
+alias hl='history | tail -n 30'
 
 # Editors
 alias c='code'
@@ -33,8 +34,8 @@ alias gl='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%
 alias gla='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --all'
 alias glo='git log  --color --graph --oneline --date=iso'
 alias gmb='git merge --log --no-ff'
+alias gph='git push'
 alias gpl='git pull'
-alias gps='git push'
 alias grs='git reset'
 alias grt='git remote -v'
 alias gsh='git show'
@@ -61,18 +62,19 @@ alias aks-dev='az aks show -g rg-aks-cadcorp-dev --name aks-cadcorp-uks-dev-aks 
 # Kubernetes
 alias k='kubectl'
 alias ka='kubectl apply'
-alias kcsn='kubectl config set-context --current --namespace'
 alias kci='kubectl cluster-info'
+alias kcsn='kubectl config set-context --current --namespace'
 alias kd='kubectl describe'
 alias kdn='kubectl describe nodes'
 alias kdnz="kubectl get nodes -o custom-columns=NAME:'{.metadata.name}',REGION:'{.metadata.labels.topology\.kubernetes\.io/region}',ZONE:'{metadata.labels.topology\.kubernetes\.io/zone}'"
-alias ke='kubectl exec -i -t'
+alias ke='kubectl get events --sort-by=".lastTimestamp"'
 alias kl='kubectl log'
 alias kn='kubectl get node'
 alias knw='kubectl get node -o wide'
 alias kp='kubectl get pod'
 alias kpw='kubectl get pod -o wide'
 alias kv='kubectl version --output=yaml'
+alias kx='kubectl exec -i -t'
 
 # Terraform
 alias t='terraform'
