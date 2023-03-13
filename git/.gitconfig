@@ -75,7 +75,6 @@
 	cmd = 'C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe'  -base:\"$BASE\" -mine:\"$LOCAL\" -theirs:\"$REMOTE\" -merged:\"$MERGED\"
 	trustExitCode = true
 [pull]
-	ff = only
 	rebase = true
 [safe]
 	directory = *
