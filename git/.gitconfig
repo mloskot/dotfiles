@@ -8,6 +8,12 @@
 	path = /mnt/d/wsl-config/git/.gitconfig.user_personal_wsl
 [includeIf "gitdir/i:**/mnt/f/"]
 	path = /mnt/d/wsl-config/git/.gitconfig.user_personal_wsl
+[include]
+	path = ~/.gitconfig.alias_basic
+	path = ~/.gitconfig.alias_ignore
+	path = ~/.gitconfig.alias_log
+	path = ~/.gitconfig.alias_tree
+	path = ~/.gitconfig.alias_misc
 [github]
 	user = mloskot
 [core]
@@ -38,42 +44,40 @@
 	changed = red
 	untracked = red
 	nobranch = red
-[include]
-	path = ~/.gitconfig.alias_basic
-	path = ~/.gitconfig.alias_ignore
-	path = ~/.gitconfig.alias_log
-	path = ~/.gitconfig.alias_tree
-	path = ~/.gitconfig.alias_misc
 [commit]
 	template = ~/.gitconfig.message
-[difftool]
-    prompt = false
-[difftool "vscode"]
-    cmd = 'C:/Program Files/Microsoft VS Code/bin/code' \"$LOCAL\" \"$REMOTE\" --diff --wait
-    trustExitCode = false
-[difftool "TortoiseGitMerge"]
-    cmd = 'C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe' \"$LOCAL\" \"$REMOTE\"
-    trustExitCode = false
-[mergetool "TortoiseGitMerge"]
-    cmd = 'C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe'  -base:\"$BASE\" -mine:\"$LOCAL\" -theirs:\"$REMOTE\" -merged:\"$MERGED\"
-    trustExitCode = true
 [diff]
-    tool = vscode
+	tool = vscode
+	colorMoved = zebra
 [diff "exif"]
-    textconv = exiftool
+	textconv = exiftool
 	cachetextconv = true
-[merge]
-    tool = TortoiseGitMerge
-[submodule]
-	fetchJobs = 8
+[difftool]
+	prompt = false
+[difftool "vscode"]
+	cmd = 'C:/Program Files/Microsoft VS Code/bin/code' \"$LOCAL\" \"$REMOTE\" --diff --wait
+	trustExitCode = false
+[difftool "TortoiseGitMerge"]
+	cmd = 'C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe' \"$LOCAL\" \"$REMOTE\"
+	trustExitCode = false
+[fetch]
+	prune = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[pull]
-	ff = only
-[safe]
-	directory = *
 [init]
 	defaultBranch = main
+[merge]
+	tool = TortoiseGitMerge
+[mergetool "TortoiseGitMerge"]
+	cmd = 'C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe'  -base:\"$BASE\" -mine:\"$LOCAL\" -theirs:\"$REMOTE\" -merged:\"$MERGED\"
+	trustExitCode = true
+[pull]
+	ff = only
+	rebase = true
+[safe]
+	directory = *
+[submodule]
+	fetchJobs = 8
