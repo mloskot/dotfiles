@@ -36,6 +36,7 @@ alias glo='git log  --color --graph --oneline --date=iso'
 alias gmb='git merge --log --no-ff'
 alias gph='git push'
 alias gpl='git pull'
+alias gpr='git pull --rebase'
 alias grs='git reset'
 alias grt='git remote -v'
 alias gsh='git show'
@@ -50,6 +51,10 @@ alias fork='/mnt/c/Windows/System32/cmd.exe /c "%USERPROFILE%\AppData\Local\Fork
 alias lgit='lazygit'
 
 # GitHub CLI
+alias hrl='gh run list'
+alias hrv='gh run view'
+alias hwl='gh workflow list'
+alias hwr='gh workflow run'
 
 # Azure CLI
 alias a='az'
@@ -63,7 +68,7 @@ alias aks-dev='az aks show -g rg-aks-cadcorp-dev --name aks-cadcorp-uks-dev-aks 
 alias k='kubectl'
 alias ka='kubectl apply'
 alias kci='kubectl cluster-info'
-alias kcsn='kubectl config set-context --current --namespace'
+alias kcns='kubectl config set-context --current --namespace'
 alias kd='kubectl describe'
 alias kdn='kubectl describe nodes'
 alias kdnz="kubectl get nodes -o custom-columns=NAME:'{.metadata.name}',REGION:'{.metadata.labels.topology\.kubernetes\.io/region}',ZONE:'{metadata.labels.topology\.kubernetes\.io/zone}'"
