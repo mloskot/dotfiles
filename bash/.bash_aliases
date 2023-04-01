@@ -84,5 +84,8 @@ alias kpw='kubectl get pod -o wide'
 alias kv='kubectl version --output=yaml'
 alias kx='kubectl exec -i -t'
 
+# K9s
+alias k9='k9s --readonly --command pulses'
+
 # Terraform
 alias t='terraform'
