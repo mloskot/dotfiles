@@ -27,6 +27,8 @@
     diffFilter = delta --color-only
 [delta]
     navigate = true
+	line-numbers = true
+	syntax-theme = base16
 [color]
 	branch = auto
 	diff = auto
