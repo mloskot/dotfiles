@@ -19,10 +19,14 @@
 [core]
 	editor = \"code\" --wait
 	longpaths = true
-	pager = less --raw-control-chars
+	pager = delta
 	fsmonitor = false
 	untrackedcache = false
 	symlinks = true
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
 [color]
 	branch = auto
 	diff = auto
@@ -47,8 +51,7 @@
 [commit]
 	template = ~/.gitconfig.message
 [diff]
-	tool = vscode
-	colorMoved = zebra
+	colorMoved = default
 [diff "exif"]
 	textconv = exiftool
 	cachetextconv = true
@@ -70,7 +73,7 @@
 [init]
 	defaultBranch = main
 [merge]
-	tool = TortoiseGitMerge
+	conflictstyle = diff3
 [mergetool "TortoiseGitMerge"]
 	cmd = 'C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe'  -base:\"$BASE\" -mine:\"$LOCAL\" -theirs:\"$REMOTE\" -merged:\"$MERGED\"
 	trustExitCode = true
