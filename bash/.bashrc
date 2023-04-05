@@ -10,15 +10,18 @@ HISTFILESIZE=5000
 if [ -d ~/.bash.d ]; then
   for f in ~/.bash.d/*.sh; do
     if [ -r $f ]; then
-        echo "Loading $f"
-      . "$f"
+      #echo "Loading $f"
+      # shellcheck disable=SC1090
+      source "$f"
     fi
   done
   unset f
 fi
 
 function _update_ps1() {
-    PS1="$($GOPATH/bin/powerline-go -newline -modules venv,ssh,cwd,perms,git,hg,jobs,exit,root,docker,kube,wsl -cwd-mode plain -hostname-only-if-ssh -trim-ad-domain -mode compatible)"
+    #PS1="$($GOPATH/bin/powerline-go -newline -modules venv,ssh,perms,git,hg,jobs,exit,root,docker,kube,wsl -cwd-mode plain -hostname-only-if-ssh -trim-ad-domain -mode compatible)"
+    PS1="$($GOPATH/bin/powerline-go -newline -modules cwd,docker,exit,jobs,git,kube,perms,root,ssh,venv,wsl -hostname-only-if-ssh -trim-ad-domain -mode compatible)"
+
 
     # Uncomment the following line to automatically clear errors after showing
     # them once. This not only clears the error for powerline-go, but also for
