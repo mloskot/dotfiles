@@ -72,18 +72,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
@@ -105,7 +93,7 @@ fi
 if [ -d ~/.bash.d ]; then
   for f in ~/.bash.d/*.sh; do
     if [ -r $f ]; then
-        echo "Loading $f"
+        #echo "Loading $f"
       . "$f"
     fi
   done
@@ -113,7 +101,7 @@ if [ -d ~/.bash.d ]; then
 fi
 
 function _update_ps1() {
-    PS1="$($HOME/bin/powerline-go -error $? -jobs $(jobs -p | wc -l) -newline -modules venv,ssh,cwd,perms,git,hg,jobs,exit,root,docker,kube,wsl -cwd-mode plain -hostname-only-if-ssh -trim-ad-domain -mode compatible)"
+    PS1="$($HOME/bin/powerline-go -error $? -jobs $(jobs -p | wc -l) -modules cwd,docker,exit,jobs,git,kube,perms,root,ssh,venv,wsl -newline -hostname-only-if-ssh -trim-ad-domain -mode compatible)"
 
     # Uncomment the following line to automatically clear errors after showing
     # them once. This not only clears the error for powerline-go, but also for
