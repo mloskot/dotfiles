@@ -25,3 +25,5 @@ fi
 # Editors
 alias c='code'
 alias v='vim'
+
+alias rtree='tree -I .git -a'
