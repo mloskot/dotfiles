@@ -17,8 +17,12 @@ alias kpw='kubectl get pod -o wide'
 alias kv='kubectl version --output=yaml'
 alias kx='kubectl exec -i -t'
 
+# Unset SHELL for Git Bash, see https://github.com/ahmetb/kubectx/issues/330#issuecomment-1506657091
+alias kctx='SHELL= kubectx'
+alias kns='SHELL= kubectx'
+
 # K9s
-alias k9='k9s --readonly --command pulses'
+alias k9r='k9s --readonly --command pulses'
 
 # shellcheck disable=SC1090
 source <(kubectl completion bash)
