@@ -19,7 +19,7 @@ alias kx='kubectl exec -i -t'
 
 # Unset SHELL for Git Bash, see https://github.com/ahmetb/kubectx/issues/330#issuecomment-1506657091
 alias kctx='SHELL= kubectx'
-alias kns='SHELL= kubectx'
+alias kns='SHELL= kubens'
 
 # K9s
 alias k9r='k9s --readonly --command pulses'
