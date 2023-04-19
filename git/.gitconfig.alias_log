@@ -1,7 +1,9 @@
 [alias]
-	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	la = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
-	lo = log  --color --graph --oneline --date=iso
+	l =  log --pretty=format:"%C(yellow)%h\\ %C(green)%ad\\ %C(yellow)%cd%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --color --decorate --date=short --max-count 30
+	la = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad\\ %C(yellow)%cd%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --color --decorate --date=short --max-count 30 --all
+	lg = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad\\ %C(yellow)%cd%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --color --decorate --date=short --max-count 30 --all --graph
+
+	last = log -1 HEAD --stat --date=iso --show-signature
 
 	# git show with message and full authorship
 	wosh = show --date=iso --pretty=fuller --show-signature --no-patch
