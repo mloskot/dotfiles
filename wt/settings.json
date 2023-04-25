@@ -38,11 +38,11 @@
         "list": 
         [
             {
-                "colorScheme": "Solarized Dark Patched",
+                "colorScheme": "Monokai Night",
                 "font": 
                 {
                     "face": "CaskaydiaCove NF",
-                    "size": 9.0
+                    "size": 10.0
                 },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
@@ -50,7 +50,7 @@
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "closeOnExit": "graceful",
+                "closeOnExit": "automatic",
                 "colorScheme": "Monokai Night",
                 "commandline": "\"%PROGRAMFILES%\\git\\bin\\bash.exe\" --login -i",
                 "cursorColor": "#FFFFFF",
@@ -58,7 +58,7 @@
                 "font": 
                 {
                     "face": "Cascadia Code PL",
-                    "size": 9.0
+                    "size": 10.0
                 },
                 "guid": "{00000000-0000-0000-ba54-000000000002}",
                 "hidden": false,
@@ -74,7 +74,7 @@
                 "font": 
                 {
                     "face": "CaskaydiaCove NF",
-                    "size": 9.0
+                    "size": 10.0
                 },
                 "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
                 "hidden": false,
@@ -304,6 +304,12 @@
                 "hidden": true,
                 "name": "Developer Command Prompt for VS 2017",
                 "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
+                "hidden": true,
+                "name": "Visual Studio Debug Console",
+                "source": "VSDebugConsole"
             }
         ]
     },
