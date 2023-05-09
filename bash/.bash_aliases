@@ -24,6 +24,12 @@ fi
 
 # Editors
 alias c='code'
+if [[ -n "${WSL_DISTRO_NAME}" ]]; then
+    alias ci='/mnt/c/Program\ Files/Microsoft\ VS\ Code\ Insiders/bin/code-insiders'
+else
+    alias ci='/c/Program\ Files/Microsoft\ VS\ Code\ Insiders/bin/code-insiders'
+fi
 alias v='vim'
+alias vi='vim'
 
 alias rtree='tree -I .git -a'
