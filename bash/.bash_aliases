@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Loading ~/.bash_alises"
 
 # Basics
 alias l='ls'
@@ -13,6 +14,7 @@ alias hl='history | tail -n 30'
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias l='ls --color=auto'
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'

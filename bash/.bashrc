@@ -1,21 +1,46 @@
 #!/bin/bash
 echo "Loading ~/.bashrc"
 
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
 # append to the history file, don't overwrite it
 shopt -s histappend
-HISTCONTROL=erasedups
+HISTCONTROL=erasedups # ignoreboth
 HISTSIZE=5000
 HISTFILESIZE=5000
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Some scripts may rely on updated PATH
 if [ -d ~/.bash.d ]; then
   for f in ~/.bash.d/*.sh; do
     if [ -r $f ]; then
-      #echo "Loading $f"
+      echo "Loading $f"
       # shellcheck disable=SC1090
       source "$f"
     fi
   done
   unset f
+fi
+
+if [ -f ~/.bash_aliases ]; then
+    source ~/.bash_aliases
 fi
 
 function _update_ps1() {
