@@ -2,12 +2,12 @@
 	path = ~/.gitconfig.user_work
 [includeIf "gitdir/i:D:/"]
 	path = ~/.gitconfig.user_personal
-[includeIf "gitdir/i:**/home/mloskot/"]
-	path = /mnt/d/wsl-config/git/.gitconfig.user_personal_wsl
 [includeIf "gitdir/i:**/mnt/d/"]
 	path = /mnt/d/wsl-config/git/.gitconfig.user_personal_wsl
 [includeIf "gitdir/i:**/mnt/f/"]
 	path = /mnt/d/wsl-config/git/.gitconfig.user_personal_wsl
+[includeIf "gitdir/i:/home/mloskot/"]
+	path = /home/mloskot/wsl-config/git/.gitconfig.user_personal_linux
 [include]
 	path = ~/.gitconfig.alias_basic
 	path = ~/.gitconfig.alias_ignore
@@ -85,3 +85,9 @@
 	directory = *
 [submodule]
 	fetchJobs = 8
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
