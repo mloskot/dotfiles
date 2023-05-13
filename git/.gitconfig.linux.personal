@@ -3,7 +3,7 @@
 	email = mateusz@loskot.net
 	signingkey = BB2AC1F2
 [commit]
-	gpgSign = false
+	gpgSign = true
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential

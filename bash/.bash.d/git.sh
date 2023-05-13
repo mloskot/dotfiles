@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# easy signing in terminal
+export GPG_TTY=$(tty)
+
 # git
 alias g='git'
 alias gad='git add'
