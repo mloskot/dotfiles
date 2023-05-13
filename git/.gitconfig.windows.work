@@ -6,5 +6,5 @@
 	helper = manager
 [commit]
 	gpgSign = true
-[gpg]
-	program = C:\\Program Files\\Git\\usr\\bin\\gpg.exe
+#[gpg]
+#	program = C:\\Program Files\\Git\\usr\\bin\\gpg.exe

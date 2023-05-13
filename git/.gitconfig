@@ -1,13 +1,17 @@
-[includeIf "gitdir/i:F:/"]
-	path = ~/.gitconfig.user_work
-[includeIf "gitdir/i:D:/"]
-	path = ~/.gitconfig.user_personal
-[includeIf "gitdir/i:**/mnt/d/"]
-	path = /mnt/d/wsl-config/git/.gitconfig.user_personal_wsl
-[includeIf "gitdir/i:**/mnt/f/"]
-	path = /mnt/d/wsl-config/git/.gitconfig.user_personal_wsl
-[includeIf "gitdir/i:/home/mloskot/"]
-	path = /home/mloskot/wsl-config/git/.gitconfig.user_personal_linux
+[includeIf "gitdir/i:D:/**"]
+	path = ~/.gitconfig.windows.personal
+[includeIf "gitdir/i:F:/**"]
+	path = ~/.gitconfig.windows.work
+[includeIf "gitdir:%(prefix)//mnt/d/**"]
+	path = %(prefix)//mnt/d/wsl-config/git/.gitconfig.wsl.personal
+[includeIf "gitdir:%(prefix)//mnt/f/**"]
+	path = %(prefix)//mnt/d/wsl-config/git/.gitconfig.wsl.work
+[includeIf "gitdir:%(prefix)//home/mloskot/**"]
+	path = %(prefix)//home/mloskot/wsl-config/git/.gitconfig.linux.personal
+[includeIf "gitdir:%(prefix)//home/mloskot/azure*/**"]
+	path = %(prefix)//mnt/d/wsl-config/git/.gitconfig.linux.work
+[includeIf "gitdir:%(prefix)//home/mloskot/cadcorp/**"]
+	path = %(prefix)//mnt/d/wsl-config/git/.gitconfig.linux.work
 [include]
 	path = ~/.gitconfig.alias_basic
 	path = ~/.gitconfig.alias_ignore
@@ -17,6 +21,7 @@
 [github]
 	user = mloskot
 [core]
+	excludesfile = ~/.gitignore
 	editor = \"code\" --wait
 	longpaths = true
 	pager = delta
@@ -85,9 +90,3 @@
 	directory = *
 [submodule]
 	fetchJobs = 8
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential

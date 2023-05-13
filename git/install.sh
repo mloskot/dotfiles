@@ -1,9 +1,14 @@
-ln -s $PWD/.gitconfig $HOME/.gitconfig
-ln -s $PWD/.gitconfig.user_personal $HOME/.gitconfig.user_personal
-ln -s $PWD/.gitconfig.user_work $HOME/.gitconfig.user_work
-ln -s $PWD/.gitconfig.message $HOME/.gitconfig.message
-ln -s $PWD/.gitconfig.alias_basic $HOME/.gitconfig.alias_basic
-ln -s $PWD/.gitconfig.alias_ignore $HOME/.gitconfig.alias_ignore
-ln -s $PWD/.gitconfig.alias_log $HOME/.gitconfig.alias_log
-ln -s $PWD/.gitconfig.alias_tree $HOME/.gitconfig.alias_tree
-ln -s $PWD/.gitconfig.alias_misc $HOME/.gitconfig.alias_misc
+#!/bin/bash
+for f in .gitconfig*
+do
+    if [[ -L ${HOME}/${f} ]]; then
+        echo "Deleting symlink ${HOME}/${f}"
+        rm "${HOME}/${f}"
+    fi
+    if [[ -f ${HOME}/${f} ]]; then
+        echo "Backing up ${HOME}/${f} to ${HOME}/${f}.original"
+        mv -f "${HOME}/${f}" "${HOME}/${f}.original"
+    fi
+    echo "Symlinking ${PWD}/${f} to ${HOME}/${f}"
+    ln -s "${PWD}/${f}" "${HOME}/${f}"
+done
