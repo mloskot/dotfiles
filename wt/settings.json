@@ -94,7 +94,7 @@
                 "commandline": "cmd.exe /k \"C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Auxiliary/Build/vcvars64.bat\" 10.0.22000.0",
                 "font": 
                 {
-                    "face": "Consolas",
+                    "face": "Cascadia Mono",
                     "size": 10.0
                 },
                 "guid": "{6e00f8e8-f1d7-467d-aea8-5369a33a14d7}",
@@ -108,7 +108,7 @@
                 "commandline": "cmd.exe /k \"C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Auxiliary/Build/vcvarsamd64_x86.bat\" 10.0.22000.0",
                 "font": 
                 {
-                    "face": "Consolas",
+                    "face": "Cascadia Mono",
                     "size": 10.0
                 },
                 "guid": "{7e00f8e8-f1d7-567d-bea8-6369a33a14d7}",
@@ -122,7 +122,7 @@
                 "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Auxiliary/Build/vcvars64.bat\" 10.0.17763.0",
                 "font": 
                 {
-                    "face": "Consolas",
+                    "face": "Cascadia Mono",
                     "size": 10.0
                 },
                 "guid": "{0ca20dad-35be-5f56-a8ff-afcfefaa6101}",
@@ -136,7 +136,7 @@
                 "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Auxiliary/Build/vcvars32.bat\" x64_x86 10.0.17763.0",
                 "font": 
                 {
-                    "face": "Consolas",
+                    "face": "Cascadia Mono",
                     "size": 10.0
                 },
                 "guid": "{0caa0dad-33be-5f56-a8ff-afceeeaa6101}",
@@ -154,8 +154,8 @@
                 "cursorShape": "bar",
                 "font": 
                 {
-                    "face": "CaskaydiaCove NF",
-                    "size": 10.0
+                    "face": "Cascadia Mono",
+                    "size": 12.0
                 },
                 "guid": "{c125e1c6-3418-4573-bcd8-a33a2799f7c4}",
                 "historySize": 9001,
@@ -176,8 +176,8 @@
                 "cursorShape": "bar",
                 "font": 
                 {
-                    "face": "CaskaydiaCove NF",
-                    "size": 10.0
+                    "face": "Cascadia Mono",
+                    "size": 12.0
                 },
                 "guid": "{fbe29e9a-71f3-41cd-85d0-0950d776720e}",
                 "historySize": 9001,
@@ -198,8 +198,8 @@
                 "cursorShape": "bar",
                 "font": 
                 {
-                    "face": "CaskaydiaCove NF",
-                    "size": 10.0
+                    "face": "Cascadia Mono",
+                    "size": 12.0
                 },
                 "guid": "{887712cd-01a6-4a56-91f2-158b70da72e2}",
                 "historySize": 9001,
@@ -220,7 +220,7 @@
                 "cursorShape": "bar",
                 "font": 
                 {
-                    "face": "Cascadia Code PL",
+                    "face": "Cascadia Mono",
                     "size": 10.0
                 },
                 "guid": "{26d689cd-5461-4003-9bf2-f8c601068bba}",
@@ -242,8 +242,8 @@
                 "cursorShape": "bar",
                 "font": 
                 {
-                    "face": "Cascadia Code PL",
-                    "size": 10.0
+                    "face": "Cascadia Mono",
+                    "size": 12.0
                 },
                 "guid": "{ebb4a86a-8026-4221-bf8f-b7f59bd0fea6}",
                 "historySize": 9001,
@@ -264,8 +264,8 @@
                 "cursorShape": "bar",
                 "font": 
                 {
-                    "face": "Cascadia Code PL",
-                    "size": 10.0
+                    "face": "Cascadia Mono",
+                    "size": 12.0
                 },
                 "guid": "{e95a4631-cddf-4a97-9994-7287b95bfb28}",
                 "historySize": 9001,
@@ -281,6 +281,7 @@
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "font": 
                 {
+                    "face": "Cascadia Mono",
                     "size": 10.0
                 },
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
