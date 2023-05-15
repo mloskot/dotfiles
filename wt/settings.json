@@ -34,16 +34,18 @@
     "defaultProfile": "{00000000-0000-0000-ba54-000000000002}",
     "profiles": 
     {
-        "defaults": {},
+        "defaults": 
+        {
+            "font": 
+            {
+                "face": "Terminus (TTF) for Windows",
+                "size": 10.0
+            }
+        },
         "list": 
         [
             {
                 "colorScheme": "Monokai Night",
-                "font": 
-                {
-                    "face": "CaskaydiaCove NF",
-                    "size": 10.0
-                },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
@@ -55,11 +57,6 @@
                 "commandline": "\"%PROGRAMFILES%\\git\\bin\\bash.exe\" --login -i",
                 "cursorColor": "#FFFFFF",
                 "cursorShape": "bar",
-                "font": 
-                {
-                    "face": "Cascadia Code PL",
-                    "size": 10.0
-                },
                 "guid": "{00000000-0000-0000-ba54-000000000002}",
                 "hidden": false,
                 "historySize": 9001,
@@ -71,12 +68,7 @@
                 "useAcrylic": false
             },
             {
-                "colorScheme": "Campbell",
-                "font": 
-                {
-                    "face": "Cascadia Code PL",
-                    "size": 10.0
-                },
+                "colorScheme": "Monokai Night",
                 "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
                 "hidden": false,
                 "name": "Ubuntu",
