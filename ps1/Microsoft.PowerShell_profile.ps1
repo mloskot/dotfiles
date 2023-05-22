@@ -6,11 +6,6 @@ if (-not (Test-Path env:PSModulePath)) {
 }
 $global:DefaultUser = [System.Environment]::UserName
 
-# Set l and ls alias to use the new Get-ChildItemColor cmdlets
-Set-Alias l Get-ChildItemColorFormatWide -Option AllScope
-Set-Alias ll Get-ChildItemColor -Option AllScope
-Set-Alias ls Get-ChildItemColorFormatWide -Option AllScope
-
 # Helper function to set location to the User Profile directory
 function cuserprofile { Set-Location ~ }
 Set-Alias ~ cuserprofile -Option AllScope
@@ -18,16 +13,14 @@ Set-Alias ~ cuserprofile -Option AllScope
 # Install-Module -AllowClobber Get-ChildItemColor
 Import-Module Get-ChildItemColor
 
-# Load ripgrep completion
-$rgPath = Join-Path -Path $env:ChocolateyInstall -ChildPath "lib\ripgrep\tools\ripgrep-13.0.0-x86_64-pc-windows-msvc\complete\_rg.ps1"
-if (Test-Path -Path $rgPath -PathType Leaf) {
-    . $rgPath
-}
-else {
-    Write-Warning ("Cannot find '{0}'" -f $rgPath)
+$profileDirPath = (Split-Path -Path $PROFILE -Parent)
+$aliasesPath = (Join-Path -Path $profileDirPath -ChildPath 'aliases.ps1')
+if (Test-Path -Path $aliasesPath -PathType Leaf) {
+    Write-host "Loading $aliasesPath"
+    . $aliasesPath
 }
 
-# Load powerline-go prompt
+# # Load powerline-go prompt
 $env:VIRTUAL_ENV_DISABLE_PROMPT=$true
 function global:prompt {
     $pwd = $ExecutionContext.SessionState.Path.CurrentLocation
