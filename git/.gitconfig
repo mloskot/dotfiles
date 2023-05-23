@@ -8,8 +8,6 @@
 	path = %(prefix)//mnt/d/wsl-config/git/.gitconfig.wsl.work
 [includeIf "gitdir:%(prefix)//home/mloskot/**"]
 	path = %(prefix)//home/mloskot/wsl-config/git/.gitconfig.linux.personal
-[includeIf "gitdir:/home/mloskot/**"]
-	path = /home/mloskot/wsl-config/git/.gitconfig.linux.personal
 [includeIf "gitdir:%(prefix)//home/mloskot/azure*/**"]
 	path = %(prefix)//mnt/d/wsl-config/git/.gitconfig.linux.work
 [includeIf "gitdir:%(prefix)//home/mloskot/cadcorp/**"]
