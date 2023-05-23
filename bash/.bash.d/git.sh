@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export GIT_EDITOR=$(command -v vim)
+test -z "$GIT_EDITOR" && unset GIT_EDITOR
+
 # easy signing in terminal
 export GPG_TTY=$(tty)
 
