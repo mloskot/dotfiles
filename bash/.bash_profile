@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Loading ~/.bash_profile"
+#echo "Loading ~/.bash_profile"
 
 if [ -f ~/.bashrc ]; then
     source ~/.bashrc

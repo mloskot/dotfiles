@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Loading ~/.bashrc"
+#echo "Loading ~/.bashrc"
 
 # If not running interactively, don't do anything
 case $- in
@@ -31,7 +31,7 @@ fi
 if [ -d ~/.bash.d ]; then
   for f in ~/.bash.d/*.sh; do
     if [ -r $f ]; then
-      echo "Loading $f"
+      #echo "Loading $f"
       # shellcheck disable=SC1090
       source "$f"
     fi

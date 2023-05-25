@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Loading ~/.bash_alises"
+#echo "Loading ~/.bash_alises"
 
 # Basics
 alias l='ls'
