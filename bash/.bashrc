@@ -55,6 +55,6 @@ function _update_ps1() {
 
     #set "?"
 }
-if command -v "powerline-go"; then
+if command -v "powerline-go" >/dev/null; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
