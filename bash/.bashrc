@@ -27,6 +27,10 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [ -f "/etc/bash_completion" ]; then
+  source /etc/bash_completion
+fi
+
 # Some scripts may rely on updated PATH
 if [ -d ~/.bash.d ]; then
   for f in ~/.bash.d/*.sh; do
