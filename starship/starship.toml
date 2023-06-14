@@ -1,0 +1,45 @@
+# Prompt
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$docker_context\
+$kubernetes\
+$package\
+$c\
+$cmake\
+$dotnet\
+$golang\
+$helm\
+$python\
+$terraform\
+$vagrant\
+$azure\
+$env_var\
+$custom\
+$sudo\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$os\
+$container\
+$shell\
+$character"""
+
+[git_commit]
+commit_hash_length = 8
+
+[kubernetes]
+disabled = false
+format = 'on [$cluster \($namespace\)](blue) '
