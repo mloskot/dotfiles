@@ -20,6 +20,10 @@
 	path = ~/.gitconfig.alias_misc
 [github]
 	user = mloskot
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/usr/bin/gh auth git-credential
 [core]
 	excludesfile = ~/.gitignore
 	editor = \"code\" --wait
