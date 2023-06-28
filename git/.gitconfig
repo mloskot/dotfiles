@@ -24,12 +24,9 @@
 	excludesfile = ~/.gitignore
 	editor = \"code\" --wait
 	longpaths = true
-	pager = delta
 	fsmonitor = false
 	untrackedcache = false
 	symlinks = true
-[interactive]
-    diffFilter = delta --color-only
 [delta]
     navigate = true
 	line-numbers = true
