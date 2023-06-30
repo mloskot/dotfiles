@@ -20,6 +20,15 @@ if (Test-Path -Path $aliasesPath -PathType Leaf) {
     . $aliasesPath
 }
 
+# Load ripgrep completion
+$rgPath = ('{0}\AppData\Local\Microsoft\WinGet\Packages\BurntSushi.ripgrep.MSVC_Microsoft.Winget.Source_8wekyb3d8bbwe\ripgrep-13.0.0-x86_64-pc-windows-msvc\complete\_rg.ps1' -f $env:USERPROFILE)
+if (Test-Path -Path $rgPath -PathType Leaf) {
+    . $rgPath
+}
+else {
+    Write-Warning ("Cannot find '{0}'" -f $rgPath)
+}
+
 # # Load powerline-go prompt
 $env:VIRTUAL_ENV_DISABLE_PROMPT=$true
 function global:prompt {

@@ -19,7 +19,7 @@ Set-Alias ~ cuserprofile -Option AllScope
 Import-Module Get-ChildItemColor
 
 # Load ripgrep completion
-$rgPath = Join-Path -Path $env:ChocolateyInstall -ChildPath "lib\ripgrep\tools\ripgrep-12.1.1-x86_64-pc-windows-msvc\complete\_rg.ps1"
+$rgPath = ('{0}\AppData\Local\Microsoft\WinGet\Packages\BurntSushi.ripgrep.MSVC_Microsoft.Winget.Source_8wekyb3d8bbwe\ripgrep-13.0.0-x86_64-pc-windows-msvc\complete\_rg.ps1' -f $env:USERPROFILE)
 if (Test-Path -Path $rgPath -PathType Leaf) {
     . $rgPath
 }
