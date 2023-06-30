@@ -29,7 +29,7 @@ else {
     Write-Warning ("Cannot find '{0}'" -f $rgPath)
 }
 
-# # Load powerline-go prompt
+# Load powerline-go prompt
 $env:VIRTUAL_ENV_DISABLE_PROMPT=$true
 function global:prompt {
     $pwd = $ExecutionContext.SessionState.Path.CurrentLocation

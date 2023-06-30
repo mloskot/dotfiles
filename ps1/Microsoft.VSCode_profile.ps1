@@ -35,7 +35,7 @@ function global:prompt {
     $pwd = $ExecutionContext.SessionState.Path.CurrentLocation
     $startInfo = New-Object System.Diagnostics.ProcessStartInfo
     $startInfo.FileName = "powerline-go"
-    $startInfo.Arguments = "-shell bare -hostname-only-if-ssh -trim-ad-domain -cwd-mode plain -newline"
+    $startInfo.Arguments = "-shell bare -newline -modules venv,ssh,cwd,perms,git,hg,jobs,exit,root,docker,wsl -cwd-mode plain -hostname-only-if-ssh -trim-ad-domain -mode compatible"
     $startInfo.Environment["TERM"] = "xterm-256color"
     $startInfo.CreateNoWindow = $true
     $startInfo.StandardOutputEncoding = [System.Text.Encoding]::UTF8
