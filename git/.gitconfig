@@ -6,12 +6,12 @@
 	path = %(prefix)//mnt/d/wsl-config/git/.gitconfig.wsl.personal
 [includeIf "gitdir:%(prefix)//mnt/f/**"]
 	path = %(prefix)//mnt/d/wsl-config/git/.gitconfig.wsl.work
-[includeIf "gitdir:%(prefix)//home/mloskot/**"]
-	path = %(prefix)//home/mloskot/wsl-config/git/.gitconfig.linux.personal
-[includeIf "gitdir:%(prefix)//home/mloskot/azure*/**"]
-	path = %(prefix)//mnt/d/wsl-config/git/.gitconfig.linux.work
-[includeIf "gitdir:%(prefix)//home/mloskot/cadcorp/**"]
-	path = %(prefix)//mnt/d/wsl-config/git/.gitconfig.linux.work
+[includeIf "gitdir:/home/mloskot/**"]
+	path = /home/mloskot/wsl-config/git/.gitconfig.linux.personal
+[includeIf "gitdir:/home/mloskot/azure*/**"]
+	path = /mnt/d/wsl-config/git/.gitconfig.linux.work
+[includeIf "gitdir:/home/mloskot/cadcorp/**"]
+	path = /mnt/d/wsl-config/git/.gitconfig.linux.work
 [include]
 	path = ~/.gitconfig.alias_basic
 	path = ~/.gitconfig.alias_ignore
