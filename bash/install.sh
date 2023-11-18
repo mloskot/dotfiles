@@ -2,7 +2,7 @@
 
 # Install core utilities
 sudo apt update
-sudo apt install -y direnv gh git golang-go kubectl wslu
+sudo apt install -y direnv gh git golang-go wslu
 
 for f in .bash*
 do
