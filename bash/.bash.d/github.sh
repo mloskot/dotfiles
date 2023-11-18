@@ -9,4 +9,6 @@ alias hrv='gh run view'
 alias hwl='gh workflow list'
 alias hwr='gh workflow run'
 
-eval "$(gh completion -s bash)"
+if command -v "gh" >/dev/null; then
+    eval "$(gh completion -s bash)"
+fi
