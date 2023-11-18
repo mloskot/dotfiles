@@ -1,6 +1,7 @@
 #!/bin/bash
-
-if [[ -d /usr/local/go/bin ]]; then
+if [[ -d /opt/go ]]; then
+    export PATH=$PATH:/opt/go/bin
+elif [[ -d /usr/local/go/bin ]]; then
     export PATH=$PATH:/usr/local/go/bin
 fi
 
