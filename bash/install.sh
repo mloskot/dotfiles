@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# Install core utilities
+sudo apt update
+sudo apt install -y direnv gh git golang-go kubectl wslu
+
 for f in .bash*
 do
     if [[ -L ${HOME}/${f} ]]; then
