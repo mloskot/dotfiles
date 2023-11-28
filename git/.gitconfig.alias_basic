@@ -5,9 +5,9 @@
 	bv = branch -vv
 	brv = branch -vv
 	bra = branch -a
-	ci = commit
-	cia = commit --amend
-	ciae = commit --amend --no-edit
+	ci = commit --signoff
+	cia = commit --amend --signoff
+	ciae = commit --amend --no-edit --signoff
 	cp = cherry-pick
 	cpm = cherry-pick -x -e -m1
 	cpx = cherry-pick -x -e
