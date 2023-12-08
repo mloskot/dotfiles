@@ -19,6 +19,8 @@
 	lfst = lfs status
 	mb = merge --log --no-ff
 	ra = remote add
+	rb = rebase
+	rbi = rebase -i
 	rs = restore
 	rt = remote -v
 	rta = remote add
