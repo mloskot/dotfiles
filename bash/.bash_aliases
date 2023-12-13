@@ -35,3 +35,6 @@ alias v='vim'
 alias vi='vim'
 
 alias rtree='tree -I .git -a'
+
+alias wttr='curl wttr.in/Janowice+Wielkie'
+
