@@ -1,7 +1,8 @@
-# wsl-config
+# dotfiles
 
-Configuration files for development environments on
-Windows Subsystem for Linux (Ubuntu, Debian, etc.).
+Configuration files for development environments on Windows,
+Windows Subsystem for Linux and Linux. The Linux dotfiles are
+mainly for Debian-based distributions.
 
 # Content
 
@@ -82,7 +83,7 @@ echo 'sudo -i service cron start' >> ~/.bashrc
 ### Vim
 
 ```console
-ln -s /mnt/d/wsl-config/vim/.vimrc ~/.vimrc
+ln -s /mnt/d/dotfiles/vim/.vimrc ~/.vimrc
 ```
 
 ### Mail
@@ -102,8 +103,8 @@ sudo pip install --system offlineimap
 ```
 
 ```console
-ln -s /mnt/d/wsl-config/mail/.offlineimaprc ~/.offlineimaprc
-ln -s /mnt/d/wsl-config/mail/offlineimap_secret.py ~/.mail/offlineimap_secret.py
+ln -s /mnt/d/dotfiles/mail/.offlineimaprc ~/.offlineimaprc
+ln -s /mnt/d/dotfiles/mail/offlineimap_secret.py ~/.mail/offlineimap_secret.py
 ```
 
 ```console
@@ -114,9 +115,9 @@ echo "<<REFRESH_TOKEN>>" | gpg -e -r "mateusz@loskot.net" -o ~/.mail/oauth2_refr
 
 ```console
 # workstation
-ln -s /mnt/d/wsl-config/mail/mailrun.sh ~/bin/
+ln -s /mnt/d/dotfiles/mail/mailrun.sh ~/bin/
 # laptop
-ln -s /mnt/d/wsl-config/mail/mailsync.sh ~/bin/
+ln -s /mnt/d/dotfiles/mail/mailsync.sh ~/bin/
 ```
 
 Optionally, to run OfflineIMAP, if the customMutt shortcuts,
@@ -142,7 +143,7 @@ echo -e 'set smtp_url="<<URL>"\nset smtp_pass="<<PASSWORD>"' | gpg -e -r "mateus
 ```
 
 ```console
-ln -s /mnt/d/wsl-config/mail/.muttrc ~/.muttrc
-ln -s /mnt/d/wsl-config/mail/signature ~/.mail/signature
-ln -s /mnt/d/wsl-config/mail/vombatidae.mutt ~/.mail/vombatidae.mutt
+ln -s /mnt/d/dotfiles/mail/.muttrc ~/.muttrc
+ln -s /mnt/d/dotfiles/mail/signature ~/.mail/signature
+ln -s /mnt/d/dotfiles/mail/vombatidae.mutt ~/.mail/vombatidae.mutt
 ```

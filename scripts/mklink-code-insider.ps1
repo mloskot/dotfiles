@@ -1,5 +1,5 @@
 # Makes link in "C:\Program Files\Microsoft VS Code Insiders\bin\code.cmd"
-# to target \wsl-config\win\vscode\code.cmd
+# to target \dotfiles\win\vscode\code.cmd
 # This provides `code` command missing from the VS Code Insider
 # and ensures VS Code runs with --disable-gpu option
 # what helps to avoid the annoying well-known freezes on high resolution/DPI screens.
