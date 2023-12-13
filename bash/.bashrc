@@ -44,10 +44,12 @@ if [ -d ~/.bash.d ]; then
 fi
 
 if [ -f ~/.bash_aliases ]; then
+    #echo "Loading ~/.bash_aliases"
     source ~/.bash_aliases
 fi
 
 function _update_ps1() {
+
     #PS1="$($GOPATH/bin/powerline-go -newline -modules venv,ssh,perms,git,hg,jobs,exit,root,docker,kube,wsl -cwd-mode plain -hostname-only-if-ssh -trim-ad-domain -mode compatible)"
     PS1="$(powerline-go -modules cwd,docker,exit,jobs,git,kube,perms,root,ssh,venv,wsl -newline -hostname-only-if-ssh -trim-ad-domain -mode compatible)"
 
@@ -63,7 +65,11 @@ if command -v "powerline-go" >/dev/null; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
-if command -v "wslfetch" >/dev/null; then
-    wslfetch
+TTY_COUNTER=$(ps a | awk '{print $2}' | grep -vi -e "tty*" -e "?" | uniq | wc -l);
+if [ $TTY_COUNTER -eq 1 ]; then
+  if command -v "neofetch" >/dev/null; then
+      neofetch
+  elif command -v "wslfetch" >/dev/null; then
+      wslfetch
+  fi
 fi
-
