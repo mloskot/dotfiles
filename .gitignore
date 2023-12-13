@@ -5,3 +5,4 @@
 *.swp
 *secret*
 *token*
+lazy-lock.json
