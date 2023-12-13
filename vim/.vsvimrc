@@ -18,11 +18,12 @@ inoremap jj <ESC>
 "inoremap <ESC> <nop> " hard-core jj-mode
 "   Moving
 "   {{{
-" use jkl; instead of hjkl as ergonomic alternative over historic
-noremap ; l
-noremap l k
-noremap k j
-noremap j h
+" DO NOT DO THIS! Go back to Vim roots!
+" " use jkl; instead of hjkl as ergonomic alternative over historic
+"noremap ; l
+"noremap l k
+"noremap k j
+"noremap j h
 " disable default arrow keys to practice hjkl
 "nnoremap <up> <nop>
 "nnoremap <down> <nop>
