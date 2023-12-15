@@ -52,3 +52,7 @@ if [[ -f "/mnt/c/Windows/System32/cmd.exe" ]]; then
 fi
 alias gu='gitui'
 alias lg='lazygit'
+
+function git-watch() {
+  watch -ct -n1 git --no-pager log --color --all --oneline --decorate --graph
+}
