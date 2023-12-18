@@ -1,6 +1,9 @@
+vim.cmd("set expandtab")
+vim.cmd("set tabstop=2")
+vim.cmd("set softtabstop=2")
+vim.cmd("set shiftwidth=2")
 vim.g.mapleader = " "
 
--- Package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -14,57 +17,28 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Plugins
 local plugins = {
-    {
-  'projekt0n/github-nvim-theme',
-  lazy = false, -- make sure we load this during startup if it is your main colorscheme
-  priority = 1000, -- make sure to load this before all the other start plugins
-  config = function()
-    vim.cmd('colorscheme github_dark')
-  end,
-},
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.5',
-    dependencies = { 'nvim-lua/plenary.nvim' }
-  }
-}
+  "nvim-telescope/telescope.nvim", tag = "0.1.5",
+  dependencies = { "nvim-lua/plenary.nvim" }
+  },
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+} 
 local opts = {}
 require("lazy").setup(plugins, opts)
 
--- Plugin: Telescope
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 
--- Basics
-vim.opt.guicursor = "i:block"
-vim.opt.cursorline = true
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.number = true
-vim.opt.mouse = 'a'
-vim.opt.relativenumber = true
-vim.opt.showcmd = true
-vim.opt.swapfile = false
-vim.opt.expandtab = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.hlsearch = true
-vim.opt.wrap = true
-vim.opt.breakindent = true
-vim.opt.termguicolors = true
+local configs = require("nvim-treesitter.configs")
+configs.setup({
+  ensure_installed = { "c", "cpp", "go", "lua" },
+  highlight = { enable = true },
+  indent = { enable = true },
+})
 
--- Key mappings
-vim.keymap.set("i", "jj", "<Esc>")
+require("catppuccin").setup()
+vim.cmd.colorscheme "catppuccin"
 
--- some
-vim.keymap.set("n", "<M-b>", ":Ex<CR>")
-
--- split screen and navigation
-vim.keymap.set("n", "<leader>v", ":vsplit<CR><C-w>l", { noremap = true })
-vim.keymap.set("n", "<leader>h", ":wincmd h<CR>", { noremap = true })
-vim.keymap.set("n", "<leader>l", ":wincmd l<CR>", { noremap = true })
