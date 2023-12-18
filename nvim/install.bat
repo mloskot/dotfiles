@@ -1,1 +1,1 @@
-mklink %USERPROFILE%\AppData\Local\nvim\init.lua %CD%\nvim\init.lua
+mklink /D %USERPROFILE%\AppData\Local\nvim  %CD%
