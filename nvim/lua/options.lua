@@ -1,19 +1,26 @@
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.opt.guicursor = ""
 
-vim.cmd('set expandtab')
-vim.cmd('set tabstop=2')
-vim.cmd('set softtabstop=2')
-vim.cmd('set shiftwidth=2')
+vim.opt.nu = true
+vim.opt.relativenumber = true
 
--- TODO: Add more options
---
---
--- NOTE: Missing oitions
---
--- FIXME: Replace vim.cmd with vim.o
---
--- XXX: ABC
+vim.opt.expandtab = true
+vim.opt.softtabstop=4
+vim.opt.shiftwidth=4
+vim.opt.tabstop=4
+vim.opt.smartindent = true
+vim.opt.wrap = true
+
+vim.opt.swapfile = true
+
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
+vim.opt.termguicolors = true
+
+vim.opt.scrolloff = 10
+
+vim.opt.colorcolumn = "80"
+
