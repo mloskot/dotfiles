@@ -5,5 +5,6 @@ Set-Alias ls Get-ChildItemColorFormatWide -Option AllScope
 
 # overrides gu for Get-Unique
 Set-Alias -Name lg -Value lazygit -Option AllScope -Force
+Set-Alias -Name k -Value kubectl -Option AllScope -Force
 
 Set-Alias -Name ci -Value 'C:\Program Files\Microsoft VS Code Insiders\bin\code-insiders.cmd' -Option AllScope -Force
