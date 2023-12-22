@@ -146,7 +146,7 @@ set incsearch
 set hlsearch
 set showmatch " show matching brackets.
 set matchtime=3 " tenths of a second delay for 'showmatch' to kick in
-set scrolloff=5 " move to display at least 5 lines of context
+set scrolloff=10 " move to display at least 5 lines of context
 set synmaxcol=800 " don't highlight lines longer than n characters
 " make it easy to clear out a search highlights by typing ,<space> or ,/
 "nnoremap <leader><space> :nohlsearch<CR>

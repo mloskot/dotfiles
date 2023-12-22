@@ -9,6 +9,7 @@ set showcmd " show (partial) command in status line.
 set history=1000 " remember more commands and search history
 set hlsearch
 set incsearch
+set scrolloff=10
 " }}}
 
 " Mappings
