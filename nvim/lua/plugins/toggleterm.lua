@@ -39,17 +39,16 @@ return {
   'akinsho/toggleterm.nvim',
   version = "*",
   opts = {
-    direction = "tab",
-    open_mapping = [[<c-\>]],
-    hide_numbers = true,
-    insert_mappings = true,
-    terminal_mappings = true,
-    start_in_insert = true,
-    close_on_exit = true,
   },
   config = function()
     require('toggleterm').setup({
       open_mapping = [[<c-\>]], 
+      direction = "float",
+      hide_numbers = true,
+      insert_mappings = true,
+      terminal_mappings = true,
+      start_in_insert = true,
+      close_on_exit = true,
     })
 
     -- if you only want these mappings for toggle term use term://*toggleterm#* instead
