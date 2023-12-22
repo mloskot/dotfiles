@@ -24,3 +24,12 @@ vim.opt.scrolloff = 10
 
 vim.opt.colorcolumn = "80"
 
+-- https://github.com/NvChad/NvChad/issues/1526#issuecomment-1234637754
+if vim.fn.has('win32') == 1 then
+    vim.opt.shell = 'pwsh.exe -nol'
+    vim.opt.shellcmdflag = '-nop -c'
+    vim.opt.shellquote = '"'
+    vim.opt.shellxquote = ''
+    vim.opt.shellpipe = '| Out-File -Encoding UTF8 %s'
+    vim.opt.shellredir = '| Out-File -Encoding UTF8 %s'
+end
