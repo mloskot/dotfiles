@@ -1,7 +1,7 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "startupActions": "new-tab -p \"Ubuntu\" --title \"Command\" --suppressApplicationTitle; new-tab -p \"Ubuntu\" --title \"Lazygit\" --suppressApplicationTitle",
+    "startupActions": "new-tab -p \"Ubuntu\" --title \"Command\" --suppressApplicationTitle; new-tab -p \"Ubuntu\" --title \"Lazygit\" --suppressApplicationTitle; new-tab -p \"Ubuntu\" --title \"Kubernetes\" --suppressApplicationTitle",
     "actions": 
     [
         {
@@ -46,7 +46,7 @@
     {
         "defaults": 
         {
-            "colorScheme": "Catppuccin Macchiato",
+            "colorScheme": "Catppuccin Mocha",
             "font": 
             {
                 "face": "0xProto Nerd Font Mono",
@@ -371,7 +371,7 @@
                 "hidden": false,
                 "historySize": 9001,
                 "icon": "ms-appx:///ProfileIcons/{0caa0dad-35be-5f56-a8ff-afceeeaa6101}.png",
-                "name": "Command Prompt as Administrator",
+                "name": "Command Prompt ( Administrator)",
                 "padding": "8, 8, 8, 8",
                 "snapOnInput": true,
                 "startingDirectory": "%USERPROFILE%",
@@ -382,6 +382,22 @@
                 "hidden": true,
                 "name": "Ubuntu-Preview",
                 "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
+                "elevate": true,
+                "font": 
+                {
+                    "face": "0xProto Nerd Font Mono",
+                    "size": 12.0
+                },
+                "guid": "{9c87a2d2-0e09-4993-b3d7-9abac4ff73b1}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/pwsh.png",
+                "name": "PowerShell (Administrator)",
+                "opacity": 100,
+                "startingDirectory": "%USERPROFILE%",
+                "useAcrylic": false
             }
         ]
     },
