@@ -1,7 +1,6 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "startupActions": "new-tab -p \"Ubuntu\" --title \"Command\" --suppressApplicationTitle; new-tab -p \"Ubuntu\" --title \"Lazygit\" --suppressApplicationTitle; new-tab -p \"Ubuntu\" --title \"Kubernetes\" --suppressApplicationTitle",
     "actions": 
     [
         {
@@ -1025,6 +1024,7 @@
             "yellow": "#808000"
         }
     ],
+    "startupActions": "new-tab -p \"Ubuntu\" --title \"Command\" --suppressApplicationTitle; new-tab -p \"Ubuntu\" --title \"Lazygit\" --suppressApplicationTitle; new-tab -p \"Ubuntu\" --title \"Kubernetes\" --suppressApplicationTitle; focus-tab --target 0",
     "theme": "system",
     "themes": 
     [
