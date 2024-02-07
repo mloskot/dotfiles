@@ -19,5 +19,54 @@
         "key": "ctrl+l",
         "command": "workbench.action.quickOpenNavigatePrevious",
         "when": "inQuickOpen"
-    }
+    },
+    {
+        "key": "ctrl+alt+f5",
+        "command": "python.execInTerminal"
+    },
+    {
+        "key": "space",
+        "when": "vim.recording || editorTextFocus && vim.active && vim.mode != 'Insert'",
+        "command": "toggle",
+        "args": {
+            "id": "line-numbers",
+            "value": [
+                {
+                    "editor.lineNumbers": "relative"
+                },
+                {
+                    "editor.lineNumbers": "on"
+                }
+            ]
+        }
+    },
+    {
+        "key": "alt+x alt+x",
+        "command": "workbench.action.terminal.runSelectedText"
+    },
+    {
+        "key": "ctrl+0",
+        "command": "-workbench.action.focusSideBar"
+    },
+    {
+        "key": "ctrl+0",
+        "command": "workbench.action.zoomReset"
+    },
+    {
+        "key": "ctrl+numpad0",
+        "command": "-workbench.action.zoomReset"
+    },
+    {
+        "key": "alt+s alt+f",
+        "command": "binocular.searchFile",
+    },
+    {
+        "key": "alt+s alt+g",
+        "command": "binocular.searchFileContent",
+    },
+    {
+        "key": "alt+c alt+l",
+        "command": "binocular.customCommands",
+        "args": "Lazygit"
+    },
 ]

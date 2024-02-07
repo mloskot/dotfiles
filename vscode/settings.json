@@ -1,18 +1,41 @@
 {
     "editor.fontLigatures": false,
+    "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
-    "powershell.codeFormatting.autoCorrectAliases": true,
-    "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
-    "powershell.codeFormatting.useConstantStrings": true,
-    "powershell.codeFormatting.useCorrectCasing": true,
-    "powershell.codeFormatting.whitespaceBetweenParameters": true,
-    "terminal.integrated.fontFamily": "CaskaydiaCove NF",
-    "workbench.colorTheme": "PowerShell ISE",
-    "workbench.startupEditor": "none",
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "editor.renderWhitespace": "all",
+    "redhat.telemetry.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",
     "vim.smartRelativeLine": true,
     "vim.useCtrlKeys": false,
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "$HOME/.vsvimrc",
+    "workbench.startupEditor": "none",
+    "terminal.integrated.tabs.enabled": false,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "git.openRepositoryInParentFolders": "never",
+    "extensions.ignoreRecommendations": true,
+    "workbench.colorTheme": "Catppuccin Frappé",
+    "go.toolsManagement.autoUpdate": true,
+    "window.restoreWindows": "none",
+    "terminal.integrated.fontFamily": "\"0xProto Nerd Font Mono\"",
+    "editor.fontFamily": "\"0xProto Nerd Font Mono\"",
+    "json.format.keepLines": true,
+    "editor.cursorSurroundingLines": 10,
+    "binocular.command.commands": [
+        {
+            "shellCommand": "lazygit",
+            "commandIdentifier": "Lazygit"
+        },
+        {
+            "shellCommand": "git checkout $(git fuzzy log)",
+            "commandIdentifier": "Git fuzzy log"
+        },
+        {
+            "shellCommand": "git checkout $(git fuzzy log ${file})",
+            "commandIdentifier": "Git fuzzy log current file"
+        }
+    ],
 }
