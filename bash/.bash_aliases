@@ -31,8 +31,9 @@ if [[ -n "${WSL_DISTRO_NAME}" ]]; then
 else
     alias ci='/c/Program\ Files/Microsoft\ VS\ Code\ Insiders/bin/code-insiders'
 fi
-alias v='vim'
-alias vi='vim'
+alias v='nvim'
+alias vi='nvim'
+alias vim='nvim'
 
 alias rtree='tree -I .git -a'
 
