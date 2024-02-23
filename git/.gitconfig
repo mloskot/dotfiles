@@ -87,3 +87,5 @@
 	directory = *
 [submodule]
 	fetchJobs = 8
+[http]
+	postBuffer = 524288000
