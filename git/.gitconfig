@@ -3,15 +3,15 @@
 [includeIf "gitdir/i:F:/**"]
 	path = ~/.gitconfig.windows.work
 [includeIf "gitdir:%(prefix)//mnt/d/**"]
-	path = %(prefix)//mnt/d/wsl-config/git/.gitconfig.wsl.personal
+	path = %(prefix)//mnt/d/dotfiles/git/.gitconfig.wsl.personal
 [includeIf "gitdir:%(prefix)//mnt/f/**"]
-	path = %(prefix)//mnt/d/wsl-config/git/.gitconfig.wsl.work
+	path = %(prefix)//mnt/d/dotfiles/git/.gitconfig.wsl.work
 [includeIf "gitdir:%(prefix)//home/mloskot/**"]
-	path = %(prefix)//home/mloskot/wsl-config/git/.gitconfig.linux.personal
+	path = %(prefix)//home/mloskot/dotfiles/git/.gitconfig.linux.personal
 [includeIf "gitdir:%(prefix)//home/mloskot/azure*/**"]
-	path = %(prefix)//mnt/d/wsl-config/git/.gitconfig.linux.work
+	path = %(prefix)//mnt/d/dotfiles/git/.gitconfig.linux.work
 [includeIf "gitdir:%(prefix)//home/mloskot/cadcorp/**"]
-	path = %(prefix)//mnt/d/wsl-config/git/.gitconfig.linux.work
+	path = %(prefix)//mnt/d/dotfiles/git/.gitconfig.linux.work
 [include]
 	path = ~/.gitconfig.alias_basic
 	path = ~/.gitconfig.alias_ignore
