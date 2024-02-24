@@ -4,3 +4,4 @@ if ! command -v "zoxide" >/dev/null; then
 fi
 
 eval "$(zoxide init bash)"
+alias cd=z
