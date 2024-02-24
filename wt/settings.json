@@ -34,7 +34,7 @@
     "defaultProfile": "{51855cb2-8cce-5362-8f54-464b92b32386}",
     "initialCols": 100,
     "initialRows": 30,
-    "launchMode": "focus",
+    "launchMode": "maximized",
     "newTabMenu": 
     [
         {
@@ -105,11 +105,10 @@
                     "face": "0xProto Nerd Font Mono",
                     "size": 12.0
                 },
-                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+                "guid": "{8c701c6d-1341-546d-84ae-1a1fb3a809ed}",
                 "hidden": false,
-                "icon": "https://www.debian.org/favicon.ico",
-                "name": "Debian",
-                "source": "Windows.Terminal.Wsl"
+                "name": "Ubuntu (Preview)",
+                "source": "CanonicalGroupLimited.UbuntuPreview_79rhkp1fndgsc"
             },
             {
                 "font": 
@@ -117,10 +116,11 @@
                     "face": "0xProto Nerd Font Mono",
                     "size": 12.0
                 },
-                "guid": "{8c701c6d-1341-546d-84ae-1a1fb3a809ed}",
+                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
                 "hidden": false,
-                "name": "Ubuntu (Preview)",
-                "source": "CanonicalGroupLimited.UbuntuPreview_79rhkp1fndgsc"
+                "icon": "https://www.debian.org/favicon.ico",
+                "name": "Debian",
+                "source": "Windows.Terminal.Wsl"
             },
             {
                 "commandline": "cmd.exe /k \"C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Auxiliary/Build/vcvars64.bat\" 10.0.22000.0",
@@ -1024,7 +1024,6 @@
             "yellow": "#808000"
         }
     ],
-    "startupActions": "new-tab -p \"Ubuntu\" --title \"Command\" --suppressApplicationTitle; new-tab -p \"Ubuntu\" --title \"Lazygit\" --suppressApplicationTitle; new-tab -p \"Ubuntu\" --title \"Kubernetes\" --suppressApplicationTitle; focus-tab --target 0",
     "theme": "system",
     "themes": 
     [
