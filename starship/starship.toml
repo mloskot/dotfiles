@@ -17,7 +17,7 @@ $python\
 [](fg:teal bg:blue)\
 $docker_context\
 [](fg:blue bg:purple)\
-$time\
+$azure\
 [ ](fg:purple)\
 $line_break$character"""
 
@@ -146,3 +146,9 @@ vimcmd_symbol = '[](bold fg:green)'
 vimcmd_replace_one_symbol = '[](bold fg:purple)'
 vimcmd_replace_symbol = '[](bold fg:purple)'
 vimcmd_visual_symbol = '[](bold fg:yellow)'
+
+[azure]
+disabled = false
+format = '[$symbol($subscription)]($style)'
+symbol = '󰠅 '
+style = "fg:mantle bg:purple"
