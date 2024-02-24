@@ -15,11 +15,13 @@ $golang\
 $lua\
 $python\
 $rust\
-[](fg:teal bg:blue)\
-$docker_context\
-[](fg:blue bg:purple)\
+[](fg:teal bg:sapphire)\
 $azure\
-[](fg:purple bg:surface0)\
+[](fg:sapphire bg:blue)\
+$kubernetes\
+[](fg:blue bg:blue)\
+$docker_context\
+[](fg:blue bg:surface0)\
 $cmd_duration\
 [ ](fg:surface0)\
 $line_break$character"""
@@ -127,16 +129,28 @@ symbol = ""
 style = "bg:teal"
 format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 
-[docker_context]
-symbol = ""
-style = "bg:mantle"
-format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
+[rust]
+symbol = ""
+style = "bg:teal"
+format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 
 [azure]
 disabled = false
 format = '[$symbol($subscription)]($style)'
 symbol = '󰠅 '
-style = "fg:mantle bg:purple"
+style = "fg:mantle bg:sapphire"
+
+[kubernetes]
+symbol = '⎈ '
+disabled = false
+style = "fg:mantle bg:blue"
+format = '[$symbol$context( \($namespace\))]($style)'
+
+[docker_context]
+disabled = false
+symbol = ""
+style = "bg:mantle"
+format = '[[ $symbol( $context) ](fg:#83a598 bg:blue)]($style)'
 
 [time]
 disabled = false
