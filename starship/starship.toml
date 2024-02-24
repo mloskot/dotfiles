@@ -28,6 +28,7 @@ $line_break$character"""
 
 palette = 'catppuccin_mocha'
 
+# Colors sorted by hue
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
 flamingo = "#f2cdcd"
@@ -61,16 +62,6 @@ disabled = false
 style = "bg:surface0 fg:text"
 
 [os.symbols]
-Windows = "󰍲"
-Ubuntu = "󰕈"
-SUSE = ""
-Raspbian = "󰐿"
-Mint = "󰣭"
-Macos = "󰀵"
-Manjaro = ""
-Linux = "󰌽"
-Gentoo = "󰣨"
-Fedora = "󰣛"
 Alpine = ""
 Amazon = ""
 Android = ""
@@ -78,46 +69,56 @@ Arch = "󰣇"
 Artix = "󰣇"
 CentOS = ""
 Debian = "󰣚"
+Fedora = "󰣛"
+Gentoo = "󰣨"
+Linux = "󰌽"
+Macos = "󰀵"
+Manjaro = ""
+Mint = "󰣭"
+Raspbian = "󰐿"
 Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
+SUSE = ""
+Ubuntu = "󰕈"
+Windows = "󰍲"
 
 [username]
-show_always = true
-style_user = "bg:surface0 fg:text"
-style_root = "bg:surface0 fg:text"
 format = '[ $user ]($style)'
+show_always = true
+style_root = "bg:surface0 fg:text"
+style_user = "bg:surface0 fg:text"
 
 [directory]
-style = "fg:mantle bg:peach"
 format = "[ $path ]($style)"
+style = "fg:mantle bg:peach"
 truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
+"Developer" = "󰲋 "
 "Documents" = "󰈙 "
 "Downloads" = " "
 "Music" = "󰝚 "
 "Pictures" = " "
-"Developer" = "󰲋 "
 
 [git_branch]
-symbol = ""
-style = "bg:teal"
 format = '[[ $symbol $branch ](fg:base bg:green)]($style)'
+style = "bg:teal"
+symbol = ""
 
 [git_status]
-style = "bg:teal"
 format = '[[($all_status$ahead_behind )](fg:base bg:green)]($style)'
+style = "bg:teal"
 
 [c]
-symbol = ""
-style = "bg:teal"
 format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+style = "bg:teal"
+symbol = " "
 
 [golang]
-symbol = ""
-style = "bg:teal"
 format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+style = "bg:teal"
+symbol = ""
 
 [lua]
 symbol = ""
@@ -125,42 +126,42 @@ style = "bg:teal"
 format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 
 [python]
-symbol = ""
-style = "bg:teal"
 format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+style = "bg:teal"
+symbol = ""
 
 [rust]
-symbol = ""
-style = "bg:teal"
 format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+style = "bg:teal"
+symbol = ""
 
 [azure]
 disabled = false
 format = '[$symbol($subscription)]($style)'
-symbol = '󰠅 '
 style = "fg:mantle bg:sapphire"
+symbol = '󰠅 '
 
 [kubernetes]
-symbol = '⎈ '
 disabled = false
-style = "fg:mantle bg:blue"
 format = '[$symbol$context( \($namespace\))]($style)'
+style = "fg:mantle bg:blue"
+symbol = '⎈ '
 
 [docker_context]
 disabled = false
-symbol = ""
-style = "bg:mantle"
 format = '[[ $symbol( $context) ](fg:#83a598 bg:blue)]($style)'
+style = "bg:mantle"
+symbol = ""
 
 [time]
 disabled = false
-time_format = "%R"
-style = "bg:color_bg1"
 format = '[[  $time ](fg:mantle bg:purple)]($style)'
+style = "bg:color_bg1"
+time_format = "%R"
 
 [cmd_duration]
-min_time = 500
 format = '[  $duration]($style)'
+min_time = 500
 style = "bg:surface0 fg:text"
 
 [line_break]
@@ -168,9 +169,9 @@ disabled = false
 
 [character]
 disabled = false
-success_symbol = '[](bold fg:green)'
 error_symbol = '[](bold fg:red)'
-vimcmd_symbol = '[](bold fg:green)'
+success_symbol = '[](bold fg:green)'
 vimcmd_replace_one_symbol = '[](bold fg:purple)'
 vimcmd_replace_symbol = '[](bold fg:purple)'
+vimcmd_symbol = '[](bold fg:green)'
 vimcmd_visual_symbol = '[](bold fg:yellow)'
