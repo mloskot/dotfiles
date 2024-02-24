@@ -57,4 +57,3 @@ if [ $TTY_COUNTER -eq 1 ]; then
       wslfetch
   fi
 fi
-
