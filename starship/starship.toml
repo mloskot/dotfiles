@@ -11,9 +11,10 @@ $git_branch\
 $git_status\
 [](fg:green bg:teal)\
 $c\
-$rust\
 $golang\
+$lua\
 $python\
+$rust\
 [](fg:teal bg:blue)\
 $docker_context\
 [](fg:blue bg:purple)\
@@ -107,17 +108,17 @@ style = "bg:teal"
 format = '[[($all_status$ahead_behind )](fg:base bg:green)]($style)'
 
 [c]
-symbol = " "
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[rust]
-symbol = ""
+symbol = ""
 style = "bg:teal"
 format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 
 [golang]
 symbol = ""
+style = "bg:teal"
+format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+
+[lua]
+symbol = ""
 style = "bg:teal"
 format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 
