@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Give Starship a priority; use powerline-go as fallback
+if command -v "starship" >/dev/null; then
+    return
+fi
+
 function _update_ps1() {
 
     #PS1="$($GOPATH/bin/powerline-go -newline -modules venv,ssh,perms,git,hg,jobs,exit,root,docker,kube,wsl -cwd-mode plain -hostname-only-if-ssh -trim-ad-domain -mode compatible)"
