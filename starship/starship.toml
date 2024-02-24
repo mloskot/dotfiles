@@ -13,11 +13,6 @@ $git_status\
 $c\
 $rust\
 $golang\
-$nodejs\
-$php\
-$java\
-$kotlin\
-$haskell\
 $python\
 [](fg:teal bg:blue)\
 $docker_context\
@@ -109,11 +104,6 @@ format = '[[ $symbol $branch ](fg:base bg:green)]($style)'
 style = "bg:teal"
 format = '[[($all_status$ahead_behind )](fg:base bg:green)]($style)'
 
-[nodejs]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
 [c]
 symbol = " "
 style = "bg:teal"
@@ -126,26 +116,6 @@ format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 
 [golang]
 symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[php]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[java]
-symbol = " "
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[kotlin]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[haskell]
-symbol = ""
 style = "bg:teal"
 format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 
