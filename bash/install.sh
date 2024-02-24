@@ -2,7 +2,15 @@
 
 # Install core utilities
 sudo apt update
-sudo apt install -y direnv gh git golang-go wslu
+if ! command -v wslfetch; then
+    sudo apt install wslu
+fi
+for tool in direnv gh git go
+do
+    if ! command -v "${tool}" >/dev/null; then
+        sudo apt install -y "${tool}"
+    fi
+done
 
 for f in .bash*
 do
