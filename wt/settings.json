@@ -34,7 +34,7 @@
     "defaultProfile": "{51855cb2-8cce-5362-8f54-464b92b32386}",
     "initialCols": 100,
     "initialRows": 30,
-    "launchMode": "maximized",
+    "launchMode": "focus",
     "newTabMenu": 
     [
         {
