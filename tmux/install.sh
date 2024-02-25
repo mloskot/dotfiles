@@ -7,3 +7,7 @@ if [[ -L "${target}" ]]; then
 fi
 echo "Symlinking ${PWD}/.tmux.conf to ${target}"
 ln -s "${PWD}/.tmux.conf" "${target}"
+
+if [[ ! -d "${HOME}/.tmux/plugins/tpm" ]]; then
+    git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+fi
