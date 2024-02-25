@@ -5,4 +5,4 @@ if [[ -L ${HOME}/.config/nvim ]]; then
     rm "${HOME}/.config/nvim"
 fi
 echo "Symlinking ${PWD}/nvim to ${HOME}/.config/nvim"
-ln -s "${PWD}/nvim" "${HOME}/.config/"
+ln -s "${PWD}" "${HOME}/.config/nvim"
