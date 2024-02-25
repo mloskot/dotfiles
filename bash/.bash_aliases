@@ -34,6 +34,7 @@ fi
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
+alias t='tmux'
 
 alias rtree='tree -I .git -a'
 
