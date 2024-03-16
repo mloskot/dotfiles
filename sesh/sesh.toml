@@ -1,0 +1,5 @@
+[[startup_scripts]]
+session_path = "~/azure-hosting"
+
+[[startup_scripts]]
+session_path = "~/.dotfiles"
