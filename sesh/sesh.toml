@@ -3,5 +3,9 @@ session_path = "~/azure-hosting"
 script_path = "~/.config/sesh/scripts/azure-hosting.sh"
 
 [[startup_scripts]]
+session_path = "~/azure-hosting-infrastructure"
+script_path = "~/.config/sesh/scripts/azure-hosting-az.sh"
+
+[[startup_scripts]]
 session_path = "~/.dotfiles"
 script_path = "~/.config/sesh/scripts/dotfiles.sh"
