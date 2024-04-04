@@ -1,11 +1,14 @@
-[[startup_scripts]]
-session_path = "~/azure-hosting"
-script_path = "~/.config/sesh/scripts/azure-hosting.sh"
+[[session]]
+name = "azure-hosting"
+path = "~/azure-hosting"
+startup_script = "~/.config/sesh/scripts/azure-hosting.sh"
 
-[[startup_scripts]]
-session_path = "~/azure-hosting-infrastructure"
-script_path = "~/.config/sesh/scripts/azure-hosting-az.sh"
+[[session]]
+name = "azure-hosting-infrastructure"
+path = "~/azure-hosting-infrastructure"
+startup_script = "~/.config/sesh/scripts/azure-hosting-az.sh"
 
-[[startup_scripts]]
-session_path = "~/.dotfiles"
-script_path = "~/.config/sesh/scripts/dotfiles.sh"
+[[session]]
+name = "dotfiles"
+path = "~/.dotfiles"
+startup_script = "~/.config/sesh/scripts/dotfiles.sh"
