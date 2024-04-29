@@ -1,5 +1,5 @@
 #!/bin/bash
-tmux rename-window git
+tmux rename-window git-gitops
 tmux send-keys "cd ~/azure-hosting/azure-hosting-gitops && direnv allow" Enter
 tmux send-keys "lazygit" Enter
 
@@ -22,6 +22,10 @@ tmux send-keys "cd ~/azure-hosting/azure-hosting-gitops/clusters/prd && direnv a
 tmux new-window
 tmux rename-window inventory
 tmux send-keys "cd ~/azure-hosting/azure-hosting-inventory" Enter
+
+tmux new-window
+tmux rename-window infra
+tmux send-keys "cd ~/azure-hosting/azure-hosting-infrastructure" Enter
 
 tmux new-window
 tmux rename-window docs
