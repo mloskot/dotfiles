@@ -11,6 +11,10 @@ tmux rename-window cluster-dev
 tmux send-keys "cd ~/azure-hosting/azure-hosting-gitops/clusters/dev && direnv allow" Enter
 
 tmux new-window
+tmux rename-window cluster-qlt
+tmux send-keys "cd ~/azure-hosting/azure-hosting-gitops/clusters/qlt && direnv allow" Enter
+
+tmux new-window
 tmux rename-window cluster-stg
 tmux send-keys "cd ~/azure-hosting/azure-hosting-gitops/clusters/stg && direnv allow" Enter
 
