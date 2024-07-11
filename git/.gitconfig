@@ -6,12 +6,12 @@
 	path = %(prefix)//mnt/d/.dotfiles/git/.gitconfig.wsl.personal
 [includeIf "gitdir:%(prefix)//mnt/f/**"]
 	path = %(prefix)//mnt/d/.dotfiles/git/.gitconfig.wsl.work
-[includeIf "gitdir:%(prefix)//home/mloskot/**"]
-	path = %(prefix)//home/mloskot/.dotfiles/git/.gitconfig.linux.personal
-[includeIf "gitdir:%(prefix)//home/mloskot/azure*/**"]
-	path = %(prefix)//mnt/d/.dotfiles/git/.gitconfig.linux.work
-[includeIf "gitdir:%(prefix)//home/mloskot/cadcorp/**"]
-	path = %(prefix)//mnt/d/.dotfiles/git/.gitconfig.linux.work
+[includeIf "gitdir:~/**"]
+	path = ~/.dotfiles/git/.gitconfig.linux.personal
+[includeIf "gitdir:~/azure*/**"]
+	path = ~/.dotfiles/git/.gitconfig.linux.work
+[includeIf "gitdir:~/cadcorp/**"]
+	path = ~/.dotfiles/git/.gitconfig.linux.work
 [include]
 	path = ~/.gitconfig.alias_basic
 	path = ~/.gitconfig.alias_ignore
