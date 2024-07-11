@@ -2,17 +2,20 @@
 
 # Install core utilities
 sudo apt update
-if ! command -v wslfetch; then
-    sudo apt install wslu
+if [[ -n "${WSL_DISTRO_NAME}" ]]; then
+    if ! command -v wslfetch; then
+      sudo apt install wslu
+    fi
 fi
-for tool in direnv gh git go
+
+for tool in direnv gh git
 do
     if ! command -v "${tool}" >/dev/null; then
         sudo apt install -y "${tool}"
     fi
 done
 
-for f in .bash*
+for f in .bash* .inputrc
 do
     if [[ -L ${HOME}/${f} ]]; then
         echo "Deleting symlink ${HOME}/${f}"
