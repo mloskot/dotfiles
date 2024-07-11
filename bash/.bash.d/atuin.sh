@@ -1,9 +1,10 @@
 #!/bin/bash
 if ! command -v "atuin" >/dev/null; then
-    return 
+    return
 fi
 
 export ATUIN_NOBIND="true"
+# shellcheck disable=SC1090
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 eval "$(atuin init bash)"
 
