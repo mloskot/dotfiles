@@ -9,3 +9,6 @@ set mark-symlinked-directories On
 set show-all-if-ambiguous On
 set show-all-if-unmodified On
 set visible-stats On
+
+# https://superuser.com/a/1721452
+set enable-bracketed-paste Off
