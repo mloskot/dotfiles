@@ -26,7 +26,7 @@ tmux rename-window cluster-stg
 tmux send-keys "cd ~/azure-hosting/azure-hosting-gitops/clusters/${az_tenant_id}stg && direnv allow" Enter
 
 tmux new-window
-tmux rename-window cluster-stg
+tmux rename-window cluster-tst
 tmux send-keys "cd ~/azure-hosting/azure-hosting-gitops/clusters/${az_tenant_id}tst && direnv allow" Enter
 
 tmux new-window
