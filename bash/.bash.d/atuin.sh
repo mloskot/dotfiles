@@ -1,4 +1,9 @@
 #!/bin/bash
+if [[ -d $HOME/.atuin/bin ]]; then
+    PATH=$PATH:$HOME/.atuin/bin
+    export PATH
+fi
+
 if ! command -v "atuin" >/dev/null; then
     return
 fi
