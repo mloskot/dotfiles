@@ -19,12 +19,12 @@ HISTFILESIZE=5000
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+  PATH="$HOME/bin:$PATH"
 fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+  PATH="$HOME/.local/bin:$PATH"
 fi
 
 if [ -f "/etc/bash_completion" ]; then
@@ -44,16 +44,19 @@ if [ -d ~/.bash.d ]; then
 fi
 
 if [ -f ~/.bash_aliases ]; then
-    #echo "Loading ~/.bash_aliases"
-    source ~/.bash_aliases
+  #echo "Loading ~/.bash_aliases"
+  # shellcheck disable=SC1090
+  source ~/.bash_aliases
 fi
 
 
 TTY_COUNTER=$(ps a | awk '{print $2}' | grep -vi -e "tty*" -e "?" | uniq | wc -l);
 if [ $TTY_COUNTER -eq 1 ]; then
-  if command -v "neofetch" >/dev/null; then
-      neofetch
+  if command -v "fastfetch" >/dev/null; then
+    fastfetch
+  elif command -v "neofetch" >/dev/null; then
+    neofetch
   elif command -v "wslfetch" >/dev/null; then
-      wslfetch
+    wslfetch
   fi
 fi
