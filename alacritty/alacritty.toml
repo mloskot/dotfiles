@@ -1,6 +1,6 @@
 # $HOME/.config/alacritty/alacritty.toml
 
-live_config_reload = false
+live_config_reload = true
 
 [window]
 decorations = "none"
