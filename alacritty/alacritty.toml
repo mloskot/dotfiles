@@ -2,6 +2,9 @@
 
 live_config_reload = true
 
+[font]
+size = 9.0
+
 [window]
 decorations = "none"
 
