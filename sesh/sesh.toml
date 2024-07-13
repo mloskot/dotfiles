@@ -4,9 +4,9 @@ path = "~/azure-hosting"
 startup_script = "~/.config/sesh/scripts/azure-hosting.sh"
 
 [[session]]
-name = "azure-hosting-infrastructure"
-path = "~/azure-hosting-infrastructure"
-startup_script = "~/.config/sesh/scripts/azure-hosting-az.sh"
+name = "azure-hosting-qlt"
+path = "~/azure-hosting"
+startup_script = "~/.config/sesh/scripts/azure-hosting-qlt.sh"
 
 [[session]]
 name = "dotfiles"
