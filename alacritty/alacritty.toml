@@ -8,6 +8,8 @@ size = 10.0
 [window]
 decorations = "none"
 
+dimensions = { columns = 140, lines = 30 }
+
 [keyboard]
 bindings = [
   { key = "F11", action = "ToggleFullscreen" },
