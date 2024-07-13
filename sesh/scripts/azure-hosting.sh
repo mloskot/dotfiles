@@ -1,37 +1,23 @@
 #!/bin/bash
+az_env=$1
 az_tenant_id=$(az account show --query homeTenantId --output tsv)
-if [[ "${az_tenant_id}" =~ ^21b22257.* ]]; then
-    az_tenant_id="${az_tenant_id}/"
-else
-    az_tenant_id="/"
-fi
 
-tmux rename-window infrastructure
+tmux rename-window infra-tf
 tmux send-keys "cd ~/azure-hosting/azure-hosting-infrastructure" Enter
 
 tmux new-window
-tmux rename-window gitops
-tmux send-keys "cd ~/azure-hosting/azure-hosting-gitops && direnv allow" Enter
+tmux rename-window infra-git-${az_env}
+tmux send-keys "cd ~/azure-hosting/azure-hosting-infrastructure" Enter
+tmux send-keys "lazygit" Enter
 
 tmux new-window
-tmux rename-window cluster-dev
-tmux send-keys "cd ~/azure-hosting/azure-hosting-gitops/clusters/${az_tenant_id}dev && direnv allow" Enter
+tmux rename-window gitops-k8s-${az_env}
+tmux send-keys "cd ~/azure-hosting/azure-hosting-gitops/clusters/${az_tenant_id}/${az_env} && direnv allow" Enter
 
 tmux new-window
-tmux rename-window cluster-qlt
-tmux send-keys "cd ~/azure-hosting/azure-hosting-gitops/clusters/${az_tenant_id}qlt && direnv allow" Enter
-
-tmux new-window
-tmux rename-window cluster-stg
-tmux send-keys "cd ~/azure-hosting/azure-hosting-gitops/clusters/${az_tenant_id}stg && direnv allow" Enter
-
-tmux new-window
-tmux rename-window cluster-tst
-tmux send-keys "cd ~/azure-hosting/azure-hosting-gitops/clusters/${az_tenant_id}tst && direnv allow" Enter
-
-tmux new-window
-tmux rename-window cluster-prd
-tmux send-keys "cd ~/azure-hosting/azure-hosting-gitops/clusters/${az_tenant_id}prd && direnv allow" Enter
+tmux rename-window gitops-git-${az_env}
+tmux send-keys "cd ~/azure-hosting/azure-hosting-gitops/clusters/${az_tenant_id}/${az_env} && direnv allow" Enter
+tmux send-keys "lazygit" Enter
 
 tmux new-window
 tmux rename-window inventory

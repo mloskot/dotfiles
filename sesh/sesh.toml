@@ -1,12 +1,12 @@
 [[session]]
-name = "azure-hosting"
-path = "~/azure-hosting"
-startup_script = "~/.config/sesh/scripts/azure-hosting.sh"
-
-[[session]]
 name = "azure-hosting-qlt"
 path = "~/azure-hosting"
 startup_script = "~/.config/sesh/scripts/azure-hosting-qlt.sh"
+
+[[session]]
+name = "azure-hosting-tst"
+path = "~/azure-hosting"
+startup_script = "~/.config/sesh/scripts/azure-hosting-tst.sh"
 
 [[session]]
 name = "dotfiles"
