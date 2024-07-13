@@ -9,4 +9,7 @@ size = 9.0
 decorations = "none"
 
 [keyboard]
-bindings = [{ key = "F11", action = "ToggleFullscreen" }]
+bindings = [
+  { key = "F11", action = "ToggleFullscreen" },
+  { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
+]
