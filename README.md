@@ -4,7 +4,8 @@ Configuration files for development environments on Windows,
 Windows Subsystem for Linux and Linux. The Linux dotfiles are
 mainly for Debian-based distributions.
 
-No fancy all-in-one installer script.
+No fancy all-in-one installer script provided, but collection
+of `install.sh` and `install.bat` scripts.
 
 ## Git
 
