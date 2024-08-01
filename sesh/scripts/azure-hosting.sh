@@ -27,4 +27,8 @@ tmux new-window
 tmux rename-window docs
 tmux send-keys "cd ~/azure-hosting/azure-hosting-docs" Enter
 
+tmux new-window
+tmux rename-window machine-images
+tmux send-keys "cd ~/azure-hosting/machine-images" Enter
+
 tmux select-window -t 0
