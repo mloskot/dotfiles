@@ -1,4 +1,9 @@
 [[session]]
+name = "azure-hosting-prd"
+path = "~/azure-hosting"
+startup_script = "~/.config/sesh/scripts/azure-hosting-prd.sh"
+
+[[session]]
 name = "azure-hosting-qlt"
 path = "~/azure-hosting"
 startup_script = "~/.config/sesh/scripts/azure-hosting-qlt.sh"
