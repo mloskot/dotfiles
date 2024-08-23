@@ -1,19 +1,19 @@
 [[session]]
 name = "azure-hosting-prd"
 path = "~/azure-hosting"
-startup_script = "~/.config/sesh/scripts/azure-hosting-prd.sh"
+startup_command = "~/.config/sesh/scripts/azure-hosting-prd.sh"
 
 [[session]]
 name = "azure-hosting-qlt"
 path = "~/azure-hosting"
-startup_script = "~/.config/sesh/scripts/azure-hosting-qlt.sh"
+startup_command = "~/.config/sesh/scripts/azure-hosting-qlt.sh"
 
 [[session]]
 name = "azure-hosting-tst"
 path = "~/azure-hosting"
-startup_script = "~/.config/sesh/scripts/azure-hosting-tst.sh"
+startup_command = "~/.config/sesh/scripts/azure-hosting-tst.sh"
 
 [[session]]
 name = "dotfiles"
 path = "~/.dotfiles"
-startup_script = "~/.config/sesh/scripts/dotfiles.sh"
+startup_command = "~/.config/sesh/scripts/dotfiles.sh"
