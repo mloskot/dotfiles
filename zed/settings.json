@@ -11,6 +11,7 @@
   "ui_font_size": 16,
   "buffer_font_family": "0xProto Nerd Font Mono",
   "buffer_font_size": 14,
+  "format_on_save": "off",
   "terminal": {
     "font_family": "0xProto Nerd Font Mono"
   },
@@ -18,5 +19,8 @@
     "mode": "system",
     "light": "Catppuccin Frappé",
     "dark": "One Dark"
+  },
+  "file_types": {
+    "LOG": ["log*.txt"]
   }
 }
