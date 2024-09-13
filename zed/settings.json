@@ -17,8 +17,8 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Frappé",
-    "dark": "One Dark"
+    "light": "Catppuccin Frappé - No Italics",
+    "dark": "Catppuccin Frappé - No Italics"
   },
   "file_types": {
     "LOG": ["log*.txt"]
