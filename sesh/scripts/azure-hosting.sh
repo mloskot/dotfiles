@@ -2,6 +2,10 @@
 az_env=$1
 az_tenant_id=$(az account show --query homeTenantId --output tsv)
 
+tmux rename-window command
+tmux send-keys "cd ~/azure-hosting" Enter
+
+tmux new-window
 tmux rename-window infra-tf
 tmux send-keys "cd ~/azure-hosting/azure-hosting-infrastructure" Enter
 tmux send-keys "mage subscription:switchDefault sub-hosting-${az_env}" Enter
