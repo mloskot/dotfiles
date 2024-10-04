@@ -8,7 +8,7 @@ size = 10.0
 [window]
 decorations = "none"
 
-dimensions = { columns = 140, lines = 30 }
+dimensions = { columns = 140, lines = 40 }
 
 [keyboard]
 bindings = [
