@@ -1,6 +1,6 @@
 #!/bin/sh
 set -x
-MY_GO_VERSION=1.22.5
+MY_GO_VERSION=1.23.2
 
 if [ ! -x /usr/bin/lsb_release ]; then
     echo "Linux expected"
