@@ -8,6 +8,12 @@ name = "azure-hosting-qlt"
 path = "~/azure-hosting"
 startup_command = "~/.config/sesh/scripts/azure-hosting-qlt.sh"
 
+
+[[session]]
+name = "azure-hosting-svc"
+path = "~/azure-hosting"
+startup_command = "~/.config/sesh/scripts/azure-hosting-svc.sh"
+
 [[session]]
 name = "azure-hosting-tst"
 path = "~/azure-hosting"
