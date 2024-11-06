@@ -1,13 +1,15 @@
 #!/bin/bash
 
-GIT_EDITOR=$(command -v vim)
-if [[ -n "$GIT_EDITOR" ]]; then
-    # Git Bash seems unfolding /usr/bin/vim as C:/Program Files/Git/usr/bin/vim
-    GIT_EDITOR=vim
-    export GIT_EDITOR
-else
-    unset GIT_EDITOR
-fi
+for e in nvim vim vi; do
+    if test "$(command -v ${e})"; then
+        # Git Bash seems unfolding /usr/bin/vim as C:/Program Files/Git/usr/bin/vim
+        GIT_EDITOR=${e}
+        export GIT_EDITOR
+        break
+    else
+        unset GIT_EDITOR
+    fi
+done
 
 # easy signing in terminal
 GPG_TTY=$(tty)
