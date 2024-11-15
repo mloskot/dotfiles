@@ -1,0 +1,6 @@
+# Look for 'source'd files relative to the current working directory where the
+# shellcheck command is invoked.
+source-path=bash/.bash.d
+
+# Allow opening any 'source'd file, even if not specified as input
+external-sources=true
