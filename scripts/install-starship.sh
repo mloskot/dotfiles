@@ -6,4 +6,4 @@ if [ ! -x /usr/bin/lsb_release ]; then
     exit 1
 fi
 
-curl -sS https://starship.rs/install.sh | sudo sh -s -- -force
+curl -sS https://starship.rs/install.sh | sudo sh -s -- --force
