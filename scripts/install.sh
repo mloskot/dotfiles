@@ -9,5 +9,6 @@ do
   ./install-"${s}".sh
 done
 
-sudo apt-get -y autoremove
+sudo apt-get -y autoremove && \
+sudo apt-get -y autoclean && \
 sudo apt-get -y clean
