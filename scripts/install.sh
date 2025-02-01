@@ -4,7 +4,7 @@ set -x
 
 ./apt-get-upgrade.sh
 
-for s in atuin golang goreleaser k9s ko lazygit sesh sourcegit starship vim
+for s in atuin golang goreleaser gotask k9s ko lazygit sesh sourcegit starship vim
 do
   ./install-"${s}".sh
 done
