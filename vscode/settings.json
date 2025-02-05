@@ -6,7 +6,7 @@
   "editor.fontFamily": "\"0xProto Nerd Font Mono\"",
   "editor.fontLigatures": false,
   "editor.fontSize": 14,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.guides.indentation": true,
   "editor.lineNumbers": "relative",
   "editor.lineNumbers_comment": "Use relative to work nicely with vim.smartRelativeLine",
