@@ -36,6 +36,7 @@
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.fontFamily": "\"0xProto Nerd Font Mono\"",
   "terminal.integrated.tabs.enabled": false,
+  "terraform.languageServer.ignoreSingleFileWarning": true,
   "vim.cursorStylePerMode.insert": "line",
   "vim.cursorStylePerMode.normal": "block",
   "vim.easymotion": true,
