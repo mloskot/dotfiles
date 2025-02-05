@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p "${HOME}/.config/Code/User"
+
 for f in keybindings.json settings.json
 do
     L="${HOME}/.config/Code/User/${f}"
