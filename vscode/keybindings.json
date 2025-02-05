@@ -1,5 +1,17 @@
-// Place your key bindings in this file to override the defaults
 [
+    // ctrl+shift+s toggles sidebar not ctrl+b /////////////////////////////////
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "-workbench.action.files.saveLocalFile"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
     // ctrl+shift+w closes editor document, not window /////////////////////////
     {
         "key": "ctrl+shift+w",
