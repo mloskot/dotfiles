@@ -17,7 +17,9 @@ repos:
       - id: trailing-whitespace
       - id: end-of-file-fixer
       - id: pretty-format-json
+        exclude: ^vscode/
       - id: check-json
+        exclude: ^vscode/
       - id: check-yaml
         args:
           - --unsafe
