@@ -1,72 +1,51 @@
 // Place your key bindings in this file to override the defaults
 [
+    // ctrl+shift+w closes editor document, not window /////////////////////////
     {
-        "key": "ctrl+k",
-        "command": "selectNextSuggestion",
-        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+        "key": "ctrl+shift+w",
+        "command": "-workbench.action.closeWindow"
     },
     {
-        "key": "ctrl+l",
-        "command": "selectPrevSuggestion",
-        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+        "key": "ctrl+shift+w",
+        "command": "workbench.action.closeActiveEditor"
     },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.quickOpenNavigateNext",
-        "when": "inQuickOpen"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.quickOpenNavigatePrevious",
-        "when": "inQuickOpen"
-    },
-    {
-        "key": "ctrl+alt+f5",
-        "command": "python.execInTerminal"
-    },
-    {
-        "key": "space",
-        "when": "vim.recording || editorTextFocus && vim.active && vim.mode != 'Insert'",
-        "command": "toggle",
-        "args": {
-            "id": "line-numbers",
-            "value": [
-                {
-                    "editor.lineNumbers": "relative"
-                },
-                {
-                    "editor.lineNumbers": "on"
-                }
-            ]
-        }
-    },
-    {
-        "key": "alt+x alt+x",
-        "command": "workbench.action.terminal.runSelectedText"
-    },
-    {
-        "key": "ctrl+0",
-        "command": "-workbench.action.focusSideBar"
-    },
-    {
-        "key": "ctrl+0",
-        "command": "workbench.action.zoomReset"
-    },
-    {
-        "key": "ctrl+numpad0",
-        "command": "-workbench.action.zoomReset"
-    },
+    // Extension: Binocular ////////////////////////////////////////////////////
     {
         "key": "alt+s alt+f",
-        "command": "binocular.searchFile",
+        "command": "binocular.searchFile"
     },
     {
         "key": "alt+s alt+g",
-        "command": "binocular.searchFileContent",
+        "command": "binocular.searchFileContent"
     },
     {
         "key": "alt+c alt+l",
         "command": "binocular.customCommands",
         "args": "Lazygit"
     },
+    // Extension: FindItFaster /////////////////////////////////////////////////
+    {
+        "key": "alt+u",
+        "command": "find-it-faster.findWithinFiles"
+    },
+    {
+        "key": "ctrl+shift+u",
+        "command": "-find-it-faster.findWithinFiles"
+    },
+    {
+        "key": "alt+j",
+        "command": "find-it-faster.findFiles"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "-find-it-faster.findFiles"
+    },
+    {
+        "key": "alt+t",
+        "command": "find-it-faster.findWithinFilesWithType"
+    },
+    {
+        "key": "ctrl+shift+alt+u",
+        "command": "-find-it-faster.findWithinFilesWithType"
+    }
 ]
