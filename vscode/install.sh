@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for f in settings.json
+for f in keybindings.json settings.json
 do
     L="${HOME}/.config/Code/User/${f}"
     if [[ -L ${L} ]]; then
