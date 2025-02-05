@@ -67,18 +67,6 @@
     {
       "before": [
         "<leader>",
-        "u"
-      ],
-      "after": [],
-      "commands": [
-        {
-          "command": "workbench.action.focusActiveEditorGroup"
-        }
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
         "v"
       ],
       "after": [],
