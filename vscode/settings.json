@@ -50,7 +50,7 @@
   "vim.vimrc.enable": false,
   "vim.handleKeys": {
     "<C-a>": false,
-    "<C-f>": false
+    "<C-f>": true
   },
   "window.restoreWindows": "none",
   "workbench.activityBar.location": "hidden",
