@@ -36,7 +36,9 @@ alias vi='nvim'
 alias vim='nvim'
 alias t='tmux'
 
+# Git
+alias wip='git add -A && git commit -m "WIP $(date +%s)" --no-verify'
+
+# Misc
 alias rtree='tree -I .git -a'
-
 alias wttr='curl wttr.in/Janowice+Wielkie'
-
