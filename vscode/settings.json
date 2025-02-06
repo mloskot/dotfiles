@@ -54,7 +54,9 @@
   "vim.vimrc.enable": false,
   "vim.handleKeys": {
     "<C-a>": false,
-    "<C-f>": true
+    "<C-f>": true,
+    "<C-p>":false,
+    "<C-n>": false,
   },
   "vim.insertModeKeyBindings": [
     {
