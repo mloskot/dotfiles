@@ -28,7 +28,7 @@
   "extensions.ignoreRecommendations": true,
   "git.openRepositoryInParentFolders": "never",
   "security.allowedUNCHosts": [
-      "wsl.localhost"
+    "wsl.localhost"
   ],
   "security.workspace.trust.untrustedFiles": "open",
   "settingsSync.ignoredSettings": [],
