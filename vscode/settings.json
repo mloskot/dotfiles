@@ -71,6 +71,24 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before": [ "<leader>", "/" ],
+      "after": [],
+      "commands": [
+        {
+          "command": "actions.find"
+        }
+      ]
+    },
+    {
+      "before": [ "<leader>", "\\", ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.startFindReplaceAction"
+        }
+      ]
+    },
+    {
       "before": [
         "<leader>",
         "v"
@@ -106,6 +124,25 @@
         }
       ]
     }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [ "<leader>", "/" ],
+      "after": [],
+      "commands": [
+        {
+          "command": "actions.find"
+        }
+      ]
+    },    {
+      "before": [ "<leader>", "\\", ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.startFindReplaceAction"
+        }
+      ]
+    },
   ],
   "window.restoreWindows": "none",
   "workbench.activityBar.location": "hidden",
