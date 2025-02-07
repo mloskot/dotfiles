@@ -1,2 +1,5 @@
+---
 git:
   disableForcePushing: true
+gui:
+  sidePanelWidth: 0.4
