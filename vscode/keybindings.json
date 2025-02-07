@@ -12,6 +12,15 @@
         "key": "ctrl+shift+s",
         "command": "workbench.action.toggleSidebarVisibility"
     },
+    // ctrl+...+up/down resize terminal view horizontally ///////////////////////
+    {
+        "key": "ctrl+shift+meta+up",
+        "command": "workbench.action.terminal.resizePaneUp"
+    },
+    {
+        "key": "ctrl+shift+meta+down",
+        "command": "workbench.action.terminal.resizePaneDown"
+    },
     // ctrl+shift+w closes editor document, not window /////////////////////////
     {
         "key": "ctrl+shift+w",
@@ -59,13 +68,5 @@
     {
         "key": "ctrl+shift+alt+u",
         "command": "-find-it-faster.findWithinFilesWithType"
-    },
-    {
-        "key": "ctrl+shift+meta+up",
-        "command": "workbench.action.terminal.resizePaneUp"
-    },
-    {
-        "key": "ctrl+shift+meta+down",
-        "command": "workbench.action.terminal.resizePaneDown"
     }
 ]
