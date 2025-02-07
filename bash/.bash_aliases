@@ -25,7 +25,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Editors
-#alias c='code' # already in PATH
+alias c='code' # already in PATH
 if [[ -n "${WSL_DISTRO_NAME}" ]]; then
     alias ci='/mnt/c/Program\ Files/Microsoft\ VS\ Code\ Insiders/bin/code-insiders'
 else
