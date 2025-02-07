@@ -20,13 +20,13 @@ tmux rename-window gitops-k8s
 tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${az_env} && direnv allow" Enter
 
 tmux new-window
-tmux rename-window gitops-k9s
-tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${az_env} && direnv allow" Enter
-
-tmux new-window
 tmux rename-window gitops-git
 tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${az_env} && direnv allow" Enter
 tmux send-keys "lazygit" Enter
+
+tmux new-window
+tmux rename-window gitops-k9s
+tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${az_env} && direnv allow" Enter
 
 tmux new-window
 tmux rename-window docs
