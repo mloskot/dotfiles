@@ -59,5 +59,13 @@
     {
         "key": "ctrl+shift+alt+u",
         "command": "-find-it-faster.findWithinFilesWithType"
+    },
+    {
+        "key": "ctrl+shift+meta+up",
+        "command": "workbench.action.terminal.resizePaneUp"
+    },
+    {
+        "key": "ctrl+shift+meta+down",
+        "command": "workbench.action.terminal.resizePaneDown"
     }
 ]
