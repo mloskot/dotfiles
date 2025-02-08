@@ -87,7 +87,7 @@ skin=catppuccin
 
 [Layout]
 output_lines=0
-left_panel_size=82
+left_panel_size=74
 top_panel_size=0
 message_visible=true
 keybar_visible=true
@@ -151,9 +151,3 @@ content_whole_words=false
 content_all_charsets=false
 ignore_dirs_enable=true
 ignore_dirs=
-
-[Panelize]
-Find SUID and SGID programs=find . \\( \\( -perm -04000 -a -perm /011 \\) -o \\( -perm -02000 -a -perm /01 \\) \\) -print
-Find rejects after patching=find . -name \\*.rej -print
-Modified git files=git ls-files --modified
-Find *.orig after patching=find . -name \\*.orig -print
