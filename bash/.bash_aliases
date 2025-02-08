@@ -41,7 +41,7 @@ alias vim='nvim'
 alias t='tmux'
 
 # Git
-alias wip='git add -A && git commit -m "WIP $(date +%s)" --no-verify'
+alias wip='git add -A && git commit -m "WIP $(date +%Y-%m-%dT%H:%M:%S)" --no-verify'
 
 # Misc
 alias mc='mc --nosubshell'
