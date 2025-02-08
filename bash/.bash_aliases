@@ -44,5 +44,6 @@ alias t='tmux'
 alias wip='git add -A && git commit -m "WIP $(date +%s)" --no-verify'
 
 # Misc
+alias mc='mc --nosubshell'
 alias rtree='tree -I .git -a'
 alias wttr='curl wttr.in/Janowice+Wielkie'
