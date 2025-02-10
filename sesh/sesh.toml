@@ -4,12 +4,6 @@ path = "~/cadcorp-cloud"
 startup_command = "~/.config/sesh/scripts/cadcorp-cloud-prd.sh"
 
 [[session]]
-name = "cadcorp-cloud-qlt"
-path = "~/cadcorp-cloud"
-startup_command = "~/.config/sesh/scripts/cadcorp-cloud-qlt.sh"
-
-
-[[session]]
 name = "cadcorp-cloud-svc"
 path = "~/cadcorp-cloud"
 startup_command = "~/.config/sesh/scripts/cadcorp-cloud-svc.sh"
