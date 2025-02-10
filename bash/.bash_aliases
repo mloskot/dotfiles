@@ -2,15 +2,13 @@
 #echo "Loading ~/.bash_alises"
 
 # Basics
-alias l='ls'
+alias h='history'
+alias hu='history -a;history -n'
+alias hl='history | tail -n 30'
 alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -la'
 alias llm='ls -la | more'
-alias h='history'
-alias hu='history -a;history -n'
-alias hl='history | tail -n 30'
-
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     if [ -r ~/.dircolors ]; then
@@ -26,6 +24,12 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+fi
+
+if command -v "eza" >/dev/null; then
+    alias l=eza
+else
+    alias l='ls'
 fi
 
 # Editors
