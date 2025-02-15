@@ -28,6 +28,9 @@
   "extensions.ignoreRecommendations": true,
   "git.openRepositoryInParentFolders": "never",
   "redhat.telemetry.enabled": true,
+  "search.exclude": {
+    "**/.terraform/**": true
+  },
   "security.allowedUNCHosts": [
     "wsl.localhost"
   ],
