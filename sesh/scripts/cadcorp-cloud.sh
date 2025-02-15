@@ -1,13 +1,11 @@
 #!/bin/bash
-cc_env=$1
+CC_ENV="${1}"
+#export CC_ENV
 
 # Force Azure CLI with configuration path per single environment
 # https://learn.microsoft.com/en-us/cli/azure/azure-cli-configuration#cli-configuration-file
 AZURE_CONFIG_DIR="${HOME}/.azure-${CC_ENV}"
 export AZURE_CONFIG_DIR
-
-CC_ENV="${cc_env}"
-#export CC_ENV
 az_tenant_id=$(az account show --query homeTenantId --output tsv)
 if [[ -z "${az_tenant_id}" ]]; then
   echo "az_tenant_id is empty"
@@ -28,7 +26,7 @@ tmux send-keys "cd ~/cadcorp-cloud" Enter
 tmux new-window
 tmux rename-window infra-tf
 tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-infrastructure" Enter
-tmux send-keys "mage subscription:switchDefault sub-hosting-${cc_env}" Enter
+tmux send-keys "mage subscription:switchDefault sub-hosting-${CC_ENV}" Enter
 
 tmux new-window
 tmux rename-window infra-git
@@ -37,16 +35,16 @@ tmux send-keys "lazygit" Enter
 
 tmux new-window
 tmux rename-window gitops-k8s
-tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${cc_env} && direnv allow" Enter
+tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
 
 tmux new-window
 tmux rename-window gitops-git
-tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${cc_env} && direnv allow" Enter
+tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
 tmux send-keys "lazygit" Enter
 
 tmux new-window
 tmux rename-window gitops-k9s
-tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${cc_env} && direnv allow" Enter
+tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
 
 tmux new-window
 tmux rename-window docs
@@ -61,3 +59,5 @@ tmux rename-window machine-images
 tmux send-keys "cd ~/cadcorp-cloud/machine-images" Enter
 
 tmux select-window -t 0
+
+unset az_tenant_id
