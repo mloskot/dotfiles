@@ -27,6 +27,7 @@
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
   "git.openRepositoryInParentFolders": "never",
+  "powershell.helpCompletion": "Disabled",
   "redhat.telemetry.enabled": true,
   "search.exclude": {
     "**/.terraform/**": true
