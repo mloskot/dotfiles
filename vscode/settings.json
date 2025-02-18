@@ -32,9 +32,7 @@
   "search.exclude": {
     "**/.terraform/**": true
   },
-  "security.allowedUNCHosts": [
-    "wsl.localhost"
-  ],
+  "security.allowedUNCHosts": ["wsl.localhost"],
   "security.workspace.trust.untrustedFiles": "open",
   "settingsSync.ignoredSettings": [],
   "settingsSync.ignoredExtensions": [],
@@ -60,23 +58,18 @@
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": true,
-    "<C-p>":false,
-    "<C-n>": false,
+    "<C-p>": false,
+    "<C-n>": false
   },
   "vim.insertModeKeyBindings": [
     {
-      "before": [
-        "j",
-        "j"
-      ],
-      "after": [
-        "<Esc>"
-      ]
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [ "<leader>", "/" ],
+      "before": ["<leader>", "/"],
       "after": [],
       "commands": [
         {
@@ -85,7 +78,7 @@
       ]
     },
     {
-      "before": [ "<leader>", "\\", ],
+      "before": ["<leader>", "\\"],
       "after": [],
       "commands": [
         {
@@ -94,10 +87,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "v"
-      ],
+      "before": ["<leader>", "v"],
       "after": [],
       "commands": [
         {
@@ -106,10 +96,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "h"
-      ],
+      "before": ["<leader>", "h"],
       "after": [],
       "commands": [
         {
@@ -118,10 +105,7 @@
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "l"
-      ],
+      "before": ["<leader>", "l"],
       "after": [],
       "commands": [
         {
@@ -132,26 +116,27 @@
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before": [ "<leader>", "/" ],
+      "before": ["<leader>", "/"],
       "after": [],
       "commands": [
         {
           "command": "actions.find"
         }
       ]
-    },    {
-      "before": [ "<leader>", "\\", ],
+    },
+    {
+      "before": ["<leader>", "\\"],
       "after": [],
       "commands": [
         {
           "command": "editor.action.startFindReplaceAction"
         }
       ]
-    },
+    }
   ],
   "window.restoreWindows": "none",
   "workbench.activityBar.location": "hidden",
   "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.enableExperiments": false,
-  "workbench.startupEditor": "none",
+  "workbench.startupEditor": "none"
 }

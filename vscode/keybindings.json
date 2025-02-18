@@ -1,72 +1,77 @@
 [
-    // ctrl+shift+s toggles sidebar not ctrl+b /////////////////////////////////
-    {
-        "key": "ctrl+b",
-        "command": "-workbench.action.toggleSidebarVisibility"
-    },
-    {
-        "key": "ctrl+shift+s",
-        "command": "-workbench.action.files.saveLocalFile"
-    },
-    {
-        "key": "ctrl+shift+s",
-        "command": "workbench.action.toggleSidebarVisibility"
-    },
-    // ctrl+...+up/down resize terminal view horizontally ///////////////////////
-    {
-        "key": "ctrl+shift+meta+up",
-        "command": "workbench.action.terminal.resizePaneUp"
-    },
-    {
-        "key": "ctrl+shift+meta+down",
-        "command": "workbench.action.terminal.resizePaneDown"
-    },
-    // ctrl+shift+w closes editor document, not window /////////////////////////
-    {
-        "key": "ctrl+shift+w",
-        "command": "-workbench.action.closeWindow"
-    },
-    {
-        "key": "ctrl+shift+w",
-        "command": "workbench.action.closeActiveEditor"
-    },
-    // Extension: Binocular ////////////////////////////////////////////////////
-    {
-        "key": "alt+s alt+f",
-        "command": "binocular.searchFile"
-    },
-    {
-        "key": "alt+s alt+g",
-        "command": "binocular.searchFileContent"
-    },
-    {
-        "key": "alt+c alt+l",
-        "command": "binocular.customCommands",
-        "args": "Lazygit"
-    },
-    // Extension: FindItFaster /////////////////////////////////////////////////
-    {
-        "key": "alt+u",
-        "command": "find-it-faster.findWithinFiles"
-    },
-    {
-        "key": "ctrl+shift+u",
-        "command": "-find-it-faster.findWithinFiles"
-    },
-    {
-        "key": "alt+j",
-        "command": "find-it-faster.findFiles"
-    },
-    {
-        "key": "ctrl+shift+j",
-        "command": "-find-it-faster.findFiles"
-    },
-    {
-        "key": "alt+t",
-        "command": "find-it-faster.findWithinFilesWithType"
-    },
-    {
-        "key": "ctrl+shift+alt+u",
-        "command": "-find-it-faster.findWithinFilesWithType"
-    }
+  // ctrl+shift+s toggles sidebar not ctrl+b /////////////////////////////////
+  {
+    "key": "ctrl+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "-workbench.action.files.saveLocalFile"
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  // ctrl+...+up/down resize terminal view horizontally ///////////////////////
+  {
+    "key": "ctrl+shift+meta+up",
+    "command": "workbench.action.terminal.resizePaneUp"
+  },
+  {
+    "key": "ctrl+shift+meta+down",
+    "command": "workbench.action.terminal.resizePaneDown"
+  },
+  // ctrl+shift+w closes editor document, not window /////////////////////////
+  {
+    "key": "ctrl+w",
+    "command": "-extension.vim_ctrl+w",
+    "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "-workbench.action.closeWindow"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  // Extension: Binocular ////////////////////////////////////////////////////
+  {
+    "key": "alt+s alt+f",
+    "command": "binocular.searchFile"
+  },
+  {
+    "key": "alt+s alt+g",
+    "command": "binocular.searchFileContent"
+  },
+  {
+    "key": "alt+c alt+l",
+    "command": "binocular.customCommands",
+    "args": "Lazygit"
+  },
+  // Extension: FindItFaster /////////////////////////////////////////////////
+  {
+    "key": "alt+u",
+    "command": "find-it-faster.findWithinFiles"
+  },
+  {
+    "key": "ctrl+shift+u",
+    "command": "-find-it-faster.findWithinFiles"
+  },
+  {
+    "key": "alt+j",
+    "command": "find-it-faster.findFiles"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "-find-it-faster.findFiles"
+  },
+  {
+    "key": "alt+t",
+    "command": "find-it-faster.findWithinFilesWithType"
+  },
+  {
+    "key": "ctrl+shift+alt+u",
+    "command": "-find-it-faster.findWithinFilesWithType"
+  }
 ]
