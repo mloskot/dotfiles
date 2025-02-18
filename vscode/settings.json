@@ -32,7 +32,9 @@
   "search.exclude": {
     "**/.terraform/**": true
   },
-  "security.allowedUNCHosts": ["wsl.localhost"],
+  "security.allowedUNCHosts": [
+    "wsl.localhost"
+  ],
   "security.workspace.trust.untrustedFiles": "open",
   "settingsSync.ignoredSettings": [],
   "settingsSync.ignoredExtensions": [],
