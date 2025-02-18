@@ -5,6 +5,10 @@
 # top-most EditorConfig file
 root = true
 
+[*.{json,yml,yaml}]
+indent_style = space
+indent_size = 2
+
 # C++ source files
 [*.{cpp,h}]
 indent_style = space
