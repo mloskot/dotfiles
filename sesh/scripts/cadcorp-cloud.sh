@@ -8,7 +8,7 @@ AZURE_CONFIG_DIR="${HOME}/.azure-${CC_ENV}"
 export AZURE_CONFIG_DIR
 az_tenant_id=$(az account show --query homeTenantId --output tsv)
 if [[ -z "${az_tenant_id}" ]]; then
-  echo "az_tenant_id is empty"
+  echo "az_tenant_id is empty despite AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}"
   exit 1
 fi
 
