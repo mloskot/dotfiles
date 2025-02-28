@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Copy of https://github.com/JetBrains/clion-wsl/blob/master/ubuntu_setup_env.sh
 # modified to NOT to install GCC/clang, etc.
 set -x
@@ -16,7 +16,7 @@ sudo apt remove -y --purge openssh-server
 sudo apt install -y openssh-server
 
 # 1.2. configure sshd
-sudo cp $SSHD_FILE ${SSHD_FILE}.`date '+%Y-%m-%d_%H-%M-%S'`.back
+sudo cp "$SSHD_FILE" "${SSHD_FILE}.$(date '+%Y-%m-%d_%H-%M-%S').backup"
 sudo sed -i '/^Port/ d' $SSHD_FILE
 sudo sed -i '/^UsePrivilegeSeparation/ d' $SSHD_FILE
 sudo sed -i '/^PasswordAuthentication/ d' $SSHD_FILE

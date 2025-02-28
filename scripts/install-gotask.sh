@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -x
 
 if [ ! -x /usr/bin/lsb_release ]; then

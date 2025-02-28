@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -x
 
 if type lsb_release >/dev/null 2>&1; then

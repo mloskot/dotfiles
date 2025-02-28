@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -x
 
 if [ ! -x /usr/bin/lsb_release ]; then
@@ -11,5 +11,3 @@ curl -Lo sesh.tar.gz "https://github.com/joshmedeski/sesh/releases/download/v${V
 sudo tar xf sesh.tar.gz -C /usr/local/bin sesh
 sudo rm -f sesh.tar.gz
 sesh --version
-
-

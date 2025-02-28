@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 url="https://cmake.org/download/"
@@ -11,7 +11,7 @@ is_newer()
 
 if type cmake > /dev/null 2>&1; then
     current_version=$(cmake --version | grep version | grep -oP ".+\K(\d+\.\d+\.\d+)")
-    if ! is_newer $version $current_version; then
+    if ! is_newer "$version" "$current_version"; then
         echo "Installed CMake $current_version is not older than available $version"
         exit 0
     else
@@ -21,10 +21,10 @@ else
     echo "No CMake installed"
 fi
 
-version_folder=v$(echo $version | grep -oP "\d+\.\d+")
+version_folder=v$(echo "$version" | grep -oP "\d+\.\d+")
 url="https://cmake.org/files/${version_folder}/cmake-${version}-Linux-x86_64.sh"
 echo "Downloading $url"
-curl --silent -o cmake-linux.sh $url
+curl --silent -o cmake-linux.sh "$url"
 
 if type cmake > /dev/null 2>&1; then
     echo "Uninstalling CMake $current_version"

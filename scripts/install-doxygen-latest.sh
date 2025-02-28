@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -x
 version='1.8.17'
 
@@ -34,7 +34,7 @@ version='1.8.17'
 sudo rm -f /usr/local/bin/doxygen
 
 wget -O - http://doxygen.nl/files/doxygen-${version}.linux.bin.tar.gz | \
-    tar xz -C ${TMPDIR-/tmp} doxygen-${version}/bin/doxygen
-sudo mv  ${TMPDIR-/tmp}/doxygen-${version}/bin/doxygen /usr/local/bin/doxygen
+    tar xz -C "${TMPDIR-/tmp}" "doxygen-${version}/bin/doxygen"
+sudo mv "${TMPDIR-/tmp}/doxygen-${version}/bin/doxygen" /usr/local/bin/doxygen
 
 doxygen --version
