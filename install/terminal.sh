@@ -6,9 +6,14 @@ if [ ! -x /usr/bin/lsb_release ]; then
     exit 1
 fi
 
-sudo apt update
+sudo apt update -y
+sudo apt upgrade -y
 sudo apt install \
   curl \
+  git \
+  unzip \
   wget
+
+# TODO
 
 
