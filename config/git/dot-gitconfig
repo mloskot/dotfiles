@@ -1,0 +1,72 @@
+[includeIf "gitdir/i:D:/**"]
+	path = ~/.gitconfig.windows.personal
+[includeIf "gitdir/i:F:/**"]
+	path = ~/.gitconfig.windows.work
+[includeIf "gitdir:%(prefix)//mnt/d/**"]
+	path = %(prefix)//mnt/d/.dotfiles/config/git/dot-gitconfig.wsl.personal
+[includeIf "gitdir:%(prefix)//mnt/f/**"]
+	path = %(prefix)//mnt/d/.dotfiles/config/git/dot-gitconfig.wsl.work
+[includeIf "gitdir:~/**"]
+	path = ~/.dotfiles/config/git/dot-gitconfig.linux.personal
+[includeIf "gitdir:~/azure*/**"]
+	path = ~/.dotfiles/config/git/dot-gitconfig.linux.work
+[includeIf "gitdir:~/cadcorp/**"]
+	path = ~/.dotfiles/config/git/dot-gitconfig.linux.work
+[include]
+	path = ~/.dotfiles/config/git/dot-gitconfig.aliases
+[github]
+	user = mloskot
+[core]
+	excludesfile = ~/.gitignore
+	editor = \"code\" --wait
+	longpaths = true
+	fsmonitor = false
+	untrackedcache = false
+	symlinks = true
+[delta]
+	navigate = true
+	line-numbers = true
+	syntax-theme = base16
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	ui = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	header = normal
+	added = red
+	updated = green
+	changed = red
+	untracked = red
+	nobranch = red
+[diff]
+	colorMoved = default
+[diff "exif"]
+	textconv = exiftool
+	cachetextconv = true
+[fetch]
+	prune = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
+[merge]
+	conflictstyle = diff3
+[pull]
+	rebase = true
+[safe]
+	directory = *
+[submodule]
+	fetchJobs = 8
