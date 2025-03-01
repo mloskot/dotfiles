@@ -2,7 +2,7 @@
 set -e
 set -x
 
-./apt-get-upgrade.sh
+./apt-upgrade.sh
 
 for s in \
     atuin \
@@ -18,7 +18,7 @@ for s in \
     starship \
     vim
 do
-  ./install-"${s}".sh
+  ./"${s}.sh"
 done
 
 sudo apt-get -y autoremove && \
