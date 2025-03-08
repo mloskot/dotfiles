@@ -2,7 +2,7 @@
 # Configure the Bash shell
 
 # Backup original default files only
-if [[ ! -L "~/.bashrc" && ! -f "~/.bashrc.original" ]]; then
+if [[ -f "~/.bashrc" && ! -L "~/.bashrc" && ! -f "~/.bashrc.original" ]]; then
     echolog "Backing up ~/.bashrc"
     mv ~/.bashrc ~/.bashrc.original
 fi
