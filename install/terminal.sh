@@ -1,19 +1,17 @@
 #!/bin/bash
-set -x
+set -e
 
-if [ ! -x /usr/bin/lsb_release ]; then
-    echo "Linux expected"
-    exit 1
-fi
+source ~/.dotfiles/log.sh
 
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt install \
   curl \
   git \
-  unzip \
-  wget
+  unzip
 
-# TODO
-
-
+# Run terminal installers
+for installer in ~/.dotfiles/install/terminal/*.sh
+do
+    source $installer
+done
