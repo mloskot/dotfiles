@@ -12,4 +12,5 @@ echolog "Installing ~/.bashrc"
 echolog "Installing ~/.bash.d"
 [[ ! -L ~/.bash.d ]] && ln -s ~/.dotfiles/config/bash/dot-bash.d ~/.bash.d
 
-echolog "Done"
+return 0
+

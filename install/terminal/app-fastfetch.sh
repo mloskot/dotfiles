@@ -15,3 +15,4 @@ if [[ ! -L ~/.config/fastfetch ]]; then
   ln -s ~/.dotfiles/config/fastfetch ~/.config/fastfetch
 fi
 
+return 0

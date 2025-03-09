@@ -2,8 +2,7 @@
 set -e
 source ~/.dotfiles/log.sh ${BASH_SOURCE[0]}
 
-echolog "Installing terminal tools..."
-
+echolog "Installing terminal prerequisites..."
 pkgs=(curl git unzip)
 for pkg in "${pkgs[@]}"; do
   if ! command -v "${pkg}" &>/dev/null; then

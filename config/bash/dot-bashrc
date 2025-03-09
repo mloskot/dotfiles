@@ -60,3 +60,8 @@ if [ $TTY_COUNTER -eq 1 ]; then
     wslfetch
   fi
 fi
+
+. "$HOME/.atuin/bin/env"
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"

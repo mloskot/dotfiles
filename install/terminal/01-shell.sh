@@ -8,4 +8,4 @@ backup ~/.inputrc
 echolog "Installing ~/.inputrc"  
 [ ! -L ~/.inputrc ] && ln -s ~/.dotfiles/config/dot-inputrc ~/.inputrc
 
-echolog "Done"
+return 0
