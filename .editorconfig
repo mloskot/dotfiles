@@ -37,9 +37,17 @@ trim_trailing_whitespace = true
 max_line_length = 80
 
 # Windows shell scripts
-[*.{cmd,bat,ps1}]
+[*.{cmd,bat}]
 end_of_line = crlf
 indent_size = 4
+indent_style = space
+insert_final_newline = false
+trim_trailing_whitespace = true
+
+# Windows shell scripts
+[*.ps1]
+end_of_line = crlf
+indent_size = 2
 indent_style = space
 insert_final_newline = false
 trim_trailing_whitespace = true
@@ -47,7 +55,7 @@ trim_trailing_whitespace = true
 # Unix shell scripts
 [*.sh]
 end_of_line = lf
-indent_size = 4
+indent_size = 2
 indent_style = space
 insert_final_newline = false
 trim_trailing_whitespace = true
