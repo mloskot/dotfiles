@@ -1,1 +1,0 @@
-/home/mloskot/.dotfiles/config/bash/dot-bash.d
