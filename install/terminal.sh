@@ -1,17 +1,22 @@
 #!/bin/bash
 set -e
+source ~/.dotfiles/log.sh ${BASH_SOURCE[0]}
 
-source ~/.dotfiles/log.sh
+echolog "Installing terminal tools..."
 
-sudo apt update -y
-sudo apt upgrade -y
-sudo apt install \
-  curl \
-  git \
-  unzip
+pkgs=(curl git unzip)
+for pkg in "${pkgs[@]}"; do
+  if ! command -v "${pkg}" &>/dev/null; then
+    echolog "Installing packages: ${pkgs[@]}" 
+    sudo apt update -y
+    sudo apt upgrade -y
+    sudo apt install -y "${pkgs[@]}"
+    break
+  fi
+done
 
 # Run terminal installers
 for installer in ~/.dotfiles/install/terminal/*.sh
 do
-    source $installer
+  source $installer
 done

@@ -1,18 +1,15 @@
 #!/bin/bash
-# Configure the Bash shell
+set -e
+source ~/.dotfiles/log.sh ${BASH_SOURCE[0]}
 
-# Backup original default files only
-if [[ -f "~/.bashrc" && ! -L "~/.bashrc" && ! -f "~/.bashrc.original" ]]; then
-    echolog "Backing up ~/.bashrc"
-    mv ~/.bashrc ~/.bashrc.original
-fi
-if [[ ! -L "~/.bash.d" && ! -d "~/.bash.d.original" ]]; then
-    echolog "Backing up ~/.bash.d"
-    mv ~/.bash.d ~/.bash.d.original
-fi
+source ~/.dotfiles/backup.sh
+backup ~/.bashrc 
+backup ~/.bash.d
 
-echolog "Installing ~/.bashrc"  
-[ ! -L "~/.bashrc" ] && ln -s ~/.dotfiles/config/bash/dot-bashrc ~/.bashrc
+echolog "Installing ~/.bashrc"
+[[ ! -L ~/.bashrc ]] && ln -s ~/.dotfiles/config/bash/dot-bashrc ~/.bashrc
 
 echolog "Installing ~/.bash.d"
-[ ! -L "~/.bash.d" ] && ln -s ~/.dotfiles/config/bash/dot-bash.d ~/.bash.d
+[[ ! -L ~/.bash.d ]] && ln -s ~/.dotfiles/config/bash/dot-bash.d ~/.bash.d
+
+echolog "Done"

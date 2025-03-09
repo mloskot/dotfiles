@@ -1,11 +1,11 @@
 #!/bin/bash
-# Configure common shell
+set -e
+source ~/.dotfiles/log.sh ${BASH_SOURCE[0]}
 
-# Backup original default filea only
-if [[ ! -L "~/.inputrc" && ! -f "~/.inputrc.original" ]]; then
-    echolog "Backing up ~/.inputrc"
-    mv ~/.inputrc ~/.inputrc.original
-fi
+source ~/.dotfiles/backup.sh
+backup ~/.inputrc 
 
 echolog "Installing ~/.inputrc"  
-[ ! -L "~/.inputrc" ] && ln -s ~/.dotfiles/config/dot-inputrc ~/.inputrc
+[ ! -L ~/.inputrc ] && ln -s ~/.dotfiles/config/dot-inputrc ~/.inputrc
+
+echolog "Done"

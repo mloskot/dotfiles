@@ -1,12 +1,12 @@
 #!/bin/bash
-# Display system information in the terminal
+set -e
+source ~/.dotfiles/log.sh ${BASH_SOURCE[0]}
 
-if [[ ! -L "~/.config/fastfetch" && ! -d "~/.config/fastfetch.original" ]]; then
-  mv ~/.config/fastfetch ~/.config/fastfetch.original
-fi
+source ~/.dotfiles/backup.sh
+backup ~/.config/fastfetch 
 
 if [[ ! -L ~/.config/fastfetch ]]; then
-
+  echolog "Installing fastfetch"
   sudo add-apt-repository -y ppa:zhangsongcui3371/fastfetch
   sudo apt update -y
   sudo apt install -y fastfetch
