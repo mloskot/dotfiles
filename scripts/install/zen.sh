@@ -19,7 +19,10 @@ curl -Lo zen.tar.xz "https://github.com/zen-browser/desktop/releases/download/${
 sudo tar -C /opt -xf zen.tar.xz
 rm -f zen.tar.xz
 
-curl -Lo "${HOME}/.local/share/applications/zen.desktop" \
-  https://raw.githubusercontent.com/zen-browser/desktop/refs/heads/dev/AppDir/zen.desktop
+curl -L https://raw.githubusercontent.com/zen-browser/desktop/refs/heads/dev/AppDir/zen.desktop \
+    -o "${HOME}/.local/share/applications/zen.desktop"
+
+sed -i -E 's#Icon=.+#Icon=/opt/zen/browser/chrome/icons/default/default128.png#' \
+    ~/.local/share/applications/zen.desktop
 
 zen --version
