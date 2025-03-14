@@ -15,9 +15,9 @@ if [ -d /opt/zen ]; then
     fi
 fi
 
-#curl -Lo zen.tar.xz "https://github.com/zen-browser/desktop/releases/download/${VERSION}/zen.linux-x86_64.tar.xz"
-#sudo tar -C /opt -xf zen.tar.xz
-#rm -f zen.tar.xz
+curl -Lo zen.tar.xz "https://github.com/zen-browser/desktop/releases/download/${VERSION}/zen.linux-x86_64.tar.xz"
+sudo tar -C /opt -xf zen.tar.xz
+rm -f zen.tar.xz
 
 sudo tee "${HOME}/.local/share/applications/zen.desktop" << EOF > /dev/null
 [Desktop Entry]
@@ -35,3 +35,5 @@ X-MultipleArgs=false
 MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/chrome;video/webm;application/x-xpinstall;
 StartupNotify=true
 EOF
+
+zen --version
