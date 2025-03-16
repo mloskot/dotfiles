@@ -1,0 +1,1100 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions":
+    [
+        {
+            "command":
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command":
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+    "initialCols": 100,
+    "initialRows": 30,
+    "launchMode": "focus",
+    "newTabMenu":
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles":
+    {
+        "defaults":
+        {
+            "colorScheme": "Catppuccin Mocha",
+            "font":
+            {
+                "face": "0xProto Nerd Font Mono",
+                "size": 12.0
+            }
+        },
+        "list":
+        [
+            {
+                "font":
+                {
+                    "face": "0xProto Nerd Font Mono",
+                    "size": 12.0
+                },
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell",
+                "opacity": 100,
+                "source": "Windows.Terminal.PowershellCore",
+                "useAcrylic": false
+            },
+            {
+                "closeOnExit": "automatic",
+                "commandline": "\"%PROGRAMFILES%\\git\\bin\\bash.exe\" --login -i",
+                "cursorColor": "#FFFFFF",
+                "cursorShape": "bar",
+                "font":
+                {
+                    "face": "0xProto Nerd Font Mono",
+                    "size": 12.0
+                },
+                "guid": "{00000000-0000-0000-ba54-000000000002}",
+                "hidden": false,
+                "historySize": 9001,
+                "icon": "c:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Git Bash",
+                "padding": "0, 0, 0, 0",
+                "snapOnInput": true,
+                "startingDirectory": "F:\\",
+                "useAcrylic": false
+            },
+            {
+                "font":
+                {
+                    "face": "0xProto Nerd Font Mono",
+                    "size": 12.0
+                },
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "opacity": 100,
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+            },
+            {
+                "font":
+                {
+                    "face": "0xProto Nerd Font Mono",
+                    "size": 12.0
+                },
+                "guid": "{8c701c6d-1341-546d-84ae-1a1fb3a809ed}",
+                "hidden": false,
+                "name": "Ubuntu (Preview)",
+                "source": "CanonicalGroupLimited.UbuntuPreview_79rhkp1fndgsc"
+            },
+            {
+                "font":
+                {
+                    "face": "0xProto Nerd Font Mono",
+                    "size": 12.0
+                },
+                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+                "hidden": false,
+                "icon": "https://www.debian.org/favicon.ico",
+                "name": "Debian",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "commandline": "cmd.exe /k \"C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Auxiliary/Build/vcvars64.bat\" 10.0.22000.0",
+                "font":
+                {
+                    "face": "Consolas",
+                    "size": 10.0
+                },
+                "guid": "{6e00f8e8-f1d7-467d-aea8-5369a33a14d7}",
+                "hidden": false,
+                "icon": "c:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
+                "name": "VS 2022 64",
+                "startingDirectory": "F:\\V92.x64"
+            },
+            {
+                "commandline": "cmd.exe /k \"C:/Program Files/Microsoft Visual Studio/2022/Professional/VC/Auxiliary/Build/vcvarsamd64_x86.bat\" 10.0.22000.0",
+                "font":
+                {
+                    "face": "Consolas",
+                    "size": 10.0
+                },
+                "guid": "{7e00f8e8-f1d7-567d-bea8-6369a33a14d7}",
+                "hidden": false,
+                "icon": "c:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
+                "name": "VS 2022 32",
+                "startingDirectory": "F:\\V92.win32"
+            },
+            {
+                "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Auxiliary/Build/vcvars64.bat\" 10.0.17763.0",
+                "font":
+                {
+                    "face": "Consolas",
+                    "size": 10.0
+                },
+                "guid": "{0ca20dad-35be-5f56-a8ff-afcfefaa6101}",
+                "hidden": false,
+                "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
+                "name": "VS 2017 64",
+                "startingDirectory": "F:\\V90.x64"
+            },
+            {
+                "commandline": "cmd.exe /k \"C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Auxiliary/Build/vcvars32.bat\" x64_x86 10.0.17763.0",
+                "font":
+                {
+                    "face": "Consolas",
+                    "size": 10.0
+                },
+                "guid": "{0caa0dad-33be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "icon": "c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Professional\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-100.png",
+                "name": "VS 2017 32",
+                "startingDirectory": "F:\\V90.win32"
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "graceful",
+                "colorScheme": "Campbell",
+                "commandline": "cmd.exe /k \"set PATH=F:\\V92.x64\\SIS\\SISpy\\x64\\Release\\Python;%PATH% && python -c \"import sis; print('PyRegress vs SIS', sis.__version__)\"\"",
+                "cursorShape": "bar",
+                "font":
+                {
+                    "face": "Consolas",
+                    "size": 12.0
+                },
+                "guid": "{c125e1c6-3418-4573-bcd8-a33a2799f7c4}",
+                "historySize": 9001,
+                "icon": "\ud83d\udc0d",
+                "name": "PyRegress 9.2 (x64)",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "F:\\PyRegress",
+                "tabTitle": null,
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "graceful",
+                "colorScheme": "Campbell",
+                "commandline": "cmd.exe /k \"set PATH=F:\\V91.x64\\SIS\\SISpy\\x64\\Release\\Python;%PATH% && python -c \"import sis; print('PyRegress vs SIS', sis.__version__)\"\"",
+                "cursorShape": "bar",
+                "font":
+                {
+                    "face": "Consolas",
+                    "size": 12.0
+                },
+                "guid": "{fbe29e9a-71f3-41cd-85d0-0950d776720e}",
+                "historySize": 9001,
+                "icon": "\ud83d\udc0d",
+                "name": "PyRegress 9.1 (x64)",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "F:\\PyRegress",
+                "tabTitle": null,
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "graceful",
+                "colorScheme": "Campbell",
+                "commandline": "cmd.exe /k \"set PATH=F:\\V90.x64\\SIS\\SISpy\\x64\\Release\\Python;%PATH% && python -c \"import sis; print('PyRegress vs SIS', sis.__version__)\"\"",
+                "cursorShape": "bar",
+                "font":
+                {
+                    "face": "Consolas",
+                    "size": 12.0
+                },
+                "guid": "{887712cd-01a6-4a56-91f2-158b70da72e2}",
+                "historySize": 9001,
+                "icon": "\ud83d\udc0d",
+                "name": "PyRegress 9.0 (x64)",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "F:\\PyRegress",
+                "tabTitle": null,
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "graceful",
+                "colorScheme": "Campbell",
+                "commandline": "cmd.exe /k \"set PATH=F:\\V80.x64\\SIS\\SISpy\\x64\\Release\\Python;%PATH% && python -c \"import sis; print('PyRegress vs SIS', sis.__version__)\"\"",
+                "cursorShape": "bar",
+                "font":
+                {
+                    "face": "Consolas",
+                    "size": 10.0
+                },
+                "guid": "{26d689cd-5461-4003-9bf2-f8c601068bba}",
+                "historySize": 9001,
+                "icon": "\ud83d\udc0d",
+                "name": "PyRegress 8.0 (x64)",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "F:\\PyRegress",
+                "tabTitle": null,
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "graceful",
+                "colorScheme": "Campbell",
+                "commandline": "F:\\V92.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__));swd=sis.GisLink()\"",
+                "cursorShape": "bar",
+                "font":
+                {
+                    "face": "Consolas",
+                    "size": 12.0
+                },
+                "guid": "{ebb4a86a-8026-4221-bf8f-b7f59bd0fea6}",
+                "historySize": 9001,
+                "icon": "\ud83d\udc0d",
+                "name": "SISpy 9.2 (x64)",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "F:\\PyRegress",
+                "tabTitle": null,
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "graceful",
+                "colorScheme": "Campbell",
+                "commandline": "F:\\V91.x64\\SIS\\SISpy\\x64\\Release\\Python\\python.exe -i -c \"import sis; print('SISpy {}'.format(sis.__version__));swd=sis.GisLink()\"",
+                "cursorShape": "bar",
+                "font":
+                {
+                    "face": "Consolas",
+                    "size": 12.0
+                },
+                "guid": "{e95a4631-cddf-4a97-9994-7287b95bfb28}",
+                "historySize": 9001,
+                "icon": "\ud83d\udc0d",
+                "name": "SISpy 9.1 (x64)",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "F:\\PyRegress",
+                "tabTitle": null,
+                "useAcrylic": false
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "font":
+                {
+                    "face": "Consolas",
+                    "size": 10.0
+                },
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": true,
+                "name": "Windows PowerShell"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{4f850f17-5459-5ced-b43f-90569fbd90d8}",
+                "hidden": true,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{c7f1819b-f772-599b-ab33-7faf9b6be14c}",
+                "hidden": true,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{001c1993-316c-52b1-8e09-d439727457cd}",
+                "hidden": true,
+                "name": "Developer Command Prompt for VS 2017",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
+                "hidden": true,
+                "name": "Visual Studio Debug Console",
+                "source": "VSDebugConsole"
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "automatic",
+                "colorScheme": "Campbell",
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "cursorShape": "bar",
+                "elevate": true,
+                "font":
+                {
+                    "face": "Cascadia Mono",
+                    "size": 10.0
+                },
+                "guid": "{f3981eca-c9a0-480c-92c1-3946505e93f4}",
+                "hidden": false,
+                "historySize": 9001,
+                "icon": "ms-appx:///ProfileIcons/{0caa0dad-35be-5f56-a8ff-afceeeaa6101}.png",
+                "name": "Command Prompt ( Administrator)",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "%USERPROFILE%",
+                "useAcrylic": false
+            },
+            {
+                "guid": "{491fa895-2dca-5d90-ba62-3da4b59cffe2}",
+                "hidden": true,
+                "name": "Ubuntu-Preview",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
+                "elevate": true,
+                "font":
+                {
+                    "face": "0xProto Nerd Font Mono",
+                    "size": 12.0
+                },
+                "guid": "{9c87a2d2-0e09-4993-b3d7-9abac4ff73b1}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/pwsh.png",
+                "name": "PowerShell (Administrator)",
+                "opacity": 100,
+                "startingDirectory": "%USERPROFILE%",
+                "useAcrylic": false
+            }
+        ]
+    },
+    "schemes":
+    [
+        {
+            "background": "#0C0C0C",
+            "black": "#0C0C0C",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#3B78FF",
+            "brightCyan": "#61D6D6",
+            "brightGreen": "#16C60C",
+            "brightPurple": "#B4009E",
+            "brightRed": "#E74856",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#F9F1A5",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#CCCCCC",
+            "green": "#13A10E",
+            "name": "Campbell",
+            "purple": "#881798",
+            "red": "#C50F1F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#C19C00"
+        },
+        {
+            "background": "#012456",
+            "black": "#0C0C0C",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#3B78FF",
+            "brightCyan": "#61D6D6",
+            "brightGreen": "#16C60C",
+            "brightPurple": "#B4009E",
+            "brightRed": "#E74856",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#F9F1A5",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#CCCCCC",
+            "green": "#13A10E",
+            "name": "Campbell Powershell",
+            "purple": "#881798",
+            "red": "#C50F1F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#C19C00"
+        },
+        {
+            "background": "#303446",
+            "black": "#51576D",
+            "blue": "#8CAAEE",
+            "brightBlack": "#626880",
+            "brightBlue": "#8CAAEE",
+            "brightCyan": "#81C8BE",
+            "brightGreen": "#A6D189",
+            "brightPurple": "#F4B8E4",
+            "brightRed": "#E78284",
+            "brightWhite": "#A5ADCE",
+            "brightYellow": "#E5C890",
+            "cursorColor": "#F2D5CF",
+            "cyan": "#81C8BE",
+            "foreground": "#C6D0F5",
+            "green": "#A6D189",
+            "name": "Catppuccin Frappe",
+            "purple": "#F4B8E4",
+            "red": "#E78284",
+            "selectionBackground": "#626880",
+            "white": "#B5BFE2",
+            "yellow": "#E5C890"
+        },
+        {
+            "background": "#24273A",
+            "black": "#494D64",
+            "blue": "#8AADF4",
+            "brightBlack": "#5B6078",
+            "brightBlue": "#8AADF4",
+            "brightCyan": "#8BD5CA",
+            "brightGreen": "#A6DA95",
+            "brightPurple": "#F5BDE6",
+            "brightRed": "#ED8796",
+            "brightWhite": "#A5ADCB",
+            "brightYellow": "#EED49F",
+            "cursorColor": "#F4DBD6",
+            "cyan": "#8BD5CA",
+            "foreground": "#CAD3F5",
+            "green": "#A6DA95",
+            "name": "Catppuccin Macchiato",
+            "purple": "#F5BDE6",
+            "red": "#ED8796",
+            "selectionBackground": "#5B6078",
+            "white": "#B8C0E0",
+            "yellow": "#EED49F"
+        },
+        {
+            "background": "#1E1E2E",
+            "black": "#45475A",
+            "blue": "#89B4FA",
+            "brightBlack": "#585B70",
+            "brightBlue": "#89B4FA",
+            "brightCyan": "#94E2D5",
+            "brightGreen": "#A6E3A1",
+            "brightPurple": "#F5C2E7",
+            "brightRed": "#F38BA8",
+            "brightWhite": "#A6ADC8",
+            "brightYellow": "#F9E2AF",
+            "cursorColor": "#F5E0DC",
+            "cyan": "#94E2D5",
+            "foreground": "#CDD6F4",
+            "green": "#A6E3A1",
+            "name": "Catppuccin Mocha",
+            "purple": "#F5C2E7",
+            "red": "#F38BA8",
+            "selectionBackground": "#585B70",
+            "white": "#BAC2DE",
+            "yellow": "#F9E2AF"
+        },
+        {
+            "background": "#193549",
+            "black": "#000000",
+            "blue": "#1478DB",
+            "brightBlack": "#808080",
+            "brightBlue": "#1478DB",
+            "brightCyan": "#00FFFF",
+            "brightGreen": "#33FF00",
+            "brightPurple": "#CC00FF",
+            "brightRed": "#FF0000",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFFF00",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#00C5C7",
+            "foreground": "#C7C7C7",
+            "green": "#3AD900",
+            "name": "Cobalt2",
+            "purple": "#FF2C70",
+            "red": "#FF2600",
+            "selectionBackground": "#FFFFFF",
+            "white": "#C7C7C7",
+            "yellow": "#FFC600"
+        },
+        {
+            "background": "#222324",
+            "black": "#000000",
+            "blue": "#1C98E8",
+            "brightBlack": "#000000",
+            "brightBlue": "#387CD3",
+            "brightCyan": "#3D97E2",
+            "brightGreen": "#77B869",
+            "brightPurple": "#957BBE",
+            "brightRed": "#E05A4F",
+            "brightWhite": "#BABABA",
+            "brightYellow": "#EFD64B",
+            "cursorColor": "#BBBBBB",
+            "cyan": "#1C98E8",
+            "foreground": "#BABABA",
+            "green": "#68C256",
+            "name": "Darkside",
+            "purple": "#8E69C9",
+            "red": "#E8341C",
+            "selectionBackground": "#303333",
+            "white": "#BABABA",
+            "yellow": "#F2D42C"
+        },
+        {
+            "background": "#1F1F1F",
+            "black": "#3A3D43",
+            "blue": "#4F76A1",
+            "brightBlack": "#888987",
+            "brightBlue": "#186DE3",
+            "brightCyan": "#2E706D",
+            "brightGreen": "#0F722F",
+            "brightPurple": "#FB0067",
+            "brightRed": "#FB001F",
+            "brightWhite": "#FDFFB9",
+            "brightYellow": "#C47033",
+            "cursorColor": "#F83E19",
+            "cyan": "#578FA4",
+            "foreground": "#B9BCBA",
+            "green": "#879A3B",
+            "name": "DimmedMonokai",
+            "purple": "#855C8D",
+            "red": "#BE3F48",
+            "selectionBackground": "#2A2D32",
+            "white": "#B9BCBA",
+            "yellow": "#C5A635"
+        },
+        {
+            "background": "#2B2A27",
+            "black": "#1C1F24",
+            "blue": "#2A6CC6",
+            "brightBlack": "#2B2A27",
+            "brightBlue": "#51AFEF",
+            "brightCyan": "#46D9FF",
+            "brightGreen": "#98BE65",
+            "brightPurple": "#C678DD",
+            "brightRed": "#FF5D38",
+            "brightWhite": "#DFDFDF",
+            "brightYellow": "#E6F972",
+            "cursorColor": "#9C9C9D",
+            "cyan": "#5699AF",
+            "foreground": "#EDE0CE",
+            "green": "#26A6A6",
+            "name": "Doom Peacock",
+            "purple": "#A9A1E1",
+            "red": "#CB4B16",
+            "selectionBackground": "#A60033",
+            "white": "#EDE0CE",
+            "yellow": "#BCD42A"
+        },
+        {
+            "background": "#262C35",
+            "black": "#191919",
+            "blue": "#17B2E0",
+            "brightBlack": "#191919",
+            "brightBlue": "#17B2E0",
+            "brightCyan": "#8BD2ED",
+            "brightGreen": "#3D9751",
+            "brightPurple": "#7830B0",
+            "brightRed": "#BF091D",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#F6BB34",
+            "cursorColor": "#D9002F",
+            "cyan": "#8BD2ED",
+            "foreground": "#EBEBEB",
+            "green": "#3D9751",
+            "name": "DotGov",
+            "purple": "#7830B0",
+            "red": "#BF091D",
+            "selectionBackground": "#1A4080",
+            "white": "#FFFFFF",
+            "yellow": "#F6BB34"
+        },
+        {
+            "background": "#161719",
+            "black": "#2A2E33",
+            "blue": "#6E90B0",
+            "brightBlack": "#1D1F22",
+            "brightBlue": "#4B6B88",
+            "brightCyan": "#4D7B74",
+            "brightGreen": "#798431",
+            "brightPurple": "#6E5079",
+            "brightRed": "#8D2E32",
+            "brightWhite": "#5A626A",
+            "brightYellow": "#E58A50",
+            "cursorColor": "#B7BCBA",
+            "cyan": "#7FBFB4",
+            "foreground": "#B7BCBA",
+            "green": "#B3BF5A",
+            "name": "Hybrid",
+            "purple": "#A17EAC",
+            "red": "#B84D51",
+            "selectionBackground": "#1E1F22",
+            "white": "#B5B9B6",
+            "yellow": "#E4B55E"
+        },
+        {
+            "background": "#343D46",
+            "black": "#000000",
+            "blue": "#6699CC",
+            "brightBlack": "#333333",
+            "brightBlue": "#85ADD6",
+            "brightCyan": "#82C4C4",
+            "brightGreen": "#ACD1A8",
+            "brightPurple": "#D8B6D8",
+            "brightRed": "#F97B58",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FAC761",
+            "cursorColor": "#FCBB6A",
+            "cyan": "#5FB4B4",
+            "foreground": "#D8DEE9",
+            "green": "#99C794",
+            "name": "Mariana",
+            "purple": "#C695C6",
+            "red": "#EC5F66",
+            "selectionBackground": "#4E5A65",
+            "white": "#F7F7F7",
+            "yellow": "#F9AE58"
+        },
+        {
+            "background": "#272822",
+            "black": "#272822",
+            "blue": "#01549E",
+            "brightBlack": "#7C7C7C",
+            "brightBlue": "#0383F5",
+            "brightCyan": "#58C2E5",
+            "brightGreen": "#8DD006",
+            "brightPurple": "#A87DB8",
+            "brightRed": "#F3044B",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#CCCC81",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#1A83A6",
+            "foreground": "#CACACA",
+            "green": "#74AA04",
+            "name": "Monokai Cmder",
+            "purple": "#89569C",
+            "red": "#A70334",
+            "selectionBackground": "#CCCC81",
+            "white": "#CACACA",
+            "yellow": "#B6B649"
+        },
+        {
+            "background": "#2E3440",
+            "black": "#1F1F1F",
+            "blue": "#6699DF",
+            "brightBlack": "#75715E",
+            "brightBlue": "#66D9EF",
+            "brightCyan": "#E69F66",
+            "brightGreen": "#A6E22E",
+            "brightPurple": "#AE81FF",
+            "brightRed": "#F92672",
+            "brightWhite": "#F8F8F2",
+            "brightYellow": "#E6DB74",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#E69F66",
+            "foreground": "#F8F8F8",
+            "green": "#A6E22E",
+            "name": "Monokai Night",
+            "purple": "#AE81FF",
+            "red": "#F92672",
+            "selectionBackground": "#FFFFFF",
+            "white": "#F8F8F2",
+            "yellow": "#E6DB74"
+        },
+        {
+            "background": "#403E41",
+            "black": "#403E41",
+            "blue": "#FC9867",
+            "brightBlack": "#727072",
+            "brightBlue": "#FC9867",
+            "brightCyan": "#78DCE8",
+            "brightGreen": "#A9DC76",
+            "brightPurple": "#AB9DF2",
+            "brightRed": "#FF6188",
+            "brightWhite": "#FCFCFA",
+            "brightYellow": "#FFD866",
+            "cursorColor": "#FCFCFA",
+            "cyan": "#78DCE8",
+            "foreground": "#FCFCFA",
+            "green": "#A9DC76",
+            "name": "Monokai Pro",
+            "purple": "#AB9DF2",
+            "red": "#FF6188",
+            "selectionBackground": "#FCFCFA",
+            "white": "#FCFCFA",
+            "yellow": "#FFD866"
+        },
+        {
+            "background": "#282A3A",
+            "black": "#000000",
+            "blue": "#427AB3",
+            "brightBlack": "#686A66",
+            "brightBlue": "#84B0D8",
+            "brightCyan": "#37E6E8",
+            "brightGreen": "#99E343",
+            "brightPurple": "#BC94B7",
+            "brightRed": "#F54235",
+            "brightWhite": "#F1F1F0",
+            "brightYellow": "#FDEB61",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#00A7AA",
+            "foreground": "#EAF2F1",
+            "green": "#5EA702",
+            "name": "Monokai Pro (Filter Octagon)",
+            "purple": "#89658E",
+            "red": "#D81E00",
+            "selectionBackground": "#FFFFFF",
+            "white": "#DBDED8",
+            "yellow": "#CFAE00"
+        },
+        {
+            "background": "#282C34",
+            "black": "#282C34",
+            "blue": "#61AFEF",
+            "brightBlack": "#5A6374",
+            "brightBlue": "#61AFEF",
+            "brightCyan": "#56B6C2",
+            "brightGreen": "#98C379",
+            "brightPurple": "#C678DD",
+            "brightRed": "#E06C75",
+            "brightWhite": "#DCDFE4",
+            "brightYellow": "#E5C07B",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#56B6C2",
+            "foreground": "#DCDFE4",
+            "green": "#98C379",
+            "name": "One Half Dark",
+            "purple": "#C678DD",
+            "red": "#E06C75",
+            "selectionBackground": "#FFFFFF",
+            "white": "#DCDFE4",
+            "yellow": "#E5C07B"
+        },
+        {
+            "background": "#FAFAFA",
+            "black": "#383A42",
+            "blue": "#0184BC",
+            "brightBlack": "#4F525D",
+            "brightBlue": "#61AFEF",
+            "brightCyan": "#56B5C1",
+            "brightGreen": "#98C379",
+            "brightPurple": "#C577DD",
+            "brightRed": "#DF6C75",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#E4C07A",
+            "cursorColor": "#4F525D",
+            "cyan": "#0997B3",
+            "foreground": "#383A42",
+            "green": "#50A14F",
+            "name": "One Half Light",
+            "purple": "#A626A4",
+            "red": "#E45649",
+            "selectionBackground": "#FFFFFF",
+            "white": "#FAFAFA",
+            "yellow": "#C18301"
+        },
+        {
+            "background": "#002B36",
+            "black": "#002B36",
+            "blue": "#268BD2",
+            "brightBlack": "#073642",
+            "brightBlue": "#839496",
+            "brightCyan": "#93A1A1",
+            "brightGreen": "#586E75",
+            "brightPurple": "#6C71C4",
+            "brightRed": "#CB4B16",
+            "brightWhite": "#FDF6E3",
+            "brightYellow": "#657B83",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#2AA198",
+            "foreground": "#839496",
+            "green": "#859900",
+            "name": "Solarized Dark",
+            "purple": "#D33682",
+            "red": "#DC322F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#EEE8D5",
+            "yellow": "#B58900"
+        },
+        {
+            "background": "#004C5F",
+            "black": "#073642",
+            "blue": "#268BD2",
+            "brightBlack": "#657B83",
+            "brightBlue": "#839496",
+            "brightCyan": "#93A1A1",
+            "brightGreen": "#586E75",
+            "brightPurple": "#6C71C4",
+            "brightRed": "#CB4B16",
+            "brightWhite": "#FDF6E3",
+            "brightYellow": "#657B83",
+            "cursorColor": "#657B83",
+            "cyan": "#2AA198",
+            "foreground": "#FDF6E3",
+            "green": "#859900",
+            "name": "Solarized Dark Patched",
+            "purple": "#D33682",
+            "red": "#DC322F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#EEE8D5",
+            "yellow": "#B58900"
+        },
+        {
+            "background": "#FDF6E3",
+            "black": "#002B36",
+            "blue": "#268BD2",
+            "brightBlack": "#073642",
+            "brightBlue": "#839496",
+            "brightCyan": "#93A1A1",
+            "brightGreen": "#586E75",
+            "brightPurple": "#6C71C4",
+            "brightRed": "#CB4B16",
+            "brightWhite": "#FDF6E3",
+            "brightYellow": "#657B83",
+            "cursorColor": "#002B36",
+            "cyan": "#2AA198",
+            "foreground": "#657B83",
+            "green": "#859900",
+            "name": "Solarized Light",
+            "purple": "#D33682",
+            "red": "#DC322F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#EEE8D5",
+            "yellow": "#B58900"
+        },
+        {
+            "background": "#000000",
+            "black": "#000000",
+            "blue": "#3465A4",
+            "brightBlack": "#555753",
+            "brightBlue": "#729FCF",
+            "brightCyan": "#34E2E2",
+            "brightGreen": "#8AE234",
+            "brightPurple": "#AD7FA8",
+            "brightRed": "#EF2929",
+            "brightWhite": "#EEEEEC",
+            "brightYellow": "#FCE94F",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#06989A",
+            "foreground": "#D3D7CF",
+            "green": "#4E9A06",
+            "name": "Tango Dark",
+            "purple": "#75507B",
+            "red": "#CC0000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#D3D7CF",
+            "yellow": "#C4A000"
+        },
+        {
+            "background": "#FFFFFF",
+            "black": "#000000",
+            "blue": "#3465A4",
+            "brightBlack": "#555753",
+            "brightBlue": "#729FCF",
+            "brightCyan": "#34E2E2",
+            "brightGreen": "#8AE234",
+            "brightPurple": "#AD7FA8",
+            "brightRed": "#EF2929",
+            "brightWhite": "#EEEEEC",
+            "brightYellow": "#FCE94F",
+            "cursorColor": "#000000",
+            "cyan": "#06989A",
+            "foreground": "#555753",
+            "green": "#4E9A06",
+            "name": "Tango Light",
+            "purple": "#75507B",
+            "red": "#CC0000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#D3D7CF",
+            "yellow": "#C4A000"
+        },
+        {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-Preview-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
+            "background": "#25234F",
+            "black": "#25234F",
+            "blue": "#5555FF",
+            "brightBlack": "#709080",
+            "brightBlue": "#5555FF",
+            "brightCyan": "#93E0E3",
+            "brightGreen": "#60B48A",
+            "brightPurple": "#EC93D3",
+            "brightRed": "#DCA3A3",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#F0DFAF",
+            "cursorColor": "#FF5555",
+            "cyan": "#8CD0D3",
+            "foreground": "#DCDCCC",
+            "green": "#60B48A",
+            "name": "Vaughn",
+            "purple": "#F08CC3",
+            "red": "#705050",
+            "selectionBackground": "#B5D5FF",
+            "white": "#709080",
+            "yellow": "#DFAF8F"
+        },
+        {
+            "background": "#000000",
+            "black": "#000000",
+            "blue": "#000080",
+            "brightBlack": "#808080",
+            "brightBlue": "#0000FF",
+            "brightCyan": "#00FFFF",
+            "brightGreen": "#00FF00",
+            "brightPurple": "#FF00FF",
+            "brightRed": "#FF0000",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFFF00",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#008080",
+            "foreground": "#C0C0C0",
+            "green": "#008000",
+            "name": "Vintage",
+            "purple": "#800080",
+            "red": "#800000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#C0C0C0",
+            "yellow": "#808000"
+        }
+    ],
+    "theme": "system",
+    "themes":
+    [
+        {
+            "name": "Catppuccin Frappe",
+            "tab":
+            {
+                "background": "#303446FF",
+                "iconStyle": "default",
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "tabRow":
+            {
+                "background": "#292C3CFF",
+                "unfocusedBackground": "#232634FF"
+            },
+            "window":
+            {
+                "applicationTheme": "dark",
+                "experimental.rainbowFrame": false,
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
+            }
+        },
+        {
+            "name": "Catppuccin Macchiato",
+            "tab":
+            {
+                "background": "#24273AFF",
+                "iconStyle": "default",
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "tabRow":
+            {
+                "background": "#1E2030FF",
+                "unfocusedBackground": "#181926FF"
+            },
+            "window":
+            {
+                "applicationTheme": "dark",
+                "experimental.rainbowFrame": false,
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
+            }
+        },
+        {
+            "name": "Catppuccin Mocha",
+            "tab":
+            {
+                "background": "#1E1E2EFF",
+                "iconStyle": "default",
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "tabRow":
+            {
+                "background": "#181825FF",
+                "unfocusedBackground": "#11111BFF"
+            },
+            "window":
+            {
+                "applicationTheme": "dark",
+                "experimental.rainbowFrame": false,
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
+            }
+        }
+    ]
+}

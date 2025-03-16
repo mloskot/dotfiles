@@ -1,0 +1,78 @@
+[alias]
+ad = add
+ada = add -A
+br = branch
+bv = branch -vv
+brv = branch -vv
+bra = branch -a
+ci = commit --signoff
+cia = commit --amend --signoff
+ciae = commit --amend --no-edit --signoff
+cp = cherry-pick
+cpm = cherry-pick -x -e -m1
+cpx = cherry-pick -x -e
+co = checkout
+dc = diff --cached
+df = diff
+ign = ls-files -o -i --exclude-standard
+lsf = ls-files
+lfst = lfs status
+mb = merge --log --no-ff
+ra = remote add
+rb = rebase
+rbi = rebase -i
+rs = restore
+rt = remote -v
+rta = remote add
+rtr = remote remove
+sst = submodule status
+st = status
+stsi = status --ignore-submodules=all
+stsu = status --ignore-submodules=untracked
+sw = switch
+
+l =  log --pretty=format:"%C(yellow)%h\\ %C(green)%ad\\ %C(yellow)%cd%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --color --decorate --date=short --max-count 30
+la = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad\\ %C(yellow)%cd%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --color --decorate --date=short --max-count 30 --all
+lg = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad\\ %C(yellow)%cd%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --color --decorate --date=short --max-count 30 --all --graph
+
+last = log -1 HEAD --stat --date=iso --show-signature
+
+# git show with message and full authorship
+wosh = show --date=iso --pretty=fuller --show-signature --no-patch
+
+# what new commits have been created by the last command – typically after a git pull
+new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+
+# Dump GitHub repo history to changelog in Markdown
+# usage: git ghclm first_tag last_tag github_user github_repo
+ghclm = "!f() { git log $1...$2  --pretty=format:\"* [view](http://github.com/$3/$4/commit/%H) - %s\"; }; f"
+
+# show ignored files
+hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+
+# Pretty Git graphs (see https://stackoverflow.com/a/22481650/151641)
+logx = log --all --graph --decorate=short --color --format=format:'%C(bold blue)%h%C(reset)+%C(dim black)(%cr)%C(reset)+%C(auto)%d%C(reset)++\n+++       %C(bold black)%an%C(reset)%C(black): %s%C(reset)'
+tree = log --all --graph --decorate=short --color --format=format:'%C(bold blue)%h%C(reset) %C(auto)%d%C(reset)\n%x09%x09%x09%C(black)%s %C(reset)'
+tree2 = log --all --graph --decorate=short --color --format=format:'%C(bold blue)%h%C(reset) %C(auto)%d%C(reset)\n         %C(black)[%cr]%C(reset)  %x09%C(black)%an: %s %C(reset)'
+t = tree
+stree = !bash -c '"                                                                             \
+	while IFS=+ read -r hash time branch message; do                                            \
+		timelength=$(echo \"$time\" | sed -r \"s:[^ ][[]([0-9]{1,2}(;[0-9]{1,2})?)?m::g\");     \
+		timelength=$(echo \"16+${#time}-${#timelength}\" | bc);                                 \
+		printf \"%${timelength}s    %s %s %s\n\" \"$time\" \"$hash\" \"$branch\" \"\";          \
+	done < <(git logx && echo);"'
+vtree = !bash -c '"                                                                             \
+	while IFS=+ read -r hash time branch message; do                                            \
+		timelength=$(echo \"$time\" | sed -r \"s:[^ ][[]([0-9]{1,2}(;[0-9]{1,2})?)?m::g\");     \
+		timelength=$(echo \"16+${#time}-${#timelength}\" | bc);                                 \
+		printf \"%${timelength}s    %s %s %s\n\" \"$time\" \"$hash\" \"$branch\" \"$message\";  \
+	done < <(git logx && echo);"'
+
+# Branches maintenance
+prune-branches = "!f() { git remote prune $1 && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D; }; f"
+fapp = "!f() { ~/AppData/Local/Fork/Fork.exe $PWD; }; f"
+
+skip = !git update-index --assume-unchanged
+unskip = !git update-index --no-assume-unchanged
+skipped = !git ls-files -v | grep -e '^[[:lower:]]'

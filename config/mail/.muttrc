@@ -1,0 +1,107 @@
+set realname="Mateusz Loskot"
+set from="mateusz@loskot.net"
+set signature="~/.mail/signature"
+set use_from=yes
+set beep=no
+set beep_new=no
+set sleep_time = 0 # be fast
+#source ~/.mail/vombatidae.mutt
+source ~/.mail/color_256.mutt
+
+#######################################################################
+# Reading and editing
+set date_format="%y-%m-%d %T"
+set index_format="%2C | %Z %d %-17.17L %-4.4c %s"
+set mark_old=no
+#set pager_index_lines=12                               # Split-screen index/pager preview thing
+set pager_stop=yes                                      # Don't skip to next message at end of message (avoids accidental setting as being read)
+set editor="vim +/^$ ++1"
+set edit_headers=yes
+set text_flowed=yes
+auto_view text/html                                     # view html automatically
+alternative_order text/plain text/enriched text/html    # save html for last
+
+#######################################################################
+# Folders and mailboxes
+set mbox_type=Maildir
+set folder="~/Mail/Gmail"
+set spoolfile=+INBOX
+set record=+Sent\ Mail
+set postponed=+Drafts
+# Gmail seems no longer listing Trash but Bin
+set trash=+Bin
+mailboxes =INBOX =Drafts =Bin =All\ Mail =Sent\ Mail =Spam
+
+#######################################################################
+# SMTP
+source "gpg -dq $HOME/.mail/smtp_token.gpg |"
+set smtp_url = "$smtp_url"
+set smtp_pass = "$smtp_pass"
+
+#######################################################################
+# Cache folders
+set header_cache=~/.cache/mutt/headers
+set message_cachedir=~/.cache/mutt/messages
+set certificate_file=~/.cache/mutt/certificates
+
+#######################################################################
+# Sidebar
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set sidebar_width = 25
+set mail_check_stats
+
+#######################################################################
+# Sorting and threading
+set sort=threads
+set sort_aux = reverse-last-date-received
+set sort_browser=reverse-date
+set sort_re
+set strict_threads=yes
+unset collapse_unread
+
+#######################################################################
+# GMail-specific
+unset move          # gmail does that
+set delete          # don't ask, just do
+unset confirmappend # don't ask, just do!
+set quit            # don't ask, just do!!
+
+#######################################################################
+# Keyboard shortcuts - based on the sane Vim bindings (see vim/.vimrc)
+#
+# '?' is used for search-opposite
+bind generic,index,pager    \Ch help
+bind generic,index,pager    \CP sidebar-prev
+bind generic,index,pager    \CN sidebar-next
+bind generic,index,pager    \CO sidebar-open
+
+bind index,pager    /   search
+bind index,pager    ?   search-reverse
+bind index,pager    n   search-next
+bind index,pager    N   search-opposite
+bind index          j   limit
+bind index          k   next-entry
+bind index          l   previous-entry
+bind pager          k   next-line
+bind pager          l   previous-line
+bind index,pager    G   group-reply
+bind index          -   collapse-thread
+bind index          _   collapse-all
+
+bind editor         <space> noop    # Required to allow mailbox with spaces
+macro index,pager   d   "<save-message>=Bin<enter>i" "Move messages to Bin"
+macro index,pager   \Cd "<purge-message>i" "Purge messages"
+macro index,pager   u   "<save-message>=INBOX<enter>i" "Move messages to INBOX"
+macro index,pager   A   "<save-message>=All Mail<enter>i" "Move messages to archive"
+
+macro index         @ "<sync-mailbox><shell-escape>offlineimap<enter>" "Run oflineimap to sync all"
+
+# Move to top entry, instead of first unread
+exec first-entry
+
+#######################################################################
+# Miscellaneous
+source ~/.mail/gpg.muttrc
+source ~/.mail/mailing-lists.muttrc
+source `FILE=$HOME/.mail/aliases; if [ ! -s "$FILE" ]; then FILE=/dev/null;fi;echo "$FILE"`
