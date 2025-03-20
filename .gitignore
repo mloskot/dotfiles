@@ -1,6 +1,7 @@
 ~*
 .vs
 .vscode
+*.log
 *.gpg
 *.swp
 *secret*
