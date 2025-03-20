@@ -1,4 +1,0 @@
-[alias]
-	skip = !git update-index --assume-unchanged 
-	unskip = !git update-index --no-assume-unchanged
-	skipped = !git ls-files -v | grep -e '^[[:lower:]]'

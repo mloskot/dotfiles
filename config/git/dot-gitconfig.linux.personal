@@ -1,0 +1,18 @@
+[user]
+	name = Mateusz Łoskot
+	email = mateusz@loskot.net
+	signingkey = BB2AC1F2
+[commit]
+	gpgSign = false
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[include]
+	path = ~/alias_basic.gitconfig
+	path = ~/alias_ignore.gitconfig
+	path = ~/alias_log.gitconfig
+	path = ~/alias_tree.gitconfig
+	path = ~/alias_misc.gitconfig

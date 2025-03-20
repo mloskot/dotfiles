@@ -1,0 +1,10 @@
+[user]
+	name = Mateusz Łoskot
+	email = mateusz.loskot@cadcorp.com
+	signingkey = BB2AC1F2
+[credential]
+	helper = manager
+[commit]
+	gpgSign = true
+#[gpg]
+#	program = C:\\Program Files\\Git\\usr\\bin\\gpg.exe

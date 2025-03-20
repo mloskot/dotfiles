@@ -1,0 +1,67 @@
+#!/bin/bash
+#echo "Loading ~/.bashrc"
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+HISTCONTROL=erasedups # ignoreboth
+HISTSIZE=5000
+HISTFILESIZE=5000
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+  PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+  PATH="$HOME/.local/bin:$PATH"
+fi
+
+if [ -f "/etc/bash_completion" ]; then
+  source /etc/bash_completion
+fi
+
+# Some scripts may rely on updated PATH
+if [ -d ~/.bash.d ]; then
+  for f in ~/.bash.d/*.sh; do
+    if [ -r $f ]; then
+      #echo "Loading $f"
+      # shellcheck disable=SC1090
+      source "$f"
+    fi
+  done
+  unset f
+fi
+
+if [ -f ~/.bash_aliases ]; then
+  #echo "Loading ~/.bash_aliases"
+  # shellcheck disable=SC1090
+  source ~/.bash_aliases
+fi
+
+
+TTY_COUNTER=$(ps a | awk '{print $2}' | grep -vi -e "tty*" -e "?" | uniq | wc -l);
+if [ $TTY_COUNTER -eq 1 ]; then
+  if command -v "fastfetch" >/dev/null; then
+    fastfetch
+  elif command -v "neofetch" >/dev/null; then
+    neofetch
+  elif command -v "wslfetch" >/dev/null; then
+    wslfetch
+  fi
+fi
+
+. "$HOME/.atuin/bin/env"
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"
