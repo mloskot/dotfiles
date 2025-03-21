@@ -19,6 +19,6 @@ lazygit --version
 
 echolog "Installing ~/.config/lazygit/config.yml"
 mkdir -p ~/.config/lazygit
-[[ ! -L ~/.config/lazygit/config.yml ]] && ln -s ~/.dotfiles/config/lazygit/.yml ~/.config/lazygit/config.yml
+[[ ! -L ~/.config/lazygit/config.yml ]] && ln -s ~/.dotfiles/config/lazygit/config.yml ~/.config/lazygit/config.yml
 
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
