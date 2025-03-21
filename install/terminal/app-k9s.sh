@@ -4,6 +4,10 @@ set -e
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
+# shellcheck disable=SC1090
+source ~/.dotfiles/backup.sh
+backup_file ~/.config/k9s/config.yaml
+
 VERSION=$(curl -s "https://api.github.com/repos/derailed/k9s/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
 echolog "Installing K9s ${VERSION}"
 
@@ -14,7 +18,8 @@ sudo rm -f k9s.deb
 k9s version
 
 echolog "Installing ~/.config/k9s/config.yaml"
-[[ ! -L ~/.config/k9s/config.yaml ]] && mkdir -p ~/.config/k9s && ln -s ~/.dotfiles/config/k9s/config.yaml ~/.config/k9s/config.yaml
+mkdir -p ~/.config/k9s
+[[ ! -L ~/.config/k9s/config.yaml ]] && ln -s ~/.dotfiles/config/k9s/config.yaml ~/.config/k9s/config.yaml
 
 echolog "Installing Catppuccing for K9s"
 K9S_SKINS="${XDG_CONFIG_HOME:-$HOME/.config}/k9s/skins"
