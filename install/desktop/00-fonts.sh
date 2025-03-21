@@ -4,18 +4,21 @@ set -e
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 mkdir -p ~/.local/share/fonts
-cd /tmp
+pushd /tmp
 
 pkgs=(0xProto CascadiaMono)
 for pkg in "${pkgs[@]}"; do
   echolog "Installing font: ${pkg}"
-  curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/${pkg}.zip
+  rm -rf "${pkg}.zip" "${pkg}"
+  curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/${pkg}.zip"
   unzip "${pkg}.zip" -d "${pkg}"
-  cp "${pkg}/*.ttf" ~/.local/share/fonts
+  pushd "${pkg}"
+  mv ./*.ttf ~/.local/share/fonts
+  popd
   rm -rf "${pkg}.zip" "${pkg}"
 done
 
-cd -
+popd
 
 fc-cache
 
