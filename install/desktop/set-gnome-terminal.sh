@@ -19,3 +19,10 @@ fi
 
 echolog "Settings Catppuccin Macchiato as default profile for Gnome Terminal"
 gsettings set org.gnome.Terminal.ProfilesList default "${CATPPUCCIN_MACCHIATO_ID}"
+
+cols="120"
+rows="40"
+echolog "Settings default size ${cols}x${rows} for Gnome Terminal"
+profile=$(gsettings get org.gnome.Terminal.ProfilesList default)
+gsettings set "org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${profile:1:-1}/" default-size-columns ${cols}
+gsettings set "org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${profile:1:-1}/" default-size-rows ${rows}
