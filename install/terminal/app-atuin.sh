@@ -7,7 +7,7 @@ source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 echolog "Installing atuin"
 curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh | bash
 
-PATH=$HOME/.atuin/bin
+PATH=$HOME/.atuin/bin:$PATH
 export PATH
 
 atuin --version
