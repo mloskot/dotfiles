@@ -7,7 +7,7 @@ if [ "$DISTRIB_ID" != "Ubuntu" ]; then
 fi
 
 sudo apt-get update >/dev/null
-sudo apt-get install -y git >/dev/null
+sudo apt-get install -y curl git >/dev/null
 
 echo "Cloning mloskot/dotfiles..."
 rm -rf ~/.dotfiles
