@@ -3,6 +3,9 @@ set -e
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
+PATH=$HOME/.local/bin:$PATH
+export PATH
+
 echolog "Installing terminal prerequisites..."
 sudo apt update -y
 sudo apt upgrade -y
