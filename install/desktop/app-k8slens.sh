@@ -4,7 +4,7 @@ set -e
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
-if ! command -v "lens-desktopX" &>/dev/null; then
+if ! command -v "lens-desktop" &>/dev/null; then
   echolog "Installing Lens Desktop"
   cd /tmp
   wget -qO- https://downloads.k8slens.dev/keys/gpg | gpg --dearmor > k8slens.gpg
