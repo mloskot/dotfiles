@@ -28,6 +28,6 @@ if [[ -n "${VERSION}" ]]; then
       ~/.local/share/applications/zen.desktop
 fi
 
-zen --version
+/opt/zen/zen --version
 
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
