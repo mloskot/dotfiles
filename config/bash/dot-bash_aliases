@@ -5,6 +5,7 @@
 alias h='history'
 alias hu='history -a;history -n'
 alias hl='history | tail -n 30'
+alias l='ls'
 alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -la'
@@ -28,8 +29,16 @@ fi
 
 if command -v "eza" >/dev/null; then
     alias l=eza
-else
-    alias l='ls'
+    alias l='eza -lbF --git'
+    alias ll='eza -lbGF --git'
+    alias llm='eza -lbGd --git --sort=modified'
+    alias la='eza -lbhHigUmuSa --time-style=long-iso --git --color-scale'
+    alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale'
+
+    # specialty views
+    alias lS='eza -1'
+    alias lt='eza --tree --level=2'
+    alias l.="eza -a | grep -E '^\.'"
 fi
 
 # Editors
