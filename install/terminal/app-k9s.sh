@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+echolog "Installing K9s"
 
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
@@ -9,7 +10,7 @@ source ~/.dotfiles/backup.sh
 backup_file ~/.config/k9s/config.yaml
 
 VERSION=$(curl -s "https://api.github.com/repos/derailed/k9s/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
-echolog "Installing K9s ${VERSION}"
+echolog "Downloading K9s ${VERSION}"
 
 curl -Lo k9s.deb "https://github.com/derailed/k9s/releases/latest/download/k9s_linux_amd64.deb"
 sudo dpkg -i k9s.deb

@@ -1,11 +1,12 @@
 #!/bin/bash
 set -e
+echolog "Installing Lens"
 
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 if ! command -v "lens-desktop" &>/dev/null; then
-  echolog "Installing Lens Desktop"
+  echolog "Adding apt repository"
   cd /tmp
   wget -qO- https://downloads.k8slens.dev/keys/gpg | gpg --dearmor > k8slens.gpg
   sudo install -D -o root -g root -m 644 k8slens.gpg /etc/apt/keyrings/k8slens.gpg

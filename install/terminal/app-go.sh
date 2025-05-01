@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+echolog "Installing go"
 
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
@@ -7,7 +8,7 @@ source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 VERSION=$(curl -s https://go.dev/VERSION?m=text | head -n 1)
 
 if ! go version | grep "${VERSION}" ; then
-  echolog "Installing go ${VERSION}"
+  echolog "Downloading go ${VERSION}"
   sudo rm -rf /opt/go
   rm -f go.tar.gz
   curl -o go.tar.gz "https://dl.google.com/go/${VERSION}.linux-amd64.tar.gz"

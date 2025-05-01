@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+echolog "Installing git"
 
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
@@ -9,7 +10,6 @@ source ~/.dotfiles/backup.sh
 backup_file ~/.gitconfig
 
 if ! command -v "git" &>/dev/null; then
-  echolog "Installing git"
   sudo apt update -y
   sudo apt install -y git
 fi

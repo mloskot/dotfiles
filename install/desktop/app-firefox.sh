@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+echolog "Installing Firefox"
 
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
@@ -7,7 +8,7 @@ source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 if command -v "/snap/bin/firefox" &>/dev/null; then
   echolog "Firefox already installed with snap"
 else
-  echolog "Installing Firefox"
+  echolog "Adding apt repository"
   sudo install -d -m 0755 /etc/apt/keyrings
   sudo rm -r /etc/apt/keyrings/packages.mozilla.org.asc
   wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | \

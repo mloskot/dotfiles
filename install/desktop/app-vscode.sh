@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+echolog "Installing Visual Studio Code"
 
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
@@ -10,7 +11,7 @@ backup_file ~/.config/Code/User/keybindings.json
 backup_file ~/.config/Code/User/settings.json
 
 if ! command -v "code" &>/dev/null; then
-  echolog "Installing Visual Studio Code"
+  echolog "Adding apt repository"
   cd /tmp
   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
   sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg

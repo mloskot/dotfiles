@@ -1,10 +1,10 @@
 #!/bin/bash
 set -e
+echolog "Installing atuin"
 
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
-echolog "Installing atuin"
 curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh | bash
 
 PATH=$HOME/.atuin/bin:$PATH

@@ -1,12 +1,12 @@
 #!/bin/bash
 set -e
+echolog "Installing gh"
 
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 if ! command -v "gh" &>/dev/null; then
-  echolog "Installing gh"
-
+  echolog "Adding apt repository"
   curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | \
   sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg &&
 	sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg &&

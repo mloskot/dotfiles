@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+echolog "Installing tmux"
 
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
@@ -9,7 +10,6 @@ source ~/.dotfiles/backup.sh
 backup_file ~/.tmux.conf
 
 if ! command -v "tmux" &>/dev/null; then
-  echolog "Installing tmux"
   sudo apt update -y
   sudo apt install -y tmux
   mkdir -p ~/.tmux/plugins

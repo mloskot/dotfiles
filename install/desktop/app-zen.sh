@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
+echolog "Installing Zen browser"
 
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 VERSION=$(curl -s "https://api.github.com/repos/zen-browser/desktop/releases/latest" | grep -Po '"tag_name": "\K[0-9a-z.]+')
-echolog "Installing Zen browser ${VERSION}"
 if [[ -d /opt/zen ]]; then
     if /opt/zen/zen --version | grep "${VERSION}" ; then
         echolog "Zen ${VERSION} already installed"
@@ -15,7 +15,7 @@ if [[ -d /opt/zen ]]; then
 fi
 
 if [[ -n "${VERSION}" ]]; then
-  echolog "Installing Zen browser ${VERSION}"
+  echolog "Downloading Zen ${VERSION}"
   curl -Lo zen.tar.xz "https://github.com/zen-browser/desktop/releases/download/${VERSION}/zen.linux-x86_64.tar.xz"
   sudo tar -C /opt -xf zen.tar.xz
   rm -f zen.tar.xz

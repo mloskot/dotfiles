@@ -1,11 +1,12 @@
 #!/bin/bash
 set -e
+echolog "Installing bat"
 
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 VERSION=$(curl -s "https://api.github.com/repos/sharkdp/bat/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
-echolog "Installing bat ${VERSION}"
+echolog "Downloading bat ${VERSION}"
 
 curl -Lo bat.deb "https://github.com/sharkdp/bat/releases/download/v${VERSION}/bat_${VERSION}_amd64.deb"
 sudo dpkg -i bat.deb
