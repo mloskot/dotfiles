@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
-echolog "Installing Firefox"
-
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+
+echolog "Installing Firefox"
 
 if command -v "/snap/bin/firefox" &>/dev/null; then
   echolog "Firefox already installed with snap"

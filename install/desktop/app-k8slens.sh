@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
-echolog "Installing Lens"
-
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+
+echolog "Installing Lens"
 
 if ! command -v "lens-desktop" &>/dev/null; then
   echolog "Adding apt repository"

@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
-echolog "Installing fzf"
-
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+
+echolog "Installing fzf"
 
 VERSION=$(curl -s "https://api.github.com/repos/junegunn/fzf/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
 echolog "Downloading fzf ${VERSION}"

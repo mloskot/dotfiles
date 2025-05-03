@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
-echolog "Installing gotask"
-
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+
+echolog "Installing gotask"
 
 VERSION=$(curl -s "https://api.github.com/repos/go-task/task/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
 echolog "Downloading gotask ${VERSION}"

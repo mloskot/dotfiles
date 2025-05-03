@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
-echolog "Installing Google Chrome"
-
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+
+echolog "Installing Google Chrome"
 
 if ! command -v "chrome" &>/dev/null; then
   echolog "Adding apt repository"

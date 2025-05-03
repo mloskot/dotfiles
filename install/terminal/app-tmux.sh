@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
-echolog "Installing tmux"
-
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+
+echolog "Installing tmux"
 
 # shellcheck disable=SC1090
 source ~/.dotfiles/backup.sh

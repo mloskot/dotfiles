@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
-echolog "Installing git"
-
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+
+echolog "Installing git"
 
 # shellcheck disable=SC1090
 source ~/.dotfiles/backup.sh

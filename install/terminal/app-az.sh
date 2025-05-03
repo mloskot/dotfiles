@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
-echolog "Installing Azure CLI"
-
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+
+echolog "Installing Azure CLI"
 
 if ! command -v "az" &>/dev/null; then
   echolog "Adding apt repository"

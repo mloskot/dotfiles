@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
-echolog "Installing K9s"
-
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+
+echolog "Installing K9s"
 
 # shellcheck disable=SC1090
 source ~/.dotfiles/backup.sh

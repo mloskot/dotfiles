@@ -24,5 +24,5 @@ done
 for installer in ~/.dotfiles/install/terminal/*.sh
 do
   # shellcheck disable=SC1090
-  source "$installer"
+  source "$installer" || echoerr "Running $installer failed"
 done

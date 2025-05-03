@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
-echolog "Installing bat"
-
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+
+echolog "Installing bat"
 
 VERSION=$(curl -s "https://api.github.com/repos/sharkdp/bat/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
 echolog "Downloading bat ${VERSION}"

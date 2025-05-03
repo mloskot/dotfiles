@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
-echolog "Installing go"
-
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+
+echolog "Installing go"
 
 VERSION=$(curl -s https://go.dev/VERSION?m=text | head -n 1)
 

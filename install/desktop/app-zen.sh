@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
-echolog "Installing Zen browser"
-
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+
+echolog "Installing Zen browser"
 
 VERSION=$(curl -s "https://api.github.com/repos/zen-browser/desktop/releases/latest" | grep -Po '"tag_name": "\K[0-9a-z.]+')
 if [[ -d /opt/zen ]]; then
