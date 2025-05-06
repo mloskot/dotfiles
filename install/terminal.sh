@@ -10,7 +10,7 @@ echolog "Installing terminal prerequisites..."
 sudo apt update -y
 sudo apt upgrade -y
 
-pkgs=(curl git unzip)
+pkgs=(apt-transport-https ca-certificates curl git gnupg unzip)
 for pkg in "${pkgs[@]}"; do
   # If any of required tools is missing, install (or upgrade) all
   if ! command -v "${pkg}" &>/dev/null; then
