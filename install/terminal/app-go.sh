@@ -7,7 +7,7 @@ echolog "Installing go"
 
 VERSION=$(curl -s https://go.dev/VERSION?m=text | head -n 1)
 
-if ! go version | grep "${VERSION}" ; then
+if ! command -v "go" &>/dev/null || ! go version | grep "${VERSION}" ; then
   echolog "Downloading go ${VERSION}"
   sudo rm -rf /opt/go
   rm -f go.tar.gz
