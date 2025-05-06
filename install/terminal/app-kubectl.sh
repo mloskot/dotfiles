@@ -8,10 +8,10 @@ echolog "Installing kubectl ${VERSION}"
 
 if command -v "kubectl" &>/dev/null; then
   echolog "Found existing kubectl"
-  kubectl version 2>/dev/null | grep -E "Client.+v${VERSION}"
+  kubectl version --client 2>/dev/null | grep -E "Client.+v${VERSION}"
 fi
 
-if ! command -v "kubectl" &>/dev/null || ! kubectl version | grep -E "Client.+v${VERSION}" ; then
+if ! command -v "kubectl" &>/dev/null || ! kubectl version --client | grep -E "Client.+v${VERSION}" ; then
   echolog "Adding apt repository"
   sudo mkdir -p -m 755 /etc/apt/keyrings
   [[ -f "/etc/apt/keyrings/kubernetes-apt-keyring.gpg" ]] && sudo rm -f /etc/apt/keyrings/kubernetes-apt-keyring.gpg
