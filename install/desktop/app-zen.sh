@@ -7,11 +7,11 @@ echolog "Installing Zen browser"
 
 VERSION=$(curl -s "https://api.github.com/repos/zen-browser/desktop/releases/latest" | grep -Po '"tag_name": "\K[0-9a-z.]+')
 if [[ -d /opt/zen ]]; then
-    if /opt/zen/zen --version | grep "${VERSION}" ; then
-        echolog "Zen ${VERSION} already installed"
-        /opt/zen/zen --version
-        VERSION=""
-    fi
+  if /opt/zen/zen --version | grep "${VERSION}" ; then
+    echolog "Zen ${VERSION} already installed"
+    /opt/zen/zen --version
+    VERSION=""
+  fi
 fi
 
 if [[ -n "${VERSION}" ]]; then
@@ -21,13 +21,13 @@ if [[ -n "${VERSION}" ]]; then
   rm -f zen.tar.xz
 
   curl -L https://raw.githubusercontent.com/zen-browser/desktop/refs/heads/dev/build/AppDir/zen.desktop \
-      -o "${HOME}/.local/share/applications/zen.desktop"
+    -o "${HOME}/.local/share/applications/zen.desktop"
 
   echolog "Installing ~/.local/share/applications/zen.desktop"
   sed -i -E 's#Icon=.+#Icon=/opt/zen/browser/chrome/icons/default/default128.png#' \
-      ~/.local/share/applications/zen.desktop
+    ~/.local/share/applications/zen.desktop
   sed -i -E 's#Exec=zen#Exec=/opt/zen/zen#' \
-      ~/.local/share/applications/zen.desktop
+    ~/.local/share/applications/zen.desktop
 fi
 
 desktop-file-validate ~/.local/share/applications/zen.desktop

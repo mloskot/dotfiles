@@ -12,41 +12,41 @@ alias lla='ls -la'
 alias llm='ls -la | more'
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    if [ -r ~/.dircolors ]; then
-        eval "$(dircolors -b ~/.dircolors)"
-    else
-        eval "$(dircolors -b)"
-    fi
-    alias l='ls --color=auto'
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+  if [ -r ~/.dircolors ]; then
+    eval "$(dircolors -b ~/.dircolors)"
+  else
+    eval "$(dircolors -b)"
+  fi
+  alias l='ls --color=auto'
+  alias ls='ls --color=auto'
+  #alias dir='dir --color=auto'
+  #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
 fi
 
 if command -v "eza" >/dev/null; then
-    alias l=eza
-    alias l='eza -lbF --git'
-    alias ll='eza -lbGF --git'
-    alias llm='eza -lbGd --git --sort=modified'
-    alias la='eza -lbhHigUmuSa --time-style=long-iso --git --color-scale'
-    alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale'
+  alias l=eza
+  alias l='eza -lbF --git'
+  alias ll='eza -lbGF --git'
+  alias llm='eza -lbGd --git --sort=modified'
+  alias la='eza -lbhHigUmuSa --time-style=long-iso --git --color-scale'
+  alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale'
 
-    # specialty views
-    alias lS='eza -1'
-    alias lt='eza --tree --level=2'
-    alias l.="eza -a | grep -E '^\.'"
+  # specialty views
+  alias lS='eza -1'
+  alias lt='eza --tree --level=2'
+  alias l.="eza -a | grep -E '^\.'"
 fi
 
 # Editors
 alias c='code' # already in PATH
 if [[ -n "${WSL_DISTRO_NAME}" ]]; then
-    alias ci='/mnt/c/Program\ Files/Microsoft\ VS\ Code\ Insiders/bin/code-insiders'
+  alias ci='/mnt/c/Program\ Files/Microsoft\ VS\ Code\ Insiders/bin/code-insiders'
 else
-    alias ci='/c/Program\ Files/Microsoft\ VS\ Code\ Insiders/bin/code-insiders'
+  alias ci='/c/Program\ Files/Microsoft\ VS\ Code\ Insiders/bin/code-insiders'
 fi
 alias v='nvim'
 alias vi='nvim'
