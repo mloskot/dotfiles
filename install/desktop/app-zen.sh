@@ -26,6 +26,8 @@ if [[ -n "${VERSION}" ]]; then
   echolog "Installing ~/.local/share/applications/zen.desktop"
   sed -i -E 's#Icon=.+#Icon=/opt/zen/browser/chrome/icons/default/default128.png#' \
       ~/.local/share/applications/zen.desktop
+  sed -i -E 's#Exec=zen#Exec=/opt/zen/zen#' \
+      ~/.local/share/applications/zen.desktop
 fi
 
 desktop-file-validate ~/.local/share/applications/zen.desktop
