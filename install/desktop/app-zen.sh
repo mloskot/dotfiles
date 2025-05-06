@@ -20,13 +20,15 @@ if [[ -n "${VERSION}" ]]; then
   sudo tar -C /opt -xf zen.tar.xz
   rm -f zen.tar.xz
 
-  curl -L https://raw.githubusercontent.com/zen-browser/desktop/refs/heads/dev/AppDir/zen.desktop \
+  curl -L https://raw.githubusercontent.com/zen-browser/desktop/refs/heads/dev/build/AppDir/zen.desktop \
       -o "${HOME}/.local/share/applications/zen.desktop"
 
   echolog "Installing ~/.local/share/applications/zen.desktop"
   sed -i -E 's#Icon=.+#Icon=/opt/zen/browser/chrome/icons/default/default128.png#' \
       ~/.local/share/applications/zen.desktop
 fi
+
+desktop-file-validate ~/.local/share/applications/zen.desktop
 
 /opt/zen/zen --version
 
