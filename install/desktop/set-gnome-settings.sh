@@ -17,6 +17,9 @@ gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
 echolog "Center new windows in the middle of the screen"
 gsettings set org.gnome.mutter center-new-windows true
 
+echolog "Enable workspaces on all displays"
+gsettings set org.gnome.mutter workspaces-only-on-primary false
+
 echolog "Hide Home and Trash icons from desktop"
 gsettings set org.gnome.shell.extensions.ding show-home false
 gsettings set org.gnome.shell.extensions.ding show-trash false
