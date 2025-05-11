@@ -26,3 +26,11 @@ echolog "Settings default size ${cols}x${rows} for Gnome Terminal"
 profile=$(gsettings get org.gnome.Terminal.ProfilesList default)
 gsettings set "org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${profile:1:-1}/" default-size-columns ${cols}
 gsettings set "org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${profile:1:-1}/" default-size-rows ${rows}
+
+echolog "Setting custom keyboard shortcuts for Gnome Terminal"
+gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ next-tab '<Control>Tab'
+gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ prev-tab '<Control><Shift>Tab'
+for i in 1 2 3 4 5 6 7 8 9 11 12
+do
+  gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ "switch-to-tab-${i}" 'disabled'
+done
