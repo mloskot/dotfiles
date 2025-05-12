@@ -1,15 +1,7 @@
 #!/bin/bash
 
-for e in nvim vim vi; do
-  if command -v "${e}" >/dev/null; then
-    # Git Bash seems unfolding /usr/bin/vim as C:/Program Files/Git/usr/bin/vim
-    GIT_EDITOR=${e}
-    export GIT_EDITOR
-    break
-  else
-    unset GIT_EDITOR
-  fi
-done
+GIT_EDITOR=nvim
+export GIT_EDITOR
 
 # easy signing in terminal
 GPG_TTY=$(tty)
