@@ -1,0 +1,27 @@
+#!/bin/bash
+set -e
+# shellcheck disable=SC1090
+source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+
+echolog "Installing nvim"
+
+# shellcheck disable=SC1090
+source ~/.dotfiles/backup.sh
+backup_file ~/.config/nvim/init.lua
+
+VERSION=$(curl -s "https://api.github.com/repos/neovim/neovim/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
+echolog "Downloading nvim ${VERSION}"
+
+curl -Lo nvim.tar.gz "https://github.com/neovim/neovim/releases/download/v${VERSION}/nvim-linux-x86_64.tar.gz"
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim.tar.gz
+rm -f nvim.tar.gz
+
+# shellcheck disable=SC1090
+source ~/.bash.d/nvim.sh
+nvim --version
+
+echolog "Installing ~/.config/nvim"
+[[ ! -L ~/.config/nvim ]] && ln -s ~/.dotfiles/config/nvim ~/.config/nvim
+
+[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

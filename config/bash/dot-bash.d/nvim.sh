@@ -11,7 +11,9 @@ for c in \
     /opt/nvim-linux-x86_64/bin/nvim
 do
     if command -v "${c}" >/dev/null; then
-        export PATH="${PATH}:$(dirname $(command -v "${c}"))"
+        PATH="${PATH}:$(dirname "$(command -v "${c}")")"
         break
     fi
 done
+
+export PATH
