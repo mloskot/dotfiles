@@ -1,14 +1,14 @@
 #!/bin/bash
 
 for e in nvim vim vi; do
-    if test "$(command -v ${e})"; then
-        # Git Bash seems unfolding /usr/bin/vim as C:/Program Files/Git/usr/bin/vim
-        GIT_EDITOR=${e}
-        export GIT_EDITOR
-        break
-    else
-        unset GIT_EDITOR
-    fi
+  if command -v "${e}" >/dev/null; then
+    # Git Bash seems unfolding /usr/bin/vim as C:/Program Files/Git/usr/bin/vim
+    GIT_EDITOR=${e}
+    export GIT_EDITOR
+    break
+  else
+    unset GIT_EDITOR
+  fi
 done
 
 # easy signing in terminal
