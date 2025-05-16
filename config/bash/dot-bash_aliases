@@ -58,6 +58,9 @@ alias wip='git add -A && git commit -m "WIP: non-verifed - $(date +%Y-%m-%dT%H:%
 alias vwip='git add -A && git commit -m "WIP: verified - $(date +%Y-%m-%dT%H:%M:%S)" --verify'
 
 # Misc
+if command -v "gio" > /dev/null; then
+  alias fm='gio open'
+  fi
 alias mc='mc --nosubshell'
 alias rtree='tree -I .git -a'
 alias wttr='curl wttr.in/Janowice+Wielkie'
