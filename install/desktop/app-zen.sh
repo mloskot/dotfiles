@@ -17,7 +17,7 @@ fi
 if [[ -n "${VERSION}" ]]; then
   echolog "Downloading Zen ${VERSION}"
   curl -Lo zen.tar.xz "https://github.com/zen-browser/desktop/releases/download/${VERSION}/zen.linux-x86_64.tar.xz"
-  sudo tar -C /opt -xf zen.tar.xz
+  sudo tar -xf zen.tar.xz --directory /opt
   rm -f zen.tar.xz
 
   curl -L https://raw.githubusercontent.com/zen-browser/desktop/refs/heads/dev/build/AppDir/zen.desktop \

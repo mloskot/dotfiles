@@ -14,7 +14,7 @@ echolog "Downloading nvim ${VERSION}"
 
 curl -Lo nvim.tar.gz "https://github.com/neovim/neovim/releases/download/v${VERSION}/nvim-linux-x86_64.tar.gz"
 sudo rm -rf /opt/nvim
-sudo tar -C /opt -xzf nvim.tar.gz
+sudo tar -xzf nvim.tar.gz --directory /opt
 rm -f nvim.tar.gz
 
 # shellcheck disable=SC1090

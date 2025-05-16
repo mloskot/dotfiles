@@ -25,6 +25,7 @@ mkdir -p ~/.config/k9s
 echolog "Installing Catppuccing for K9s"
 K9S_SKINS="${XDG_CONFIG_HOME:-$HOME/.config}/k9s/skins"
 mkdir -p "$K9S_SKINS"
-curl -L https://github.com/catppuccin/k9s/archive/main.tar.gz | tar xz -C "$K9S_SKINS" --strip-components=2 k9s-main/dist
+curl -L https://github.com/catppuccin/k9s/archive/main.tar.gz | \
+  tar -xz --directory "$K9S_SKINS" --strip-components=2 k9s-main/dist
 
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

@@ -13,7 +13,7 @@ VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/l
 echolog "Downloading lazygit ${VERSION}"
 
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${VERSION}_Linux_x86_64.tar.gz"
-sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
+sudo tar -xzf lazygit.tar.gz --directory /usr/local/bin lazygit
 sudo rm -f lazygit.tar.gz
 
 lazygit --version

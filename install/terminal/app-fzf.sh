@@ -9,7 +9,7 @@ VERSION=$(curl -s "https://api.github.com/repos/junegunn/fzf/releases/latest" | 
 echolog "Downloading fzf ${VERSION}"
 
 curl -Lo fzf.tar.gz "https://github.com/junegunn/fzf/releases/download/v${VERSION}/fzf-${VERSION}-linux_amd64.tar.gz"
-sudo tar xf fzf.tar.gz -C /usr/local/bin fzf
+sudo tar -xzf fzf.tar.gz --directory /usr/local/bin fzf
 rm -f fzf.tar.gz
 
 fzf --version

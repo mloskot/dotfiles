@@ -9,7 +9,7 @@ VERSION=$(curl -s "https://api.github.com/repos/zellij-org/zellij/releases/lates
 echolog "Downloading zellij ${VERSION}"
 
 curl -LO "https://github.com/zellij-org/zellij/releases/download/v${VERSION}/zellij-x86_64-unknown-linux-musl.tar.gz"
-sudo tar xf zellij-x86_64-unknown-linux-musl.tar.gz -C /usr/local/bin zellij
+sudo tar -xzf zellij-x86_64-unknown-linux-musl.tar.gz --directory /usr/local/bin zellij
 rm -f zellij-x86_64-unknown-linux-musl.tar.gz
 
 zellij --version
