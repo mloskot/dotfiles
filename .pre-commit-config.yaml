@@ -1,43 +1,44 @@
 ---
 repos:
-  - repo: local
-    hooks:
-      - id: forbid-yml
-        name: Require .yaml and forbid .yml extension
-        entry: YAML file extensions must be .yaml
-        language: fail
-        files: \.yml$
-        exclude: |
-          (?x)^(
-            ^.*(copier-answers\.ya?ml)$
-          )$
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
-    hooks:
-      - id: trailing-whitespace
-      - id: end-of-file-fixer
-      - id: pretty-format-json
-        exclude: ^vscode/
-      - id: check-json
-        exclude: ^vscode/
-      - id: check-toml
-      - id: check-yaml
-        args:
-          - --unsafe
-      - id: check-added-large-files
-      - id: check-merge-conflict
-      - id: check-symlinks
-      - id: detect-private-key
-      - id: forbid-submodules
-  - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.44.0
-    hooks:
-      - id: markdownlint
-  - repo: https://github.com/koalaman/shellcheck-precommit
-    rev: v0.10.0
-    hooks:
-      - id: shellcheck
-  - repo: https://github.com/crate-ci/committed
-    rev: v1.1.7
-    hooks:
-      - id: committed
+- repo: local
+  hooks:
+  - id: forbid-yml
+    name: Require .yaml and forbid .yml extension
+    entry: YAML file extensions must be .yaml
+    language: fail
+    files: \.yml$
+    exclude: |
+      (?x)^(
+        ^.*(copier-answers\.ya?ml)$
+      )$
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v5.0.0
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
+  - id: pretty-format-json
+    exclude: ^vscode/
+  - id: check-json
+    exclude: ^vscode/
+  - id: check-toml
+  - id: check-yaml
+    args:
+    - --unsafe
+  - id: check-added-large-files
+  - id: check-merge-conflict
+  - id: check-symlinks
+  - id: detect-private-key
+  - id: forbid-submodules
+- repo: https://github.com/igorshubovych/markdownlint-cli
+  rev: v0.44.0
+  hooks:
+  - id: markdownlint
+- repo: https://github.com/koalaman/shellcheck-precommit
+  rev: v0.10.0
+  hooks:
+  - id: shellcheck
+- repo: https://github.com/crate-ci/committed
+  rev: v1.1.7
+  hooks:
+  - id: committed
+    stages: [commit-msg]
