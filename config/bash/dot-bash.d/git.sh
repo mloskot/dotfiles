@@ -39,6 +39,10 @@ alias gsts='git submodule status'
 alias gsw='git switch'
 alias gwo='git show --date=iso --pretty=fuller --show-signature --no-patch'
 
+
+alias wip='git add -A && git commit -m "WIP: non-verifed - $(date +%Y-%m-%dT%H:%M:%S)" --no-verify'
+alias vwip='git add -A && git commit -m "WIP: verified - $(date +%Y-%m-%dT%H:%M:%S)" --verify'
+
 ## Git Custom Comands
 ### Git Goes Back to Main (updating and deleting previous topic branch, if merged)
 alias ggbm='git switch main && git pull origin main && git br -d @{-1} && git fetch --all --prune'

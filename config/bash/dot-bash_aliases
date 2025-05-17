@@ -53,10 +53,6 @@ alias vi='nvim'
 alias vim='nvim'
 alias t='tmux'
 
-# Git
-alias wip='git add -A && git commit -m "WIP: non-verifed - $(date +%Y-%m-%dT%H:%M:%S)" --no-verify'
-alias vwip='git add -A && git commit -m "WIP: verified - $(date +%Y-%m-%dT%H:%M:%S)" --verify'
-
 # Misc
 if command -v "gio" > /dev/null; then
   alias fm='gio open'
@@ -64,7 +60,6 @@ if command -v "gio" > /dev/null; then
 alias mc='mc --nosubshell'
 alias rtree='tree -I .git -a'
 alias wttr='curl wttr.in/Janowice+Wielkie'
-
 
 if command -v "batcat" >/dev/null && ! command -v "bat" >/dev/null; then
   alias bat=batcat
