@@ -20,6 +20,7 @@ repos:
         exclude: ^vscode/
       - id: check-json
         exclude: ^vscode/
+      - id: check-toml
       - id: check-yaml
         args:
           - --unsafe
