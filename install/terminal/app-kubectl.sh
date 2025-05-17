@@ -37,4 +37,7 @@ echolog "Installed $(which kubectl) $(kubectl version --client)"
 PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 echolog "Installed $(which kubectl-krew)\n$(kubectl krew version)"
 
+echolog "Installing Krew plugin: grep"
+kubectl krew install grep
+
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
