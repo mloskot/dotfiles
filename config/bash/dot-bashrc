@@ -49,8 +49,8 @@ if [ -f ~/.bash_aliases ]; then
   source ~/.bash_aliases
 fi
 
-
 TTY_COUNTER=$(ps a | awk '{print $2}' | grep -vi -e "tty*" -e "?" | uniq | wc -l);
+# shellcheck disable=SC2086
 if [ $TTY_COUNTER -eq 1 ]; then
   if command -v "fastfetch" >/dev/null; then
     fastfetch
@@ -61,7 +61,11 @@ if [ $TTY_COUNTER -eq 1 ]; then
   fi
 fi
 
+# shellcheck disable=SC1091
 . "$HOME/.atuin/bin/env"
 
-[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+if [[ -f ~/.bash-preexec.sh ]]; then
+  # shellcheck disable=SC1090
+  source ~/.bash-preexec.sh
+fi
 eval "$(atuin init bash)"
