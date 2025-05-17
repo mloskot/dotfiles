@@ -12,6 +12,6 @@ curl -Lo yq.tar.gz "https://github.com/mikefarah/yq/releases/download/v${VERSION
 sudo tar -xzf yq.tar.gz --directory /usr/local/bin --transform='s/yq_linux_amd64/yq/g'
 sudo rm -f yq.tar.gz
 
-yq --version
+echolog "Installed $(which yq) $(yq --version)"
 
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

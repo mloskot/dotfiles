@@ -16,7 +16,7 @@ curl -Lo k9s.deb "https://github.com/derailed/k9s/releases/latest/download/k9s_l
 sudo dpkg -i k9s.deb
 sudo rm -f k9s.deb
 
-k9s version
+echolog "Installed $(which k9s) $(k9s version)"
 
 echolog "Installing ~/.config/k9s/config.yaml"
 mkdir -p ~/.config/k9s

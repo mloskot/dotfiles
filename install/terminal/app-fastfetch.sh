@@ -16,7 +16,7 @@ if ! command -v "fastfetch" &>/dev/null; then
   sudo apt install -y fastfetch
 fi
 
-fastfetch --version
+echolog "Installed $(which fastfetch) $(fastfetch --version)"
 
 echolog "Installing ~/.config/fastfetch"
 [[ ! -L ~/.config/fastfetch ]] && ln -s ~/.dotfiles/config/fastfetch ~/.config/fastfetch

@@ -12,7 +12,7 @@ curl -Lo sesh.tar.gz "https://github.com/joshmedeski/sesh/releases/download/v${V
 sudo tar -xzf sesh.tar.gz --directory /usr/local/bin sesh
 sudo rm -f sesh.tar.gz
 
-sesh --version
+echolog "Installed $(which sesh) $(sesh --version)"
 
 echolog "Installing ~/.config/sesh"
 [[ ! -L ~/.config/sesh ]] && ln -s ~/.dotfiles/config/sesh ~/.config/sesh

@@ -27,7 +27,7 @@ if [[ ! $KUBECTL_VERSION =~ $MINOR_VERSION ]]; then
   echolog "Installing Krew plugin"
   curl -LO "https://github.com/kubernetes-sigs/krew/releases/latest/download/krew-linux_amd64.tar.gz"
 
-  tar -xzf krew-linux_amd64.tar.gz
+  tar -xzf krew-linux_amd64.tar.gz krew-linux_amd64
   ./krew-linux_amd64 install krew
   rm ./krew*
 fi

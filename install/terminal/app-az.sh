@@ -10,6 +10,6 @@ if ! command -v "az" &>/dev/null; then
   curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 fi
 
-az --version
+echolog "Installed $(which az) $(az --version)"
 
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

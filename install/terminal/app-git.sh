@@ -14,7 +14,7 @@ if ! command -v "git" &>/dev/null; then
   sudo apt install -y git
 fi
 
-git --version
+echolog "Installed $(which git) $(git --version)"
 
 echolog "Installing ~/.gitconfig"
 [[ ! -L ~/.gitconfig ]] && ln -s ~/.dotfiles/config/git/dot-gitconfig ~/.gitconfig

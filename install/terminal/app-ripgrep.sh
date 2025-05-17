@@ -12,6 +12,6 @@ curl -Lo ripgrep.deb "https://github.com/BurntSushi/ripgrep/releases/download/${
 sudo dpkg -i ripgrep.deb
 rm -f ripgrep.deb
 
-rg --version
+echolog "Installed $(which rg) $(rg --version)"
 
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

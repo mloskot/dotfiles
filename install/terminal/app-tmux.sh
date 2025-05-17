@@ -15,7 +15,7 @@ if ! command -v "tmux" &>/dev/null; then
   mkdir -p ~/.tmux/plugins
 fi
 
-tmux -V
+echolog "Installed $(which tmux) $(tmux -V)"
 
 echolog "Installing ~/.tmux.conf"
 [[ ! -L ~/.tmux.conf ]] && ln -s ~/.dotfiles/config/tmux/dot-tmux.conf ~/.tmux.conf

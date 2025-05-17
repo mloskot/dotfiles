@@ -10,7 +10,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh | bash
 PATH=$HOME/.atuin/bin:$PATH
 export PATH
 
-atuin --version
+echolog "Installed $(which atuin) $(atuin --version)"
 
 echolog "Installing bash-preexec"
 curl https://raw.githubusercontent.com/rcaloras/bash-preexec/master/bash-preexec.sh -o ~/.bash-preexec.sh

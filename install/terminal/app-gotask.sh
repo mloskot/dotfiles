@@ -12,6 +12,6 @@ curl -Lo task.deb "https://github.com/go-task/task/releases/download/v${VERSION}
 sudo dpkg -i task.deb
 rm -f task.deb
 
-task --version
+echolog "Installed $(which task) $(task --version)"
 
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

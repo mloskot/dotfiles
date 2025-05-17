@@ -12,6 +12,6 @@ curl -Lo fzf.tar.gz "https://github.com/junegunn/fzf/releases/download/v${VERSIO
 sudo tar -xzf fzf.tar.gz --directory /usr/local/bin fzf
 rm -f fzf.tar.gz
 
-fzf --version
+echolog "Installed $(which fzf) $(fzf --version)"
 
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

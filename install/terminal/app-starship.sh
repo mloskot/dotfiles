@@ -11,7 +11,7 @@ backup_file ~/.config/starship.toml
 
 curl -sS https://starship.rs/install.sh | sudo sh -s -- --force
 
-starship --version
+echolog "Installed $(which starship) $(starship --version)"
 
 echolog "Installing ~/.config/starship.toml"
 [[ ! -L ~/.config/starship.toml ]] && ln -s ~/.dotfiles/config/starship/starship.toml ~/.config/starship.toml

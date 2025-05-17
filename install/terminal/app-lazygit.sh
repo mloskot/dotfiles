@@ -16,7 +16,7 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 sudo tar -xzf lazygit.tar.gz --directory /usr/local/bin lazygit
 sudo rm -f lazygit.tar.gz
 
-lazygit --version
+echolog "Installed $(which lazygit) $(lazygit --version)"
 
 echolog "Installing ~/.config/lazygit/config.yml"
 mkdir -p ~/.config/lazygit

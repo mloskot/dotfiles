@@ -19,7 +19,7 @@ rm -f nvim.tar.gz
 
 # shellcheck disable=SC1090
 source ~/.bash.d/nvim.sh
-nvim --version
+echolog "Installed $(which nvim) $(nvim --version)"
 
 echolog "Installing ~/.config/nvim"
 [[ ! -L ~/.config/nvim ]] && ln -s ~/.dotfiles/config/nvim ~/.config/nvim

@@ -12,6 +12,6 @@ curl -Lo bat.deb "https://github.com/sharkdp/bat/releases/download/v${VERSION}/b
 sudo dpkg -i bat.deb
 rm -f bat.deb
 
-bat --version
+echolog "Installed $(which bat) $(bat --version)"
 
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

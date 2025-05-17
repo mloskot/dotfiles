@@ -11,6 +11,6 @@ if ! command -v "pre-commit" &>/dev/null; then
   pipx install pre-commit
 fi
 
-pre-commit --version
+echolog "Installed $(which pre-commit) $(pre-commit --version)"
 
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

@@ -11,6 +11,6 @@ if ! command -v "speedtest" &>/dev/null; then
   sudo apt install -y speedtest
 fi
 
-speedtest --version
+echolog "Installed $(which speedtest) $(speedtest --version)"
 
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

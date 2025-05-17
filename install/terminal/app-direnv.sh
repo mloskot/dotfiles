@@ -12,6 +12,6 @@ export bin_path=/usr/local/bin
 curl -sfL https://direnv.net/install.sh | sudo bash
 unset bin_path
 
-direnv --version
+echolog "Installed $(which direnv) $(direnv --version)"
 
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

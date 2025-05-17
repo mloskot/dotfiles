@@ -12,6 +12,6 @@ curl -LO "https://github.com/zellij-org/zellij/releases/download/v${VERSION}/zel
 sudo tar -xzf zellij-x86_64-unknown-linux-musl.tar.gz --directory /usr/local/bin zellij
 rm -f zellij-x86_64-unknown-linux-musl.tar.gz
 
-zellij --version
+echolog "Installed $(which zellij) $(zellij --version)"
 
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

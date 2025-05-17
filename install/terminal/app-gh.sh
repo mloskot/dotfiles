@@ -16,6 +16,6 @@ if ! command -v "gh" &>/dev/null; then
 	sudo apt install -y gh
 fi
 
-gh --version
+echolog "Installed $(which gh) $(gh --version)"
 
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
