@@ -1,10 +1,14 @@
 #!/bin/bash
+if ! command -v kubectl > /dev/null; then
+  return
+fi
 
 # shellcheck disable=SC1090
-if command -v kubectl > /dev/null; then
-    source <(kubectl completion bash)
-    complete -o default -F __start_kubectl k
-fi
+source <(kubectl completion bash)
+complete -o default -F __start_kubectl k
+
+PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH
 
 # kubectl
 alias k='kubectl'
