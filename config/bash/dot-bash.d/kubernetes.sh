@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# shellcheck disable=SC1090
+if command -v kubectl > /dev/null; then
+    source <(kubectl completion bash)
+    complete -o default -F __start_kubectl k
+fi
+
 # kubectl
 alias k='kubectl'
 alias ka='kubectl apply'
@@ -23,9 +29,3 @@ alias kns='SHELL= kubens'
 
 # K9s
 alias k9r='k9s --readonly --command pulses'
-
-# shellcheck disable=SC1090
-if command -v kubectl > /dev/null; then
-    source <(kubectl completion bash)
-    complete -o default -F __start_kubectl k
-fi
