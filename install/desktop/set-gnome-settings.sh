@@ -29,3 +29,7 @@ gsettings set org.gnome.desktop.calendar show-weekdate true
 
 echolog "Show battery percentage"
 gsettings set org.gnome.desktop.interface show-battery-percentage true
+
+echolog "Disable <super>+p bindings to switch-monitor"
+# Keep XF86Display in case there is some kind of "display" key on keyboard
+gsettings set org.gnome.mutter.keybindings switch-monitor "['XF86Display']"
