@@ -8,7 +8,8 @@ echolog "Enable fractional scaling"
 gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
 
 echo "Enable text scaling"
-gsettings set org.gnome.desktop.interface text-scaling-factor 1.2
+# TODO(mloskot): Detect high DPI screen and scale with 1.2 or similar
+gsettings set org.gnome.desktop.interface text-scaling-factor 1.0
 
 echolog "Auto-hide the Dock"
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
