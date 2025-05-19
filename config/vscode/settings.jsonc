@@ -20,7 +20,7 @@
   "editor.renderWhitespace": "all",
   "editor.roundedSelection": false,
   "editor.tabSize": 4,
-  "editor.wordBasedSuggestions": "off",
+  "editor.wordBasedSuggestions": "currentDocument",
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.wordWrap": "off",
   "explorer.compactFolders": false,
