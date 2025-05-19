@@ -24,4 +24,8 @@ echolog "Installed $(which nvim) $(nvim --version)"
 echolog "Installing ~/.config/nvim"
 [[ ! -L ~/.config/nvim ]] && ln -s ~/.dotfiles/config/nvim ~/.config/nvim
 
+echolog "Symlinking vi and vim to nvim"
+[[ ! -L ~/.local/bin/vi ]] && ln -s /opt/nvim-linux-x86_64/bin/nvim ~/.local/bin/vi
+[[ ! -L ~/.local/bin/vim ]] && ln -s /opt/nvim-linux-x86_64/bin/nvim ~/.local/bin/vim
+
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
