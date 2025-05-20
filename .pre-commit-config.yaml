@@ -1,4 +1,5 @@
 ---
+default_install_hook_types: [pre-commit, commit-msg]
 repos:
 - repo: local
   hooks:
