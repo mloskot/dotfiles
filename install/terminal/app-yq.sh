@@ -10,7 +10,7 @@ echolog "Downloading yq ${VERSION}"
 
 curl -Lo yq.tar.gz "https://github.com/mikefarah/yq/releases/download/v${VERSION}/yq_linux_amd64.tar.gz"
 sudo tar -xzf yq.tar.gz --directory /usr/local/bin --transform='s/yq_linux_amd64/yq/g'
-sudo rm -f yq.tar.gz
+rm -f yq.tar.gz
 
 echolog "Installed $(which yq) $(yq --version)"
 

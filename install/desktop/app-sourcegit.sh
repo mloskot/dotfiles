@@ -9,6 +9,6 @@ VERSION=$(curl -s "https://api.github.com/repos/sourcegit-scm/sourcegit/releases
 echolog "Downloading SourceGit ${VERSION}"
 curl -Lo sourcegit.deb "https://github.com/sourcegit-scm/sourcegit/releases/latest/download/sourcegit_${VERSION}-1_amd64.deb"
 sudo dpkg -i sourcegit.deb
-sudo rm -f sourcegit.deb
+rm -f sourcegit.deb
 
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

@@ -14,7 +14,7 @@ echolog "Downloading K9s ${VERSION}"
 
 curl -Lo k9s.deb "https://github.com/derailed/k9s/releases/latest/download/k9s_linux_amd64.deb"
 sudo dpkg -i k9s.deb
-sudo rm -f k9s.deb
+rm -f k9s.deb
 
 echolog "Installed $(which k9s) $(k9s version)"
 

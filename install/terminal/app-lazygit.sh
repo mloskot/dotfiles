@@ -14,7 +14,7 @@ echolog "Downloading lazygit ${VERSION}"
 
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${VERSION}_Linux_x86_64.tar.gz"
 sudo tar -xzf lazygit.tar.gz --directory /usr/local/bin lazygit
-sudo rm -f lazygit.tar.gz
+rm -f lazygit.tar.gz
 
 echolog "Installed $(which lazygit) $(lazygit --version)"
 
