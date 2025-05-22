@@ -5,7 +5,7 @@ source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing direnv"
 
-VERSION=$(curl -s "https://api.github.com/repos/direnv/direnv/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
+VERSION=$(curl -s "https://api.github.com/repos/direnv/direnv/releases/latest" | grep -Po '"tag_name":\s*"v?\K[0-9.]+')
 echolog "Downloading direnv ${VERSION}"
 
 export bin_path=/usr/local/bin

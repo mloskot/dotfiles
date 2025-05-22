@@ -9,7 +9,7 @@ echolog "Installing K9s"
 source ~/.dotfiles/backup.sh
 backup_file ~/.config/k9s/config.yaml
 
-VERSION=$(curl -s "https://api.github.com/repos/derailed/k9s/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
+VERSION=$(curl -s "https://api.github.com/repos/derailed/k9s/releases/latest" | grep -Po '"tag_name":\s*"v?\K[0-9.]+')
 echolog "Downloading K9s ${VERSION}"
 
 curl -Lo k9s.deb "https://github.com/derailed/k9s/releases/latest/download/k9s_linux_amd64.deb"

@@ -9,7 +9,7 @@ echolog "Installing nvim"
 source ~/.dotfiles/backup.sh
 backup_file ~/.config/nvim/init.lua
 
-VERSION=$(curl -s "https://api.github.com/repos/neovim/neovim/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
+VERSION=$(curl -s "https://api.github.com/repos/neovim/neovim/releases/latest" | grep -Po '"tag_name":\s*"v?\K[0-9.]+')
 echolog "Downloading nvim ${VERSION}"
 
 curl -Lo nvim.tar.gz "https://github.com/neovim/neovim/releases/download/v${VERSION}/nvim-linux-x86_64.tar.gz"
