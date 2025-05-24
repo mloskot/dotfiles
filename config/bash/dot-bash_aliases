@@ -28,16 +28,14 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 if command -v "eza" >/dev/null; then
-  alias l=eza
   alias l='eza -lbF --git'
-  alias ll='eza -lbGF --git'
-  alias llm='eza -lbGd --git --sort=modified'
-  alias la='eza -lbhHigUmuSa --time-style=long-iso --git --color-scale'
-  alias lx='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale'
-
-  # specialty views
+  alias ll='eza -lbhgUmu --time-style=long-iso --git --color-scale'
+  alias la='eza -lbhgUmu --all --time-style=long-iso --git --color-scale'
+  alias lx='eza -lbhHigUmuS@ --all --time-style=long-iso --git --color-scale'
+  alias lt='eza --tree --git-ignore --all'
+  alias ltd='eza --tree --git-ignore --only-dirs'
+  alias ltx='eza --tree --all'
   alias lS='eza -1'
-  alias lt='eza --tree --level=2'
   alias l.="eza -a | grep -E '^\.'"
 fi
 
