@@ -3,11 +3,13 @@ set -e
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
+echolog "Running GNOME $(gnome-shell --version)"
+
 echolog "Installing desktop prerequisites..."
 sudo apt update -y
 sudo apt upgrade -y
 
-pkgs=()
+pkgs=(gnome-shell-extension-manager)
 for pkg in "${pkgs[@]}"; do
   # If any of required tools is missing, install (or upgrade) all
   if ! command -v "${pkg}" &>/dev/null; then
