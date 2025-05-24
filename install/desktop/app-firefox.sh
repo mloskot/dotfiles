@@ -9,7 +9,7 @@ if command -v "/snap/bin/firefox" &>/dev/null; then
   echolog "Firefox already installed with snap"
 else
   echolog "Adding apt repository"
-  sudo install -d -m 0755 /etc/apt/keyrings
+  sudo install -m 0755 -d /etc/apt/keyrings
   sudo rm -r /etc/apt/keyrings/packages.mozilla.org.asc
   wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | \
     sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null

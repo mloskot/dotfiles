@@ -13,7 +13,7 @@ fi
 
 if [[ ! $KUBECTL_VERSION =~ $MINOR_VERSION ]]; then
   echolog "Adding apt repository"
-  sudo mkdir -p -m 755 /etc/apt/keyrings
+  sudo mkdir -m 755 -p /etc/apt/keyrings
   [[ -f "/etc/apt/keyrings/kubernetes-apt-keyring.gpg" ]] && sudo rm -f /etc/apt/keyrings/kubernetes-apt-keyring.gpg
   curl -fsSL "https://pkgs.k8s.io/core:/stable:/v${MINOR_VERSION}/deb/Release.key" | \
     sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
