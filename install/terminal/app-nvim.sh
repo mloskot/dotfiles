@@ -7,7 +7,7 @@ echolog "Installing nvim"
 
 # shellcheck disable=SC1090
 source ~/.dotfiles/backup.sh
-backup_file ~/.config/nvim/init.lua
+backup_file ~/.config/nvim
 
 VERSION=$(curl -s "https://api.github.com/repos/neovim/neovim/releases/latest" | grep -Po '"tag_name":\s*"v?\K[0-9.]+')
 echolog "Downloading nvim ${VERSION}"
