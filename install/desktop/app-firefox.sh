@@ -19,7 +19,7 @@ else
 
   sudo rm -f /etc/apt/sources.list.d/mozilla.list
   echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | \
-   sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
+    sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
 
 echo '
 Package: *
