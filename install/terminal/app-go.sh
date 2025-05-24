@@ -19,6 +19,6 @@ if ! command -v "go" &>/dev/null || ! go version | grep "${VERSION}" ; then
   source ~/.dotfiles/config/bash/dot-bash.d/go.sh
 fi
 
-echolog "Installed $(which go) $(go --version)"
+echolog "Installed $(which go) $(go version)"
 
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
