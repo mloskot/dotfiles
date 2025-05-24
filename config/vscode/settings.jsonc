@@ -115,15 +115,6 @@
           "command": "workbench.action.focusNextGroup"
         }
       ]
-    },
-    {
-      "before": ["<leader>", "f"],
-      "commands": [
-        {
-          "command": "periscope.search",
-          "when": "editorTextFocus"
-        }
-      ]
     }
   ],
   "vim.visualModeKeyBindings": [

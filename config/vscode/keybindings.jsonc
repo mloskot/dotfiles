@@ -73,5 +73,10 @@
   {
     "key": "ctrl+shift+alt+u",
     "command": "-find-it-faster.findWithinFilesWithType"
+  },
+  // Extension: Periscope ////////////////////////////////////////////////////
+  {
+    "key": "meta+p",
+    "command": "periscope.search"
   }
 ]
