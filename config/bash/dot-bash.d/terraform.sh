@@ -1,4 +1,6 @@
 #!/bin/bash
+if ! command -v "terraform" >/dev/null; then
+    return
+fi
 
-# Terraform
 alias tf='terraform'
