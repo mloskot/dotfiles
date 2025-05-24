@@ -6,6 +6,7 @@
 *.gpg
 *.swp
 *.tar*
+*.zip
 *secret*
 *token*
 lazy-lock.json
