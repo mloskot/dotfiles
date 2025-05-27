@@ -5,7 +5,7 @@ set -e
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 if ! command -v "python3" &>/dev/null; then
-  echolog "Installing Python 3Visual Studio Code"
+  echolog "Installing Python 3"
   sudo apt update -y
   sudo apt install -y python3
 fi
