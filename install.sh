@@ -7,6 +7,9 @@ source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 # shellcheck disable=SC1090
 source ~/.dotfiles/install/check-os.sh
 
+# shellcheck disable=SC1090
+source ~/.dotfiles/install/check-hw.sh
+
 # Desktop software and tweaks will only be installed if we're running Gnome
 if [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]]; then
   # Ensure computer does not go to sleep or lock while installing

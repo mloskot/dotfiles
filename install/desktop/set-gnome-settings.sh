@@ -4,16 +4,17 @@ set -e
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
-echolog "Enable fractional scaling"
-gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
+if [[ -n "${DOTFILES_LAPTOP}" ]]; then
+  echolog "Enable fractional scaling for small screen laptop ${DOTFILES_LAPTOP}"
+  gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
 
-echo "Enable text scaling"
-# TODO(mloskot): Detect high DPI screen and scale with 1.2 or similar
-gsettings set org.gnome.desktop.interface text-scaling-factor 1.0
+  echolog "Enable text scaling 1.2 for small screen laptop ${DOTFILES_LAPTOP}"
+  gsettings set org.gnome.desktop.interface text-scaling-factor 1.0 # 1.2 slightly bigger
 
-echolog "Auto-hide the Dock"
-gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
-gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
+  echolog "Auto-hide the Dock for small screen laptop ${DOTFILES_LAPTOP}"
+  gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
+  gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
+fi
 
 echolog "Center new windows in the middle of the screen"
 gsettings set org.gnome.mutter center-new-windows true
