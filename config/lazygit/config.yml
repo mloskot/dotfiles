@@ -3,3 +3,5 @@ git:
   disableForcePushing: true
 gui:
   sidePanelWidth: 0.4
+os:
+  editPreset: 'vscode'
