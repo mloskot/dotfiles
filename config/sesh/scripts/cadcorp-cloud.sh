@@ -47,16 +47,8 @@ tmux rename-window gitops-k9s
 tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
 
 tmux new-window
-tmux rename-window docs
-tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-docs" Enter
-
-tmux new-window
-tmux rename-window docker-images
-tmux send-keys "cd ~/cadcorp-cloud/docker-images-apps" Enter
-
-tmux new-window
-tmux rename-window machine-images
-tmux send-keys "cd ~/cadcorp-cloud/machine-images" Enter
+tmux rename-window docker
+tmux send-keys "cd ~/cadcorp-cloud" Enter
 
 tmux select-window -t 0
 
