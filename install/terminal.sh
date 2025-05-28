@@ -24,5 +24,16 @@ done
 for installer in ~/.dotfiles/install/terminal/*.sh
 do
   # shellcheck disable=SC1090
-  source "$installer" || echoerr "Running $installer failed"
+  source "$installer" && status=$? || status=$?; true
+  if [[ $status -eq 0 ]]; then
+    DOTFILES_INSTALL_SUCCESS="${DOTFILES_INSTALL_SUCCESS} $installer"
+  else
+    echoerr "Running $installer failed"
+    DOTFILES_INSTALL_FAILURE="${DOTFILES_INSTALL_FAILURE} $installer"
+  fi
 done
+
+if [[ -z "${DOTFILES_INSTALL_SH}" ]]; then
+  echolog "Successful installers: ${DOTFILES_INSTALL_SUCCESS}"
+  echolog "Failed installers: ${DOTFILES_INSTALL_FAILURE}"
+fi

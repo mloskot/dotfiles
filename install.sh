@@ -1,5 +1,8 @@
 #!/bin/bash
 set -e
+# Flags installation executed using the root install.sh
+DOTFILES_INSTALL_SH="${BASH_SOURCE[0]}"
+
 # shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
@@ -34,3 +37,10 @@ else
   # shellcheck disable=SC1090
   source ~/.dotfiles/install/terminal.sh
 fi
+
+if [[ -n "${DOTFILES_INSTALL_SH}" ]]; then
+  echolog "Successful installers: ${DOTFILES_INSTALL_SUCCESS}"
+  echolog "Failed installers: ${DOTFILES_INSTALL_FAILURE}"
+fi
+
+echolog "Done"
