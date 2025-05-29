@@ -137,6 +137,9 @@
       ]
     }
   ],
+  "vs-kubernetes": {
+    "disable-linters": ["resource-limits"]
+  },
   "window.restoreWindows": "none",
   "workbench.activityBar.location": "hidden",
   "workbench.colorTheme": "Catppuccin Macchiato",
