@@ -28,15 +28,15 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 if command -v "eza" >/dev/null; then
-  alias l='eza -lbF --git'
-  alias ll='eza -lbhgUmu --time-style=long-iso --git --color-scale'
-  alias la='eza -lbhgUmu --all --time-style=long-iso --git --color-scale'
-  alias lx='eza -lbhHigUmuS@ --all --time-style=long-iso --git --color-scale'
-  alias lt='eza --tree --git-ignore --all'
-  alias ltd='eza --tree --git-ignore --only-dirs'
-  alias ltx='eza --tree --all'
-  alias lS='eza -1'
-  alias l.="eza -a | grep -E '^\.'"
+  alias l='pwd && eza -lbF --git'
+  alias ll='pwd && eza -lbhgUmu --time-style=long-iso --git --color-scale'
+  alias la='pwd && eza -lbhgUmu --all --time-style=long-iso --git --color-scale'
+  alias lx='pwd && eza -lbhHigUmuS@ --all --time-style=long-iso --git --color-scale'
+  alias lt='pwd && eza --tree --git-ignore --all'
+  alias ltd='pwd && eza --tree --git-ignore --only-dirs'
+  alias ltx='pwd && eza --tree --all'
+  alias lS='pwd && eza -1'
+  alias l.="pwd && eza -a | grep -E '^\.'"
 fi
 
 # Editors
