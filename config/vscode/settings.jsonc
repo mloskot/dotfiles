@@ -138,7 +138,10 @@
     }
   ],
   "vs-kubernetes": {
-    "disable-linters": ["resource-limits"]
+    "disable-linters": [
+      "resource-limits"
+    ],
+    "vs-kubernetes.crd-code-completion": "enabled"
   },
   "window.restoreWindows": "none",
   "workbench.activityBar.location": "hidden",
