@@ -9,6 +9,11 @@ echolog "Installing lazygit"
 source ~/.dotfiles/backup.sh
 backup_file ~/.config/lazygit/config.yml
 
+if ! command -v "xclip" >/dev/null; then
+  sudo apt update -y
+  sudo apt install -y xclip # for copying commit attributes to clipboard
+fi
+
 VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name":\s*"v?\K[0-9.]+')
 echolog "Downloading lazygit ${VERSION}"
 
