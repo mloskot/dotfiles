@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# shellcheck disable=SC1090
 source ~/.dotfiles/log.sh
 
 if [ ! -f /etc/os-release ]; then

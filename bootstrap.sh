@@ -20,5 +20,4 @@ if [[ "${DOTFILES_REF:-main}" != "main" ]]; then
 fi
 
 echo "Installation starting..."
-# shellcheck disable=SC1090
 source ~/.dotfiles/install.sh

@@ -1,11 +1,9 @@
 #!/bin/bash
 set -e
-# shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing jj"
 
-# shellcheck disable=SC1090
 source ~/.dotfiles/backup.sh
 backup_file ~/.config/jj
 

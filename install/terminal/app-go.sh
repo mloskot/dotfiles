@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-# shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing go"
@@ -15,8 +14,7 @@ if ! command -v "go" &>/dev/null || ! go version | grep "${VERSION}" ; then
   sudo tar -xzf go.tar.gz --directory /opt
   rm -f go.tar.gz
 
-  # shellcheck disable=SC1090
-  source ~/.dotfiles/config/bash/dot-bash.d/go.sh
+    source ~/.dotfiles/config/bash/dot-bash.d/go.sh
 fi
 
 echolog "Installed $(which go) $(go version)"

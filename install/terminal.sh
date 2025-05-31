@@ -1,6 +1,5 @@
 #!/bin/bash
-set -e
-# shellcheck disable=SC1090
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 PATH=$HOME/.local/bin:$PATH
@@ -23,8 +22,7 @@ done
 # Run terminal installers
 for installer in ~/.dotfiles/install/terminal/*.sh
 do
-  # shellcheck disable=SC1090
-  source "$installer" && status=$? || status=$?; true
+    source "$installer" && status=$? || status=$?; true
   if [[ $status -eq 0 ]]; then
     DOTFILES_INSTALL_SUCCESS="${DOTFILES_INSTALL_SUCCESS} $installer"
   else

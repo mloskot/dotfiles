@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-# shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 MINOR_VERSION="${MINOR_VERSION:-1.31}"

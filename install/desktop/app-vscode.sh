@@ -1,11 +1,9 @@
 #!/bin/bash
 set -e
-# shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing Visual Studio Code"
 
-# shellcheck disable=SC1090
 source ~/.dotfiles/backup.sh
 backup_file ~/.config/Code/User/keybindings.json
 backup_file ~/.config/Code/User/settings.json

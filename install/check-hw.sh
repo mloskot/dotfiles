@@ -5,7 +5,6 @@
 # - Dell Precision T7xxx
 # - WSL
 
-# shellcheck disable=SC1090
 source ~/.dotfiles/log.sh
 
 DOTFILES_HW_MODEL=$(hostnamectl status --json=short | jq -r '.HardwareModel')

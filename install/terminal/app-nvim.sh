@@ -1,11 +1,9 @@
 #!/bin/bash
 set -e
-# shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing nvim"
 
-# shellcheck disable=SC1090
 source ~/.dotfiles/backup.sh
 backup_file ~/.config/nvim
 
@@ -17,7 +15,6 @@ sudo rm -rf /opt/nvim
 sudo tar -xzf nvim.tar.gz --directory /opt
 rm -f nvim.tar.gz
 
-# shellcheck disable=SC1090
 source ~/.bash.d/nvim.sh
 echolog "Installed $(which nvim) $(nvim --version)"
 

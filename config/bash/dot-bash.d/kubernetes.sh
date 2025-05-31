@@ -3,7 +3,6 @@ if ! command -v kubectl > /dev/null; then
   return
 fi
 
-# shellcheck disable=SC1090
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
 

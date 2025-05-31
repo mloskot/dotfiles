@@ -4,3 +4,5 @@ source-path=bash/.bash.d
 
 # Allow opening any 'source'd file, even if not specified as input
 external-sources=true
+
+disable=SC1090

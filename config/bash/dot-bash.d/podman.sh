@@ -7,7 +7,6 @@ if ! command -v "docker" >/dev/null; then
   ln -s "$(command -v podman)" "$HOME/.local/bin/docker"
 fi
 
-# shellcheck disable=SC1090
 source <(podman completion bash)
 
 alias p='podman'

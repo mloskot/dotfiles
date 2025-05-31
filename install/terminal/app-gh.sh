@@ -2,7 +2,6 @@
 set -e
 echolog "Installing gh"
 
-# shellcheck disable=SC1090
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 if ! command -v "gh" &>/dev/null; then

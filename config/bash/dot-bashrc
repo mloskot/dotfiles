@@ -36,7 +36,6 @@ if [ -d ~/.bash.d ]; then
   for f in ~/.bash.d/*.sh; do
     if [ -r $f ]; then
       #echo "Loading $f"
-      # shellcheck disable=SC1090
       source "$f"
     fi
   done
@@ -45,7 +44,6 @@ fi
 
 if [ -f ~/.bash_aliases ]; then
   #echo "Loading ~/.bash_aliases"
-  # shellcheck disable=SC1090
   source ~/.bash_aliases
 fi
 
@@ -65,7 +63,6 @@ fi
 . "$HOME/.atuin/bin/env"
 
 if [[ -f ~/.bash-preexec.sh ]]; then
-  # shellcheck disable=SC1090
   source ~/.bash-preexec.sh
 fi
 eval "$(atuin init bash)"
