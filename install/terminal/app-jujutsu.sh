@@ -28,4 +28,6 @@ unzip -j jjui.zip "jjui-${VERSION}-linux-amd64"
 rm jjui.zip
 mv "jjui-${VERSION}-linux-amd64" ~/.local/bin/jjui
 
+echolog "Installed $(which jj) $(jj --version)"
+
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
