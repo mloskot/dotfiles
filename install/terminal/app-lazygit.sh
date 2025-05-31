@@ -7,7 +7,7 @@ echolog "Installing lazygit"
 
 # shellcheck disable=SC1090
 source ~/.dotfiles/backup.sh
-backup_file ~/.config/lazygit/config.yml
+backup_file ~/.config/lazygit/config.yaml
 
 if ! command -v "xclip" >/dev/null; then
   sudo apt update -y
@@ -23,8 +23,10 @@ rm -f lazygit.tar.gz
 
 echolog "Installed $(which lazygit) $(lazygit --version)"
 
-echolog "Installing ~/.config/lazygit/config.yml"
+echolog "Installing ~/.config/lazygit/config.yaml"
 mkdir -p ~/.config/lazygit
-[[ ! -L ~/.config/lazygit/config.yml ]] && ln -s ~/.dotfiles/config/lazygit/config.yml ~/.config/lazygit/config.yml
+if [[ ! -L ~/.config/lazygit/config.yaml ]]; then
+  ln -s ~/.dotfiles/config/lazygit/config.yaml ~/.config/lazygit/config.yaml
+fi
 
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
