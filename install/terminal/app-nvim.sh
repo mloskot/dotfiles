@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing nvim"
@@ -16,7 +16,9 @@ sudo tar -xzf nvim.tar.gz --directory /opt
 rm -f nvim.tar.gz
 
 source ~/.bash.d/nvim.sh
-echolog "Installed $(which nvim) $(nvim --version)"
+installed_cmd="$(command -v nvim)"
+installed_ver="$(nvim --version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"
 
 echolog "Installing ~/.config/nvim"
 [[ ! -L ~/.config/nvim ]] && ln -s ~/.dotfiles/config/nvim ~/.config/nvim
@@ -24,5 +26,3 @@ echolog "Installing ~/.config/nvim"
 echolog "Symlinking vi and vim to nvim"
 [[ ! -L ~/.local/bin/vi ]] && ln -s /opt/nvim-linux-x86_64/bin/nvim ~/.local/bin/vi
 [[ ! -L ~/.local/bin/vim ]] && ln -s /opt/nvim-linux-x86_64/bin/nvim ~/.local/bin/vim
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing moar"
@@ -11,6 +11,6 @@ curl -Lo moar "https://github.com/walles/moar/releases/download/v${VERSION}/moar
 mv moar ~/.local/bin
 chmod +x ~/.local/bin/moar
 
-echolog "Installed $(which moar) $(moar --version)"
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
+installed_cmd="$(command -v moar)"
+installed_ver="$(moar --version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"

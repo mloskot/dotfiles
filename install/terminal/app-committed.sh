@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing committed"
@@ -11,6 +11,6 @@ curl -Lo committed.tar.gz "https://github.com/crate-ci/committed/releases/downlo
 tar -xzf committed.tar.gz --directory ~/.local/bin ./committed
 rm -f committed.tar.gz
 
-echolog "Installed $(which committed) $(committed --version)"
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
+installed_cmd="$(command -v committed)"
+installed_ver="$(committed --version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"

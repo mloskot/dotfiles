@@ -1,11 +1,11 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing lazydocker"
 
 curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
 
-echolog "Installed $(which lazydocker) $(lazydocker --version)"
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
+installed_cmd="$(command -v lazydocker)"
+installed_ver="$(lazydocker --version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"

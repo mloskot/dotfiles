@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 echolog "Installing gh"
 
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
@@ -16,6 +16,6 @@ if ! command -v "gh" &>/dev/null; then
   sudo apt install -y gh
 fi
 
-echolog "Installed $(which gh) $(gh --version)"
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
+installed_cmd="$(command -v gh)"
+installed_ver="$(gh --version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"

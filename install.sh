@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 # Flags installation executed using the root install.sh
 DOTFILES_INSTALL_SH="${BASH_SOURCE[0]}"
 

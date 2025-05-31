@@ -15,7 +15,7 @@ if ! git show-branch "${BR}" > /dev/null 2>&1; then
     echo "${ME} Branch ${BR} not found. Aborting."
     exit 1
 fi
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 git fetch origin
 echo "${ME} Checking out PR ${PR}"
 gh pr checkout "${PR}"

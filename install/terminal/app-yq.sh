@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing yq"
@@ -11,6 +11,6 @@ curl -Lo yq.tar.gz "https://github.com/mikefarah/yq/releases/download/v${VERSION
 sudo tar -xzf yq.tar.gz --directory /usr/local/bin --transform='s/yq_linux_amd64/yq/g'
 rm -f yq.tar.gz
 
-echolog "Installed $(which yq) $(yq --version)"
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
+installed_cmd="$(command -v yq)"
+installed_ver="$(yq --version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"

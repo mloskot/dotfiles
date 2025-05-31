@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing SOPS CLI"
@@ -11,6 +11,6 @@ curl -Lo sops.deb "https://github.com/getsops/sops/releases/download/v${VERSION}
 sudo dpkg -i sops.deb
 rm -f sops.deb
 
-echolog "Installed $(which sops) $(sops --version)"
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
+installed_cmd="$(command -v sops)"
+installed_ver="$(sops --version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"

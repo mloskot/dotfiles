@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing Docker Engine"
@@ -20,7 +20,9 @@ if ! command -v "docker" &>/dev/null; then
   sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 fi
 
-echolog "Installed $(which docker) $(docker --version)"
+installed_cmd="$(command -v docker)"
+installed_ver="$(docker --version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"
 
 echolog "Setting up Docker to start on boot with systemd"
 sudo systemctl enable docker.service

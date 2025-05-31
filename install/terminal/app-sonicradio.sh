@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing sonicradio"
@@ -12,5 +12,3 @@ tar -xzf sonicradio.tar.gz --directory ~/.local/bin sonicradio
 rm -f sonicradio.tar.gz
 
 command -v sonicradio # no --version
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

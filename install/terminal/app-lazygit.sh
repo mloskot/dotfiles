@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing lazygit"
@@ -19,12 +19,12 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 sudo tar -xzf lazygit.tar.gz --directory /usr/local/bin lazygit
 rm -f lazygit.tar.gz
 
-echolog "Installed $(which lazygit) $(lazygit --version)"
+installed_cmd="$(command -v lazygit)"
+installed_ver="$(lazygit --version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"
 
 echolog "Installing ~/.config/lazygit/config.yaml"
 mkdir -p ~/.config/lazygit
 if [[ ! -L ~/.config/lazygit/config.yaml ]]; then
   ln -s ~/.dotfiles/config/lazygit/config.yaml ~/.config/lazygit/config.yaml
 fi
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

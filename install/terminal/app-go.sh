@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing go"
@@ -17,6 +17,6 @@ if ! command -v "go" &>/dev/null || ! go version | grep "${VERSION}" ; then
     source ~/.dotfiles/config/bash/dot-bash.d/go.sh
 fi
 
-echolog "Installed $(which go) $(go version)"
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
+installed_cmd="$(command -v go)"
+installed_ver="$(go version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing eza"
@@ -18,6 +18,6 @@ if ! command -v "eza" &>/dev/null; then
   sudo apt install -y eza
 fi
 
-echolog "Installed $(which eza) $(fastfetch --version)"
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
+installed_cmd="$(command -v eza)"
+installed_ver="$(eza --version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"

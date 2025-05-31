@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 MINOR_VERSION="${MINOR_VERSION:-1.31}"
@@ -32,12 +32,15 @@ if [[ ! $KUBECTL_VERSION =~ $MINOR_VERSION ]]; then
   rm ./krew*
 fi
 
-echolog "Installed $(which kubectl) $(kubectl version --client)"
+installed_cmd="$(command -v kubectl)"
+installed_ver="$(kubectl version --client)"
+echolog "Installed ${installed_cmd} ${installed_ver}"
 
 PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-echolog "Installed $(which kubectl-krew)\n$(kubectl krew version)"
+
+installed_cmd="$(command -v kubectl-krew)"
+installed_ver="$(kubectl krew version)"
+echolog "Installed ${installed_cmd}\n${installed_ver}"
 
 echolog "Installing Krew plugin: grep"
 kubectl krew install grep
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing gotask"
@@ -11,6 +11,6 @@ curl -Lo task.deb "https://github.com/go-task/task/releases/download/v${VERSION}
 sudo dpkg -i task.deb
 rm -f task.deb
 
-echolog "Installed $(which task) $(task --version)"
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
+installed_cmd="$(command -v task)"
+installed_ver="$(task --version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"

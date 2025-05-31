@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing git"
@@ -12,9 +12,9 @@ if ! command -v "git" &>/dev/null; then
   sudo apt install -y git
 fi
 
-echolog "Installed $(which git) $(git --version)"
+installed_cmd="$(command -v git)"
+installed_ver="$(git --version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"
 
 echolog "Installing ~/.gitconfig"
 [[ ! -L ~/.gitconfig ]] && ln -s ~/.dotfiles/config/git/dot-gitconfig ~/.gitconfig
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

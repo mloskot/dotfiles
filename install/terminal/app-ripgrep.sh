@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing ripgrep"
@@ -11,6 +11,6 @@ curl -Lo ripgrep.deb "https://github.com/BurntSushi/ripgrep/releases/download/${
 sudo dpkg -i ripgrep.deb
 rm -f ripgrep.deb
 
-echolog "Installed $(which rg) $(rg --version)"
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
+installed_cmd="$(command -v rg)"
+installed_ver="$(rg --version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"

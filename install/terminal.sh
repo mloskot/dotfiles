@@ -22,7 +22,7 @@ done
 # Run terminal installers
 for installer in ~/.dotfiles/install/terminal/*.sh
 do
-    source "$installer" && status=$? || status=$?; true
+  source "$installer" && status=$? || status=$?; true
   if [[ $status -eq 0 ]]; then
     DOTFILES_INSTALL_SUCCESS="${DOTFILES_INSTALL_SUCCESS} $installer"
   else

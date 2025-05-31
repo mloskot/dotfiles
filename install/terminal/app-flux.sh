@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing Flux CLI ${FLUX_VERSION}"
@@ -12,7 +12,6 @@ fi
 
 curl -s https://fluxcd.io/install.sh | FLUX_VERSION="${FLUX_VERSION}" bash -s ~/.local/bin
 
-
-echolog "Installed $(which flux) $(flux version --client)"
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
+installed_cmd="$(command -v flux)"
+installed_ver="$(flux version --client)"
+echolog "Installed ${installed_cmd} ${installed_ver}"

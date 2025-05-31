@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing bat"
@@ -11,6 +11,6 @@ curl -Lo bat.deb "https://github.com/sharkdp/bat/releases/download/v${VERSION}/b
 sudo dpkg -i bat.deb
 rm -f bat.deb
 
-echolog "Installed $(which bat) $(bat --version)"
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
+installed_cmd="$(command -v bat)"
+installed_ver="$(bat --version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing Slack"
@@ -9,5 +9,3 @@ echolog "Downloading Slack ${VERSION}"
 curl -Lo slack.deb "https://downloads.slack-edge.com/desktop-releases/linux/x64/${VERSION}/slack-desktop-${VERSION}-amd64.deb"
 sudo dpkg -i slack.deb
 rm -f slack.deb
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

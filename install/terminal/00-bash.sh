@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
@@ -16,5 +16,3 @@ echolog "Installing ~/.bash_aliases"
 
 echolog "Installing ~/.bash.d"
 [[ ! -L ~/.bash.d ]] && ln -s ~/.dotfiles/config/bash/dot-bash.d ~/.bash.d
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

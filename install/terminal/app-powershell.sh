@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing PowerShell"
@@ -17,6 +17,6 @@ curl -Lo powershell.deb "https://github.com/rhubarb-geek-nz/powershell-ubuntu/re
 sudo dpkg -i powershell.deb
 rm -f powershell.deb
 
-echolog "Installed $(which pwsh) $(pwsh --version)"
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
+installed_cmd="$(command -v pwsh)"
+installed_ver="$(pwsh --version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"

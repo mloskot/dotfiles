@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 echolog "Installing sesh"
 
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
@@ -11,9 +11,9 @@ curl -Lo sesh.tar.gz "https://github.com/joshmedeski/sesh/releases/download/v${V
 sudo tar -xzf sesh.tar.gz --directory /usr/local/bin sesh
 rm -f sesh.tar.gz
 
-echolog "Installed $(which sesh) $(sesh --version)"
+installed_cmd="$(command -v sesh)"
+installed_ver="$(sesh --version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"
 
 echolog "Installing ~/.config/sesh"
 [[ ! -L ~/.config/sesh ]] && ln -s ~/.dotfiles/config/sesh ~/.config/sesh
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0

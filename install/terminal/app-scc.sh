@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing scc (sloc cloc and code)"
@@ -11,6 +11,6 @@ curl -Lo scc.tar.gz "https://github.com/boyter/scc/releases/download/v${VERSION}
 sudo tar -xzf scc.tar.gz --directory ~/.local/bin scc
 rm -f scc.tar.gz
 
-echolog "Installed $(which scc) $(scc --version)"
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
+installed_cmd="$(command -v scc)"
+installed_ver="$(scc --version)"
+echolog "Installed ${installed_cmd} ${installed_ver}"

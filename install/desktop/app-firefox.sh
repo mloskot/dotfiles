@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing Firefox"
@@ -31,5 +31,3 @@ Pin-Priority: 1000
 fi
 
 firefox --version
-
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && return 0
