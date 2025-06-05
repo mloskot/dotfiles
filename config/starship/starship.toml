@@ -6,7 +6,10 @@ $os\
 $username\
 [](bg:peach fg:surface0)\
 $directory\
-[](fg:peach bg:green)\
+[](bg:yellow fg:peach)\
+$env_var\
+$mise\
+[](fg:yellow bg:green)\
 $git_branch\
 $git_status\
 [](fg:green bg:teal)\
@@ -100,6 +103,22 @@ truncation_symbol = "…/"
 "Downloads" = " "
 "Music" = "󰝚 "
 "Pictures" = " "
+
+[env_var]
+
+[env_var.MISE]
+variable = "MISE_ENV"
+format = '[[$symbol $env_value ](fg:base bg:yellow)]($style)'
+style = "bg:teal"
+symbol = ""
+
+[mise]
+disabled = false
+format = '[[$symbol](fg:base bg:yellow)]($style)'
+style = "bg:green"
+symbol = "󱁤"
+healthy_symbol = ""
+unhealthy_symbol = ""
 
 [git_branch]
 format = '[[ $symbol $branch ](fg:base bg:green)]($style)'
