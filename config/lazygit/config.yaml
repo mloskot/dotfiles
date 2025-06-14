@@ -2,6 +2,7 @@
 git:
   disableForcePushing: true
 gui:
+  commandLogSize: 16
   sidePanelWidth: 0.4
 os:
   editPreset: 'vscode'
