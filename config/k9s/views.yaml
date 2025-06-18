@@ -1,0 +1,23 @@
+views:
+  v1/pods@customer-*:
+    sortColumn: AGE:asc
+    columns:
+    - AGE
+    - STATUS
+    - READY
+    - RESTARTS
+    - NAME
+    - NAMESPACE
+    - UCID:.metadata.annotations.cadcorp\.cloud/ucid
+    - NODE
+  customers:
+    sortColumn: AGE:asc
+    columns:
+    - AGE
+    - STATUS
+    - READY
+    - RESTARTS
+    - NAME
+    - NAMESPACE
+    - UCID:.metadata.annotations.cadcorp\.cloud/ucid
+    - NODE
