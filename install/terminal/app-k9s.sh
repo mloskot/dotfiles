@@ -5,7 +5,9 @@ source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 echolog "Installing K9s"
 
 source ~/.dotfiles/backup.sh
+backup_file ~/.config/k9s/aliases.yaml
 backup_file ~/.config/k9s/config.yaml
+backup_file ~/.config/k9s/views.yaml
 
 VERSION=$(curl -s "https://api.github.com/repos/derailed/k9s/releases/latest" | grep -Po '"tag_name":\s*"v?\K[0-9.]+')
 echolog "Downloading K9s ${VERSION}"
@@ -18,9 +20,13 @@ installed_cmd="$(command -v k9s)"
 installed_ver="$(k9s version)"
 echolog "Installed ${installed_cmd} ${installed_ver}"
 
-echolog "Installing ~/.config/k9s/config.yaml"
 mkdir -p ~/.config/k9s
+echolog "Installing ~/.config/k9s/aliases.yaml"
+[[ ! -L ~/.config/k9s/aliases.yaml ]] && ln -s ~/.dotfiles/config/k9s/aliases.yaml ~/.config/k9s/aliases.yaml
+echolog "Installing ~/.config/k9s/config.yaml"
 [[ ! -L ~/.config/k9s/config.yaml ]] && ln -s ~/.dotfiles/config/k9s/config.yaml ~/.config/k9s/config.yaml
+echolog "Installing ~/.config/k9s/views.yaml"
+[[ ! -L ~/.config/k9s/views.yaml ]] && ln -s ~/.dotfiles/config/k9s/views.yaml ~/.config/k9s/views.yaml
 
 echolog "Installing Catppuccing for K9s"
 K9S_SKINS="${XDG_CONFIG_HOME:-$HOME/.config}/k9s/skins"
