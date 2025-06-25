@@ -1,4 +1,18 @@
 views:
+  v1/pods:
+    sortColumn: AGE:asc
+    columns:
+    - AGE
+    - NAMESPACE
+    - NAME
+    - PF
+    - READY
+    - STATUS
+    - RESTARTS
+    - NODE
+    - IP
+    - CPU
+    - MEM
   v1/pods@customer-*:
     sortColumn: AGE:asc
     columns:
