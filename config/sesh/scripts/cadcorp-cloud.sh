@@ -45,6 +45,7 @@ tmux send-keys "lazygit" Enter
 tmux new-window
 tmux rename-window gitops-k9s
 tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
+tmux send-keys "sleep 3" Enter
 tmux send-keys "k9s" Enter
 
 tmux new-window
