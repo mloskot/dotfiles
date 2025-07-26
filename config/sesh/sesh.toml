@@ -14,9 +14,15 @@ path = "~/cadcorp-cloud"
 startup_command = "~/.config/sesh/scripts/cadcorp-cloud-tst.sh"
 
 [[session]]
-name = "cadcorp-cloud-watch"
+name = "cadcorp-cloud-watch-events"
 path = "~/cadcorp-cloud"
-startup_command = "~/.config/sesh/scripts/cadcorp-cloud-watch.sh"
+startup_command = "~/.config/sesh/scripts/cadcorp-cloud-watch-events.sh"
+
+[[session]]
+name = "cadcorp-cloud-watch-pods"
+path = "~/cadcorp-cloud"
+startup_command = "~/.config/sesh/scripts/cadcorp-cloud-watch-pods.sh"
+
 
 [[session]]
 name = "dotfiles"
