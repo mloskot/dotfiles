@@ -1,8 +1,6 @@
 #!/bin/bash
 
 tmux rename-window kubectl
-
-
 tmux send-keys "cd ~/cadcorp-cloud" Enter
 
 for CC_ENV in prd svc tst ; do
@@ -20,12 +18,16 @@ for CC_ENV in prd svc tst ; do
   fi
   tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV}" Enter
   tmux send-keys "direnv allow" Enter
-  tmux send-keys "kwall" Enter
+  tmux send-keys "viddy --interval 3 --differences kubectl get pods -A" Enter
 
+  unset AZURE_CONFIG_DIR
   unset az_tenant_id
 done
 
 tmux select-pane -t 0
-tmux select-layout main-horizontal
-H=$(tmux display -p '#{window_height}')
-tmux resize-pane -t 0 -y $((H * 2 / 3))
+tmux select-layout main-vertical
+W=$(tmux display -p '#{window_width}')
+W=$((W / 2))
+P=$((W / 20))
+W=$((W + P))
+tmux resize-pane -t 0 -x "${W}"
