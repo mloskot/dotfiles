@@ -1,12 +1,12 @@
 #!/bin/bash
+source ~/.dotfiles/backup.sh
+backup_file ~/.config/Code/User/keybindings.json
+backup_file ~/.config/Code/User/settings.json
+
 source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing Visual Studio Code"
-
-source ~/.dotfiles/backup.sh
-backup_file ~/.config/Code/User/keybindings.json
-backup_file ~/.config/Code/User/settings.json
 
 if ! command -v "code" &>/dev/null; then
   echolog "Adding apt repository"
@@ -31,6 +31,6 @@ code --version
 mkdir -p ~/.config/Code/User
 
 echolog "Installing ~/.config/Code/User/settings.json"
-[[ ! -L ~/.config/Code/User/settings.json ]] && ln -s ~/.dotfiles/config/vscode/settings.jsonc ~/.config/Code/User/settings.json
+[[ ! -L ~/.config/Code/User/settings.json ]] && ln -s ~/.dotfiles/config/vscode/settings.jsonc ~/.config/Code/User/settings.json || true
 echolog "Installing ~/.config/Code/User/keybindings.json"
-[[ ! -L ~/.config/Code/User/keybindings.json ]] && ln -s ~/.dotfiles/config/vscode/keybindings.jsonc ~/.config/Code/User/keybindings.json
+[[ ! -L ~/.config/Code/User/keybindings.json ]] && ln -s ~/.dotfiles/config/vscode/keybindings.jsonc ~/.config/Code/User/keybindings.json || true

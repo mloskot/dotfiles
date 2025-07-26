@@ -1,11 +1,11 @@
 #!/bin/bash
+source ~/.dotfiles/backup.sh
+backup_file ~/.config/lazygit/config.yaml
+
 source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing lazygit"
-
-source ~/.dotfiles/backup.sh
-backup_file ~/.config/lazygit/config.yaml
 
 if ! command -v "xclip" >/dev/null; then
   sudo apt update -y
@@ -25,6 +25,4 @@ echolog "Installed ${installed_cmd} ${installed_ver}"
 
 echolog "Installing ~/.config/lazygit/config.yaml"
 mkdir -p ~/.config/lazygit
-if [[ ! -L ~/.config/lazygit/config.yaml ]]; then
-  ln -s ~/.dotfiles/config/lazygit/config.yaml ~/.config/lazygit/config.yaml
-fi
+[[ ! -L ~/.config/lazygit/config.yaml ]] && ln -s ~/.dotfiles/config/lazygit/config.yaml ~/.config/lazygit/config.yaml || true
