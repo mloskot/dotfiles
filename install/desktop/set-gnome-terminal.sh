@@ -1,6 +1,5 @@
 #!/bin/bash
 source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
-
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 if ! command -v "python3" &>/dev/null; then
