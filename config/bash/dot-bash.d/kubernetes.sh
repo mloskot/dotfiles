@@ -9,7 +9,13 @@ complete -o default -F __start_kubectl k
 PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH
 
-# kubectl
+# K9s
+alias k9r='k9s --readonly --command pulses'
+
+# kubectl, unless fubectl exists
+if test -f ~/.config/fubectl/fubectl.source; then
+  return
+fi
 alias k='kubectl'
 alias ka='kubectl apply'
 alias kci='kubectl cluster-info'
@@ -30,6 +36,3 @@ alias kx='kubectl exec -i -t'
 # Unset SHELL for Git Bash, see https://github.com/ahmetb/kubectx/issues/330#issuecomment-1506657091
 alias kctx='SHELL= kubectx'
 alias kns='SHELL= kubens'
-
-# K9s
-alias k9r='k9s --readonly --command pulses'
