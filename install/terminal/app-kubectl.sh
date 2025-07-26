@@ -2,7 +2,7 @@
 source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
-MINOR_VERSION="${MINOR_VERSION:-1.31}"
+MINOR_VERSION="${MINOR_VERSION:-1.33}"
 echolog "Installing kubectl ${MINOR_VERSION}"
 
 if command -v "kubectl" &>/dev/null; then
