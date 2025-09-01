@@ -33,5 +33,5 @@ if [[ -d "$HOME/.docker" ]]; then
   sudo chown "$USER":"$USER" "$HOME/.docker" -R
   sudo chmod g+rwx "$HOME/.docker" -R
 fi
-sudo groupadd docker
+sudo groupadd --force docker
 sudo usermod -aG docker "${USER}"
