@@ -1,8 +1,8 @@
 #!/bin/bash
 source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
-echolog "Installing gh"
-
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+
+echolog "Installing gh"
 
 if ! command -v "gh" &>/dev/null; then
   echolog "Adding apt repository"
