@@ -11,8 +11,9 @@ source ~/.dotfiles/install/check-hw.sh
 # Desktop software and tweaks will only be installed if we're running Gnome
 if [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]]; then
   # Ensure computer does not go to sleep or lock while installing
-  gsettings set org.gnome.desktop.screensaver lock-enabled false
+  idle_delay=$(gsettings get org.gnome.desktop.session idle-delay | cut -d ' ' -f 2)
   gsettings set org.gnome.desktop.session idle-delay 0
+  gsettings set org.gnome.desktop.screensaver lock-enabled false
 
   echolog "Installing terminal and desktop tools..."
 
@@ -23,8 +24,8 @@ if [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]]; then
   source ~/.dotfiles/install/desktop.sh
 
   # Revert to normal idle and lock settings
+  gsettings set org.gnome.desktop.session idle-delay "${idle_delay}"
   gsettings set org.gnome.desktop.screensaver lock-enabled true
-  gsettings set org.gnome.desktop.session idle-delay 300
 else
   echolog "Only installing terminal tools..."
   source ~/.dotfiles/install/terminal.sh
