@@ -44,3 +44,6 @@ echolog "Installed ${installed_cmd}\n${installed_ver}"
 
 echolog "Installing Krew plugin: grep"
 kubectl krew install grep
+
+echolog "Installing Krew plugin: ktop"
+kubectl krew install ktop
