@@ -19,6 +19,8 @@ for pkg in "${pkgs[@]}"; do
 done
 
 # Run desktop installers
+echolog "Installing desktop applications..."
+
 for installer in ~/.dotfiles/install/desktop/*.sh
 do
     source "$installer" && status=$? || status=$?; true
