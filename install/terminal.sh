@@ -20,6 +20,8 @@ for pkg in "${pkgs[@]}"; do
 done
 
 # Run terminal installers
+echolog "Installing terminal applications..."
+
 for installer in ~/.dotfiles/install/terminal/*.sh
 do
   source "$installer" && status=$? || status=$?; true
