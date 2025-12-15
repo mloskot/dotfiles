@@ -17,8 +17,10 @@ if [[ ! $CT_VERSION =~ $VERSION ]]; then
 
   curl -Lo chart-testing.tar.gz "https://github.com/helm/chart-testing/releases/download/v${VERSION}/chart-testing_${VERSION}_linux_amd64.tar.gz"
   tar -xzf chart-testing.tar.gz --directory ~/.local/bin ct
-  mkdir ~/.ct
-  sudo tar -xzf chart-testing.tar.gz --directory ~/.ct etc
+  sudo rm -rf ~/.ct
+  sudo tar -xzf chart-testing.tar.gz --directory . etc
+  sudo chown -R "${USER}" ./etc
+  mv ./etc ~/.ct
   rm -f chart-testing.tar.gz
 fi
 
