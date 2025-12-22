@@ -12,7 +12,12 @@
     "key": "ctrl+shift+s",
     "command": "workbench.action.toggleSidebarVisibility"
   },
-  // ctrl+...+up/down resize terminal view horizontally ///////////////////////
+  // shortcut to maximize panel //////////////////////////////////////////////
+  {
+    "key": "ctrl+meta+`",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  // ctrl+...+up/down resize terminal view horizontally //////////////////////
   {
     "key": "ctrl+shift+meta+up",
     "command": "workbench.action.terminal.resizePaneUp"
