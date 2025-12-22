@@ -12,3 +12,9 @@ function echoerr
     echo -n "$(printf '%(%F %T)T') ${caller} " >&2
     echo -e "\033[31;1mERROR:\033[0m $*" >&2
 }
+
+function echowrn
+{
+    echo -n "$(printf '%(%F %T)T') ${caller} " >&2
+    echo -e "\033[35;1mERROR:\033[0m $*" >&2
+}

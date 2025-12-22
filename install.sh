@@ -46,13 +46,13 @@ fi
 if [[ $arg_terminal -gt 0 ]]; then
   source ~/.dotfiles/install/terminal.sh
 else
-  echolog "Skipping terminal applications..."
+  echowrn "Skipping terminal applications..."
 fi
 
 if [[ $arg_desktop -gt 0 ]]; then
   source ~/.dotfiles/install/desktop.sh
 else
-  echolog "Skipping desktop applications..."
+  echowrn "Skipping desktop applications..."
 fi
 
 if [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]]; then
@@ -63,7 +63,7 @@ fi
 
 if [[ -n "${DOTFILES_INSTALL_SH}" ]]; then
   echolog "Successful installers: ${DOTFILES_INSTALL_SUCCESS}"
-  echolog "Failed installers: ${DOTFILES_INSTALL_FAILURE}"
+  echowrn "Failed installers: ${DOTFILES_INSTALL_FAILURE}"
 fi
 
 echolog "Done"
