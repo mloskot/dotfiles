@@ -12,6 +12,8 @@
 	path = ~/.dotfiles/config/git/dot-gitconfig.linux.work
 [includeIf "gitdir:~/cadcorp/**"]
 	path = ~/.dotfiles/config/git/dot-gitconfig.linux.work
+[includeIf "gitdir:~/cadcorp-cloud/**"]
+	path = ~/.dotfiles/config/git/dot-gitconfig.linux.work
 [include]
 	path = ~/.dotfiles/config/git/dot-gitconfig.aliases
 [github]
