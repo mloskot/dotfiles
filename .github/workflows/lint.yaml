@@ -19,4 +19,8 @@ jobs:
       uses: ludeeus/action-shellcheck@master
       with:
         ignore_paths: >-
+          config/bash/dot-bash.d/bash_completion.sh
+          config/git/git-prompt.sh
+          config/mail/*
+          scripts/*
           windows/**
