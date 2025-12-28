@@ -1,5 +1,5 @@
 ---
-name: Lint
+name: 'Lint:ShellCheck'
 
 on:
   push:
@@ -11,7 +11,6 @@ permissions: {}
 
 jobs:
   shellcheck:
-    name: Shellcheck
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
