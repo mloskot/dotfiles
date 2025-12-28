@@ -1,4 +1,6 @@
 #!/bash/bash
+# shellcheck disable=SC2086,SC2207
+
 if [[ -f /usr/share/bash-completion/bash_completion ]]; then
     return
 fi
