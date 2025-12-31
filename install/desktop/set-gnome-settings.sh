@@ -12,6 +12,10 @@ if [[ -n "${DOTFILES_LAPTOP}" ]]; then
   echolog "Auto-hide the Dock for small screen laptop ${DOTFILES_LAPTOP}"
   gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
   gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
+else
+  echolog "Stop screen locking after inactivity"
+  gsettings set org.gnome.desktop.screensaver lock-delay 0
+  gsettings set org.gnome.desktop.session idle-delay 0
 fi
 
 echolog "Center new windows in the middle of the screen"
