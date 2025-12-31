@@ -155,5 +155,8 @@
   },
   "workbench.enableExperiments": false,
   "workbench.startupEditor": "none",
-  "terminal.integrated.fontSize": 16
+  "terminal.integrated.fontSize": 16,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "chat.agent.enabled": false,
+  "chat.disableAIFeatures": true
 }
