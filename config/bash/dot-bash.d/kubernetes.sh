@@ -16,7 +16,7 @@ alias k9r='k9s --readonly --command pulses'
 if test -f ~/.config/fubectl/fubectl.source; then
   return
 fi
-alias k='kubectl'
+alias k='kubecolor'
 alias ka='kubectl apply'
 alias kci='kubectl cluster-info'
 alias kcns='kubectl config set-context --current --namespace'

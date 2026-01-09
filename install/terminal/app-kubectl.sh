@@ -46,3 +46,14 @@ kubectl krew install grep
 
 echolog "Installing Krew plugin: ktop"
 kubectl krew install ktop
+
+echolog "Installing kubecolor wrapper"
+VERSION=$(curl -s "https://api.github.com/repos/kubecolor/kubecolor/releases/latest" | grep -Po '"tag_name":\s*"v?\K[0-9.]+')
+echolog "Downloading kubecolor ${VERSION}"
+curl -Lo kubecolor.deb "https://github.com/kubecolor/kubecolor/releases/download/v${VERSION}/kubecolor_${VERSION}_linux_amd64.deb"
+sudo dpkg -i kubecolor.deb
+rm -f kubecolor.deb
+
+installed_cmd="$(command -v kubecolor)"
+installed_ver="$(kubecolor version --client)"
+echolog "Installed ${installed_cmd} ${installed_ver}"
