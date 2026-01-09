@@ -55,5 +55,5 @@ sudo dpkg -i kubecolor.deb
 rm -f kubecolor.deb
 
 installed_cmd="$(command -v kubecolor)"
-installed_ver="$(kubecolor version --client)"
+installed_ver="$(kubecolor --kubecolor-version)"
 echolog "Installed ${installed_cmd} ${installed_ver}"
