@@ -1,0 +1,25 @@
+name: Test
+
+on:
+  push:
+    branches:
+    - main
+  workflow_dispatch: {}
+
+permissions: {}
+
+jobs:
+  bats:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Setup Bats
+      id: setup-bats
+      uses: bats-core/bats-action@3.0.1
+    - name: Run Bats
+      shell: bash
+      env:
+        BATS_LIB_PATH: ${{ steps.setup-bats.outputs.lib-path }}
+        TERM: xterm
+      run: bats tests/
