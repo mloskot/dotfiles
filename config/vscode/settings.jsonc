@@ -1,6 +1,4 @@
 {
-  "chat.agent.enabled": false,
-  "chat.disableAIFeatures": true,
   "diffEditor.renderIndicators": true,
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnEnter": "on",
