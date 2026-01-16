@@ -19,3 +19,9 @@ fi
 installed_cmd="$(command -v gh)"
 installed_ver="$(gh --version)"
 echolog "Installed ${installed_cmd} ${installed_ver}"
+
+echolog "Installing Act extension"
+gh extension install https://github.com/nektos/gh-act
+
+echolog "Upgrading all extensions"
+gh extension upgrade --all
