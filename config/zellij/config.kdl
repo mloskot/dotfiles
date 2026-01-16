@@ -145,6 +145,7 @@ keybinds clear-defaults=true {
         bind "Alt ]" { NextSwapLayout; }
         // bind "Alt f" { ToggleFloatingPanes; }
         unbind "Alt f"
+        bind "Ctrl Alt f" { ToggleFloatingPanes; }
         bind "Ctrl g" { SwitchToMode "locked"; }
         bind "Alt h" { MoveFocusOrTab "left"; }
         bind "Alt i" { MoveTab "left"; }
