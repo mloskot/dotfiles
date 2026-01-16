@@ -27,6 +27,11 @@
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
   "git.openRepositoryInParentFolders": "never",
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+    "text": "Use the conventional commit message format. Use imperative mood in the commit message subject. Try to limit the subject to 50 characters, but do not exceed 72 characters. Use the commit message body to explain why vs how. Keep lines of the body to a maximum of 72 characters. Separate the subject from the body with a blank line. Branch name may contain hint for the conventional commit type. Avoid word \"commit\" in the commit message."
+    },
+  ],
   "go.toolsManagement.autoUpdate": true,
   "notebook.lineNumbers": "on",
   "powershell.helpCompletion": "Disabled",
