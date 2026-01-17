@@ -4,8 +4,6 @@ source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing sesh"
 
-source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
-
 VERSION=$(curl -s "https://api.github.com/repos/joshmedeski/sesh/releases/latest" | grep -Po '"tag_name":\s*"v?\K[0-9.]+')
 echolog "Downloading sesh ${VERSION}"
 
@@ -18,4 +16,4 @@ installed_ver="$(sesh --version)"
 echolog "Installed ${installed_cmd} ${installed_ver}"
 
 echolog "Installing ~/.config/sesh"
-[[ ! -L ~/.config/sesh ]] && ln -s ~/.dotfiles/config/sesh ~/.config/sesh
+[[ ! -L ~/.config/sesh ]] && ln -s ~/.dotfiles/config/sesh ~/.config/sesh || true
