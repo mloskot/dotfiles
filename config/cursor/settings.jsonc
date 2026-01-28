@@ -1,0 +1,193 @@
+{
+    "chat.viewSessions.orientation": "stacked",
+    "diffEditor.renderIndicators": true,
+    "diffEditor.renderSideBySide": false,
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.cursorSurroundingLines": 10,
+    "editor.fontFamily": "\"0xProto Nerd Font Mono\"",
+    "editor.fontLigatures": false,
+    "editor.fontSize": 16,
+    "editor.formatOnSave": false,
+    "editor.guides.indentation": true,
+    "editor.lineNumbers": "relative",
+    "editor.lineNumbers_comment": "Use relative to work nicely with vim.smartRelativeLine",
+    "editor.minimap.enabled": false,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    "editor.renderLineHighlight": "line",
+    "editor.renderWhitespace": "all",
+    "editor.roundedSelection": false,
+    "editor.tabSize": 4,
+    "editor.wordBasedSuggestions": "currentDocument",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
+    "extensions.ignoreRecommendations": true,
+    "git.openRepositoryInParentFolders": "never",
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "text": "Use the conventional commit message format. Use imperative mood in the commit message subject. Try to limit the subject to 50 characters, but do not exceed 72 characters. Use the commit message body to explain why vs how. Keep lines of the body to a maximum of 72 characters. Separate the subject from the body with a blank line. Branch name may contain hint for the conventional commit type. Avoid word \"commit\" in the commit message."
+        }
+    ],
+    "go.toolsManagement.autoUpdate": true,
+    "notebook.lineNumbers": "on",
+    "powershell.helpCompletion": "Disabled",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.experiments.enabled": false,
+    "python.testing.autoTestDiscoverOnSaveEnabled": false,
+    "redhat.telemetry.enabled": true,
+    "search.exclude": {
+        "**/.terraform/**": true
+    },
+    "security.allowedUNCHosts": [
+        "wsl.localhost"
+    ],
+    "security.workspace.trust.untrustedFiles": "open",
+    "settingsSync.ignoredSettings": [],
+    "settingsSync.ignoredExtensions": [],
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.fontFamily": "\"0xProto Nerd Font Mono\"",
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.tabs.enabled": false,
+    "terraform.languageServer.ignoreSingleFileWarning": true,
+    "vim.cursorStylePerMode.insert": "line",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.easymotion": true,
+    "vim.enableNeovim": true,
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.leader": "<space>",
+    "vim.neovimPath": "/opt/nvim-linux-x86_64/bin/nvim",
+    "vim.neovimUseConfigFile": true,
+    "vim.searchHighlightColor_comment": "Catppuccin Macchiato: Yellow",
+    "vim.searchHighlightColor": "rgba(238, 212, 159, 0.7)",
+    "vim.smartRelativeLine": true,
+    "vim.useCtrlKeys": true,
+    "vim.useSystemClipboard": true,
+    "vim.vimrc.enable": false,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": true,
+        "<C-p>": false,
+        "<C-n>": false
+    },
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "/"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "actions.find"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "\\"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.startFindReplaceAction"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "v"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.splitEditor"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "h"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusPreviousGroup"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "l"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusNextGroup"
+                }
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                "<leader>",
+                "/"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "actions.find"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "\\"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.startFindReplaceAction"
+                }
+            ]
+        }
+    ],
+    "vs-kubernetes": {
+        "disable-linters": [
+            "resource-limits"
+        ],
+        "vs-kubernetes.crd-code-completion": "enabled"
+    },
+    "window.restoreWindows": "none",
+    "window.newWindowDimensions": "maximized",
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "workbench.editorAssociations": {
+        "*.md": "default"
+    },
+    "workbench.enableExperiments": false,
+    "workbench.startupEditor": "none",
+    "workbench.secondarySideBar.defaultVisibility": "hidden"
+}
