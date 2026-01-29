@@ -15,3 +15,14 @@ else
   sudo dpkg -i cursor.deb
   rm -f cursor.deb
 fi
+
+mkdir -p ~/.config/Cursor/User
+
+source "${SCRIPT_PATH}/../../backup.sh" "${SCRIPT_NAME}"
+backup_file ~/.config/Code/Cursor/keybindings.json
+backup_file ~/.config/Code/Cursor/settings.json
+
+echolog "Installing ~/.config/Cursor/User/settings.json"
+[[ ! -L ~/.config/Cursor/User/settings.json ]] && ln -s ~/.dotfiles/config/cursor/settings.jsonc ~/.config/Cursor/User/settings.json || true
+echolog "Installing ~/.config/Cursor/User/keybindings.json"
+[[ ! -L ~/.config/Cursor/User/keybindings.json ]] && ln -s ~/.dotfiles/config/cursor/keybindings.jsonc ~/.config/Cursor/User/keybindings.json || true
