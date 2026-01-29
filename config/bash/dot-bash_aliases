@@ -40,12 +40,13 @@ if command -v "eza" >/dev/null; then
 fi
 
 # Editors
-alias c='code' # already in PATH
+alias co='code' # already in PATH
 if [[ -n "${WSL_DISTRO_NAME}" ]]; then
   alias ci='/mnt/c/Program\ Files/Microsoft\ VS\ Code\ Insiders/bin/code-insiders'
 else
   alias ci='/c/Program\ Files/Microsoft\ VS\ Code\ Insiders/bin/code-insiders'
 fi
+alias or='cursor'
 alias v='nvim'
 alias t='tmux'
 
