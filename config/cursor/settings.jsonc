@@ -182,12 +182,12 @@
     },
     "window.restoreWindows": "none",
     "window.newWindowDimensions": "maximized",
-    "workbench.activityBar.location": "hidden",
+    "workbench.activityBar.orientation": "vertical",
     "workbench.colorTheme": "Catppuccin Macchiato",
     "workbench.editorAssociations": {
         "*.md": "default"
     },
     "workbench.enableExperiments": false,
-    "workbench.startupEditor": "none",
-    "workbench.secondarySideBar.defaultVisibility": "hidden"
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "workbench.startupEditor": "none"
 }
