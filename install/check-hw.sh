@@ -5,7 +5,8 @@
 # - Dell Precision T7xxx
 # - WSL
 
-source ~/.dotfiles/log.sh
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib.sh"
+source "${DOTFILES_ROOT}/log.sh"
 
 DOTFILES_HW_MODEL=$(hostnamectl status --json=short | jq -r '.HardwareModel')
 echolog "Detected hardware: ${DOTFILES_HW_MODEL}"

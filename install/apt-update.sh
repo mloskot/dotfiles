@@ -1,5 +1,6 @@
 #!/bin/bash
-source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib.sh"
+source "${DOTFILES_ROOT}/err.sh" "${BASH_SOURCE[0]}"
 set -x
 sudo apt-get -y update
 sudo apt-get -y upgrade

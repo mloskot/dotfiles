@@ -1,9 +1,11 @@
 #!/bin/bash
-source ~/.dotfiles/backup.sh
+DOTFILES_ROOT="${DOTFILES_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)}"
+export DOTFILES_ROOT
+source "${DOTFILES_ROOT}/backup.sh"
 backup_file ~/.config/nvim
 
-source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
-source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+source "${DOTFILES_ROOT}/err.sh" "${BASH_SOURCE[0]}"
+source "${DOTFILES_ROOT}/log.sh" "${BASH_SOURCE[0]}"
 
 echolog "Installing nvim"
 
@@ -21,7 +23,7 @@ installed_ver="$(nvim --version)"
 echolog "Installed ${installed_cmd} ${installed_ver}"
 
 echolog "Installing ~/.config/nvim"
-[[ ! -L ~/.config/nvim ]] && ln -s ~/.dotfiles/config/nvim ~/.config/nvim || true
+[[ ! -L ~/.config/nvim ]] && ln -s "${DOTFILES_ROOT}/config/nvim" ~/.config/nvim || true
 
 echolog "Symlinking vi and vim to nvim"
 [[ ! -L ~/.local/bin/vi ]] && ln -s /opt/nvim-linux-x86_64/bin/nvim ~/.local/bin/vi || true
