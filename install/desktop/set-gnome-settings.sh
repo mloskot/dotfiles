@@ -37,3 +37,6 @@ gsettings set org.gnome.desktop.interface show-battery-percentage true
 echolog "Disable <super>+p bindings to switch-monitor"
 # Keep XF86Display in case there is some kind of "display" key on keyboard
 gsettings set org.gnome.mutter.keybindings switch-monitor "['XF86Display']"
+
+echolog "Disable ctrl+alt+d bindings to show-desktopm, use <super>+d instead"
+gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']"
