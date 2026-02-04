@@ -6,7 +6,6 @@
   "editor.cursorSurroundingLines": 10,
   "editor.fontFamily": "\"0xProto Nerd Font Mono\"",
   "editor.fontLigatures": false,
-  "editor.fontSize": 16,
   "editor.formatOnSave": false,
   "editor.guides.indentation": true,
   "editor.lineNumbers": "relative",
@@ -51,7 +50,6 @@
   "settingsSync.ignoredExtensions": [],
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.fontFamily": "\"0xProto Nerd Font Mono\"",
-  "terminal.integrated.fontSize": 16,
   "terminal.integrated.tabs.enabled": false,
   "terraform.languageServer.ignoreSingleFileWarning": true,
   "vim.cursorStylePerMode.insert": "line",
@@ -163,5 +161,6 @@
   },
   "workbench.enableExperiments": false,
   "workbench.startupEditor": "none",
-  "workbench.secondarySideBar.defaultVisibility": "hidden"
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "window.zoomLevel": 1
 }
