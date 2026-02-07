@@ -49,11 +49,19 @@ else
   echowrn "Skipping terminal applications..."
 fi
 
+# Restore environment after previous source-ing to avoid confusing logs
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
+source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+
 if [[ $arg_desktop -gt 0 ]]; then
   source ~/.dotfiles/install/desktop.sh
 else
   echowrn "Skipping desktop applications..."
 fi
+
+# Restore environment after previous source-ing to avoid confusing logs
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
+source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 if [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]]; then
   echolog "Restoring idle and lock settings"

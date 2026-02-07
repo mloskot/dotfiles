@@ -32,6 +32,10 @@ do
   fi
 done
 
+# Restore environment after previous source-ing to avoid confusing logs
+source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
+source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+
 if [[ -z "${DOTFILES_INSTALL_SH}" ]]; then
   echolog "Successful installers: ${DOTFILES_INSTALL_SUCCESS}"
   echolog "Failed installers: ${DOTFILES_INSTALL_FAILURE}"
