@@ -16,5 +16,5 @@ function echoerr
 function echowrn
 {
     echo -n "$(printf '%(%F %T)T') ${caller} " >&2
-    echo -e "\033[35;1mERROR:\033[0m $*" >&2
+    echo -e "\033[33;1mWARNING:\033[0m $*" >&2
 }
