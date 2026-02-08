@@ -1,6 +1,6 @@
 [user]
 	name = Mateusz Łoskot
-	email = mateusz.loskot@cadcorp.com
+	email = mateusz.loskot@necsws.com
 	signingkey = BB2AC1F2
 [commit]
 	gpgSign = false
