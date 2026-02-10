@@ -1,9 +1,11 @@
 #!/bin/bash
-source ~/.dotfiles/backup.sh
+DOTFILES_ROOT="${DOTFILES_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)}"
+export DOTFILES_ROOT
+source "${DOTFILES_ROOT}/backup.sh"
 backup_file ~/.config/jj
 
-source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
-source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+source "${DOTFILES_ROOT}/err.sh" "${BASH_SOURCE[0]}"
+source "${DOTFILES_ROOT}/log.sh" "${BASH_SOURCE[0]}"
 
 echolog "Installing jj"
 
@@ -19,4 +21,4 @@ installed_ver="$(jj --version)"
 echolog "Installed ${installed_cmd} ${installed_ver}"
 
 echolog "Installing ~/.config/jj"
-[[ ! -L ~/.config/jj ]] && ln -s ~/.dotfiles/config/jj ~/.config/jj || true
+[[ ! -L ~/.config/jj ]] && ln -s "${DOTFILES_ROOT}/config/jj" ~/.config/jj || true
