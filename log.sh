@@ -1,4 +1,5 @@
 #!/bin/bash
+[ -n "${DOTFILES_DEBUG}" ] && echo "DEBUG ${BASH_SOURCE[0]}: \$1=${1}"
 caller=$(basename "${1}")
 
 function echolog
