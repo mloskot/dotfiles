@@ -12,5 +12,5 @@ tar -xzf diffnav.tar.gz --directory ~/.local/bin diffnav
 rm -f diffnav.tar.gz
 
 installed_cmd="$(command -v diffnav)"
-installed_ver="$(diffnav --version)"
+installed_ver="" # $(diffnav --version)" # FIXME: https://github.com/dlvhdr/diffnav/issues/26
 echolog "Installed ${installed_cmd} ${installed_ver}"
