@@ -4,6 +4,11 @@ source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing diffnav"
 
+if ! command -v "delta" &>/dev/null; then
+  sudo apt update -y
+  sudo apt install -y git-delta
+fi
+
 VERSION=$(curl -s "https://api.github.com/repos/dlvhdr/diffnav/releases/latest" | grep -Po '"tag_name":\s*"v?\K[0-9.]+')
 echolog "Downloading diffnav ${VERSION}"
 
