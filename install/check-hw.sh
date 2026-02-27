@@ -7,7 +7,17 @@
 
 source ~/.dotfiles/log.sh
 
+if ! command -v "jq" >/dev/null; then
+    sudo apt update -y && sudo install jq -y
+fi
+
 DOTFILES_HW_MODEL=$(hostnamectl status --json=short | jq -r '.HardwareModel')
+if [[ $DOTFILES_HW_MODEL =~ "null" ]]; then
+    DOTFILES_KERNEL_RELEASE=$(hostnamectl status --json=short | jq -r '.KernelRelease')
+    if [[ $DOTFILES_KERNEL_RELEASE =~ "WSL2" ]]; then
+        DOTFILES_HW_MODEL="WSL"
+    fi
+fi
 echolog "Detected hardware: ${DOTFILES_HW_MODEL}"
 
 # Assume desktop by default, possibly multi-screen
