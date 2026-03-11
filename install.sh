@@ -1,8 +1,10 @@
 #!/bin/bash
-source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
+DOTFILES_ROOT="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && pwd)"
+export DOTFILES_ROOT
+source "${DOTFILES_ROOT}/err.sh" "${BASH_SOURCE[0]}"
 # Flags installation executed using the root install.sh
 DOTFILES_INSTALL_SH="${BASH_SOURCE[0]}"
-source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+source "${DOTFILES_ROOT}/log.sh" "${BASH_SOURCE[0]}"
 
 function usage
 {
@@ -32,8 +34,8 @@ do
 done
 
 # Check the distribution name and version and abort if incompatible
-source ~/.dotfiles/install/check-os.sh
-source ~/.dotfiles/install/check-hw.sh
+source "${DOTFILES_ROOT}/install/check-os.sh"
+source "${DOTFILES_ROOT}/install/check-hw.sh"
 
 # Desktop software and tweaks will only be installed if we're running Gnome
 if [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]]; then
@@ -44,7 +46,7 @@ if [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]]; then
 fi
 
 if [[ $arg_terminal -gt 0 ]]; then
-  source ~/.dotfiles/install/terminal.sh
+  source "${DOTFILES_ROOT}/install/terminal.sh"
 else
   echowrn "Skipping terminal applications..."
 fi
@@ -54,7 +56,7 @@ source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
 if [[ $arg_desktop -gt 0 ]]; then
-  source ~/.dotfiles/install/desktop.sh
+  source "${DOTFILES_ROOT}/install/desktop.sh"
 else
   echowrn "Skipping desktop applications..."
 fi

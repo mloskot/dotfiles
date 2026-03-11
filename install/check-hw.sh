@@ -5,7 +5,8 @@
 # - Dell Precision T7xxx
 # - WSL
 
-source ~/.dotfiles/log.sh
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib.sh"
+source "${DOTFILES_ROOT}/log.sh"
 
 if ! command -v "jq" >/dev/null; then
     sudo apt update -y && sudo install jq -y

@@ -1,9 +1,11 @@
 #!/bin/bash
-source ~/.dotfiles/backup.sh
+DOTFILES_ROOT="${DOTFILES_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)}"
+export DOTFILES_ROOT
+source "${DOTFILES_ROOT}/backup.sh"
 backup_file ~/.config/lazygit/config.yaml
 
-source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
-source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+source "${DOTFILES_ROOT}/err.sh" "${BASH_SOURCE[0]}"
+source "${DOTFILES_ROOT}/log.sh" "${BASH_SOURCE[0]}"
 
 echolog "Installing lazygit"
 
@@ -25,4 +27,4 @@ echolog "Installed ${installed_cmd} ${installed_ver}"
 
 echolog "Installing ~/.config/lazygit/config.yaml"
 mkdir -p ~/.config/lazygit
-[[ ! -L ~/.config/lazygit/config.yaml ]] && ln -s ~/.dotfiles/config/lazygit/config.yaml ~/.config/lazygit/config.yaml || true
+[[ ! -L ~/.config/lazygit/config.yaml ]] && ln -s "${DOTFILES_ROOT}/config/lazygit/config.yaml" ~/.config/lazygit/config.yaml || true
