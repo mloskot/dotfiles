@@ -1,6 +1,8 @@
 #!/bin/bash
-source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
-source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+DOTFILES_ROOT="${DOTFILES_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)}"
+export DOTFILES_ROOT
+source "${DOTFILES_ROOT}/err.sh" "${BASH_SOURCE[0]}"
+source "${DOTFILES_ROOT}/log.sh" "${BASH_SOURCE[0]}"
 
 echolog "Installing go"
 
@@ -14,7 +16,7 @@ if ! command -v "go" &>/dev/null || ! go version | grep "${VERSION}" ; then
   sudo tar -xzf go.tar.gz --directory /opt
   rm -f go.tar.gz
 
-    source ~/.dotfiles/config/bash/dot-bash.d/go.sh
+    source "${DOTFILES_ROOT}/config/bash/dot-bash.d/go.sh"
 fi
 
 installed_cmd="$(command -v go)"
