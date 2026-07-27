@@ -6,7 +6,7 @@ CC_ENV="${1}"
 # https://learn.microsoft.com/en-us/cli/azure/azure-cli-configuration#cli-configuration-file
 AZURE_CONFIG_DIR="${HOME}/cadcorp-cloud/.azure/${CC_ENV}"
 if [ ! -d "${AZURE_CONFIG_DIR}" ]; then
-  AZURE_CONFIG_DIR="${HOME}/.azure-${CC_ENV}"
+  AZURE_CONFIG_DIR="${HOME}/.azure/${CC_ENV}"
 fi
 export AZURE_CONFIG_DIR
 az_tenant_id=$(az account show --query homeTenantId --output tsv)

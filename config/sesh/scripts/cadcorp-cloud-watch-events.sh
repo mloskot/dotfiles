@@ -4,7 +4,7 @@ tmux rename-window kubectl
 tmux send-keys "cd ~/cadcorp-cloud" Enter
 
 for CC_ENV in prd svc tst ; do
-  export AZURE_CONFIG_DIR="${HOME}/.azure-${CC_ENV}"
+  export AZURE_CONFIG_DIR="${HOME}/.azure/${CC_ENV}"
   az_tenant_id=$(az account show --query homeTenantId --output tsv)
   if [[ -z "${az_tenant_id}" ]]; then
     echo "az_tenant_id is empty despite AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}"
