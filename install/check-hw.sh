@@ -8,7 +8,7 @@
 source ~/.dotfiles/log.sh
 
 if ! command -v "jq" >/dev/null; then
-    sudo apt update -y && sudo install jq -y
+    sudo apt update -y && sudo apt install -y jq
 fi
 
 DOTFILES_HW_MODEL=$(hostnamectl status --json=short | jq -r '.HardwareModel')
