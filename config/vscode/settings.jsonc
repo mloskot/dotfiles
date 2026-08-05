@@ -1,11 +1,11 @@
 {
-  "chat.viewSessions.orientation": "stacked",
   "diffEditor.renderIndicators": true,
   "diffEditor.renderSideBySide": false,
   "editor.acceptSuggestionOnEnter": "on",
   "editor.cursorSurroundingLines": 10,
   "editor.fontFamily": "\"0xProto Nerd Font Mono\"",
   "editor.fontLigatures": false,
+  "editor.fontSize": 14,
   "editor.formatOnSave": false,
   "editor.guides.indentation": true,
   "editor.lineNumbers": "relative",
@@ -26,6 +26,9 @@
   "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    ".wslconfig": "ini"
+  },
   "git.openRepositoryInParentFolders": "never",
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
@@ -35,6 +38,7 @@
   "go.toolsManagement.autoUpdate": true,
   "notebook.lineNumbers": "on",
   "powershell.helpCompletion": "Disabled",
+  "powershell.promptToUpdatePowerShell": false,
   "python.analysis.typeCheckingMode": "basic",
   "python.experiments.enabled": false,
   "python.testing.autoTestDiscoverOnSaveEnabled": false,
@@ -154,6 +158,7 @@
   },
   "window.restoreWindows": "none",
   "window.newWindowDimensions": "maximized",
+  "window.zoomLevel": 0.5,
   "workbench.activityBar.location": "hidden",
   "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.editorAssociations": {
@@ -162,5 +167,12 @@
   "workbench.enableExperiments": false,
   "workbench.startupEditor": "none",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
-  "window.zoomLevel": 1
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ]
 }
