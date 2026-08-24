@@ -48,37 +48,55 @@ if (Get-Command -Name eza -CommandType Application -ErrorAction SilentlyContinue
 
   function Invoke-EzaLL {
     param ([Parameter(ValueFromRemainingArguments = $true)][string[]]$Args)
-    eza -lbhgUmu --time-style=long-iso --git --color-scale @Args
+    eza -lbhgUmu --time-style=long-iso --git @Args
   }
   New-Alias -Name ll -Value Invoke-EzaLL -Force -Option AllScope
 
   function Invoke-EzaLA {
     param ([Parameter(ValueFromRemainingArguments = $true)][string[]]$Args)
-    eza -lbhgUmu --all --time-style=long-iso --git --color-scale @Args
+    eza -lbhgUmu --all --time-style=long-iso --git @Args
   }
   New-Alias -Name la -Value Invoke-EzaLA -Force -Option AllScope
 
   function Invoke-EzaLX {
     param ([Parameter(ValueFromRemainingArguments = $true)][string[]]$Args)
-    eza -lbhHigUmuS@ --all --time-style=long-iso --git --color-scale @Args
+    eza -lbhHigUmuS@ --all --time-style=long-iso --git @Args
   }
   New-Alias -Name lx -Value Invoke-EzaLX -Force -Option AllScope
 
   function Invoke-EzaLT {
     param ([Parameter(ValueFromRemainingArguments = $true)][string[]]$Args)
-    eza --tree --git-ignore --all @Args
+    eza --tree --all @Args
   }
   New-Alias -Name lt -Value Invoke-EzaLT -Force -Option AllScope
 
   function Invoke-EzaLTD {
     param ([Parameter(ValueFromRemainingArguments = $true)][string[]]$Args)
-    eza --tree --git-ignore --only-dirs @Args
+    eza --tree --only-dirs @Args
   }
   New-Alias -Name ltd -Value Invoke-EzaLTD -Force -Option AllScope
+
+  function Invoke-EzaLTG {
+    param ([Parameter(ValueFromRemainingArguments = $true)][string[]]$Args)
+    eza --tree --all --git-ignore @Args
+  }
+  New-Alias -Name ltg -Value Invoke-EzaLTG -Force -Option AllScope
+
+  function Invoke-EzaLTDG {
+    param ([Parameter(ValueFromRemainingArguments = $true)][string[]]$Args)
+    eza --tree --only-dirs --git-ignore @Args
+  }
+  New-Alias -Name ltdg -Value Invoke-EzaLTDG -Force -Option AllScope
 }
 
 if (Get-Command -Name nerdctl -CommandType Application -ErrorAction SilentlyContinue) {
+  New-Alias -Name n -Value nerdctl -Force -Option AllScope
+  New-Alias -Name d -Value nerdctl -Force -Option AllScope
   New-Alias -Name docker -Value nerdctl -Force -Option AllScope
+} elseif (Get-Command -Name docker -CommandType Application -ErrorAction SilentlyContinue) {
+  New-Alias -Name n -Value docker -Force -Option AllScope
+  New-Alias -Name d -Value docker -Force -Option AllScope
+  New-Alias -Name nerdctl -Value docker -Force -Option AllScope
 }
 
 # Aliases for basic commands (Linux muscle memory helpers)
