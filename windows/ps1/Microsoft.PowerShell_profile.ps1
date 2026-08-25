@@ -91,12 +91,12 @@ if (Get-Command -Name eza -CommandType Application -ErrorAction SilentlyContinue
 
 if (Get-Command -Name nerdctl -CommandType Application -ErrorAction SilentlyContinue) {
   New-Alias -Name n -Value nerdctl -Force -Option AllScope
-  New-Alias -Name d -Value nerdctl -Force -Option AllScope
   New-Alias -Name docker -Value nerdctl -Force -Option AllScope
-} elseif (Get-Command -Name docker -CommandType Application -ErrorAction SilentlyContinue) {
-  New-Alias -Name n -Value docker -Force -Option AllScope
-  New-Alias -Name d -Value docker -Force -Option AllScope
-  New-Alias -Name nerdctl -Value docker -Force -Option AllScope
+} else {
+  if (Get-Command -Name docker -CommandType Application -ErrorAction SilentlyContinue) {
+    New-Alias -Name d -Value docker -Force -Option AllScope
+    New-Alias -Name nerdctl -Value docker -Force -Option AllScope
+  }
 }
 
 # Aliases for basic commands (Linux muscle memory helpers)
