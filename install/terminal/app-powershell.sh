@@ -9,10 +9,10 @@ echolog "Installing PowerShell"
 #curl -Lo powershell.deb "https://github.com/PowerShell/PowerShell/releases/latest/download/powershell_${VERSION}-1.deb_amd64.deb"
 
 sudo apt update -y
-sudo apt install -y dotnet-runtime-8.0
+sudo apt install -y dotnet-runtime-9.0
 
 VERSION=$(curl -s "https://api.github.com/repos/rhubarb-geek-nz/powershell-ubuntu/releases/latest" | grep -Po '"tag_name":\s*"v?\K[0-9.]+')
-echolog "Downloading PowerShell ${VERSION} (depens on dotnet-runtime-8.0)"
+echolog "Downloading PowerShell ${VERSION} (depens on dotnet-runtime-9.0)"
 curl -Lo powershell.deb "https://github.com/rhubarb-geek-nz/powershell-ubuntu/releases/latest/download/powershell_${VERSION}-1.ubuntu_amd64.deb"
 sudo dpkg -i powershell.deb
 rm -f powershell.deb
