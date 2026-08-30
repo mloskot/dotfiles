@@ -1,6 +1,7 @@
 #!/bin/bash
-source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
-source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib.sh"
+source "${DOTFILES_ROOT}/err.sh" "${BASH_SOURCE[0]}"
+source "${DOTFILES_ROOT}/log.sh" "${BASH_SOURCE[0]}"
 
 echolog "Running GNOME $(gnome-shell --version)"
 
@@ -21,7 +22,7 @@ done
 # Run desktop installers
 echolog "Installing desktop applications..."
 
-for installer in ~/.dotfiles/install/desktop/*.sh
+for installer in "${DOTFILES_ROOT}/install/desktop/"*.sh
 do
     source "$installer" && status=$? || status=$?; true
   if [[ $status -eq 0 ]]; then

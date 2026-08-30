@@ -1,10 +1,12 @@
 #!/bin/bash
-source ~/.dotfiles/backup.sh
+DOTFILES_ROOT="${DOTFILES_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)}"
+export DOTFILES_ROOT
+source "${DOTFILES_ROOT}/backup.sh"
 backup_file ~/.config/Code/User/keybindings.json
 backup_file ~/.config/Code/User/settings.json
 
-source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
-source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+source "${DOTFILES_ROOT}/err.sh" "${BASH_SOURCE[0]}"
+source "${DOTFILES_ROOT}/log.sh" "${BASH_SOURCE[0]}"
 
 echolog "Installing Visual Studio Code"
 
@@ -31,6 +33,6 @@ code --version
 mkdir -p ~/.config/Code/User
 
 echolog "Installing ~/.config/Code/User/settings.json"
-[[ ! -L ~/.config/Code/User/settings.json ]] && ln -s ~/.dotfiles/config/vscode/settings.jsonc ~/.config/Code/User/settings.json || true
+[[ ! -L ~/.config/Code/User/settings.json ]] && ln -s "${DOTFILES_ROOT}/config/vscode/settings.jsonc" ~/.config/Code/User/settings.json || true
 echolog "Installing ~/.config/Code/User/keybindings.json"
-[[ ! -L ~/.config/Code/User/keybindings.json ]] && ln -s ~/.dotfiles/config/vscode/keybindings.jsonc ~/.config/Code/User/keybindings.json || true
+[[ ! -L ~/.config/Code/User/keybindings.json ]] && ln -s "${DOTFILES_ROOT}/config/vscode/keybindings.jsonc" ~/.config/Code/User/keybindings.json || true

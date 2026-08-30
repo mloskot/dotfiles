@@ -1,6 +1,7 @@
 #!/bin/bash
-source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
-source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib.sh"
+source "${DOTFILES_ROOT}/err.sh" "${BASH_SOURCE[0]}"
+source "${DOTFILES_ROOT}/log.sh" "${BASH_SOURCE[0]}"
 
 PATH=$HOME/.local/bin:$PATH
 export PATH
@@ -22,7 +23,7 @@ done
 # Run terminal installers
 echolog "Installing terminal applications..."
 
-for installer in ~/.dotfiles/install/terminal/*.sh
+for installer in "${DOTFILES_ROOT}/install/terminal/"*.sh
 do
   source "$installer" && status=$? || status=$?; true
   if [[ $status -eq 0 ]]; then

@@ -1,8 +1,8 @@
 #!/bin/bash
-SCRIPT_NAME="${BASH_SOURCE[0]}"
-SCRIPT_PATH="$(dirname "$(realpath "${SCRIPT_NAME}")")"
-source "${SCRIPT_PATH}/../../err.sh" "${SCRIPT_NAME}"
-source "${SCRIPT_PATH}/../../log.sh" "${SCRIPT_NAME}"
+DOTFILES_ROOT="${DOTFILES_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)}"
+export DOTFILES_ROOT
+source "${DOTFILES_ROOT}/err.sh" "${BASH_SOURCE[0]}"
+source "${DOTFILES_ROOT}/log.sh" "${BASH_SOURCE[0]}"
 
 echolog "Installing bat"
 
