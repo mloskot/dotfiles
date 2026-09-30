@@ -23,37 +23,41 @@ tmux set-environment CC_ENV "${CC_ENV}"
 tmux send-keys -t 0 "export AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}" Enter
 tmux send-keys -t 0 "export CC_ENV=${CC_ENV}" Enter
 # Configure Window 0 created by sesh
-tmux rename-window command
+tmux rename-window cmd
 tmux send-keys "cd ~/cadcorp-cloud" Enter
 
 tmux new-window
-tmux rename-window infra-tf
+tmux rename-window i-cmd
 tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-infrastructure" Enter
 tmux send-keys "mage subscription:switchDefault sub-hosting-${CC_ENV}" Enter
 
 tmux new-window
-tmux rename-window infra-git
-tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-infrastructure" Enter
+tmux rename-window i-copilot
+tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-infrastructure" Enter
+
+tmux new-window
+tmux rename-window i-git
+tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-infrastructure" Enter
 tmux send-keys "lazygit" Enter
 
 tmux new-window
-tmux rename-window gitops-k8s
-tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
+tmux rename-window g-cmd
+tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
 
 tmux new-window
-tmux rename-window gitops-git
-tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
+tmux rename-window g-copilot
+tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
+
+tmux new-window
+tmux rename-window g-git
+tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
 tmux send-keys "lazygit" Enter
 
 tmux new-window
-tmux rename-window gitops-k9s
-tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
+tmux rename-window g-k9s
+tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
 tmux send-keys "sleep 3" Enter
 tmux send-keys "k9s" Enter
-
-tmux new-window
-tmux rename-window docker
-tmux send-keys "cd ~/cadcorp-cloud" Enter
 
 tmux select-window -t 0
 
