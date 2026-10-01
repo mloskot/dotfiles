@@ -4,6 +4,10 @@ CC_ENV="${1}"
 
 # Force Azure CLI with configuration path per single environment
 # https://learn.microsoft.com/en-us/cli/azure/azure-cli-configuration#cli-configuration-file
+if [ -n "${AZURE_CONFIG_DIR}" ]; then
+echo "XXXXXXXXXXXXXXXXXXXXX"
+exit
+fi
 AZURE_CONFIG_DIR="${HOME}/cadcorp-cloud/.azure/${CC_ENV}"
 if [ ! -d "${AZURE_CONFIG_DIR}" ]; then
   AZURE_CONFIG_DIR="${HOME}/.azure/${CC_ENV}"
@@ -19,42 +23,55 @@ fi
 tmux set-environment AZURE_CONFIG_DIR "${AZURE_CONFIG_DIR}"
 tmux set-environment CC_ENV "${CC_ENV}"
 
-# Force environment update in window 0
-tmux send-keys -t 0 "export AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}" Enter
-tmux send-keys -t 0 "export CC_ENV=${CC_ENV}" Enter
 # Configure Window 0 created by sesh
 tmux rename-window cmd
+tmux send-keys -t cmd "export AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}" Enter
+tmux send-keys -t cmd "export CC_ENV=${CC_ENV}" Enter
 tmux send-keys "cd ~/cadcorp-cloud" Enter
 
 tmux new-window
 tmux rename-window i-cmd
+tmux send-keys -t i-cmd "export AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}" Enter
+tmux send-keys -t i-cmd "export CC_ENV=${CC_ENV}" Enter
 tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-infrastructure" Enter
 tmux send-keys "mage subscription:switchDefault sub-hosting-${CC_ENV}" Enter
 
 tmux new-window
 tmux rename-window i-copilot
+tmux send-keys -t i-copilot "export AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}" Enter
+tmux send-keys -t i-copilot "export CC_ENV=${CC_ENV}" Enter
 tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-infrastructure" Enter
 
 tmux new-window
 tmux rename-window i-git
+tmux send-keys -t i-git "export AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}" Enter
+tmux send-keys -t i-git "export CC_ENV=${CC_ENV}" Enter
 tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-infrastructure" Enter
 tmux send-keys "lazygit" Enter
 
 tmux new-window
 tmux rename-window g-cmd
+tmux send-keys -t g-cmd "export AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}" Enter
+tmux send-keys -t g-cmd "export CC_ENV=${CC_ENV}" Enter
 tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
 
 tmux new-window
 tmux rename-window g-copilot
+tmux send-keys -t g-copilot "export AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}" Enter
+tmux send-keys -t g-copilot "export CC_ENV=${CC_ENV}" Enter
 tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
 
 tmux new-window
 tmux rename-window g-git
+tmux send-keys -t g-git "export AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}" Enter
+tmux send-keys -t g-git "export CC_ENV=${CC_ENV}" Enter
 tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
 tmux send-keys "lazygit" Enter
 
 tmux new-window
 tmux rename-window g-k9s
+tmux send-keys -t g-k9s "export AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}" Enter
+tmux send-keys -t g-k9s "export CC_ENV=${CC_ENV}" Enter
 tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
 tmux send-keys "sleep 3" Enter
 tmux send-keys "k9s" Enter
