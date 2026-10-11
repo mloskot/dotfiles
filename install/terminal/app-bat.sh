@@ -1,8 +1,5 @@
 #!/bin/bash
-SCRIPT_NAME="${BASH_SOURCE[0]}"
-SCRIPT_PATH="$(dirname "$(realpath "${SCRIPT_NAME}")")"
-source "${SCRIPT_PATH}/../../err.sh" "${SCRIPT_NAME}"
-source "${SCRIPT_PATH}/../../log.sh" "${SCRIPT_NAME}"
+source lib.sh "${BASH_SOURCE[0]}"
 
 echolog "Installing bat"
 
