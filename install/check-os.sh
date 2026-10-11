@@ -1,6 +1,6 @@
 #!/bin/bash
-
-source ~/.dotfiles/log.sh
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib.sh"
+source "${DOTFILES_ROOT}/log.sh"
 
 if [ ! -f /etc/os-release ]; then
   echoerr "Unable to determine OS. /etc/os-release file not found."

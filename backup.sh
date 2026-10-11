@@ -1,8 +1,8 @@
 #!/bin/bash
 SCRIPT_NAME="${BASH_SOURCE[0]}"
-SCRIPT_PATH="$(dirname "$(realpath "${SCRIPT_NAME}")")"
-source "${SCRIPT_PATH}/err.sh" "${SCRIPT_NAME}"
-source "${SCRIPT_PATH}/log.sh" "${SCRIPT_NAME}"
+DOTFILES_ROOT="${DOTFILES_ROOT:-$(cd "$(dirname "$(realpath "${SCRIPT_NAME}")")" && pwd)}"
+source "${DOTFILES_ROOT}/err.sh" "${SCRIPT_NAME}"
+source "${DOTFILES_ROOT}/log.sh" "${SCRIPT_NAME}"
 
 function backup_file
 {

@@ -1,9 +1,11 @@
 #!/bin/bash
-source ~/.dotfiles/backup.sh
+DOTFILES_ROOT="${DOTFILES_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)}"
+export DOTFILES_ROOT
+source "${DOTFILES_ROOT}/backup.sh"
 backup_file ~/.config/starship.toml
 
-source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
-source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+source "${DOTFILES_ROOT}/err.sh" "${BASH_SOURCE[0]}"
+source "${DOTFILES_ROOT}/log.sh" "${BASH_SOURCE[0]}"
 
 echolog "Installing Starship"
 
@@ -14,4 +16,4 @@ installed_ver="$(starship --version)"
 echolog "Installed ${installed_cmd} ${installed_ver}"
 
 echolog "Installing ~/.config/starship.toml"
-[[ ! -L ~/.config/starship.toml ]] && ln -s ~/.dotfiles/config/starship/starship.toml ~/.config/starship.toml || true
+[[ ! -L ~/.config/starship.toml ]] && ln -s "${DOTFILES_ROOT}/config/starship/starship.toml" ~/.config/starship.toml || true

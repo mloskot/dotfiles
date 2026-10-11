@@ -1,6 +1,8 @@
 #!/bin/bash
-source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
-source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
+DOTFILES_ROOT="${DOTFILES_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)}"
+export DOTFILES_ROOT
+source "${DOTFILES_ROOT}/err.sh" "${BASH_SOURCE[0]}"
+source "${DOTFILES_ROOT}/log.sh" "${BASH_SOURCE[0]}"
 
 echolog "Installing sesh"
 
@@ -16,4 +18,4 @@ installed_ver="$(sesh --version)"
 echolog "Installed ${installed_cmd} ${installed_ver}"
 
 echolog "Installing ~/.config/sesh"
-[[ ! -L ~/.config/sesh ]] && ln -s ~/.dotfiles/config/sesh ~/.config/sesh || true
+[[ ! -L ~/.config/sesh ]] && ln -s "${DOTFILES_ROOT}/config/sesh" ~/.config/sesh || true
