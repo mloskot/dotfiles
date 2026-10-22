@@ -37,17 +37,17 @@ tmux send-keys "cd ~/cadcorp-cloud/cadcorp-cloud-infrastructure" Enter
 tmux send-keys "mage subscription:switchDefault sub-hosting-${CC_ENV}" Enter
 
 tmux new-window
-tmux rename-window i-copilot
-tmux send-keys -t i-copilot "export AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}" Enter
-tmux send-keys -t i-copilot "export CC_ENV=${CC_ENV}" Enter
-tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-infrastructure" Enter
-
-tmux new-window
 tmux rename-window i-git
 tmux send-keys -t i-git "export AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}" Enter
 tmux send-keys -t i-git "export CC_ENV=${CC_ENV}" Enter
 tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-infrastructure" Enter
 tmux send-keys "lazygit" Enter
+
+tmux new-window
+tmux rename-window i-copilot
+tmux send-keys -t i-copilot "export AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}" Enter
+tmux send-keys -t i-copilot "export CC_ENV=${CC_ENV}" Enter
+tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-infrastructure" Enter
 
 tmux new-window
 tmux rename-window g-cmd
@@ -56,17 +56,17 @@ tmux send-keys -t g-cmd "export CC_ENV=${CC_ENV}" Enter
 tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
 
 tmux new-window
-tmux rename-window g-copilot
-tmux send-keys -t g-copilot "export AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}" Enter
-tmux send-keys -t g-copilot "export CC_ENV=${CC_ENV}" Enter
-tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
-
-tmux new-window
 tmux rename-window g-git
 tmux send-keys -t g-git "export AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}" Enter
 tmux send-keys -t g-git "export CC_ENV=${CC_ENV}" Enter
 tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
 tmux send-keys "lazygit" Enter
+
+tmux new-window
+tmux rename-window g-copilot
+tmux send-keys -t g-copilot "export AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}" Enter
+tmux send-keys -t g-copilot "export CC_ENV=${CC_ENV}" Enter
+tmux send-keys "sleep 3 && cd ~/cadcorp-cloud/cadcorp-cloud-gitops/clusters/${az_tenant_id}/${CC_ENV} && direnv allow" Enter
 
 tmux new-window
 tmux rename-window g-k9s
