@@ -9,7 +9,7 @@ echolog "Installing tmux"
 
 if ! command -v "tmux" &>/dev/null; then
   sudo apt update -y
-  sudo apt install -y tmux
+  sudo apt install -y tmux tmuxp
   mkdir -p ~/.tmux/plugins
 fi
 
