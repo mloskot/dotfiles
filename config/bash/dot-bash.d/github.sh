@@ -5,6 +5,8 @@ fi
 
 eval "$(gh completion -s bash)"
 
+alias has='gh auth status'
+alias haw='gh auth switch'
 alias hil='gh issue list'
 alias his='gh issue status'
 alias hiv='gh issue view'
