@@ -33,6 +33,6 @@ curl -fsSL "https://raw.githubusercontent.com/JuliusBrussee/caveman/v${VERSION}/
 
 if command -v caveman >/dev/null 2>&1; then
   installed_cmd="$(command -v caveman)"
-  installed_ver="$(caveman --version | head -n 1)"
+  installed_ver="$(caveman --version | jq -r '.version')"
   echolog "Installed ${installed_cmd} ${installed_ver}"
 fi
