@@ -2,7 +2,7 @@
 source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
-NODE_MAJOR_REQUIRED=18
+NODE_MAJOR_REQUIRED=24
 
 if ! command -v node >/dev/null 2>&1; then
   echolog "Installing Ubuntu nodejs package for caveman"
