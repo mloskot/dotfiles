@@ -58,11 +58,3 @@ if [ $TTY_COUNTER -eq 1 ]; then
     wslfetch
   fi
 fi
-
-# shellcheck disable=SC1091
-. "$HOME/.atuin/bin/env"
-
-if [[ -f ~/.bash-preexec.sh ]]; then
-  source ~/.bash-preexec.sh
-fi
-eval "$(atuin init bash)"
