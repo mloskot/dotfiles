@@ -2,7 +2,7 @@
 source ~/.dotfiles/err.sh "${BASH_SOURCE[0]}"
 source ~/.dotfiles/log.sh "${BASH_SOURCE[0]}"
 
-NODE_MAJOR_REQUIRED=24
+NODE_MAJOR_REQUIRED="24"
 
 if ! command -v node >/dev/null 2>&1; then
   echolog "Installing Ubuntu nodejs package for caveman"
@@ -18,7 +18,8 @@ if [ "$(node -p "process.versions.node.split('.')[0]" 2>/dev/null || echo 0)" -l
   echolog "Ubuntu nodejs is too old for caveman; installing NodeSource Node.js ${NODE_MAJOR_REQUIRED}+"
   sudo apt install -y ca-certificates curl gnupg
   curl -fsSL "https://deb.nodesource.com/setup_${NODE_MAJOR_REQUIRED}.x" | sudo -E bash -
-  sudo apt install -y nodejs npm
+  # NodeSource installs both node and npm.
+  sudo apt install -y nodejs
   if ! command -v node >/dev/null 2>&1 && command -v nodejs >/dev/null 2>&1; then
     sudo ln -sf "$(command -v nodejs)" "${HOME}/.local/bin/node"
   fi
