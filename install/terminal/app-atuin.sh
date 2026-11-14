@@ -13,7 +13,7 @@ fi
 
 if [[ -z "${installed_ver}" ]] || [[ "$(printf '%s\n' "${installed_ver}" "${VERSION}" | sort -V | tail -n1)" != "${installed_ver}" ]]; then
   echolog "Installing atuin ${VERSION}"
-  curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh | bash
+  curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh | bash -- --no-up-arrow --sync off
 else
   echolog "Atuin ${installed_ver} is up to date"
 fi
