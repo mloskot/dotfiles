@@ -5,13 +5,14 @@ CC_ENV="${1}"
 # Force Azure CLI with configuration path per single environment
 # https://learn.microsoft.com/en-us/cli/azure/azure-cli-configuration#cli-configuration-file
 if [ -n "${AZURE_CONFIG_DIR}" ]; then
-echo "XXXXXXXXXXXXXXXXXXXXX"
-exit
+  echo "ERROR: AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR} already defined. Aborting."
+  exit 1
 fi
 AZURE_CONFIG_DIR="${HOME}/cadcorp-cloud/.azure/${CC_ENV}"
 if [ ! -d "${AZURE_CONFIG_DIR}" ]; then
   AZURE_CONFIG_DIR="${HOME}/.azure/${CC_ENV}"
 fi
+echo "INFO: Using AZURE_CONFIG_DIR=${AZURE_CONFIG_DIR}"
 export AZURE_CONFIG_DIR
 az_tenant_id=$(az account show --query homeTenantId --output tsv)
 if [[ -z "${az_tenant_id}" ]]; then
