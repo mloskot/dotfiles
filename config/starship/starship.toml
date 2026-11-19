@@ -5,8 +5,8 @@ command_timeout = 1000 # Prevents terminal freezing if a command hangs
 format = """
 [](surface0)\
 $os\
-$username\
 ${custom.gh_account}\
+${custom.git_user}\
 [](bg:peach fg:surface0)\
 $directory\
 [](bg:yellow fg:peach)\
@@ -15,7 +15,6 @@ $mise\
 [](fg:yellow bg:green)\
 $git_branch\
 $git_status\
-${custom.git_user}\
 [](fg:green bg:teal)\
 $c\
 $golang\
@@ -98,8 +97,16 @@ style_user = "bg:surface0 fg:text"
 [custom.gh_account]
 command = "gh auth status --hostname=github.com --active 2>&1 | grep 'Logged in to github.com account' | sed 's/.*account //; s/ .*//'"
 when = "command -v gh" # Only runs if the GitHub CLI is installed
-format = '[gh:$output]($style)'
+format = '[ gh:$output ]($style)'
 style = "bg:surface0 fg:text"
+
+[custom.git_user]
+description = "Display the active Git user config"
+command = "git config user.email" # Or use "gh api user --xpath .login" if you strictly want the 'gh' CLI account
+when = "git rev-parse --is-inside-work-tree 2> /dev/null"
+format = '[$symbol ($output$ahead_behind )]($style)'
+style = "bg:surface0 fg:text"
+symbol = ""
 
 [directory]
 format = "[ $path ]($style)"
@@ -138,14 +145,6 @@ symbol = ""
 [git_status]
 format = '[[($all_status$ahead_behind )](fg:base bg:green)]($style)'
 style = "bg:teal"
-
-[custom.git_user]
-description = "Display the active Git user config"
-command = "git config user.email" # Or use "gh api user --xpath .login" if you strictly want the 'gh' CLI account
-when = "git rev-parse --is-inside-work-tree 2> /dev/null"
-format = '[[$symbol ($output$ahead_behind )](fg:base bg:green)]($style)'
-style = "bg:teal"
-symbol = ""
 
 [c]
 format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
